@@ -1,12 +1,13 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - nazmulkabir
+  - AI-VTRC
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - nazmulkabir/DeepH2O
+  - nazmulkabir/MAA
+  - nazmulkabir/IWS
+  - nazmulkabir/tsgans_cps
+  - nazmulkabir/AIforPolicy
+  - AI-VTRC/Contextual-AI-WDS
+  - AI-VTRC/GAN-Water-Study
+  - AI-VTRC/DCWater
