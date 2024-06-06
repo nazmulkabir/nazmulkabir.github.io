@@ -1,3 +1,12 @@
+---
+layout: post
+date: 2022-11-5 15:59:00-0400
+inline: true
+related_posts: false
+---
+
+[Team Contends to Protect Water Systems from Cyber Threats](https://cyberinitiative.org/cci-news/2022/team-contends-to-protect-water-systems-from-cyber-threats.html?fbclid=IwAR2AosM5KXTR8OSEWE2kh8KUFiLSG9ZKGbowhXWbJpB97OiM_UOcz7QBtfI)
+
 <!-- ---
 layout: post
 title: A long announcement with details
@@ -32,11 +41,3 @@ Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxide
 
 Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual. -->
 
----
-layout: post
-date: 2022-11-5 15:59:00-0400
-inline: true
-related_posts: false
----
-
-[Team Contends to Protect Water Systems from Cyber Threats](https://cyberinitiative.org/cci-news/2022/team-contends-to-protect-water-systems-from-cyber-threats.html?fbclid=IwAR2AosM5KXTR8OSEWE2kh8KUFiLSG9ZKGbowhXWbJpB97OiM_UOcz7QBtfI)
