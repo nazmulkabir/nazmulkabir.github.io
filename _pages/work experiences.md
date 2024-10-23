@@ -61,3 +61,29 @@ I worked as a System Engineer at Grameenphone, focusing primarily on microwave t
 
 **Awards:**  
 - **Technology Award**: Received prestigious recognition for the quickest launch of LTE in Dhaka from the CTO.
+
+### College Projects, BUET ###
+
+- Power Electronics: Designed and implemented a variable input voltage compatible LED driver with a high-efficiency and a long lifetime without the use of the electrolytic capacitor, a 500 VA, 48 volt DC to 230 volt AC system comprising of a full-bridge DC-DC converter and H-bridge inverter with sinusoidal pulse width modulation technique for harmonic reduction. Additionally, designed and implemented a solar charge controller with SEPIC topology (Thesis)
+- Microcontroller: Designed and developed a Microcontroller based robotic maze solver.
+- DC Motor Design: Designed and developed a high-efficiency Single Phase Motor.
+- Power System: Designed a power factor improvement plant using PSS simulator.
+- Digital Electronics: Designed and implemented a digital IC-based remote controller that can control multiple home appliances including light, fan, washing machine, AC at the same time.
+- 8-Bit PC: Designed software-based 8-Bit PC (Proteus tool) which can carry out 29 basic instructions.
+- Control System: Designed and implemented a Microcontroller-based color detecting movable camera using Arduino UNO (Moving direction is vertical 180 degrees.
+- Numerical Analysis: Designed a student database using C# language that can insert, modify, delete and browse previously saved student profiles.
+- Digital Signal Processing: Designed a program to determine the pitch and the wavelength of human voice using MATLAB.
+- Line Following Robot: Designed and implemented a microcontroller-based line following robot (Figure: Line FOllowing Robot Contest).
+- Pattern Recognition: Designed a pattern recognition program that can identify a set of letters from A to Z along with digits from “0” to “9”.	
+
+<div style="text-align: center;">
+  <img src="/assets/img/bsc_work.png" alt="bsc_work" width="500" height="300">
+  <p style="font-style: italic;">Simulink Model of Maximum Power Point Tracker (MPPT)</p>
+</div>
+
+### UNDERGRAD THESIS ### 
+##### Title: Designing a Maximum Power Point Tracking charge controller for Solar Panel (100 Wp).
+- International Publications: [MPPT-IEEE](https://drive.google.com/file/d/0B2IPmmQtM5OleGRlSGZ6YnZlT3c/view?resourcekey=0-mC-OFF7jnsYIsiy6Ky_Ogg)
+- Final Thesis Book: [Here](https://drive.google.com/file/d/1G2niX0olst6P1g3CxrsU7HtQ1ugl9KXg/view).
+
+- Abstract: This paper presents the analysis and design of a Maximum Power Point Tracker (MPPT) which is economical and compact in size. The DC to DC converter used in the system is a SEPIC converter which eliminates the use of separate ground isolation circuits and reduces tracking time. The efficiency of this converter is better than the traditionally used Buck-Boost converter. Here Incremental Conductance method is used to get a stable output in varying solar irradiance levels. The proposed system also includes the elimination of PI controller for duty cycle modification, elimination of complex circuits for sensing current, and elimination of filters for accurate analog to digital conversion of voltage and currents. This system is tested and verified experimentally with a 135Wp solar panel in varying insolation levels. 
