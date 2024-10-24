@@ -4,7 +4,7 @@ permalink: /default/
 title: resources
 description: A collection of curated links and resources for learning AI and deep learning
 nav: true
-nav_order: 6
+nav_order: 7
 ---
 
 ## AI and Deep Learning Resources

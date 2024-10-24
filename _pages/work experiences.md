@@ -4,7 +4,7 @@ permalink: /work/
 title: experience
 description: Overview of my professional journey, roles, and contributions
 nav: true
-nav_order: 7
+nav_order: 6
 ---
 
 

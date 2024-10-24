@@ -4,7 +4,7 @@ title: projects
 permalink: /projects/
 description: A list of my work on Machine Learning and Cyber Physical Systems (CPS) solutions
 nav: true
-nav_order: 3
+nav_order: 4
 display_categories: [work, fun]
 horizontal: false
 ---
