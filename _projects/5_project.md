@@ -7,74 +7,162 @@ importance: 5
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+<h2>Outlier Detection in Agricultural Production Systems - DeepAg</h2>
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+<p>This section presents outlier detection (OD) methods using machine learning (ML) and deep learning (DL) models in Agricultural Production Systems (APS). The methodology involves unsupervised anomaly detection approaches, such as Isolation Forest, to identify outliers in the agricultural data. These techniques enable precision farming by detecting anomalies that may signify economic risks or operational inefficiencies.</p>
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+<h3>Isolation Forest</h3>
+
+<p>The Isolation Forest algorithm is designed for unsupervised anomaly detection. It isolates outliers by constructing a binary tree structure where outliers are more likely to be isolated earlier in the process compared to normal data points. The key idea is that outliers require fewer splits to be isolated, leading to shorter path lengths in the trees. Figure 1 illustrates the Isolation Forest algorithm.</p>
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-12">
+        <img src="Figures/Isolation_Forest.png" alt="Isolation Forest Method for OD" class="img-fluid rounded z-depth-1">
+        <div class="caption">
+            <p><em>Figure 1: Isolation Forest Method for OD</em> (<a href="https://doi.org/10.1109/ICOIN.2021.9366416">Regaya et al., 2021</a>)</p>
+        </div>
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
+
+<p>The Isolation Forest constructs multiple isolation trees, each of which is built using a random subset of data points and features. The algorithm assigns an anomaly score to each data point based on the number of splits required to isolate it. Figure 2 shows the DeepAg methodology, where economic indices (e.g., Crude Oil, Gold, Dow Jones, S&amp;P 500, VIX) are used as inputs for anomaly detection.</p>
+
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-12">
+        <img src="Figures/methods-deepag.png" alt="DeepAg Methodology" class="img-fluid rounded z-depth-1">
+        <div class="caption">
+            <p><em>Figure 2: DeepAg Methodology</em> (<a href="https://doi.org/10.1109/ACCESS.2021.3056591">Gurrapu et al., 2021</a>)</p>
+        </div>
     </div>
 </div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+<h4>Algorithm: Isolation Forest for Outlier Detection</h4>
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+<pre>
+<code>
+\begin{algorithm}
+\caption{Isolation Forest for Outlier Detection}
+\label{algo:Isolation-Forest}
+\begin{algorithmic}[1]
+\STATE \textbf{Input:} Dataset $X$, number of trees $T$, sub-sampling size $S$
+\STATE \textbf{Output:} Outlier scores for each data point
+
+\STATE Initialize an empty set of isolation trees: $F = \{\}$
+
+\FOR{$t$ in $1$ to $T$}
+    \STATE Randomly select $S$ samples from $X$ without replacement to create a sub-sample $X_s$
+    \STATE Create a new isolation tree $T_t$ using $X_s$ as follows:
+        \STATE \hspace{10pt} If $X_s$ contains only one point or maximum depth is reached, create a leaf node with that point.
+        \STATE \hspace{10pt} Otherwise, randomly select a feature $A$ from the remaining features.
+        \STATE \hspace{10pt} Randomly select a split value $p$ for feature $A$ within its range in $X_s$.
+        \STATE \hspace{10pt} Split $X_s$ into two subsets: $X_{\text{left}}$ containing points with $A \leq p$ and $X_{\text{right}}$ with $A > p$.
+        \STATE \hspace{10pt} Create a non-leaf node with feature $A$ and split value $p$.
+        \STATE \hspace{10pt} Recursively build the left subtree using $X_{\text{left}}$ and the right subtree using $X_{\text{right}}$.
+    \STATE Add the newly created isolation tree $T_t$ to the set $F$
+\ENDFOR
+
+\STATE Compute the anomaly score for each data point in $X$ as follows:
+\FOR{each data point $x$ in $X$}
+    \STATE For each isolation tree $T_t$ in $F$, traverse the tree to find the depth $d_t(x)$ at which $x$ is isolated.
+    \STATE Calculate the average depth across all trees: $D(x) = \frac{1}{T}\sum_{t=1}^{T} d_t(x)$
+    \STATE Compute the anomaly score for each data point $x$: $S(x) = 2^{-\frac{D(x)}{c}}$, where $c$ is a normalizing factor.
+\ENDFOR
+
+\RETURN Anomaly scores for each data point
+\end{algorithmic}
+\end{algorithm}
+</code>
+</pre>
+
+<h3>Anomaly Detection Thresholds and Contamination Rates</h3>
+
+<p>The contamination rate is a key parameter in the Isolation Forest algorithm, which estimates the percentage of outliers in the dataset. It is typically determined using the <strong>Interquartile Range (IQR)</strong>, a statistical measure that describes the middle 50% of the data distribution. IQR is calculated as the difference between the third quartile (Q3) and the first quartile (Q1), as shown in Equation (1):</p>
+
+<pre>
+<code>
+\[
+\text{Interquartile Range} = Q3 - Q1
+\]
+</code>
+</pre>
+
+<div class="row">
+    <div class="col-sm-12">
+        <img src="Figures/IQR.png" alt="Interquartile Range Diagram" class="img-fluid rounded z-depth-1">
+        <div class="caption">
+            <p><em>Figure 3: Interquartile Range Diagram</em></p>
+        </div>
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+<p>The contamination rate helps estimate the anomaly threshold value, which is used to classify data points as outliers. Tables 1a and 1b present the contamination rates for daily and monthly financial indices using the IQR method.</p>
 
-{% raw %}
+<pre>
+<code>
+\begin{table}[!ht]
+\caption{Contamination Rates for Financial Indices using IQR}
+\label{tab:iqr-combined}
+\begin{subtable}{\textwidth}
+  \caption{Daily Data Contamination (\%)}
+  \begin{tabular}{|l|l|}
+    \hline
+    Financial Index & Contamination Rate \\
+    \hline
+    VIX & 6.559 \\
+    \hline
+    Gold & 5.382 \\
+    \hline
+    S\&P 500 & 6.008 \\
+    \hline
+    DOW & 6.125 \\
+    \hline
+    Crude Oil & 3.953 \\
+    \hline
+  \end{tabular}
+\end{subtable}
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+\begin{subtable}{\textwidth}
+  \caption{Monthly Data Contamination (\%)}
+  \begin{tabular}{|l|l|}
+    \hline
+    Financial Index & Contamination Rate \\
+    \hline
+    VIX & 6.250 \\
+    \hline
+    Gold & 2.232 \\
+    \hline
+    S\&P 500 & 2.232 \\
+    \hline
+    DOW & 2.232 \\
+    \hline
+    Crude Oil & 6.250 \\
+    \hline
+  \end{tabular}
+\end{subtable}
+\end{table}
+</code>
+</pre>
 
-{% endraw %}
+<p>The anomaly score for each data point is computed based on the path length in the isolation trees, as described by Equation (2):</p>
+
+<pre>
+<code>
+\[
+s(x, m) = 2^{-E(h(x)) / c(m)}
+\]
+</code>
+</pre>
+
+<p>Finally, a threshold value <strong>T</strong> is selected using contamination rates to classify data points as outliers or normal, as defined in Equations (3) and (4):</p>
+
+<pre>
+<code>
+\[
+\text{If } S(x) < T, \text{ then } x \text{ is a normal data point.}
+\]
+\[
+\text{If } S(x) \geq T, \text{ then } x \text{ is an outlier.}
+\]
+</code>
+</pre>
+
+<p>The detailed steps of the Isolation Forest for outlier detection in economic data are presented in Algorithm 1 above. This approach efficiently detects anomalies in high-dimensional datasets, making it suitable for APS data analysis.</p>

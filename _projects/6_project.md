@@ -19,17 +19,17 @@ category: work
 
 ### Problem Statement: Short-Term Water Level Forecasting (STWLF)
 
-The objective of short-term water level forecasting is to predict inflow levels over a short horizon. Specifically, we aim to forecast future water levels \( \{y_t\}_{M+1}^{M+H} \) based on past data \( \{y_t\}_{1}^{M} \), where:
+The objective of short-term water level forecasting is to predict inflow levels over a short horizon. Specifically, we aim to forecast future water levels $$ \{y_t\}_{M+1}^{M+H} $$ based on past data $$ \{y_t\}_{1}^{M} $$, where:
 
-\[
+\begin{equation}
 y_t = \text{Water level at time } t
-\]
-\[
+\end{equation}
+\begin{equation}
 M = \text{Length of historical data}
-\]
-\[
+\end{equation}
+\begin{equation}
 H = \text{Forecast horizon (e.g., 4-6 hours)}
-\]
+\end{equation}
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -45,12 +45,12 @@ H = \text{Forecast horizon (e.g., 4-6 hours)}
 
 Each time series is decomposed into its seasonal component \( S_t \) and level component \( L_t \), with the dynamic smoothing method using the Holt-Winters model. The key smoothing equations are as follows:
 
-\[
+\begin{equation}
 L_t = \alpha_t Y_t + (1 - \alpha_t)L_{t-1}
-\]
-\[
+\end{equation}
+\begin{equation}
 S_{t+P} = \beta_t \frac{Y_t}{L_t} + (1 - \beta_t)S_t
-\]
+\end{equation}
 
 Where \( L_t \) represents the level component, \( S_t \) represents the seasonal component, and \( \alpha_t, \beta_t \) are smoothing coefficients dynamically adjusted by the RNN.
 
@@ -68,11 +68,12 @@ Where \( L_t \) represents the level component, \( S_t \) represents the seasona
 
 To optimize forecasts, WcdNet-RNN uses a pinball loss function for both point forecasts and predictive intervals. The loss function is defined as:
 
-\[
-L_{\tau} = \rho(y_{\tau}, \hat{y}_{q*, \tau}) + \gamma(\rho(y_{\tau}, \hat{y}_{q, \tau}) + \rho(y_{\tau}, \hat{y}_{\bar{q}, \tau}))
-\]
+\begin{equation}
+L_{\tau} = \rho(y_{\tau}, \hat{y}_{q^* , \tau}) + \gamma \left( \rho(y_{\tau}, \hat{y}_{q , \tau}) + \rho(y_{\tau}, \hat{y}_{\bar{q}, \tau}) \right)
+\end{equation}
 
-Where \( \rho \) represents the pinball loss, \( q^* \) is the median quantile, and \( q, \bar{q} \) represent the bounds of the predictive intervals.
+Where \\( \rho \\) represents the pinball loss, \\( q^* \\) is the median quantile, and \\( q, \bar{q} \\) represent the bounds of the predictive intervals.
+
 
 ### Pre and Post-Processing
 
