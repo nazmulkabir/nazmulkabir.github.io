@@ -32,4 +32,4 @@ Before this, at the Advanced Research Institute under [Dr. Saifur Rahman](https:
 
 I am an experienced machine learning expert specializing in AI and cybersecurity for critical infrastructure. I have a proven track record of enhancing security and efficiency with ML solutions deployed in major U.S. facilities. Skilled in developing scalable AI models for real-time threat detection, I am committed to advancing data-driven technologies in high-stakes environments. My motto is: "Advancing data-driven technologies in high-stakes environments."
 
-Anticipating my Ph.D. graduation in 2024, I am seeking full-time opportunities, particularly in machine learning research with tabular and time series data. For any inquiries or opportunities, please contact me at [nazmulkabir@vt.edu](mailto:nazmulkabir@vt.edu).
+Anticipating my Ph.D. graduation in 2024, I am seeking full-time opportunities, particularly in machine learning research with tabular and time series data. For any inquiries or opportunities, please contact me at [nazmulkabir@vt.edu](mailto:nazmulkabir@vt.edu) or schedule a meeting with me using this [LINK](https://calendly.com/nazmulkabir-vt/30min).
