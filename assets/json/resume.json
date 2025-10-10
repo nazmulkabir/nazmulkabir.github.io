@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Md Nazmul Kabir Sikder",
-    "label": "PhD Candidate",
+    "label": "Postdoctoral Research Associate",
     "image": "",
     "email": "nazmulkabir@vt.edu",
     "phone": "(571) 277-0159",
     "url": "https://nazmulkabir.github.io/",
-    "summary": "A Bangladesh-born Computer Engineer, apply AI and Deep Learning to tabular and time-series data for forecasting and anomaly detection with AI Assurance",
+    "summary": "Postdoctoral Research Associate in Computer Engineering specializing in AI assurance and cybersecurity for critical infrastructure. Expert in developing robust and explainable machine learning methods for cyberattack detection in cyber-physical systems.",
     "location": {
       "address": "900 North Glebe Rd.",
       "postalCode": "22203",
@@ -15,11 +15,6 @@
       "region": "Virginia"
     },
     "profiles": [
-      {
-        "network": "Twitter",
-        "username": "Sik1Kabir",
-        "url": "https://x.com/Sik1Kabir"
-      },
       {
         "network": "LinkedIn",
         "username": "md-nazmul-kabir-sikder-831596a6",
@@ -34,11 +29,26 @@
   },
   "work": [
     {
+      "name": "Commonwealth Cyber Initiative, Virginia Tech",
+      "position": "Postdoctoral Research Associate",
+      "url": "https://cyberinitiative.org/",
+      "startDate": "2025-01-01",
+      "endDate": "Present",
+      "summary": "Conducting advanced research in AI assurance and cybersecurity for critical infrastructure. Developing robust and explainable machine learning methods for cyberattack detection in cyber-physical systems with applications in water distribution and agricultural networks.",
+      "highlights": [
+        "AI Assurance for Critical Infrastructure",
+        "Explainable AI for Cybersecurity",
+        "Real-time Threat Detection Systems",
+        "Cyber-Physical Systems Security",
+        "Machine Learning Robustness and Reliability"
+      ]
+    },
+    {
       "name": "A3 Lab & Commonwealth Cyber Initiative",
       "position": "Graduate Research Assistant",
       "url": "https://ai.bse.vt.edu/",
       "startDate": "2021-01-01",
-      "endDate": "Present",
+      "endDate": "2024-12-01",
       "summary": "Led the development of advanced AI models for threat detection in water supply systems, improving the efficacy and explainability of real-time cyber-physical threat detection methods.",
       "highlights": [
         "Cyber-physical Attacks Detection: Increased concealed attack detection accuracy by 25%, reduced false positives by 30%",
@@ -93,14 +103,16 @@
       "url": "https://www.vt.edu/",
       "area": "Computer Engineering",
       "studyType": "PhD",
-      "startDate": "2019-08-01",
-      "endDate": "Present",
+      "startDate": "2022-05-01",
+      "endDate": "2024-12-01",
       "score": "",
       "courses": [
         "Deep Learning",
         "Reinforcement Learning",
         "Optimization Techniques",
-        "Statistics in Research"
+        "Statistics in Research",
+        "AI Assurance Methods",
+        "Cybersecurity for Critical Infrastructure"
       ]
     },
     {
@@ -287,12 +299,27 @@
     },
     {
       "name": "Cybersecurity Tools",
-      "level": "Intermediate",
+      "level": "Expert",
       "icon": "",
       "keywords": [
         "OpenSSL",
         "JWT",
-        "PyCrypto"
+        "PyCrypto",
+        "NIST Framework",
+        "MITRE ATT&CK",
+        "Network Security Analysis"
+      ]
+    },
+    {
+      "name": "AI Assurance",
+      "level": "Expert",
+      "icon": "",
+      "keywords": [
+        "Explainable AI",
+        "Model Robustness",
+        "Adversarial ML",
+        "AI Safety",
+        "Trustworthy AI"
       ]
     }
   ],
@@ -310,15 +337,17 @@
   ],
   "interests": [
     {
-      "name": "Data Science",
+      "name": "Research Areas",
       "icon": "",
       "keywords": [
-        "Deep Learning",
+        "AI Assurance",
         "Cybersecurity",
+        "Explainable AI",
         "Cyber-Physical Systems",
-        "Water Supply Systems",
-        "Smart Grid",
-        "Power Systems"
+        "Critical Infrastructure Protection",
+        "Machine Learning Robustness",
+        "Time Series Analysis",
+        "Anomaly Detection"
       ]
     }
   ]

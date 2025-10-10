@@ -2,7 +2,7 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description:
+description: Open-source projects and code repositories for AI/ML research and cybersecurity tools
 nav: true
 nav_order: 5
 ---

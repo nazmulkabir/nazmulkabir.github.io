@@ -1,5 +1,57 @@
 ---
 ---
+@phdthesis{sikder2025phd,
+  title       = {AI Methods for Anomaly Detection in Cyber-Physical Systems: With Application to Water and Agriculture},
+  author      = {Sikder, Md Nazmul Kabir},
+  school      = {Virginia Tech},
+  address     = {Blacksburg, VA},
+  year        = {2025},
+  month       = {feb},
+  preview     = {thesis.jpg},
+  url         = {https://hdl.handle.net/10919/124470},
+  pdf         = {Sikder_M_D_2024.pdf},
+  keywords    = {AI Assurance, Cyber-Physical Systems, Outlier Analysis, Machine Learning, Deep Learning, Intelligent Water Systems, Context},
+  abstract    = {Recent unprecedented AI and sensor technology advancements are transforming all do-
+mains, including Water Distribution Systems (WDSs) and Agricultural Production Systems
+(APSs). With Industry 4.0, WDSs and APSs are undergoing a significant digital trans-
+formation to enable data-driven monitoring and control of utility operations. Incorporat-
+ing cyber elements—such as sensors, actuators, data transmitters, receivers, Programmable
+Logic Controllers (PLCs), and Internet of Things (IoT) devices—aims to make these Cyber-
+Physical Systems (CPSs) more effective in Operation and Maintenance (O&M). However,
+this progress comes with a trade-off, as CPSs become increasingly vulnerable to security and
+safety threats. For example, in 2013, hackers seized control of a small Florida dam, releasing
+unprocessed water into nearby communities. Furthermore, on February 5th, 2021, a Florida
+water treatment plant (in Oldsmar, FL) was compromised when the hacker altered the levels
+of sodium hydroxide (N aOH) in the water—a chemical that would severely damage human
+tissue. Recent targeted attacks on infrastructure in Ukraine also highlight the risks facing
+critical infrastructures worldwide, including WDSs. These events suggest that current con-
+trol operations are largely exposed, necessitating sophisticated learning algorithms that can
+estimate system states, detect anomalies, and mitigate the harm caused by such intrusions.
+Technology has fundamentally transformed agriculture as well, significantly impacting this
+domain. Agriculture, a vital occupation in numerous countries, now faces increasing global
+population pressures. The United Nations (UN) projects the population to reach 9.7 billion
+by 2050, intensifying the strain on limited arable land. With only a 4% increase in cultivable
+land expected by 2050, farmers must do more with less. Traditional methods are insufficient
+to meet the soaring demands, as a 60% increase in food production is needed to feed an
+additional two billion people. This necessity for enhanced productivity and reduced waste
+drives the integration of AI into the agricultural sector. AI adoption not only accelerates
+efficiency but also increases production volumes, shortening the time from farm to market.
+This dissertation proposes novel, data- and context-driven Deep Learning (DL)-based meth-
+ods and decision-support tools to enhance cybersecurity and anomaly detection within WDSs
+and APSs. Focusing on these critical infrastructures demonstrates how AI-driven strategies
+can effectively address real-world challenges and improve resilience, operational efficiency,
+and overall trustworthiness. The contributions of this dissertation include a framework
+and pipelines that incorporate contextual insights and AI assurance principles to improve
+anomaly detection and cybersecurity in these domains; the development of DL models tai-
+lored for identifying complex outliers and providing actionable decision-support, thereby
+optimizing resource allocation and ensuring sustainable operations; and validation of these
+approaches through experimental evaluations using real-world and synthetic data. Collec-
+tively, these efforts highlight significant improvements in reliability, efficiency, and scalabil-
+ity for critical infrastructure management, bridging the gap between theoretical advances in
+AI-driven anomaly detection and their practical application in WDSs and APSs.},
+  url={https://vtechworks.lib.vt.edu/server/api/core/bitstreams/ddafd734-9641-4011-9bba-f5d4f8756bbe/content}
+}
+
 
 @article{sikder2023outlier,
   title={Outlier detection using AI: a survey},
@@ -9,8 +61,41 @@
   pages={231--291},
   year={2023},
   volume={31},
-  preview={Outlier.png}
+  preview={Outlier.png},
+  abstract={An outlier is an event or observation that is defined as an unusual activity, intrusion, or a suspicious data point that lies at an irregular distance from a population. The definition of an outlier event, however, is subjective and depends on
+
+the application and the domain (agriculture, healthcare, wireless network, etc.).
+It is important to detect outlier events as carefully as possible to avoid infrastructure failures, because anomalous events can cause minor to severe damage
+to infrastructure. For instance, an attack on a cyber-physical system, such as
+a microgrid may initiate voltage or frequency instability, thereby damaging a
+smart inverter, which involves very expensive repairing. Unusual activities in
+microgrids can be mechanical faults, behavior changes in the system, human
+or instrument errors or a malicious attack. Accordingly, and due to its variability, outlier detection (OD) is an ever-growing research field. In this chapter, we
+discuss the progress of OD methods using AI techniques. For that, the fundamental concepts of each OD model are introduced via multiple categories. Broad
+range of OD methods are categorized into six major categories: statistical-based,
+distance-based, density-based, clustering-based, learning-based, and ensemble
+methods. For every category, we discuss recent state-of-the-art approaches, their
+application areas, and performances. After that, a brief discussion regarding the
+advantages, disadvantages, and challenges of each technique is provided with
+recommendations on future research directions. This survey aims to guide the
+reader to better understand recent progress of OD methods for the assurance
+of AI.},
+  doi={https://doi.org/10.1016/B978-0-32-391919-7.00020-2},
+  url={https://www.sciencedirect.com/science/article/abs/pii/B9780323919197000202}
 }
+
+@article{sikder2025cp2o,
+  title   = {Context-driven Deep Learning Forecasting for Wastewater Treatment Plants},
+  author  = {Sikder, Md Nazmul Kabir and Batarseh, Feras A.},
+  journal = {ACM Transactions on Cyber-Physical Systems},
+  year    = {2025},
+  doi     = {10.1145/3744350},
+  url     = {https://dl.acm.org/doi/10.1145/3744350},
+  note    = {Just Accepted (June 20, 2025)},
+  pdf     = {Sikder_TCPS_2025_cP2O.pdf},
+  preview = {context.png},
+  abstract= {Wastewater‑treatment utilities face various operational challenges that could benefit from embodied AI and other advanced cyber‑physical technologies. These challenges include optimizing pump schedules, managing energy and chemical consumption during extreme weather events, and interpreting sensor data for water‑quality treatment. Addressing these issues requires accurate short‑term, multi‑step forecasting tools to provide reliable real‑time decision support, particularly during heavy‑rainfall events that can overwhelm operations. Leading water‑system operators and vendors in the United States report that tools capable of forecasting 4–6 hours ahead can significantly enhance resource management, including energy, chemicals, and manpower. However, accurate short‑term forecasting is particularly difficult because of the non‑linearities and seasonal variations inherent in plant data, which limit effective decision‑making. To address these challenges, we propose cP2O, a context‑driven forecasting solution, a novel hybrid deep‑learning architecture integrating dynamic context extraction with hierarchical, dilated long‑short‑term‑memory (LSTM) cells. The proposed model utilizes internal water‑system data, such as flow rates and tunnel levels, along with exogenous variables including weather, river flow, and demographic information to derive relevant context. It captures both short‑term fluctuations and long‑term dependencies in water‑level data, while an internal attention mechanism dynamically weighs the importance of exogenous information. We validate the model on two full‑scale utilities: tunnel‑water‑level forecasting at DC Water’s Blue Plains facility and nitrate‑level prediction at AlexRenew. Relative to strong baselines, cP2O reduces mean absolute percentage error by 22 % and 19 %, respectively, and its 90 % prediction bands cover 90.5 % ± 3.2 % of observations (5.9 % below, 3.6 % above). By dynamically incorporating contextual information, especially under critical conditions, the model delivers reliable real‑time forecasts that enhance resource allocation and strengthen the overall resilience of wastewater‑treatment operations.}}
+
 
 @article{sikder2023deepH2O,
   title={Deep H2O: Cyber attacks detection in water distribution systems using deep learning},
@@ -18,9 +103,26 @@
   journal={Journal of Water Process Engineering},
   volume={52},
   pdf = {Deeph2o.pdf},
-  pages={9},
+  pages={103532},
   year={2023},
-  preview={DeepH2O.png}
+  preview={DeepH2O.png},
+  abstract={Water Distribution Systems (WDSs) leverage the recent technological advancements in sensor technologies and Cyber-Physical Systems (CPSs) for better processing, distribution, and delivery of clean water. Given the digital nature of CPSs, they can be vulnerable to different kinds of cyber threats, especially in cases where adversaries can conceal the state of the attack. If an adversary (state or non-state actor) successfully compromises a WDS, that could result in major destructive consequences to water quality, public health, and agricultural irrigation. This paper presents empirical Artificial Intelligence (AI)-based methods for detecting such concealed attacks in WDS. We present two Deep Learning (DL) models: Temporal Graph Convolutional Network (TGCN) with Attention, a supervised learning model, and High Confidence Auto-Encoder (HCAE), an unsupervised learning model. TGCN adopts Attention and Robust Mahalanobis Distance (RMD) metrics for robust and generalizable forecasting performance. HCAE uses customized hidden layers to improve classification performance compared to state-of-the-art approaches. Experiments are performed to evaluate the proposed models using the BATtle of the Attack Detection ALgorithms (BATADAL) dataset; founded on a Supervisory Control And Data Acquisition (SCADA) infrastructure. Additionally, we assess the performance of the two models against synthetically poisoned data generated from a Generative Adversarial Network (GAN). Both attack detection models show superior accuracy with attack detection, localization, and overall robustness against data poisoning. The results suggest that both the supervised and unsupervised models perform better attack detection with a ranking score of 0.845 and 0.933, respectively. Results also indicate that, among the two models, the unsupervised model performs better in detecting poisoned data (accuracy: 0.992) and has better generalizability. Experimental results are recorded, evaluated, and discussed.},
+  doi={https://doi.org/10.1016/j.jwpe.2023.103568},
+  url={https://www.sciencedirect.com/science/article/abs/pii/S2214714423000855}
+}
+
+@article{sikder2025assessing,
+  title={Assessing the Impact of Cyber Attacks on Water Distribution Systems: A Deep Learning Approach},
+  author={Sikder, Md Nazmul Kabir and Wang, Yingjie and Batarseh, Feras A},
+  journal={IEEE Access},
+  volume={13},
+  pdf = {GANgeneration.pdf},
+  pages={106443 - 106464},
+  year={2023},
+  preview={access-gagraphic-3577969.jpg},
+  abstract={Limited data access to Water Distribution Systems (WDSs) is a longstanding barrier to data-driven research and development. This limited access is further exacerbated by the reluctance of WDSs operators to share data. Driven by the absence of standard mandates, resource constraints, privacy and security concerns, and legal challenges, access to big data has been a challenge in the water scientific community. This review paper addresses this limitation by utilizing Generative Adversarial Networks (GANs) to generate realistic synthetic datasets, overcoming data scarcity and privacy concerns in WDSs. We review, train, and evaluate seven state-of-the-art GAN models using three multivariate time-series datasets. The core contribution of this work lies in its comprehensive technical review of the GANs, comparing and evaluating their ability to replicate temporal dynamics and maintain spatio-temporal dependencies within WDSs. For evaluation, we use techniques like t-distributed Stochastic Neighbor Embedding (t-SNE) and Principal Component Analysis (PCA) to quantify the diversity of the generated synthetic data. Key findings indicate that specific GAN models, such as Cramer GAN and CTGAN, are effective in generating data for predictive modeling, replacing the need for original WDSs datasets. Additionally, DoppelGANger and TimeGAN exhibit strong capabilities in preserving essential spatio-temporal relationships, which are critical for applications like environmental impact estimation. The results also highlight the practical utility of GAN-generated synthetic data in supporting the secure and effective management of WDSs, particularly in scenarios where data are scarce or sensitive. This research contributes to the application of Artificial Intelligence (AI) in water resource management and guides the selection of appropriate GAN models for specific tasks and contexts, demonstrating their practical implications in real-world scenarios. Experimental results are recorded, evaluated, and discussed.},
+  doi={10.1109/ACCESS.2025.3577969},
+  url={https://ieeexplore.ieee.org/abstract/document/11028129}
 }
 
 @book{batarseh2022AIAssurance,
@@ -30,7 +132,10 @@
   pdf = {[book] AI Assurance.pdf},
   year={2022},
   volume={8},
-  preview={Assurance.png}
+  preview={Assurance.png},
+  abstract={This comprehensive book explores the critical aspects of AI assurance, covering trustworthiness, explainability, safety, and ethical considerations in artificial intelligence systems. It provides frameworks and methodologies for ensuring reliable AI deployment in critical applications and sensitive domains.},
+  isbn={978-0-323-91919-7},
+  url={https://www.sciencedirect.com/book/9780323919197/ai-assurance}
 }
 
 @inproceedings{gurrapu2021deepag,
@@ -40,7 +145,10 @@
   pdf = {Deepag.pdf},
   pages={1--8},
   year={2021},
-  preview={Deepag.png}
+  preview={Deepag.png},
+  abstract={Quantitative metrics that measure the global econ-omy's equilibrium have strong and interdependent relationships with the agricultural supply chain and international trade flows. Sudden shocks in these processes caused by outlier events such as trade wars, pandemics, or weather can have complex effects on the global economy. In this paper, we propose a novel framework, namely: DeepAg, that employs econometrics and measures the effects of outlier events detection using Deep Learning (DL) to determine relationships between commonplace financial indices (such as the DowJones), and the production values of agricultural commodities (such as Cheese and Milk). We employed a technique called Long Short-Term Memory (LSTM) networks successfully to predict commodity production with high accuracy and also present five popular models (regression and boosting) as baselines to measure the effects of outlier events. The results indicate that DeepAg with outliers' considerations (using Isolation Forests) outperforms baseline models, as well as the same model without outliers detection. Outlier events make a considerable impact when predicting commodity production with respect to financial indices. Moreover, we present the implications of DeepAg on public policy, provide insights for policymakers and farmers, and for operational decisions in the agricultural ecosystem. Data are collected, models developed, and the results are recorded and presented.},
+  doi={10.1109/SSCI50451.2021.9659921},
+  url={https://ieeexplore.ieee.org/abstract/document/9659921}
 }
 
 @inbook{williams2022application,
@@ -51,7 +159,11 @@
   pages={501--529},
   year={2022},
   volume={1},
-  preview={Deepag.png}
+  preview={Deepag.png},
+  abstract={Agricultural policy has traditionally been conducted in an ad hoc manner, generally, by responding to natural disasters instinctively or managing unavoidable causes through the implementation of short term financial compensations or long-term loan and insurance programs at farms. The presented model, namely AI2Farm, provides farmers with predictions during conventional and unconventional times to compensate for the little to no guidance that policies, such as the Farm Bill, provide for spur-of-the-moment decisions needed to be made that arise from outlier events.
+Farmers are an integral part of our economy due to their ability to manage market supply and demand expectations that solidify the nation's food security. Therefore it's important that farmers have access to the most up-to-date technology to make sound decisions that are in the best interest of rural and urban communities. Machine learning (ML) models measure associations, correlations, and causations of global and domestic events via commonplace financial indices with the production, consumption, and pricing of global agricultural commodities in the United States. Consequently, a deeper understanding of changes in behavior displayed by farmers as a result of outlier events aid in the ability to determine how precision agriculture can best assist farmers in the decision-making process. This entire set of information is lastly applied to the analysis of farms in the state of Virginia with smart tools and equipment that can benefit from models such as AI2Farm; the model and its results are presented and discussed.},
+doi={https://doi.org/10.1016/B978-0-32-391919-7.00029-9},
+  url={https://www.sciencedirect.com/science/article/abs/pii/B9780323919197000299}
 }
 
 @inproceedings{sikder2022modelagnostic,
@@ -61,7 +173,10 @@
   pdf = {MAA.pdf},
   pages={9--18},
   year={2022},
-  preview={MAA.png}
+  preview={MAA.png},
+  abstract={State of the art Artificial Intelligence Assurance (AIA) methods validate AI systems based on predefined goals and standards, are applied within a given domain, and are designed for a specific AI algorithm. Existing works do not provide information on assuring subjective AI goals such as fairness and trustworthiness. Other assurance goals are frequently required in an intelligent deployment, including explainability, safety, and security. Accordingly, issues such as value loading, generalization, context, and scalability arise; however, achieving multiple assurance goals without major trade-offs is generally deemed an unattainable task. In this manuscript, we present two AIA pipelines that are model-agnostic, independent of the domain (such as: healthcare, energy, banking), and provide scores for AIA goals including explainability, safety, and security. The two pipelines: Adversarial Logging Scoring Pipeline (ALSP) and Requirements Feedback Scoring Pipeline (RFSP) are scalable and tested with multiple use cases, such as a water distribution network and a telecommunications network, to illustrate their benefits. ALSP optimizes models using a game theory approach and it also logs and scores the actions of an AI model to detect adversarial inputs, and assures the datasets used for training. RFSP identifies the best hyper-parameters using a Bayesian approach and provides assurance scores for subjective goals such as ethical AI using user inputs and statistical assurance measures. Each pipeline has three algorithms that enforce the final assurance scores and other outcomes. Unlike ALSP (which is a parallel process), RFSP is user-driven and its actions are sequential. Data are collected for experimentation; the results of both pipelines are presented and contrasted.},
+  doi={10.1109/STC55697.2022.00011},
+  url={https://ieeexplore.ieee.org/abstract/document/9951019}
 }
 
 @article{gurrapu2021precision,
@@ -72,7 +187,10 @@
   volume={34},
   pages={4},
   year={2021},
-  preview={Deepag.png}
+  preview={Deepag.png},
+  abstract={This paper presents comprehensive applications of machine learning techniques in precision agriculture and smart farming systems. We explore how AI can optimize crop management, resource allocation, and yield prediction while supporting sustainable agricultural practices.},
+  doi={},
+  url={https://scholar.archive.org/work/x4nad4ffdrgprittlkqyu7paki/access/wayback/https://journals.flvc.org/FLAIRS/article/download/128497/130068}
 }
 
 @inproceedings{chakma2015MPPT,
@@ -82,7 +200,10 @@
   pdf = {MPPT.pdf},
   year={2015},
   pages={4},
-  preview={MPPT.png}
+  preview={MPPT.png},
+  abstract={This paper presents analysis and design of a Maximum Power Point Tracker (MPPT) which is economical and compact in size. The DC to DC converter used in the system is SEPIC converter which eliminates the use of separate ground isolation circuit and reduces tracking time. The efficiency of this converter is better than traditionally used Buck-Boost converter. Here Incremental Conductance method is used to get a stable output in varying solar irradiance level. The proposed system also includes elimination of PI controller for duty cycle modification, elimination of complex circuit for sensing current and elimination of filters for accurate analog to digital conversion of voltage and currents. This system is tested and verified experimentally with 135Wp solar panel in varying insolation levels.},
+  doi={10.1109/WIECON-ECE.2015.7443942},
+  url={https://ieeexplore.ieee.org/abstract/document/7443942}
 }
 
 @article{kulkarni2023P2O,
@@ -94,17 +215,31 @@
   number={9},
   pages={04023045},
   year={2023},
-  preview={P2O.png}
+  preview={P2O.png},
+  abstract={Wastewater treatment plants (WWTPs) are critical infrastructures responsible for processing wastewater before discharging effluent to rivers and other potential uses. WWTPs use large, connected deep tunnels for storing sanitary and wet-weather flows for treatment. However, wastewater in those systems cannot exceed safe tunnel levels in order to prevent overflows of untreated wastewater into the environment. Further, WWTPs are among the 16 national lifeline infrastructure sectors in which the utilization of sensor technology has increased, making the sectors vulnerable to all forms of cyber threats. Considering these challenges, the work presented in this manuscript uncovers the role of AI at WWTPs by focusing on two problems: tunnel water-level prediction and detection of security threats. This is done by proposing an AI framework: P2⁢O (prediction, protection, and optimization). The prediction module forecasts the tunnel water level using deep-learning models based on the current wastewater flow in the tunnel and other inputs from the sensors and gauges. The protection module focuses on classifying the intentionality of an anomaly, i.e., whether an attack is adversarial in nature or merely an outlier, using recurrent neural network models. Last, the optimization module aims to provide actionable recommendations to pump operators using a genetic algorithm. The experimental results of P2⁢O indicate that the prediction module can predict the tunnel water level with 85% accuracy, and the protection module can detect about 97% of intentional attacks on WWTPs. AI models within P2⁢O are evaluated; the experimental results are presented and discussed.},
+  doi={https://doi.org/10.1061/JOEEDU.EEENG-7266},
+  url={https://ascelibrary.org/doi/abs/10.1061/JOEEDU.EEENG-7266}
 }
 
 @inproceedings{batarseh2022wastewater,
   title={Realtime management of wastewater treatment plants using AI},
   author={FA Batarseh and MO Yardimci and R Suzuki and MNK Sikder and Z Wang and W Mao},
-  booktitle={2022},
+  booktitle={2022 International Water Symposium},
   pdf = {IWS_22.pdf},
   pages={3},
   year={2022},
-  preview={IWS.png}
+  preview={IWS.png},
+  abstract={This work introduces the Real-time AI-Driven Decision Support System (RADS). RADS is a real-time
+cybersecurity, prediction, and optimization framework for Wastewater Treatment Plants (WWTP). RADS
+addresses the need for intelligent systems (AI-driven) to manage immense data and water flow at
+facilities. We present a web-based, AI-driven framework that can be adapted and deployed to assist
+multiple tasks including but not limited to, data security, reservoir water level prediction, and costefficient effluent management for pumping goals and during extreme weather conditions. RADS provides
+90% protection against cyberattacks, 87% accurate prediction of peak water levels in the WWTP
+reservoirs, and 27% saving on effluent release processes during extreme weather conditions. Our
+simulations also showed RADS was able to predict every single overflow incident from 2018 to 2022 at
+Blue Plains Advanced Wastewater Treatment Plant (DC Water).},
+note={Technical Report},
+  url={https://www.waterrf.org/sites/default/files/file/2022-11/2022_IWS-Challenge-Solution_Virginia-Tech.pdf}
 }
 
 @inproceedings{sikder2022scoring,
@@ -112,7 +247,18 @@
   author={FA Sikder and Md Nazmul Kabir and Batarseh},
   booktitle={SDSS Conference 2022},
   year={2022},
-  preview={MAA.png}
+  preview={MAA.png},
+  abstract={This work introduces the Real-time AI-Driven Decision Support System (RADS). RADS is a real-time
+cybersecurity, prediction, and optimization framework for Wastewater Treatment Plants (WWTP). RADS
+addresses the need for intelligent systems (AI-driven) to manage immense data and water flow at
+facilities. We present a web-based, AI-driven framework that can be adapted and deployed to assist
+multiple tasks including but not limited to, data security, reservoir water level prediction, and costefficient effluent management for pumping goals and during extreme weather conditions. RADS provides
+90% protection against cyberattacks, 87% accurate prediction of peak water levels in the WWTP
+reservoirs, and 27% saving on effluent release processes during extreme weather conditions. Our
+simulations also showed RADS was able to predict every single overflow incident from 2018 to 2022 at
+Blue Plains Advanced Wastewater Treatment Plant (DC Water).},
+note={PDF not available - Conference presentation},
+  url={https://www.amstat.org/meetings/sdss/2022/}
 }
 
 @inproceedings{usman2021quantification,
@@ -122,6 +268,9 @@
   pdf = {Demand_response.pdf},
   pages={1--6},
   year={2021},
-  preview={Demand.png}
+  preview={Demand.png},
+  abstract={Quantification of peak demand reduction potential of buildings is critical for demand response (DR) analysis in a microgrid (MG) environment. Due to the varying nature of electricity consumption throughout the day over different seasons, DR periods affect the energy savings and peak demand reduction potentials of a building in different ways. This paper investigates peak reduction potential of selected commercial buildings within a MG environment through HVAC set point and brightness adjustment. Building models are simulated in EnergyPlus and validated against monthly, daily and 30-minute building electrical consumption with the actual consumption from the smart meter data. The study is conducted over two different DR periods for a winter and a summer week to understand how time of the day and different weather conditions influence building peak demand. Results show that with the proper choice of the DR period along with the set point and the brightness adjustments, significant hourly peak demand reduction can be achieved for different types of commercial buildings.},
+  doi={DOI: 10.1109/PESGM46819.2021.9638053},
+  url={https://ieeexplore.ieee.org/document/9638053}
 }
 
