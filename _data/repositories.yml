@@ -11,3 +11,6 @@ github_repos:
   - nazmulkabir/pytorch-forecasting
   - nazmulkabir/AI-for-Ag-Production-DeepAg
   - nazmulkabir/graph-representation-learning
+
+# Controls the number of description lines in repo cards (used by _includes/repository/repo.liquid)
+repo_description_lines_max: 1

@@ -27,6 +27,7 @@ nav_order: 7
     <a href="#cybersecurity" class="nav-link"><i class="fas fa-shield-alt"></i> Security Tools</a>
     <a href="#datasets" class="nav-link"><i class="fas fa-database"></i> Datasets</a>
     <a href="#learning" class="nav-link"><i class="fas fa-graduation-cap"></i> Learning</a>
+    <a href="#development" class="nav-link"><i class="fas fa-code"></i> Development</a>
   </div>
 
   <!-- Machine Learning Tools -->
@@ -186,17 +187,6 @@ nav_order: 7
       </div>
     </div>
   </div>
-          <p>Deep learning framework for research and production. Excellent for explainable AI and model interpretability.</p>
-          <div class="resource-tags">
-            <span class="tag deep-learning">Deep Learning</span>
-            <span class="tag research">Research</span>
-          </div>
-          <div class="resource-links">
-            <a href="https://pytorch.org/" target="_blank" class="btn-link">
-              <i class="fas fa-external-link-alt"></i> Official Site
-            </a>
-            <a href="https://pytorch.org/docs/" target="_blank" class="btn-link">
-              <i class="fas fa-book"></i> Documentation
   <!-- Datasets -->
   <div id="datasets" class="resource-section">
     <h2><i class="fas fa-database"></i> Research Datasets</h2>
@@ -276,86 +266,6 @@ nav_order: 7
     </div>
   </div>
 
-  <!-- Learning Resources -->
-  <div id="learning" class="resource-section">
-    <h2><i class="fas fa-graduation-cap"></i> Learning & Development</h2>
-    
-    <div class="tool-grid">
-      <div class="tool-item">
-        <div class="tool-header">
-          <i class="fas fa-book"></i>
-          <h4>Deep Learning Book</h4>
-        </div>
-        <p>Ian Goodfellow's comprehensive deep learning textbook</p>
-        <div class="tool-tags">
-          <span class="tag">Deep Learning</span>
-          <span class="tag">Theory</span>
-        </div>
-      </div>
-      
-      <div class="tool-item">
-        <div class="tool-header">
-          <i class="fas fa-video"></i>
-          <h4>CS231n Stanford</h4>
-        </div>
-        <p>Convolutional Neural Networks for Visual Recognition</p>
-        <div class="tool-tags">
-          <span class="tag">Computer Vision</span>
-          <span class="tag">Online Course</span>
-        </div>
-      </div>
-      
-      <div class="tool-item">
-        <div class="tool-header">
-          <i class="fas fa-lock"></i>
-          <h4>Cybrary</h4>
-        </div>
-        <p>Free cybersecurity training platform</p>
-        <div class="tool-tags">
-          <span class="tag">Cybersecurity</span>
-          <span class="tag">Certification</span>
-        </div>
-      </div>
-      
-      <div class="tool-item">
-        <div class="tool-header">
-          <i class="fas fa-code"></i>
-          <h4>Kaggle Learn</h4>
-        </div>
-        <p>Free micro-courses on data science and ML</p>
-        <div class="tool-tags">
-          <span class="tag">Data Science</span>
-          <span class="tag">Practical</span>
-        </div>
-      </div>
-      
-      <div class="tool-item">
-        <div class="tool-header">
-          <i class="fas fa-brain"></i>
-          <h4>Fast.ai</h4>
-        </div>
-        <p>Practical deep learning for coders</p>
-        <div class="tool-tags">
-          <span class="tag">Deep Learning</span>
-          <span class="tag">Practical</span>
-        </div>
-      </div>
-      
-      <div class="tool-item">
-        <div class="tool-header">
-          <i class="fas fa-university"></i>
-          <h4>MIT 6.034</h4>
-        </div>
-        <p>Introduction to Artificial Intelligence</p>
-        <div class="tool-tags">
-          <span class="tag">AI Fundamentals</span>
-          <span class="tag">Theory</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <style>
 /* Professional Resources Page Styling */
 .resources-header {
@@ -404,7 +314,7 @@ nav_order: 7
   gap: 1rem;
   margin-bottom: 2rem;
   padding: 1rem;
-  background: #f8f9fa;
+  background: var(--global-card-bg-color);
   border-radius: 10px;
   flex-wrap: wrap;
 }
@@ -567,30 +477,6 @@ nav_order: 7
   }
 }
 </style>
-          </div>
-        </div>
-      </div>
-      
-      <div class="resource-card">
-        <div class="resource-icon">
-          <i class="fas fa-server"></i>
-        </div>
-        <div class="resource-content">
-          <h4>Suricata</h4>
-          <p>High-performance network IDS, IPS, and network security monitoring engine.</p>
-          <div class="resource-tags">
-            <span class="tag ids">IDS/IPS</span>
-            <span class="tag monitoring">Network Monitoring</span>
-          </div>
-          <div class="resource-links">
-            <a href="https://suricata.io/" target="_blank" class="btn-link">
-              <i class="fas fa-external-link-alt"></i> Official Site
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Datasets -->
   <div class="resource-category">
@@ -841,7 +727,7 @@ nav_order: 7
   </div>
 
   <!-- Development Tools -->
-  <div class="resource-category">
+  <div id="development" class="resource-category">
     <div class="category-header">
       <h2><i class="fas fa-code"></i> Development & Deployment</h2>
       <p>Essential tools for research development, experimentation, and deployment</p>
@@ -979,6 +865,7 @@ nav_order: 7
     </div>
   </div>
 </div>
+</div>
 
 <style>
 /* Enhanced Resources Page Styling */
@@ -1110,8 +997,8 @@ nav_order: 7
 }
 
 .resource-card.featured {
-  border-left: 4px solid #667eea;
-  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+  border-left: 4px solid var(--global-theme-color);
+  background: var(--global-card-bg-color);
 }
 
 .resource-card.featured::before {
@@ -1236,8 +1123,8 @@ nav_order: 7
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: #f8f9fa;
-  color: #667eea;
+  background: var(--global-card-bg-color);
+  color: var(--global-theme-color);
   text-decoration: none;
   border-radius: 0.5rem;
   font-size: 0.9rem;
@@ -1255,12 +1142,12 @@ nav_order: 7
 
 /* Contribution Section */
 .contribution-section {
-  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+  background: var(--global-card-bg-color);
   padding: 4rem 2rem;
   border-radius: 1rem;
   text-align: center;
   margin-top: 4rem;
-  border: 1px solid rgba(102, 126, 234, 0.1);
+  border: 1px solid var(--global-divider-color);
 }
 
 .contribution-content h2 {

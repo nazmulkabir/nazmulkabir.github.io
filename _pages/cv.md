@@ -402,11 +402,11 @@ toc:
 
 /* Quick Overview */
 .cv-overview {
-  background: #f8f9fa;
+  background: var(--global-card-bg-color);
   padding: 1.5rem;
   border-radius: 10px;
   margin-bottom: 2rem;
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--global-divider-color);
 }
 
 .overview-stats {

@@ -352,9 +352,9 @@ related_publications: true
     </div>
   </div>
 </div>
-\begin{equation}
-S_{t+P} = \beta_t \frac{Y_t}{L_t} + (1 - \beta_t)S_t
-\end{equation}
+$$
+S_{t+P} = \beta_t \frac{Y_t}{L_t} + (1 - \beta_t) S_t
+$$
 
 Where \( L_t \) represents the level component, \( S_t \) represents the seasonal component, and \( \alpha_t, \beta_t \) are smoothing coefficients dynamically adjusted by the RNN.
 
@@ -372,9 +372,9 @@ Where \( L_t \) represents the level component, \( S_t \) represents the seasona
 
 To optimize forecasts, cP2O uses a pinball loss function for both point forecasts and predictive intervals. The loss function is defined as:
 
-\begin{equation}
-L_{\tau} = \rho(y_{\tau}, \hat{y}_{q^* , \tau}) + \gamma \left( \rho(y_{\tau}, \hat{y}_{q , \tau}) + \rho(y_{\tau}, \hat{y}_{\bar{q}, \tau}) \right)
-\end{equation}
+$$
+L_{\tau} = \rho(y_{\tau}, \hat{y}_{q^* , \, \tau}) + \gamma \left( \rho(y_{\tau}, \hat{y}_{q , \, \tau}) + \rho(y_{\tau}, \hat{y}_{\bar{q}, \, \tau}) \right)
+$$
 
 Where \\( \rho \\) represents the pinball loss, \\( q^* \\) is the median quantile, and \\( q, \bar{q} \\) represent the bounds of the predictive intervals.
 

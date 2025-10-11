@@ -3,9 +3,11 @@ layout: page
 permalink: /repositories/
 title: repositories
 description: Open-source projects and code repositories for AI/ML research and cybersecurity tools
-nav: true
+nav: false
 nav_order: 5
 ---
+
+<!-- Deprecated: This page is hidden from navigation. Prefer the compact GitHub section on /projects/. -->
 
 ## GitHub users
 

@@ -53,9 +53,9 @@ social: true # includes social icons at the bottom of the page
         <div class="focus-papers">
           <h6>Key Publications:</h6>
           <ul class="paper-list">
-            <li><a href="#deeph2o">Deep H2O: Cyber attacks detection in water distribution systems using deep learning</a> <span class="journal">Journal of Water Process Engineering (2023)</span></li>
-            <li><a href="#p2o">P2O: AI-Driven Framework for Managing and Securing Wastewater Treatment Plants</a> <span class="journal">Journal of Environmental Engineering (2023)</span></li>
-            <li><a href="#maa">Model-agnostic scoring methods for artificial intelligence assurance</a> <span class="journal">IEEE STC (2022)</span></li>
+            <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S2214714423000855" target="_blank">Deep H2O: Cyber attacks detection in water distribution systems using deep learning</a> <span class="journal">Journal of Water Process Engineering (2023)</span></li>
+            <li><a href="https://ascelibrary.org/doi/abs/10.1061/JOEEDU.EEENG-7266" target="_blank">P2O: AI-Driven Framework for Managing and Securing Wastewater Treatment Plants</a> <span class="journal">Journal of Environmental Engineering (2023)</span></li>
+            <li><a href="https://ieeexplore.ieee.org/abstract/document/9951019" target="_blank">Model-agnostic scoring methods for artificial intelligence assurance</a> <span class="journal">IEEE STC (2022)</span></li>
           </ul>
         </div>
       </div>
@@ -71,9 +71,9 @@ social: true # includes social icons at the bottom of the page
         <div class="focus-papers">
           <h6>Key Publications:</h6>
           <ul class="paper-list">
-            <li><a href="#cp2o">Context-driven Deep Learning Forecasting for Wastewater Treatment Plants</a> <span class="journal">ACM TCPS (2025)</span></li>
-            <li><a href="#gan-wds">Assessing the Impact of Cyber Attacks on Water Distribution Systems</a> <span class="journal">IEEE Access (2023)</span></li>
-            <li><a href="#iws-challenge">Realtime management of wastewater treatment plants using AI</a> <span class="journal">International Water Symposium (2022)</span></li>
+            <li><a href="https://dl.acm.org/doi/10.1145/3744350" target="_blank">Context-driven Deep Learning Forecasting for Wastewater Treatment Plants</a> <span class="journal">ACM TCPS (2025)</span></li>
+            <li><a href="https://ieeexplore.ieee.org/abstract/document/11028129" target="_blank">Assessing the Impact of Cyber Attacks on Water Distribution Systems</a> <span class="journal">IEEE Access (2023)</span></li>
+            <li><a href="https://www.waterrf.org/sites/default/files/file/2022-11/2022_IWS-Challenge-Solution_Virginia-Tech.pdf" target="_blank">Realtime management of wastewater treatment plants using AI</a> <span class="journal">International Water Symposium (2022)</span></li>
           </ul>
         </div>
       </div>
@@ -89,9 +89,9 @@ social: true # includes social icons at the bottom of the page
         <div class="focus-papers">
           <h6>Key Publications:</h6>
           <ul class="paper-list">
-            <li><a href="#deepag">DeepAg: Deep learning approach for measuring the effects of outlier events</a> <span class="journal">IEEE SSCI (2021)</span></li>
-            <li><a href="#ai2farm">The application of artificial intelligence assurance in precision farming</a> <span class="journal">AI Assurance Book Chapter (2022)</span></li>
-            <li><a href="#ml-agriculture">Applications of machine learning for precision agriculture and smart farming</a> <span class="journal">FLAIRS (2021)</span></li>
+            <li><a href="https://ieeexplore.ieee.org/abstract/document/9659921" target="_blank">DeepAg: Deep learning approach for measuring the effects of outlier events</a> <span class="journal">IEEE SSCI (2021)</span></li>
+            <li><a href="https://www.sciencedirect.com/science/article/abs/pii/B9780323919197000299" target="_blank">The application of artificial intelligence assurance in precision farming</a> <span class="journal">AI Assurance Book Chapter (2022)</span></li>
+            <li><a href="https://scholar.archive.org/work/x4nad4ffdrgprittlkqyu7paki/access/wayback/https://journals.flvc.org/FLAIRS/article/download/128497/130068" target="_blank">Applications of machine learning for precision agriculture and smart farming</a> <span class="journal">FLAIRS (2021)</span></li>
           </ul>
         </div>
       </div>
@@ -107,9 +107,9 @@ social: true # includes social icons at the bottom of the page
         <div class="focus-papers">
           <h6>Key Publications:</h6>
           <ul class="paper-list">
-            <li><a href="#phd-thesis">AI Methods for Anomaly Detection in Cyber-Physical Systems</a> <span class="journal">PhD Dissertation, Virginia Tech (2025)</span></li>
-            <li><a href="#outlier-survey">Outlier detection using AI: a survey</a> <span class="journal">AI Assurance Book Chapter (2023)</span></li>
-            <li><a href="#ai-assurance-book">AI Assurance: Towards Trustworthy, Explainable, Safe, and Ethical AI</a> <span class="journal">Academic Press (2022)</span></li>
+            <li><a href="https://vtechworks.lib.vt.edu/server/api/core/bitstreams/ddafd734-9641-4011-9bba-f5d4f8756bbe/content" target="_blank">AI Methods for Anomaly Detection in Cyber-Physical Systems</a> <span class="journal">PhD Dissertation, Virginia Tech (2025)</span></li>
+            <li><a href="https://www.sciencedirect.com/science/article/abs/pii/B9780323919197000202" target="_blank">Outlier detection using AI: a survey</a> <span class="journal">AI Assurance Book Chapter (2023)</span></li>
+            <li><a href="https://www.sciencedirect.com/book/9780323919197/ai-assurance" target="_blank">AI Assurance: Towards Trustworthy, Explainable, Safe, and Ethical AI</a> <span class="journal">Academic Press (2022)</span></li>
           </ul>
         </div>
       </div>

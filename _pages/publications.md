@@ -11,37 +11,39 @@ nav_order: 3
 <div class="publications">
 
 <!-- Publication Statistics Section -->
-<div class="publication-stats-section mb-5">
+<div class="publication-stats-section mb-4">
   <div class="row">
     <div class="col-md-12">
-      <div class="card border-0 shadow-sm">
-        <div class="card-body text-center">
-          <h4 class="card-title mb-4"><i class="fas fa-chart-bar text-primary"></i> Publication Metrics</h4>
-          <div class="row">
-            <div class="col-md-3">
-              <div class="stat-item">
-                <h3 class="text-primary mb-1">{% bibliography_count -f {{site.scholar.bibliography}} %}</h3>
-                <p class="text-muted mb-0">Total Publications</p>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="stat-item">
-                <h3 class="text-success mb-1">{% bibliography_count -f {{site.scholar.bibliography}} -q @phdthesis %}</h3>
-                <p class="text-muted mb-0">PhD Thesis</p>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="stat-item">
-                <h3 class="text-info mb-1">{% bibliography_count -f {{site.scholar.bibliography}} -q @article %}</h3>
-                <p class="text-muted mb-0">Journal Articles</p>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="stat-item">
-                <h3 class="text-warning mb-1">{% bibliography_count -f {{site.scholar.bibliography}} -q @inproceedings %}</h3>
-                <p class="text-muted mb-0">Conference Papers</p>
-              </div>
-            </div>
+      <div class="stats-compact">
+        <h2 class="section-title text-center mb-3">
+          <i class="fas fa-file-alt text-primary"></i> Research Publications
+        </h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">{% bibliography_count -f {{site.scholar.bibliography}} %}</span>
+            <span class="stat-label">Total Publications</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">{% bibliography_count -f {{site.scholar.bibliography}} -q @article %}</span>
+            <span class="stat-label">Journal Articles</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">{% bibliography_count -f {{site.scholar.bibliography}} -q @inproceedings %}</span>
+            <span class="stat-label">Conference Papers</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Years Research</span>
+          </div>
+        </div>
+        <div class="publication-highlights">
+          <h6 class="mb-2">Featured Venues:</h6>
+          <div class="venue-tags">
+            <span class="venue-tag">ACM TCPS</span>
+            <span class="venue-tag">IEEE Access</span>
+            <span class="venue-tag">Journal of Water Process Engineering</span>
+            <span class="venue-tag">IEEE STC</span>
+            <span class="venue-tag">FLAIRS</span>
           </div>
         </div>
       </div>
@@ -188,20 +190,20 @@ nav_order: 3
 }
 
 .publication-controls {
-  background: #f8f9fa;
+  background: var(--global-card-bg-color);
   padding: 1.5rem;
   border-radius: 0.75rem;
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--global-divider-color);
 }
 
 .publications .bibliography .row {
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background: #ffffff;
+  background: var(--global-card-bg-color);
   border-radius: 0.75rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--global-divider-color);
 }
 
 .publications .bibliography .row:hover {
@@ -321,3 +323,85 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+
+<style>
+/* Compact Stats Styling */
+.stats-compact {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: var(--global-card-bg-color);
+  border-radius: 0.75rem;
+  border: 1px solid var(--global-divider-color);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--global-theme-color);
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--global-text-color-light);
+  font-weight: 500;
+}
+
+.publication-highlights {
+  margin-top: 1.5rem;
+}
+
+.publication-highlights h6 {
+  color: var(--global-text-color-light);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.venue-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.venue-tag {
+  background: rgba(102, 126, 234, 0.1);
+  color: var(--global-theme-color);
+  padding: 0.375rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+}
+</style>

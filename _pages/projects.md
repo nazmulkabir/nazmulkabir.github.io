@@ -27,15 +27,17 @@ horizontal: false
         <div class="hero-stats mt-4">
           <div class="row justify-content-center">
             <div class="col-md-3 col-6">
-              <div class="stat-card">
+              <div class="stat-card clickable" data-target="projects-section">
                 <h3 class="stat-number">{{ site.projects | size }}</h3>
                 <p class="stat-label">Active Projects</p>
+                <i class="fas fa-arrow-down stat-arrow"></i>
               </div>
             </div>
             <div class="col-md-3 col-6">
-              <div class="stat-card">
+              <div class="stat-card clickable" data-target="research-focus">
                 <h3 class="stat-number">4</h3>
                 <p class="stat-label">Research Areas</p>
+                <i class="fas fa-arrow-down stat-arrow"></i>
               </div>
             </div>
             <div class="col-md-3 col-6">
@@ -45,9 +47,10 @@ horizontal: false
               </div>
             </div>
             <div class="col-md-3 col-6">
-              <div class="stat-card">
+              <div class="stat-card clickable" data-target="/publications/">
                 <h3 class="stat-number">10+</h3>
                 <p class="stat-label">Publications</p>
+                <i class="fas fa-external-link-alt stat-arrow"></i>
               </div>
             </div>
           </div>
@@ -57,8 +60,29 @@ horizontal: false
   </div>
 </div>
 
+<!-- GitHub Highlights (compact) -->
+<div class="github-compact-section mb-5">
+  <h2 class="section-title text-center mb-2">
+    <i class="fab fa-github text-dark"></i> GitHub highlights
+  </h2>
+  <p class="text-center text-muted small mb-4">A few open-source repos I maintain or contribute to</p>
+
+  <div class="github-compact-grid">
+    {% assign repos = site.data.repositories.github_repos | slice: 0, 4 %}
+    {% for repo in repos %}
+      {% include repository/repo.liquid repository=repo %}
+    {% endfor %}
+  </div>
+
+  <div class="text-center mt-3">
+    <a class="btn btn-sm btn-outline-primary" href="https://github.com/{{ site.data.repositories.github_users[0] }}" target="_blank" rel="noopener">
+      <i class="fab fa-github"></i> View GitHub profile
+    </a>
+  </div>
+</div>
+
 <!-- Research Focus Areas -->
-<div class="research-focus-section mb-5">
+<div id="research-focus" class="research-focus-section mb-5">
   <div class="row">
     <div class="col-md-12">
       <h2 class="section-title text-center mb-4">
@@ -206,19 +230,18 @@ horizontal: false
 
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
+  <div id="projects-section">
   {% for category in page.display_categories %}
   <div class="project-category-section mb-5" data-category="{{ category }}">
-    <a id="{{ category }}" href=".#{{ category }}">
-      <h2 class="category-header">
-        {% if category == "work" %}
-          <i class="fas fa-briefcase text-primary"></i> Professional Projects
-        {% elsif category == "fun" %}
-          <i class="fas fa-lightbulb text-warning"></i> Research Experiments
-        {% else %}
-          <i class="fas fa-folder text-info"></i> {{ category | capitalize }}
-        {% endif %}
-      </h2>
-    </a>
+    <h2 class="category-header" id="{{ category }}">
+      {% if category == "work" %}
+        <i class="fas fa-briefcase text-primary"></i> Professional Projects
+      {% elsif category == "fun" %}
+        <i class="fas fa-lightbulb text-warning"></i> Research Experiments
+      {% else %}
+        <i class="fas fa-folder text-info"></i> {{ category | capitalize }}
+      {% endif %}
+    </h2>
     
     {% assign categorized_projects = site.projects | where: "category", category %}
     {% assign sorted_projects = categorized_projects | sort: "importance" %}
@@ -250,6 +273,7 @@ horizontal: false
     {% endif %}
   </div>
   {% endfor %}
+  </div>
 
 {% else %}
 
@@ -328,11 +352,35 @@ horizontal: false
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.2);
   transition: all 0.3s ease;
+  position: relative;
+}
+
+.stat-card.clickable {
+  cursor: pointer;
+}
+
+.stat-card.clickable:hover {
+  transform: translateY(-8px);
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .stat-card:hover {
   transform: translateY(-5px);
   background: rgba(255,255,255,0.15);
+}
+
+.stat-arrow {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.75rem;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.stat-card.clickable:hover .stat-arrow {
+  opacity: 1;
 }
 
 .stat-number {
@@ -356,17 +404,17 @@ horizontal: false
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: var(--global-text-color);
   margin-bottom: 3rem;
 }
 
 .focus-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  background: var(--global-card-bg-color);
   padding: 2rem;
   border-radius: 1rem;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid var(--global-divider-color);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -493,10 +541,10 @@ horizontal: false
 
 /* Project Controls */
 .project-controls-section {
-  background: #f8f9fa;
+  background: var(--global-card-bg-color);
   padding: 2rem;
   border-radius: 1rem;
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--global-divider-color);
 }
 
 .controls-container {
@@ -543,15 +591,22 @@ horizontal: false
 }
 
 /* Category Headers */
+.project-category-section {
+  margin-bottom: 3rem;
+  min-height: 200px;
+  padding: 1rem 0;
+}
+
 .category-header {
   font-size: 2rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: var(--global-text-color);
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 3px solid transparent;
-  border-image: linear-gradient(90deg, #667eea 0%, #764ba2 100%) 1;
-  display: inline-block;
+  border-image: linear-gradient(90deg, var(--global-theme-color) 0%, #764ba2 100%) 1;
+  display: block;
+  width: 100%;
 }
 
 .category-description {
@@ -615,6 +670,47 @@ horizontal: false
   opacity: 0;
   transform: translateY(20px);
   pointer-events: none;
+}
+
+/* Compact GitHub section */
+.github-compact-section {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+.github-compact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+@media (max-width: 1200px) {
+  .github-compact-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .github-compact-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .github-compact-grid { grid-template-columns: 1fr; }
+}
+
+/* Tighten repo include images inside this page */
+.github-compact-section .repo {
+  padding: 0.25rem !important;
+}
+.github-compact-section .repo-img-light,
+.github-compact-section .repo-img-dark {
+  border-radius: 0.5rem;
+  border: 1px solid #eef1f4;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.github-compact-section a:hover .repo-img-light,
+.github-compact-section a:hover .repo-img-dark {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 </style>
 
@@ -707,4 +803,31 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+// Interactive stats functionality
+document.querySelectorAll('.stat-card.clickable').forEach(card => {
+  card.addEventListener('click', function() {
+    const target = this.dataset.target;
+    
+    if (target.startsWith('/')) {
+      // External link
+      window.location.href = target;
+    } else {
+      // Scroll to section
+      const targetElement = document.getElementById(target);
+      if (targetElement) {
+        targetElement.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+        
+        // Add highlight effect
+        targetElement.style.animation = 'fadeInUp 0.6s ease-out';
+        setTimeout(() => {
+          targetElement.style.animation = '';
+        }, 600);
+      }
+    }
+  });
+});
 </script>
