@@ -19,6 +19,116 @@ nav_order: 7
   </div>
 </div>
 
+<!-- Animated News Section -->
+<div class="animated-news-section">
+  <div class="news-header">
+    <h2><i class="fas fa-newspaper"></i> Latest Research News</h2>
+    <p>Stay updated with the latest developments in AI research and cybersecurity</p>
+  </div>
+  
+  <div class="news-carousel-container">
+    <div class="news-carousel">
+      <!-- News Item 1 -->
+      <div class="news-item">
+        <div class="news-thumbnail">
+          <img src="{{ '/assets/img/news/ai-breakthrough.jpg' | relative_url }}" alt="AI Breakthrough" onerror="this.src='https://via.placeholder.com/300x200/3498db/white?text=AI+Research'">
+        </div>
+        <div class="news-content">
+          <span class="news-date">October 10, 2025</span>
+          <h4>Revolutionary AI Model Achieves 99% Accuracy in Cybersecurity Threat Detection</h4>
+          <p>New deep learning architecture shows unprecedented performance in identifying sophisticated cyber attacks...</p>
+          <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <!-- News Item 2 -->
+      <div class="news-item">
+        <div class="news-thumbnail">
+          <img src="{{ '/assets/img/news/water-systems.jpg' | relative_url }}" alt="Water Systems Security" onerror="this.src='https://via.placeholder.com/300x200/2ecc71/white?text=Water+Security'">
+        </div>
+        <div class="news-content">
+          <span class="news-date">October 8, 2025</span>
+          <h4>Smart Water Systems Defense: ML-Powered Anomaly Detection Framework</h4>
+          <p>Our latest research introduces an innovative machine learning approach for protecting critical water infrastructure...</p>
+          <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <!-- News Item 3 -->
+      <div class="news-item">
+        <div class="news-thumbnail">
+          <img src="{{ '/assets/img/news/agriculture-ai.jpg' | relative_url }}" alt="Agriculture AI" onerror="this.src='https://via.placeholder.com/300x200/f39c12/white?text=AgriTech+AI'">
+        </div>
+        <div class="news-content">
+          <span class="news-date">October 5, 2025</span>
+          <h4>Precision Agriculture: AI-Driven Crop Monitoring System Launches</h4>
+          <p>Breakthrough IoT and machine learning integration for real-time agricultural monitoring and optimization...</p>
+          <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <!-- News Item 4 -->
+      <div class="news-item">
+        <div class="news-thumbnail">
+          <img src="{{ '/assets/img/news/conference.jpg' | relative_url }}" alt="Research Conference" onerror="this.src='https://via.placeholder.com/300x200/9b59b6/white?text=Conference+2025'">
+        </div>
+        <div class="news-content">
+          <span class="news-date">October 1, 2025</span>
+          <h4>International Cybersecurity Conference 2025: Keynote Presentation</h4>
+          <p>Presenting cutting-edge research on explainable AI for cybersecurity at the prestigious international conference...</p>
+          <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <!-- News Item 5 -->
+      <div class="news-item">
+        <div class="news-thumbnail">
+          <img src="{{ '/assets/img/news/publication.jpg' | relative_url }}" alt="Research Publication" onerror="this.src='https://via.placeholder.com/300x200/e74c3c/white?text=Publication'">
+        </div>
+        <div class="news-content">
+          <span class="news-date">September 28, 2025</span>
+          <h4>New Research Paper Published in IEEE Transactions on Cybersecurity</h4>
+          <p>Latest work on adaptive machine learning for dynamic threat detection accepted in top-tier journal...</p>
+          <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <!-- News Item 6 -->
+      <div class="news-item">
+        <div class="news-thumbnail">
+          <img src="{{ '/assets/img/news/collaboration.jpg' | relative_url }}" alt="Research Collaboration" onerror="this.src='https://via.placeholder.com/300x200/34495e/white?text=Collaboration'">
+        </div>
+        <div class="news-content">
+          <span class="news-date">September 25, 2025</span>
+          <h4>New Research Collaboration with Leading Tech Companies Announced</h4>
+          <p>Exciting partnership to develop next-generation AI security solutions for critical infrastructure protection...</p>
+          <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Navigation Controls -->
+    <div class="news-controls">
+      <button class="news-control prev" onclick="moveCarousel(-1)">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="news-control next" onclick="moveCarousel(1)">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    
+    <!-- Progress Indicators -->
+    <div class="news-indicators">
+      <span class="indicator active" onclick="goToSlide(0)"></span>
+      <span class="indicator" onclick="goToSlide(1)"></span>
+      <span class="indicator" onclick="goToSlide(2)"></span>
+      <span class="indicator" onclick="goToSlide(3)"></span>
+      <span class="indicator" onclick="goToSlide(4)"></span>
+      <span class="indicator" onclick="goToSlide(5)"></span>
+    </div>
+  </div>
+</div>
+
 <div class="resources-container">
   
   <!-- Quick Navigation -->
@@ -187,6 +297,7 @@ nav_order: 7
       </div>
     </div>
   </div>
+  
   <!-- Datasets -->
   <div id="datasets" class="resource-section">
     <h2><i class="fas fa-database"></i> Research Datasets</h2>
@@ -261,342 +372,6 @@ nav_order: 7
         <div class="tool-tags">
           <span class="tag">Remote Sensing</span>
           <span class="tag">Agriculture</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<style>
-/* Professional Resources Page Styling */
-.resources-header {
-  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
-  color: white;
-  padding: 2.5rem 2rem;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.header-content h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem 0;
-}
-
-.header-content p {
-  font-size: 1.1rem;
-  margin: 0 0 1rem 0;
-  opacity: 0.9;
-}
-
-.resource-stats {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.stat {
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-.resources-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Navigation */
-.resource-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background: var(--global-card-bg-color);
-  border-radius: 10px;
-  flex-wrap: wrap;
-}
-
-.nav-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: white;
-  color: #2c3e50;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  border: 1px solid #e9ecef;
-  font-size: 0.9rem;
-}
-
-.nav-link:hover {
-  background: #3498db;
-  color: white;
-  text-decoration: none;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
-}
-
-/* Resource Sections */
-.resource-section {
-  margin-bottom: 3rem;
-}
-
-.resource-section h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #2c3e50;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #e9ecef;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.resource-section h2 i {
-  color: #3498db;
-  font-size: 1.3rem;
-}
-
-/* Tool Grid */
-.tool-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-}
-
-.tool-item {
-  background: white;
-  padding: 1.25rem;
-  border-radius: 10px;
-  border: 1px solid #e9ecef;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  transition: all 0.3s ease;
-}
-
-.tool-item:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transform: translateY(-2px);
-}
-
-.tool-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.tool-header i {
-  font-size: 1.5rem;
-  color: #3498db;
-  width: 24px;
-  text-align: center;
-}
-
-.tool-header h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #2c3e50;
-  margin: 0;
-}
-
-.tool-item p {
-  font-size: 0.9rem;
-  color: #6c757d;
-  margin: 0 0 1rem 0;
-  line-height: 1.5;
-}
-
-.tool-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.tag {
-  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-  color: white;
-  padding: 0.2rem 0.6rem;
-  border-radius: 15px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .resources-header {
-    padding: 2rem 1.5rem;
-  }
-  
-  .header-content h1 {
-    font-size: 1.7rem;
-  }
-  
-  .resource-stats {
-    gap: 1rem;
-  }
-  
-  .resource-nav {
-    gap: 0.5rem;
-  }
-  
-  .nav-link {
-    font-size: 0.8rem;
-    padding: 0.4rem 0.8rem;
-  }
-  
-  .tool-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .tool-item {
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-content h1 {
-    font-size: 1.5rem;
-  }
-  
-  .resource-nav {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .nav-link {
-    width: 100%;
-    justify-content: center;
-  }
-}
-</style>
-
-  <!-- Datasets -->
-  <div class="resource-category">
-    <div class="category-header">
-      <h2><i class="fas fa-database"></i> Research Datasets</h2>
-      <p>Curated datasets for cybersecurity research, anomaly detection, and ML model training</p>
-    </div>
-    
-    <div class="resource-grid">
-      <div class="resource-card featured">
-        <div class="resource-icon">
-          <i class="fas fa-water"></i>
-        </div>
-        <div class="resource-content">
-          <h4>BATADAL Dataset</h4>
-          <p>Battle of Attack Detection Algorithms - Water distribution system cyberattack dataset.</p>
-          <div class="resource-tags">
-            <span class="tag water">Water Systems</span>
-            <span class="tag cyberattacks">Cyberattacks</span>
-          </div>
-          <div class="resource-links">
-            <a href="https://www.batadal.net/" target="_blank" class="btn-link">
-              <i class="fas fa-external-link-alt"></i> Dataset
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="resource-card">
-        <div class="resource-icon">
-          <i class="fas fa-industry"></i>
-        </div>
-        <div class="resource-content">
-          <h4>SWaT Dataset</h4>
-          <p>Secure Water Treatment testbed dataset with normal operations and cyberattack scenarios.</p>
-          <div class="resource-tags">
-            <span class="tag industrial">Industrial Control</span>
-            <span class="tag scada">SCADA</span>
-          </div>
-          <div class="resource-links">
-            <a href="https://itrust.sutd.edu.sg/itrust-labs-datasets/" target="_blank" class="btn-link">
-              <i class="fas fa-external-link-alt"></i> Dataset
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="resource-card">
-        <div class="resource-icon">
-          <i class="fas fa-network-wired"></i>
-        </div>
-        <div class="resource-content">
-          <h4>NSL-KDD Dataset</h4>
-          <p>Improved version of KDD Cup 99 dataset for network intrusion detection research.</p>
-          <div class="resource-tags">
-            <span class="tag intrusion">Intrusion Detection</span>
-            <span class="tag network">Network Security</span>
-          </div>
-          <div class="resource-links">
-            <a href="https://www.unb.ca/cic/datasets/nsl.html" target="_blank" class="btn-link">
-              <i class="fas fa-external-link-alt"></i> Dataset
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="resource-card">
-        <div class="resource-icon">
-          <i class="fas fa-seedling"></i>
-        </div>
-        <div class="resource-content">
-          <h4>Agricultural IoT Datasets</h4>
-          <p>Collection of sensor data from smart agriculture systems for anomaly detection research.</p>
-          <div class="resource-tags">
-            <span class="tag agriculture">Agriculture</span>
-            <span class="tag iot">IoT Sensors</span>
-          </div>
-          <div class="resource-links">
-            <a href="https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset" target="_blank" class="btn-link">
-              <i class="fas fa-external-link-alt"></i> Kaggle
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="resource-card">
-        <div class="resource-icon">
-          <i class="fas fa-bolt"></i>
-        </div>
-        <div class="resource-content">
-          <h4>Power Grid Datasets</h4>
-          <p>Smart grid and power system datasets for critical infrastructure security research.</p>
-          <div class="resource-tags">
-            <span class="tag power-grid">Power Systems</span>
-            <span class="tag smart-grid">Smart Grid</span>
-          </div>
-          <div class="resource-links">
-            <a href="https://ieee-dataport.org/" target="_blank" class="btn-link">
-              <i class="fas fa-external-link-alt"></i> IEEE DataPort
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="resource-card">
-        <div class="resource-icon">
-          <i class="fas fa-traffic-light"></i>
-        </div>
-        <div class="resource-content">
-          <h4>CIC-IDS2017</h4>
-          <p>Comprehensive intrusion detection dataset with diverse attack scenarios and network traffic.</p>
-          <div class="resource-tags">
-            <span class="tag ids">Intrusion Detection</span>
-            <span class="tag comprehensive">Comprehensive</span>
-          </div>
-          <div class="resource-links">
-            <a href="https://www.unb.ca/cic/datasets/ids-2017.html" target="_blank" class="btn-link">
-              <i class="fas fa-external-link-alt"></i> Dataset
-            </a>
-          </div>
         </div>
       </div>
     </div>
@@ -865,92 +640,478 @@ nav_order: 7
     </div>
   </div>
 </div>
-</div>
 
 <style>
-/* Enhanced Resources Page Styling */
-.resources-hero {
+/* Animated News Section Styling */
+.animated-news-section {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   padding: 4rem 2rem;
+  margin: 2rem 0 4rem;
   border-radius: 1rem;
-  margin-bottom: 4rem;
   position: relative;
   overflow: hidden;
 }
 
-.resources-hero::before {
+.animated-news-section::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="newsgrid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23newsgrid)"/></svg>');
   opacity: 0.3;
 }
 
-.hero-content {
+.news-header {
+  text-align: center;
+  margin-bottom: 3rem;
   position: relative;
   z-index: 2;
-  text-align: center;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
+.news-header h2 {
+  font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 1rem;
   color: white;
 }
 
-.hero-subtitle {
+.news-header p {
   font-size: 1.2rem;
   opacity: 0.9;
-  max-width: 800px;
-  margin: 0 auto 3rem;
-}
-
-.resources-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
   max-width: 600px;
   margin: 0 auto;
 }
 
-.resources-stats .stat-card {
-  background: rgba(255,255,255,0.1);
-  padding: 1.5rem;
-  border-radius: 1rem;
+.news-carousel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.news-carousel {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  gap: 2rem;
+}
+
+.news-item {
+  flex: 0 0 350px;
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+  color: #2c3e50;
+}
+
+.news-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+
+.news-thumbnail {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.news-item:hover .news-thumbnail img {
+  transform: scale(1.1);
+}
+
+.news-content {
+  padding: 1.5rem;
+}
+
+.news-date {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.news-content h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-content p {
+  color: #6c757d;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
 }
 
-.resources-stats .stat-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255,255,255,0.15);
+.news-link:hover {
+  color: #764ba2;
+  transform: translateX(5px);
+  text-decoration: none;
 }
 
-.resources-stats .stat-card h3 {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
+/* Navigation Controls */
+.news-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.news-control {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #667eea;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.news-control:hover {
+  background: white;
+  transform: scale(1.1);
+  color: #764ba2;
+}
+
+.news-control.prev {
+  margin-left: -25px;
+}
+
+.news-control.next {
+  margin-right: -25px;
+}
+
+/* Progress Indicators */
+.news-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 2rem;
+  z-index: 2;
+  position: relative;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active,
+.indicator:hover {
+  background: white;
+  transform: scale(1.2);
+}
+
+/* Animation Classes */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.news-item.slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.news-item.slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+/* Responsive Design for News Section */
+@media (max-width: 768px) {
+  .animated-news-section {
+    padding: 2rem 1rem;
+    margin: 1rem 0 2rem;
+  }
+  
+  .news-header h2 {
+    font-size: 2rem;
+  }
+  
+  .news-header p {
+    font-size: 1rem;
+  }
+  
+  .news-item {
+    flex: 0 0 280px;
+  }
+  
+  .news-content {
+    padding: 1rem;
+  }
+  
+  .news-content h4 {
+    font-size: 1.1rem;
+  }
+  
+  .news-controls {
+    display: none;
+  }
+  
+  .news-carousel {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .news-carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .news-item {
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-item {
+    flex: 0 0 250px;
+  }
+  
+  .news-thumbnail {
+    height: 150px;
+  }
+  
+  .news-header h2 {
+    font-size: 1.7rem;
+  }
+}
+
+/* Professional Resources Page Styling */
+.resources-header {
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
   color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-.resources-stats .stat-card p {
-  margin: 0;
+.header-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.header-content p {
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
   opacity: 0.9;
-  font-weight: 600;
 }
 
-/* Resource Categories */
-.resource-categories {
+.resource-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.resources-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
+/* Navigation */
+.resource-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--global-card-bg-color);
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  color: #2c3e50;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  font-size: 0.9rem;
+}
+
+.nav-link:hover {
+  background: #3498db;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Resource Sections */
+.resource-section {
+  margin-bottom: 3rem;
+}
+
+.resource-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resource-section h2 i {
+  color: #3498db;
+  font-size: 1.3rem;
+}
+
+/* Tool Grid */
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.tool-item {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+
+.tool-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.tool-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.tool-header i {
+  font-size: 1.5rem;
+  color: #3498db;
+  width: 24px;
+  text-align: center;
+}
+
+.tool-header h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.tool-item p {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+}
+
+.tool-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Resource Categories (for learning and development sections) */
 .resource-category {
   margin-bottom: 4rem;
 }
@@ -961,7 +1122,7 @@ nav_order: 7
 }
 
 .category-header h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #2c3e50;
   margin-bottom: 1rem;
@@ -974,7 +1135,6 @@ nav_order: 7
   margin: 0 auto;
 }
 
-/* Resource Grid */
 .resource-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -997,8 +1157,7 @@ nav_order: 7
 }
 
 .resource-card.featured {
-  border-left: 4px solid var(--global-theme-color);
-  background: var(--global-card-bg-color);
+  border-left: 4px solid #3498db;
 }
 
 .resource-card.featured::before {
@@ -1006,7 +1165,7 @@ nav_order: 7
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
   color: white;
   padding: 0.3rem 0.8rem;
   border-radius: 1rem;
@@ -1017,7 +1176,7 @@ nav_order: 7
 .resource-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
   border-radius: 1rem;
   display: flex;
   align-items: center;
@@ -1040,7 +1199,6 @@ nav_order: 7
   margin-bottom: 1.5rem;
 }
 
-/* Resource Tags */
 .resource-tags {
   display: flex;
   flex-wrap: wrap;
@@ -1048,70 +1206,6 @@ nav_order: 7
   margin-bottom: 1.5rem;
 }
 
-.tag {
-  padding: 0.4rem 0.8rem;
-  border-radius: 1rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: white;
-}
-
-.tag.deep-learning { background: linear-gradient(135deg, #6f42c1 0%, #5a2d91 100%); }
-.tag.research { background: linear-gradient(135deg, #28a745 0%, #20c997 100%); }
-.tag.ml { background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); }
-.tag.anomaly { background: linear-gradient(135deg, #dc3545 0%, #c82333 100%); }
-.tag.xai { background: linear-gradient(135deg, #fd7e14 0%, #e55100 100%); }
-.tag.interpretability { background: linear-gradient(135deg, #e83e8c 0%, #d91a72 100%); }
-.tag.boosting { background: linear-gradient(135deg, #17a2b8 0%, #138496 100%); }
-.tag.performance { background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%); }
-.tag.mlops { background: linear-gradient(135deg, #6610f2 0%, #520dc2 100%); }
-.tag.deployment { background: linear-gradient(135deg, #20c997 0%, #1ea080 100%); }
-.tag.time-series { background: linear-gradient(135deg, #fd7e14 0%, #e55100 100%); }
-.tag.forecasting { background: linear-gradient(135deg, #e83e8c 0%, #d91a72 100%); }
-.tag.network { background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); }
-.tag.forensics { background: linear-gradient(135deg, #6f42c1 0%, #5a2d91 100%); }
-.tag.siem { background: linear-gradient(135deg, #dc3545 0%, #c82333 100%); }
-.tag.analytics { background: linear-gradient(135deg, #28a745 0%, #20c997 100%); }
-.tag.vulnerability { background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%); }
-.tag.assessment { background: linear-gradient(135deg, #17a2b8 0%, #138496 100%); }
-.tag.framework { background: linear-gradient(135deg, #6610f2 0%, #520dc2 100%); }
-.tag.threat-modeling { background: linear-gradient(135deg, #e83e8c 0%, #d91a72 100%); }
-.tag.pentesting { background: linear-gradient(135deg, #fd7e14 0%, #e55100 100%); }
-.tag.exploitation { background: linear-gradient(135deg, #dc3545 0%, #c82333 100%); }
-.tag.ids { background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); }
-.tag.monitoring { background: linear-gradient(135deg, #28a745 0%, #20c997 100%); }
-.tag.water { background: linear-gradient(135deg, #17a2b8 0%, #138496 100%); }
-.tag.cyberattacks { background: linear-gradient(135deg, #dc3545 0%, #c82333 100%); }
-.tag.industrial { background: linear-gradient(135deg, #6f42c1 0%, #5a2d91 100%); }
-.tag.scada { background: linear-gradient(135deg, #fd7e14 0%, #e55100 100%); }
-.tag.intrusion { background: linear-gradient(135deg, #e83e8c 0%, #d91a72 100%); }
-.tag.agriculture { background: linear-gradient(135deg, #28a745 0%, #20c997 100%); }
-.tag.iot { background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); }
-.tag.power-grid { background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%); }
-.tag.smart-grid { background: linear-gradient(135deg, #20c997 0%, #1ea080 100%); }
-.tag.comprehensive { background: linear-gradient(135deg, #6610f2 0%, #520dc2 100%); }
-.tag.book { background: linear-gradient(135deg, #6f42c1 0%, #5a2d91 100%); }
-.tag.practical { background: linear-gradient(135deg, #28a745 0%, #20c997 100%); }
-.tag.course { background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); }
-.tag.foundations { background: linear-gradient(135deg, #17a2b8 0%, #138496 100%); }
-.tag.cybersecurity { background: linear-gradient(135deg, #dc3545 0%, #c82333 100%); }
-.tag.certification { background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%); }
-.tag.specialization { background: linear-gradient(135deg, #e83e8c 0%, #d91a72 100%); }
-.tag.papers { background: linear-gradient(135deg, #6610f2 0%, #520dc2 100%); }
-.tag.latest { background: linear-gradient(135deg, #fd7e14 0%, #e55100 100%); }
-.tag.opensource { background: linear-gradient(135deg, #28a745 0%, #20c997 100%); }
-.tag.projects { background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); }
-.tag.containerization { background: linear-gradient(135deg, #17a2b8 0%, #138496 100%); }
-.tag.notebook { background: linear-gradient(135deg, #fd7e14 0%, #e55100 100%); }
-.tag.interactive { background: linear-gradient(135deg, #e83e8c 0%, #d91a72 100%); }
-.tag.version-control { background: linear-gradient(135deg, #6f42c1 0%, #5a2d91 100%); }
-.tag.collaboration { background: linear-gradient(135deg, #20c997 0%, #1ea080 100%); }
-.tag.cloud { background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%); }
-.tag.scalable { background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); }
-.tag.editor { background: linear-gradient(135deg, #6610f2 0%, #520dc2 100%); }
-.tag.tracking { background: linear-gradient(135deg, #28a745 0%, #20c997 100%); }
-
-/* Resource Links */
 .resource-links {
   display: flex;
   gap: 1rem;
@@ -1123,8 +1217,8 @@ nav_order: 7
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: var(--global-card-bg-color);
-  color: var(--global-theme-color);
+  background: #f8f9fa;
+  color: #3498db;
   text-decoration: none;
   border-radius: 0.5rem;
   font-size: 0.9rem;
@@ -1134,7 +1228,7 @@ nav_order: 7
 }
 
 .btn-link:hover {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
   color: white;
   transform: translateY(-2px);
   text-decoration: none;
@@ -1142,12 +1236,13 @@ nav_order: 7
 
 /* Contribution Section */
 .contribution-section {
-  background: var(--global-card-bg-color);
+  background: white;
   padding: 4rem 2rem;
   border-radius: 1rem;
   text-align: center;
   margin-top: 4rem;
-  border: 1px solid var(--global-divider-color);
+  border: 1px solid #e9ecef;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 .contribution-content h2 {
@@ -1184,25 +1279,25 @@ nav_order: 7
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
   color: white;
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
   text-decoration: none;
   color: white;
 }
 
 .btn-outline {
   background: transparent;
-  color: #667eea;
-  border-color: #667eea;
+  color: #3498db;
+  border-color: #3498db;
 }
 
 .btn-outline:hover {
-  background: #667eea;
+  background: #3498db;
   color: white;
   transform: translateY(-3px);
   text-decoration: none;
@@ -1210,28 +1305,37 @@ nav_order: 7
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .resources-hero {
-    padding: 2rem 1rem;
+  .resources-header {
+    padding: 2rem 1.5rem;
   }
   
-  .hero-content h1 {
-    font-size: 2rem;
+  .header-content h1 {
+    font-size: 1.7rem;
   }
   
-  .resources-stats {
-    grid-template-columns: repeat(2, 1fr);
+  .resource-stats {
+    gap: 1rem;
   }
   
-  .resource-grid {
+  .resource-nav {
+    gap: 0.5rem;
+  }
+  
+  .nav-link {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .tool-grid, .resource-grid {
     grid-template-columns: 1fr;
   }
   
-  .resource-card {
-    padding: 1.5rem;
+  .tool-item, .resource-card {
+    padding: 1rem;
   }
   
   .category-header h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   
   .contribution-actions {
@@ -1244,4 +1348,255 @@ nav_order: 7
     max-width: 300px;
   }
 }
+
+@media (max-width: 480px) {
+  .header-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .resource-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-link {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .category-header h2 {
+    font-size: 1.5rem;
+  }
+}
 </style>
+
+<script>
+// Animated News Carousel Functionality
+class NewsCarousel {
+  constructor() {
+    this.carousel = document.querySelector('.news-carousel');
+    this.items = document.querySelectorAll('.news-item');
+    this.indicators = document.querySelectorAll('.indicator');
+    this.totalItems = this.items.length;
+    this.currentIndex = 0;
+    this.itemWidth = 350; // Width of each news item + gap
+    this.itemsPerView = this.getItemsPerView();
+    this.isAnimating = false;
+    this.autoPlayInterval = null;
+    
+    this.init();
+  }
+  
+  init() {
+    if (!this.carousel || this.totalItems === 0) return;
+    
+    // Set initial position
+    this.updateCarouselPosition();
+    
+    // Start auto-play
+    this.startAutoPlay();
+    
+    // Pause auto-play on hover
+    this.carousel.parentElement.addEventListener('mouseenter', () => {
+      this.stopAutoPlay();
+    });
+    
+    this.carousel.parentElement.addEventListener('mouseleave', () => {
+      this.startAutoPlay();
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', () => {
+      this.itemsPerView = this.getItemsPerView();
+      this.updateCarouselPosition();
+    });
+    
+    // Touch/swipe support for mobile
+    this.addTouchSupport();
+  }
+  
+  getItemsPerView() {
+    const containerWidth = this.carousel.parentElement.offsetWidth;
+    if (containerWidth < 480) return 1;
+    if (containerWidth < 768) return 1.2;
+    if (containerWidth < 1024) return 2;
+    return 3;
+  }
+  
+  updateCarouselPosition(animate = true) {
+    if (!this.carousel) return;
+    
+    const maxIndex = Math.max(0, this.totalItems - Math.floor(this.itemsPerView));
+    this.currentIndex = Math.min(this.currentIndex, maxIndex);
+    
+    const translateX = -(this.currentIndex * (this.itemWidth + 32)); // 32px for gap
+    
+    if (animate) {
+      this.carousel.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+    } else {
+      this.carousel.style.transition = 'none';
+    }
+    
+    this.carousel.style.transform = `translateX(${translateX}px)`;
+    
+    // Update indicators
+    this.updateIndicators();
+    
+    // Add animation classes to visible items
+    this.addItemAnimations();
+  }
+  
+  updateIndicators() {
+    this.indicators.forEach((indicator, index) => {
+      indicator.classList.toggle('active', index === this.currentIndex);
+    });
+  }
+  
+  addItemAnimations() {
+    this.items.forEach((item, index) => {
+      item.classList.remove('slide-in-left', 'slide-in-right');
+      
+      if (index >= this.currentIndex && index < this.currentIndex + this.itemsPerView) {
+        const animationClass = index === this.currentIndex ? 'slide-in-left' : 'slide-in-right';
+        setTimeout(() => {
+          item.classList.add(animationClass);
+        }, (index - this.currentIndex) * 100);
+      }
+    });
+  }
+  
+  moveCarousel(direction) {
+    if (this.isAnimating) return;
+    
+    this.isAnimating = true;
+    
+    if (direction === 1) {
+      // Move right
+      const maxIndex = Math.max(0, this.totalItems - Math.floor(this.itemsPerView));
+      if (this.currentIndex < maxIndex) {
+        this.currentIndex++;
+      } else {
+        this.currentIndex = 0; // Loop back to start
+      }
+    } else {
+      // Move left
+      if (this.currentIndex > 0) {
+        this.currentIndex--;
+      } else {
+        const maxIndex = Math.max(0, this.totalItems - Math.floor(this.itemsPerView));
+        this.currentIndex = maxIndex; // Loop to end
+      }
+    }
+    
+    this.updateCarouselPosition();
+    
+    setTimeout(() => {
+      this.isAnimating = false;
+    }, 600);
+  }
+  
+  goToSlide(index) {
+    if (this.isAnimating || index === this.currentIndex) return;
+    
+    this.isAnimating = true;
+    this.currentIndex = index;
+    this.updateCarouselPosition();
+    
+    setTimeout(() => {
+      this.isAnimating = false;
+    }, 600);
+  }
+  
+  startAutoPlay() {
+    this.stopAutoPlay();
+    this.autoPlayInterval = setInterval(() => {
+      this.moveCarousel(1);
+    }, 5000); // Change slide every 5 seconds
+  }
+  
+  stopAutoPlay() {
+    if (this.autoPlayInterval) {
+      clearInterval(this.autoPlayInterval);
+      this.autoPlayInterval = null;
+    }
+  }
+  
+  addTouchSupport() {
+    let startX = 0;
+    let startY = 0;
+    let isDragging = false;
+    
+    this.carousel.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      isDragging = false;
+      this.stopAutoPlay();
+    });
+    
+    this.carousel.addEventListener('touchmove', (e) => {
+      if (!startX) return;
+      
+      const currentX = e.touches[0].clientX;
+      const currentY = e.touches[0].clientY;
+      const diffX = startX - currentX;
+      const diffY = startY - currentY;
+      
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 10) {
+        isDragging = true;
+        e.preventDefault();
+      }
+    });
+    
+    this.carousel.addEventListener('touchend', (e) => {
+      if (!startX || !isDragging) return;
+      
+      const endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+      
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+          this.moveCarousel(1); // Swipe left - move right
+        } else {
+          this.moveCarousel(-1); // Swipe right - move left
+        }
+      }
+      
+      startX = 0;
+      isDragging = false;
+      this.startAutoPlay();
+    });
+  }
+}
+
+// Global functions for button controls
+function moveCarousel(direction) {
+  if (window.newsCarousel) {
+    window.newsCarousel.moveCarousel(direction);
+  }
+}
+
+function goToSlide(index) {
+  if (window.newsCarousel) {
+    window.newsCarousel.goToSlide(index);
+  }
+}
+
+// Initialize carousel when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Wait a bit for all elements to be rendered
+  setTimeout(() => {
+    window.newsCarousel = new NewsCarousel();
+  }, 100);
+});
+
+// Reinitialize on page changes (for SPA behavior)
+if (typeof window !== 'undefined') {
+  window.addEventListener('load', function() {
+    if (!window.newsCarousel) {
+      setTimeout(() => {
+        window.newsCarousel = new NewsCarousel();
+      }, 200);
+    }
+  });
+}
+</script>

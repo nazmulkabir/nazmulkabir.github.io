@@ -172,13 +172,15 @@ related_publications: true
           <h4>Shapley Value Calculation</h4>
           <p><strong>Weight Assessment</strong> employs game theory principles to calculate <strong>Shapley values</strong> at every epoch of learning, providing detailed AIA scores for individual data points rather than aggregated metrics.</p>
           
-          <div class="shapley-method">
+          <div class="shapley-method" markdown="1">
             <h5><i class="fas fa-calculator"></i> Mathematical Foundation</h5>
             <p>Shapley values represent each feature's contribution to predictions by modeling cooperation among features in a game-theoretic framework:</p>
-            <div class="equation-block">
-              $$\varphi_{i}(v)=\frac{1}{n} \sum_{S \subseteq N \backslash\{i\}}\binom{n-1}{|S|}^{-1}(v(S \cup\{i\})-v(S))$$
-            </div>
-            <p>Where φᵢ(v) represents the Shapley value for feature i, and v(S) is the value function for feature subset S.</p>
+
+$$
+\varphi_{i}(v) = \frac{1}{n} \sum_{S \subseteq N \backslash\{i\}} \binom{n-1}{|S|}^{-1} (v(S \cup\{i\}) - v(S))
+$$
+
+            <p>Where $\varphi_i(v)$ represents the Shapley value for feature $i$, and $v(S)$ is the value function for feature subset $S$.</p>
           </div>
           
           <div class="algorithm-box">
@@ -407,45 +409,40 @@ related_publications: true
 
 <p>Reverse Learning is a log-based method that traces back assurance issues using a recorded table of learning actions, essentially <strong>reverse engineering</strong> the model’s learning process. By logging the learning process, Reverse Learning can track where performance issues arise and optimize learning. For instance, it records details such as pseudo-residuals, gamma, and probability values during each epoch. This log can be used to verify if assurance goals like <strong>XAI</strong> are being met.</p>
 
-<p>The method's outcome includes both the optimized number of epochs required to minimize the loss function and detailed logs of learning actions for each epoch. Equations (2) and (3) describe the GBDT model’s prediction and loss functions:</p>
+<p>The method's outcome includes both the optimized number of epochs required to minimize the loss function and detailed logs of learning actions for each epoch. The GBDT model's prediction and loss functions are:</p>
 
-<pre>
-<code>
-\[
-f_{m i}= \begin{cases}0 \rightarrow p_{m i}<0.5\\  1 \rightarrow p_{m i}>=0.5\end{cases}
-\]
-\[
-L=-\sum_{i=1}^{N}\left(y \log (odds)-\log \left(1+e^{\log (odds)}\right)\right)
-\]
-</code>
-</pre>
+$$
+f_{mi} = \begin{cases}
+0 & \text{if } p_{mi} < 0.5 \\
+1 & \text{if } p_{mi} \geq 0.5
+\end{cases}
+$$
+
+$$
+L = -\sum_{i=1}^{N}\left(y \log(odds) - \log(1 + e^{\log(odds)})\right)
+$$
 
 <h4>Algorithm: Reverse Learning</h4>
 
-<pre>
-<code>
-\begin{algorithm}
-\caption{Reverse Learning}
-\label{algo:reverse-learning}
-\begin{algorithmic}[1]
-\STATE \textbf{Input:} AI model, training data $D_{\text{train}}$
-\STATE \textbf{Output:} Optimized number of epochs, logged actions
-
-\STATE Initialize empty logs for each epoch
-
-\FOR{$i$ in $\text{number of epochs}$}
-    \STATE Train AI model for one epoch on $D_{\text{train}}$
-    \STATE Calculate pseudo-residuals, gamma, and other values
-    \STATE Save learning details in logs for epoch $i$
-    \STATE Update model weights
-\ENDFOR
-
-\STATE Analyze logs to find the optimized number of epochs
-\STATE Analyze logs for assurance issues
-
-\RETURN Optimized number of epochs, logged actions
-\end{algorithmic}
-\end{algorithm}
+<div class="algorithm-pseudocode">
+  <p><strong>Algorithm:</strong> Reverse Learning</p>
+  <p><strong>Input:</strong> AI model, training data $D_{\text{train}}$</p>
+  <p><strong>Output:</strong> Optimized number of epochs, logged actions</p>
+  <ol>
+    <li>Initialize empty logs for each epoch</li>
+    <li><strong>For</strong> $i$ in number of epochs:
+      <ul>
+        <li>Train AI model for one epoch on $D_{\text{train}}$</li>
+        <li>Calculate pseudo-residuals, gamma, and other values</li>
+        <li>Save learning details in logs for epoch $i$</li>
+        <li>Update model weights</li>
+      </ul>
+    </li>
+    <li>Analyze logs to find the optimized number of epochs</li>
+    <li>Analyze logs for assurance issues</li>
+    <li><strong>Return:</strong> Optimized number of epochs, logged actions</li>
+  </ol>
+</div>
 \end{code>
 </pre>
 
@@ -457,55 +454,39 @@ L=-\sum_{i=1}^{N}\left(y \log (odds)-\log \left(1+e^{\log (odds)}\right)\right)
 
 <p>The encoder-decoder structure is represented as:</p>
 
-<pre>
-<code>
-\[
+$$
 \phi: \mathcal{X} \rightarrow \mathcal{F}
-\]
-\[
+$$
+
+$$
 \psi: \mathcal{F} \rightarrow \mathcal{X}
-\]
-\]
-\]
-</code>
-</pre>
+$$
 
-<p>The reconstruction error is minimized through optimization techniques like Adam or SGD. Equation (4) provides the formula for reconstruction error minimization:</p>
+<p>The reconstruction error is minimized through optimization techniques like Adam or SGD:</p>
 
-<pre>
-<code>
-\[
-\|X-(\phi \circ \psi) X\|^{2}
-\]
-</code>
-</pre>
+$$
+\|X - (\phi \circ \psi) X\|^{2}
+$$
 
 <h4>Algorithm: Secret Inversion</h4>
 
-<pre>
-<code>
-\begin{algorithm}
-\caption{Secret Inversion}
-\label{algo:secret-inversion}
-\begin{algorithmic}[1]
-\STATE \textbf{Input:} Dataset $D$, Autoencoder model, reconstruction errors $r$
-\STATE \textbf{Output:} AIA scores (SAI and CAI)
-
-\STATE Train Autoencoder model on $D$
-
-\FOR{each feature $F_i$ in $D$}
-    \STATE Encode $F_i$ using the Autoencoder: $F_i' = \phi(F_i)$
-    \STATE Decode $F_i'$ using the Autoencoder: $F_i'' = \psi(F_i')$
-    \STATE Calculate reconstruction error for $F_i$: $r_i = \|F_i - F_i''\|$
-\ENDFOR
-
-\STATE Calculate SAI and CAI based on reconstruction errors
-
-\RETURN SAI and CAI scores
-\end{algorithmic}
-\end{algorithm}
-\end{code>
-</pre>
+<div class="algorithm-pseudocode">
+  <p><strong>Algorithm:</strong> Secret Inversion</p>
+  <p><strong>Input:</strong> Dataset $D$, Autoencoder model, reconstruction errors $r$</p>
+  <p><strong>Output:</strong> AIA scores (SAI and CAI)</p>
+  <ol>
+    <li>Train Autoencoder model on $D$</li>
+    <li><strong>For</strong> each feature $F_i$ in $D$:
+      <ul>
+        <li>Encode $F_i$ using the Autoencoder: $F_i' = \phi(F_i)$</li>
+        <li>Decode $F_i'$ using the Autoencoder: $F_i'' = \psi(F_i')$</li>
+        <li>Calculate reconstruction error for $F_i$: $r_i = \|F_i - F_i''\|$</li>
+      </ul>
+    </li>
+    <li>Calculate SAI and CAI based on reconstruction errors</li>
+    <li><strong>Return:</strong> SAI and CAI scores</li>
+  </ol>
+</div>
 
 <p>The Secret Inversion method identifies potential security and confidentiality risks in a model by evaluating reconstruction errors. It generates AIA scores for SAI and CAI to ensure robustness against adversarial inputs and data integrity issues.</p>
 

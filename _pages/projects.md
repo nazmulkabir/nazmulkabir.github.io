@@ -201,107 +201,36 @@ horizontal: false
   </div>
 </div>
 
-<!-- Project Filter and Search -->
-<div class="project-controls-section mb-4">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="controls-container">
-        <div class="row align-items-center">
-          <div class="col-md-6 mb-3">
-            <div class="search-container">
-              <i class="fas fa-search search-icon"></i>
-              <input type="text" id="project-search" class="form-control search-input" placeholder="Search projects...">
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <div class="filter-container">
-              <select class="form-select filter-select" id="project-category-filter">
-                <option value="">All Categories</option>
-                <option value="work">Work Projects</option>
-                <option value="fun">Fun Projects</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  <div id="projects-section">
-  {% for category in page.display_categories %}
-  <div class="project-category-section mb-5" data-category="{{ category }}">
-    <h2 class="category-header" id="{{ category }}">
-      {% if category == "work" %}
-        <i class="fas fa-briefcase text-primary"></i> Professional Projects
-      {% elsif category == "fun" %}
-        <i class="fas fa-lightbulb text-warning"></i> Research Experiments
-      {% else %}
-        <i class="fas fa-folder text-info"></i> {{ category | capitalize }}
-      {% endif %}
-    </h2>
-    
-    {% assign categorized_projects = site.projects | where: "category", category %}
-    {% assign sorted_projects = categorized_projects | sort: "importance" %}
-    
-    <!-- Category Description -->
-    <div class="category-description mb-4">
-      {% if category == "work" %}
-        <p class="lead">Professional research projects focused on solving real-world challenges in critical infrastructure and AI systems.</p>
-      {% elsif category == "fun" %}
-        <p class="lead">Experimental research projects exploring innovative approaches and cutting-edge technologies.</p>
-      {% endif %}
-    </div>
-    
-    <!-- Generate enhanced cards for each project -->
-    {% if page.horizontal %}
-    <div class="container">
-      <div class="row row-cols-1 row-cols-md-2">
-      {% for project in sorted_projects %}
-        {% include projects_horizontal.liquid %}
-      {% endfor %}
-      </div>
-    </div>
-    {% else %}
-    <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2" id="projects-container-{{ category }}">
-      {% for project in sorted_projects %}
-        {% include projects.liquid %}
-      {% endfor %}
-    </div>
-    {% endif %}
-  </div>
-  {% endfor %}
-  </div>
-
-{% else %}
-
-<!-- Display projects without categories -->
-{% assign sorted_projects = site.projects | sort: "importance" %}
-
-  <!-- Generate enhanced cards for each project -->
-{% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2" id="projects-container">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
-
 </div>
 
 <style>
 /* Projects Page Enhanced Styling */
+
+/* Simple, clean project sections - no complex hiding */
+.simple-project-section {
+  margin-bottom: 3rem;
+  padding: 1rem 0;
+}
+
+.simple-category-header {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--global-text-color);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(90deg, var(--global-theme-color) 0%, #764ba2 100%) 1;
+}
+
+.simple-category-description {
+  max-width: 800px;
+}
+
+.simple-category-description .lead {
+  font-size: 1.1rem;
+  color: #6c757d;
+  line-height: 1.7;
+}
 
 /* Hero Section */
 .projects-hero-section {
@@ -620,17 +549,9 @@ horizontal: false
 }
 
 /* Project Cards Enhancement */
-.projects .col {
+.row .col {
   margin-bottom: 2rem;
 }
-
-/* Animation delays for staggered effect */
-.projects .col:nth-child(1) { animation-delay: 0.1s; }
-.projects .col:nth-child(2) { animation-delay: 0.2s; }
-.projects .col:nth-child(3) { animation-delay: 0.3s; }
-.projects .col:nth-child(4) { animation-delay: 0.4s; }
-.projects .col:nth-child(5) { animation-delay: 0.5s; }
-.projects .col:nth-child(6) { animation-delay: 0.6s; }
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -661,16 +582,6 @@ horizontal: false
   }
 }
 
-/* Smooth transitions for filtering */
-.project-category-section {
-  transition: all 0.3s ease;
-}
-
-.project-category-section.hidden {
-  opacity: 0;
-  transform: translateY(20px);
-  pointer-events: none;
-}
 
 /* Compact GitHub section */
 .github-compact-section {
@@ -715,56 +626,18 @@ horizontal: false
 </style>
 
 <script>
+// Simple smooth scroll - no filtering or animations
 document.addEventListener('DOMContentLoaded', function() {
-  const searchInput = document.getElementById('project-search');
-  const categoryFilter = document.getElementById('project-category-filter');
-  const projectCards = document.querySelectorAll('.projects .col');
-  const categorySection = document.querySelectorAll('.project-category-section');
-
-  function filterProjects() {
-    const searchTerm = searchInput.value.toLowerCase();
-    const selectedCategory = categoryFilter.value;
-
-    // Filter category sections
-    categorySection.forEach(section => {
-      const sectionCategory = section.getAttribute('data-category');
-      const shouldShowSection = !selectedCategory || selectedCategory === sectionCategory;
-      
-      if (shouldShowSection) {
-        section.classList.remove('hidden');
-      } else {
-        section.classList.add('hidden');
-      }
-    });
-
-    // Filter individual project cards
-    projectCards.forEach(card => {
-      const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
-      const description = card.querySelector('.card-text')?.textContent.toLowerCase() || '';
-      const projectCategory = card.closest('.project-category-section')?.getAttribute('data-category') || '';
-      
-      const matchesSearch = !searchTerm || title.includes(searchTerm) || description.includes(searchTerm);
-      const matchesCategory = !selectedCategory || selectedCategory === projectCategory;
-      
-      if (matchesSearch && matchesCategory) {
-        card.style.display = 'block';
-        card.style.opacity = '1';
-        card.style.transform = 'translateY(0)';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-  }
-
-  // Add event listeners
-  searchInput.addEventListener('input', filterProjects);
-  categoryFilter.addEventListener('change', filterProjects);
-
-  // Smooth scroll for category links
+  // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+      const targetSelector = this.getAttribute('href');
+      if (!targetSelector || targetSelector === '#') {
+        return;
+      }
+
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
+      const target = document.querySelector(targetSelector);
       if (target) {
         target.scrollIntoView({
           behavior: 'smooth',
@@ -774,60 +647,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Add animation classes to cards
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+  // Stats card navigation
+  document.querySelectorAll('.stat-card.clickable').forEach(card => {
+    card.addEventListener('click', function() {
+      const target = this.dataset.target || '';
+
+      if (target.startsWith('/')) {
+        window.location.href = target;
+        return;
       }
-    });
-  });
 
-  projectCards.forEach(card => {
-    observer.observe(card);
-  });
-});
-
-// CSS animation keyframes
-const style = document.createElement('style');
-style.textContent = `
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-`;
-document.head.appendChild(style);
-
-// Interactive stats functionality
-document.querySelectorAll('.stat-card.clickable').forEach(card => {
-  card.addEventListener('click', function() {
-    const target = this.dataset.target;
-    
-    if (target.startsWith('/')) {
-      // External link
-      window.location.href = target;
-    } else {
-      // Scroll to section
       const targetElement = document.getElementById(target);
       if (targetElement) {
-        targetElement.scrollIntoView({ 
+        targetElement.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
         });
-        
-        // Add highlight effect
-        targetElement.style.animation = 'fadeInUp 0.6s ease-out';
-        setTimeout(() => {
-          targetElement.style.animation = '';
-        }, 600);
       }
-    }
+    });
   });
 });
 </script>

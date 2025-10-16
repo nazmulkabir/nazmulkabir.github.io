@@ -7,7 +7,7 @@ subtitle: Postdoctoral Research Associate in <a href='https://ece.vt.edu/'>Compu
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: >
     <p><i class="fas fa-envelope"></i> nazmulkabir@vt.edu</p>
     <p><i class="fas fa-map-marker-alt"></i> Arlington, VA</p>
