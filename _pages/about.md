@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Postdoctoral Research Associate in <a href='https://ece.vt.edu/'>Computer Engineering</a>. Virginia Tech.
+subtitle: Research Assistant Professor in <a href='https://www.odu.edu/cyber'>Cybersecurity</a>. Old Dominion University.
 
 profile:
   align: right
@@ -21,7 +21,7 @@ social: true # includes social icons at the bottom of the page
 <div class="about-intro">
   <div class="intro-content">
     <h2>AI Research Scientist & Cybersecurity Expert</h2>
-    <p class="intro-text">I am a <strong>Postdoctoral Research Associate</strong> at Virginia Tech's <a href="https://cyberinitiative.org/" target="_blank">Commonwealth Cyber Initiative</a>, specializing in AI assurance and cybersecurity for critical infrastructure. My research develops robust, explainable machine learning methods for cyberattack detection in cyber-physical systems, with real-world applications in water distribution and agricultural networks.</p>
+    <p class="intro-text">I am an incoming <strong>Research Assistant Professor</strong> at Old Dominion University's <a href="https://www.odu.edu/cyber" target="_blank">School of Cybersecurity</a>, where I will be exploring emerging research directions in cybersecurity. My expertise spans AI assurance, machine learning for cyberattack detection, and securing cyber-physical systems, with proven real-world applications in critical infrastructure including water distribution and agricultural networks.</p>
     
     <div class="intro-highlights">
       <div class="highlight-item">
@@ -158,9 +158,9 @@ social: true # includes social icons at the bottom of the page
             <i class="fas fa-rocket"></i>
           </div>
           <div class="timeline-content">
-            <h4>Current Research Impact</h4>
-            <p class="institution">Virginia Tech - Commonwealth Cyber Initiative</p>
-            <p>ML solutions currently <strong>deployed in major U.S. facilities</strong>, bridging the gap between theoretical AI research and real-world applications.</p>
+            <h4>Research Assistant Professor</h4>
+            <p class="institution">Old Dominion University - Cybersecurity (2025 - Present)</p>
+            <p>Leading advanced research in AI-driven cybersecurity, developing ML solutions currently <strong>deployed in major U.S. facilities</strong>, bridging the gap between theoretical AI research and real-world applications.</p>
             <div class="achievement-badges">
               <span class="badge">Real-world Deployment</span>
               <span class="badge">Industry Partnership</span>
@@ -227,12 +227,22 @@ social: true # includes social icons at the bottom of the page
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
+html[data-theme='dark'] .about-intro {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 1px solid #404040;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
 .intro-content h2 {
   font-size: 1.8rem;
   font-weight: 700;
   color: #2c3e50;
   margin-bottom: 1rem;
   text-align: center;
+}
+
+html[data-theme='dark'] .intro-content h2 {
+  color: #e8e8e8;
 }
 
 .intro-text {
@@ -244,6 +254,10 @@ social: true # includes social icons at the bottom of the page
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+}
+
+html[data-theme='dark'] .intro-text {
+  color: #c0c0c0;
 }
 
 .intro-highlights {
@@ -288,6 +302,11 @@ social: true # includes social icons at the bottom of the page
   border-bottom: 2px solid #e9ecef;
 }
 
+html[data-theme='dark'] .research-focus h3 {
+  color: #e8e8e8;
+  border-bottom: 2px solid #404040;
+}
+
 .focus-areas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -304,6 +323,12 @@ social: true # includes social icons at the bottom of the page
   border: 1px solid #e9ecef;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   transition: all 0.3s ease;
+}
+
+html[data-theme='dark'] .focus-area {
+  background: #2d2d2d;
+  border: 1px solid #404040;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .focus-area:hover {
@@ -331,11 +356,19 @@ social: true # includes social icons at the bottom of the page
   margin: 0 0 0.5rem 0;
 }
 
+html[data-theme='dark'] .focus-content h4 {
+  color: #e8e8e8;
+}
+
 .focus-content p {
   font-size: 0.9rem;
   color: #6c757d;
   margin: 0 0 1rem 0;
   line-height: 1.5;
+}
+
+html[data-theme='dark'] .focus-content p {
+  color: #b0b0b0;
 }
 
 /* Focus Papers Styling */
@@ -350,6 +383,11 @@ social: true # includes social icons at the bottom of the page
   margin-bottom: 0.75rem;
   border-bottom: 1px solid #e9ecef;
   padding-bottom: 0.25rem;
+}
+
+html[data-theme='dark'] .focus-papers h6 {
+  color: #e8e8e8;
+  border-bottom: 1px solid #404040;
 }
 
 .paper-list {
@@ -367,9 +405,18 @@ social: true # includes social icons at the bottom of the page
   transition: all 0.3s ease;
 }
 
+html[data-theme='dark'] .paper-list li {
+  background: #1a1a1a;
+  border-left: 3px solid #5dade2;
+}
+
 .paper-list li:hover {
   background: #e3f2fd;
   transform: translateX(3px);
+}
+
+html[data-theme='dark'] .paper-list li:hover {
+  background: #2d4a5c;
 }
 
 .paper-list li a {
@@ -382,9 +429,17 @@ social: true # includes social icons at the bottom of the page
   margin-bottom: 0.25rem;
 }
 
+html[data-theme='dark'] .paper-list li a {
+  color: #e8e8e8;
+}
+
 .paper-list li a:hover {
   color: #3498db;
   text-decoration: none;
+}
+
+html[data-theme='dark'] .paper-list li a:hover {
+  color: #5dade2;
 }
 
 .paper-list .journal {
@@ -392,6 +447,10 @@ social: true # includes social icons at the bottom of the page
   color: #6c757d;
   font-style: italic;
   font-weight: 400;
+}
+
+html[data-theme='dark'] .paper-list .journal {
+  color: #999999;
 }
 
 /* Background Section */
@@ -406,6 +465,11 @@ social: true # includes social icons at the bottom of the page
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #e9ecef;
+}
+
+html[data-theme='dark'] .background-section h3 {
+  color: #e8e8e8;
+  border-bottom: 2px solid #404040;
 }
 
 /* Timeline Styling */
@@ -454,9 +518,19 @@ social: true # includes social icons at the bottom of the page
   transition: all 0.3s ease;
 }
 
+html[data-theme='dark'] .timeline-content {
+  background: #2d2d2d;
+  border: 1px solid #404040;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
 .timeline-content:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transform: translateY(-2px);
+}
+
+html[data-theme='dark'] .timeline-content:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 .timeline-content h4 {
@@ -466,6 +540,10 @@ social: true # includes social icons at the bottom of the page
   font-size: 1.1rem;
 }
 
+html[data-theme='dark'] .timeline-content h4 {
+  color: #e8e8e8;
+}
+
 .institution {
   color: #3498db;
   font-weight: 500;
@@ -473,11 +551,19 @@ social: true # includes social icons at the bottom of the page
   font-size: 0.9rem;
 }
 
+html[data-theme='dark'] .institution {
+  color: #5dade2;
+}
+
 .timeline-content p {
   color: #6c757d;
   font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 0.75rem;
+}
+
+html[data-theme='dark'] .timeline-content p {
+  color: #b0b0b0;
 }
 
 .achievement-badges {
@@ -505,12 +591,22 @@ social: true # includes social icons at the bottom of the page
   height: fit-content;
 }
 
+html[data-theme='dark'] .research-highlights {
+  background: #2d2d2d;
+  border: 1px solid #404040;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
 .research-highlights h4 {
   color: #2c3e50;
   margin-bottom: 1.25rem;
   font-weight: 600;
   font-size: 1.1rem;
   text-align: center;
+}
+
+html[data-theme='dark'] .research-highlights h4 {
+  color: #e8e8e8;
 }
 
 .highlight-stats {
@@ -528,6 +624,10 @@ social: true # includes social icons at the bottom of the page
   transition: all 0.3s ease;
 }
 
+html[data-theme='dark'] .stat-item {
+  background: #1a1a1a;
+}
+
 .stat-item:hover {
   background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
   color: white;
@@ -541,6 +641,10 @@ social: true # includes social icons at the bottom of the page
   margin-bottom: 0.25rem;
 }
 
+html[data-theme='dark'] .stat-number {
+  color: #5dade2;
+}
+
 .stat-item:hover .stat-number {
   color: white;
 }
@@ -549,6 +653,10 @@ social: true # includes social icons at the bottom of the page
   font-size: 0.8rem;
   color: #6c757d;
   font-weight: 500;
+}
+
+html[data-theme='dark'] .stat-label {
+  color: #b0b0b0;
 }
 
 .stat-item:hover .stat-label {
@@ -562,6 +670,11 @@ social: true # includes social icons at the bottom of the page
   border: 1px solid #e9ecef;
 }
 
+html[data-theme='dark'] .current-focus-box {
+  background: #1a1a1a;
+  border: 1px solid #404040;
+}
+
 .current-focus-box h5 {
   color: #2c3e50;
   margin-bottom: 0.75rem;
@@ -569,11 +682,19 @@ social: true # includes social icons at the bottom of the page
   font-size: 1rem;
 }
 
+html[data-theme='dark'] .current-focus-box h5 {
+  color: #e8e8e8;
+}
+
 .current-focus-box p {
   color: #6c757d;
   font-size: 0.9rem;
   line-height: 1.6;
   margin: 0;
+}
+
+html[data-theme='dark'] .current-focus-box p {
+  color: #b0b0b0;
 }
 
 /* Collaboration Section */

@@ -116,16 +116,31 @@ toc:
     <div class="experience-list">
       <div class="exp-item">
         <div class="exp-header">
-          <h3>Postdoctoral Research Scientist</h3>
-          <span class="date-badge current">2024 - Present</span>
+          <h3>Research Assistant Professor</h3>
+          <span class="date-badge current">2025 - Present</span>
         </div>
         <div class="exp-meta">
-          <span class="company">Virginia Tech</span>
+          <span class="company">Old Dominion University</span>
         </div>
         <ul class="exp-details">
-          <li>Lead AI assurance research for cyber-physical systems security</li>
-          <li>Develop ML solutions for real-world deployment in critical infrastructure</li>
+          <li>Lead AI-driven cybersecurity research for critical infrastructure</li>
+          <li>Develop ML solutions for real-world deployment in cyber-physical systems</li>
           <li>Mentor graduate students and coordinate research initiatives</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Postdoctoral Research Associate</h3>
+          <span class="date-badge">2024 - 2025</span>
+        </div>
+        <div class="exp-meta">
+          <span class="company">Virginia Tech - Commonwealth Cyber Initiative</span>
+        </div>
+        <ul class="exp-details">
+          <li>Led AI assurance research for cyber-physical systems security</li>
+          <li>Developed ML solutions for real-world deployment in critical infrastructure</li>
+          <li>Mentored graduate students and coordinated research initiatives</li>
         </ul>
       </div>
 

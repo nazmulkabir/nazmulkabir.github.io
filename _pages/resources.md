@@ -856,7 +856,7 @@ nav_order: 7
     <h2><i class="fas fa-plus-circle text-primary"></i> Contribute to Resources</h2>
     <p>Found a useful tool, dataset, or resource that should be included? I'm always looking to expand this collection with high-quality resources for the research community.</p>
     <div class="contribution-actions">
-      <a href="mailto:nazmul@vt.edu" class="btn btn-primary">
+      <a href="mailto:nazmulkabir@vt.edu" class="btn btn-primary">
         <i class="fas fa-envelope"></i> Suggest a Resource
       </a>
       <a href="https://github.com/nazmulkabir" target="_blank" class="btn btn-outline">

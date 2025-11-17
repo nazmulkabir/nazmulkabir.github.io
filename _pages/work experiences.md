@@ -41,15 +41,15 @@ nav_order: 6
     </div>
     <div class="timeline-content">
       <div class="position-header">
-        <h3>Postdoctoral Research Associate</h3>
+        <h3>Research Assistant Professor</h3>
         <div class="company-info">
-          <a href="https://cyberinitiative.org" target="_blank">
-            <strong>Virginia Tech - Commonwealth Cyber Initiative</strong>
+          <a href="https://www.odu.edu/cyber" target="_blank">
+            <strong>Old Dominion University - Cybersecurity</strong>
           </a>
-          <span class="duration">2024 - Present</span>
+          <span class="duration">2025 - Present</span>
         </div>
         <div class="location">
-          <i class="fas fa-map-marker-alt"></i> Blacksburg, VA
+          <i class="fas fa-map-marker-alt"></i> Norfolk, VA
         </div>
       </div>
       
@@ -85,6 +85,31 @@ nav_order: 6
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Postdoctoral Position -->
+  <div class="timeline-item">
+    <div class="timeline-marker">
+      <i class="fas fa-flask"></i>
+    </div>
+    <div class="timeline-content">
+      <div class="position-header">
+        <h3>Postdoctoral Research Associate</h3>
+        <div class="company-info">
+          <a href="https://cyberinitiative.org" target="_blank">
+            <strong>Virginia Tech - Commonwealth Cyber Initiative</strong>
+          </a>
+          <span class="duration">2024 - 2025</span>
+        </div>
+        <div class="location">
+          <i class="fas fa-map-marker-alt"></i> Blacksburg, VA
+        </div>
+      </div>
+      
+      <div class="role-description">
+        <p class="role-summary">Led advanced research in AI assurance and cybersecurity for critical infrastructure, developing robust and explainable machine learning methods for cyberattack detection in cyber-physical systems.</p>
         
         <div class="achievements">
           <h4><i class="fas fa-trophy"></i> Key Achievements</h4>
