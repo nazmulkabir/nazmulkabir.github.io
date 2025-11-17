@@ -25,7 +25,7 @@ related_publications: true
       <div class="col-lg-8">
         <div class="overview-content">
           <h2><i class="fas fa-brain text-primary"></i> cP<sub>2</sub>O: Context-aware Forecasting</h2>
-          <p class="lead">cP<sub>2</sub>O represents a breakthrough in <strong>context-aware deep learning</strong> for water system services, featuring advanced <strong>dilated LSTM with attention mechanisms</strong> and <strong>hierarchical dilated RNN layers</strong> for highly accurate short-term water level forecasting.</p>
+          <p class="lead">cP<sub>2</sub>O represents a breakthrough in <strong>context-aware deep learning</strong> for water systems, featuring advanced <strong>dilated LSTM with attention mechanisms</strong> and <strong>hierarchical RNN layers</strong> for highly accurate short-term water level forecasting.</p>
           
           <div class="highlight-box">
             <h4><i class="fas fa-bullseye text-success"></i> Core Innovations</h4>
@@ -96,18 +96,20 @@ related_publications: true
         <h4>Short-Term Water Level Forecasting (STWLF)</h4>
         <p>The objective of short-term water level forecasting is to predict inflow levels over a short horizon with high accuracy. The system aims to forecast future water levels based on historical data patterns and contextual information.</p>
         
-        <div class="mathematical-framework">
+        <div class="mathematical-framework" markdown="1">
           <h5><i class="fas fa-calculator"></i> Mathematical Formulation</h5>
           <p>The forecasting problem is formally defined as predicting future water levels:</p>
-          <div class="equation-block">
-            $$\{y_t\}_{M+1}^{M+H} = f(\{y_t\}_{1}^{M}, \theta)$$
-          </div>
-          <p>Where:</p>
+
+$$
+\{y_t\}_{M+1}^{M+H} = f(\{y_t\}_{1}^{M}, \theta)
+$$
+
+          <p><strong>Where:</strong></p>
           <ul class="equation-terms">
-            <li>$$y_t$$ = Water level at time $t$</li>
-            <li>$$M$$ = Length of historical data</li>
-            <li>$$H$$ = Forecast horizon (e.g., 4-6 hours)</li>
-            <li>$$\theta$$ = Model parameters incorporating context</li>
+            <li>$y_t$ = Water level at time $t$</li>
+            <li>$M$ = Length of historical data</li>
+            <li>$H$ = Forecast horizon (e.g., 4-6 hours)</li>
+            <li>$\theta$ = Model parameters incorporating context</li>
           </ul>
         </div>
       </div>
@@ -165,20 +167,22 @@ related_publications: true
           <div class="decomposition-components">
             <h5><i class="fas fa-layer-group"></i> Time Series Components</h5>
             <ul class="feature-list">
-              <li><strong>Seasonal Component (S<sub>t</sub>):</strong> Recurring periodic patterns</li>
-              <li><strong>Level Component (L<sub>t</sub>):</strong> Long-term trend information</li>
+              <li><strong>Seasonal Component:</strong> Recurring periodic patterns</li>
+              <li><strong>Level Component:</strong> Long-term trend information</li>
               <li><strong>Trend Component:</strong> Directional changes over time</li>
               <li><strong>Residual Component:</strong> Random noise and irregularities</li>
             </ul>
           </div>
           
-          <div class="mathematical-framework">
+          <div class="mathematical-framework" markdown="1">
             <h5><i class="fas fa-calculator"></i> Smoothing Equations</h5>
             <p>The key smoothing equation for level component extraction:</p>
-            <div class="equation-block">
-              $$L_t = \alpha_t Y_t + (1 - \alpha_t)L_{t-1}$$
-            </div>
-            <p>Where α<sub>t</sub> is the adaptive smoothing parameter that adjusts based on data characteristics and contextual information.</p>
+
+$$
+L_t = \alpha_t Y_t + (1 - \alpha_t)L_{t-1}
+$$
+
+            <p>Where $\alpha_t$ is the adaptive smoothing parameter that adjusts based on data characteristics and contextual information.</p>
           </div>
         </div>
       </div>

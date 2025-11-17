@@ -25,12 +25,12 @@ related_publications: true
       <div class="col-lg-8">
         <div class="overview-content">
           <h2><i class="fas fa-seedling text-success"></i> DeepAg: Precision Farming Intelligence</h2>
-          <p class="lead">DeepAg revolutionizes agricultural production systems through advanced <strong>machine learning</strong> and <strong>deep learning</strong> techniques, focusing on <strong>outlier detection</strong> to identify economic risks and operational inefficiencies in modern farming operations.</p>
+          <p class="lead">DeepAg revolutionizes agricultural production systems through advanced <strong>machine learning</strong> and <strong>deep learning</strong> techniques, focusing on <strong>anomaly detection</strong> to identify economic risks and operational inefficiencies in modern farming operations.</p>
           
           <div class="highlight-box">
             <h4><i class="fas fa-bullseye text-success"></i> Key Innovations</h4>
             <ul class="objectives-list">
-              <li><strong>Unsupervised Anomaly Detection:</strong> Isolation Forest for agricultural outliers</li>
+              <li><strong>Unsupervised Anomaly Detection:</strong> Isolation Forest for agricultural anomalies</li>
               <li><strong>Economic Risk Assessment:</strong> Integration with financial market indicators</li>
               <li><strong>Precision Agriculture:</strong> Data-driven farming optimization</li>
             </ul>
@@ -72,7 +72,7 @@ related_publications: true
             <i class="fas fa-tree"></i>
           </div>
           <h4>Isolation Forest</h4>
-          <p>Advanced unsupervised outlier detection algorithm specifically adapted for agricultural production systems.</p>
+          <p>Advanced unsupervised anomaly detection algorithm specifically adapted for agricultural production systems.</p>
         </div>
       </div>
       <div class="col-md-4 mb-4">
@@ -103,14 +103,14 @@ related_publications: true
   <div class="module-section prediction-module">
     <div class="module-header">
       <h2><i class="fas fa-tree text-primary"></i> Isolation Forest Algorithm</h2>
-      <p class="module-description">Advanced unsupervised anomaly detection designed for identifying outliers in agricultural production systems with high efficiency and accuracy.</p>
+      <p class="module-description">Advanced unsupervised anomaly detection designed for identifying unusual patterns in agricultural production systems with high efficiency and accuracy.</p>
     </div>
     
     <div class="row">
       <div class="col-lg-8">
         <div class="technical-details">
           <h4>Algorithm Principles</h4>
-          <p>The <strong>Isolation Forest</strong> algorithm operates on the principle that outliers are more easily isolated than normal data points. By constructing binary tree structures, anomalies require fewer splits to be separated, resulting in shorter path lengths.</p>
+          <p>The <strong>Isolation Forest</strong> algorithm operates on the principle that anomalies are more easily isolated than normal data points. By constructing binary tree structures, unusual data requires fewer splits to be separated, resulting in shorter path lengths.</p>
           
           <div class="isolation-features">
             <h5><i class="fas fa-cogs"></i> Core Mechanisms</h5>
@@ -125,7 +125,7 @@ related_publications: true
           <div class="algorithm-box">
             <h5><i class="fas fa-code"></i> Isolation Process</h5>
             <div class="algorithm-steps">
-              <p><strong>Algorithm: Isolation Forest for Agricultural Outlier Detection</strong></p>
+              <p><strong>Algorithm: Isolation Forest for Agricultural Anomaly Detection</strong></p>
               <ol>
                 <li><strong>Input:</strong> Agricultural dataset X, number of trees T, sub-sampling size S</li>
                 <li><strong>Initialize:</strong> Empty set of isolation trees F = {}</li>
@@ -361,13 +361,11 @@ related_publications: true
 
 <h3>Anomaly Detection Thresholds and Contamination Rates</h3>
 
-<p>The contamination rate is a key parameter in the Isolation Forest algorithm, which estimates the percentage of outliers in the dataset. It is typically determined using the <strong>Interquartile Range (IQR)</strong>, a statistical measure that describes the middle 50% of the data distribution. IQR is calculated as the difference between the third quartile (Q3) and the first quartile (Q1), as shown in Equation (1):</p>
+<p>The contamination rate is a key parameter in the Isolation Forest algorithm, which estimates the percentage of outliers in the dataset. It is typically determined using the <strong>Interquartile Range (IQR)</strong>, a statistical measure that describes the middle 50% of the data distribution. IQR is calculated as the difference between the third quartile ($Q3$) and the first quartile ($Q1$):</p>
 
-<pre>
-<code>
-\[
-\text{Interquartile Range} = Q3 - Q1
-\]
+$$
+\text{IQR} = Q3 - Q1
+$$
 </code>
 </pre>
 
@@ -380,75 +378,58 @@ related_publications: true
     </div>
 </div>
 
-<p>The contamination rate helps estimate the anomaly threshold value, which is used to classify data points as outliers. Tables 1a and 1b present the contamination rates for daily and monthly financial indices using the IQR method.</p>
+<p>The contamination rate helps estimate the anomaly threshold value, which is used to classify data points as outliers. The following tables present the contamination rates for daily and monthly financial indices using the IQR method:</p>
 
-<pre>
-<code>
-\begin{table}[!ht]
-\caption{Contamination Rates for Financial Indices using IQR}
-\label{tab:iqr-combined}
-\begin{subtable}{\textwidth}
-  \caption{Daily Data Contamination (\%)}
-  \begin{tabular}{|l|l|}
-    \hline
-    Financial Index & Contamination Rate \\
-    \hline
-    VIX & 6.559 \\
-    \hline
-    Gold & 5.382 \\
-    \hline
-    S\&P 500 & 6.008 \\
-    \hline
-    DOW & 6.125 \\
-    \hline
-    Crude Oil & 3.953 \\
-    \hline
-  \end{tabular}
-\end{subtable}
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <caption><strong>Table 1a:</strong> Daily Data Contamination (%)</caption>
+    <thead>
+      <tr>
+        <th>Financial Index</th>
+        <th>Contamination Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>VIX</td><td>6.559</td></tr>
+      <tr><td>Gold</td><td>5.382</td></tr>
+      <tr><td>S&P 500</td><td>6.008</td></tr>
+      <tr><td>DOW</td><td>6.125</td></tr>
+      <tr><td>Crude Oil</td><td>3.953</td></tr>
+    </tbody>
+  </table>
+  
+  <table class="table table-bordered">
+    <caption><strong>Table 1b:</strong> Monthly Data Contamination (%)</caption>
+    <thead>
+      <tr>
+        <th>Financial Index</th>
+        <th>Contamination Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>VIX</td><td>6.250</td></tr>
+      <tr><td>Gold</td><td>2.232</td></tr>
+      <tr><td>S&P 500</td><td>2.232</td></tr>
+      <tr><td>DOW</td><td>2.232</td></tr>
+      <tr><td>Crude Oil</td><td>6.250</td></tr>
+    </tbody>
+  </table>
+</div>
 
-\begin{subtable}{\textwidth}
-  \caption{Monthly Data Contamination (\%)}
-  \begin{tabular}{|l|l|}
-    \hline
-    Financial Index & Contamination Rate \\
-    \hline
-    VIX & 6.250 \\
-    \hline
-    Gold & 2.232 \\
-    \hline
-    S\&P 500 & 2.232 \\
-    \hline
-    DOW & 2.232 \\
-    \hline
-    Crude Oil & 6.250 \\
-    \hline
-  \end{tabular}
-\end{subtable}
-\end{table}
-</code>
-</pre>
+<p>The anomaly score for each data point is computed based on the path length in the isolation trees:</p>
 
-<p>The anomaly score for each data point is computed based on the path length in the isolation trees, as described by Equation (2):</p>
-
-<pre>
-<code>
-\[
+$$
 s(x, m) = 2^{-E(h(x)) / c(m)}
-\]
-</code>
-</pre>
+$$
 
-<p>Finally, a threshold value <strong>T</strong> is selected using contamination rates to classify data points as outliers or normal, as defined in Equations (3) and (4):</p>
+<p>Finally, a threshold value $T$ is selected using contamination rates to classify data points:</p>
 
-<pre>
-<code>
-\[
+$$
 \text{If } S(x) < T, \text{ then } x \text{ is a normal data point.}
-\]
-\[
+$$
+
+$$
 \text{If } S(x) \geq T, \text{ then } x \text{ is an outlier.}
-\]
-</code>
-</pre>
+$$
 
 <p>The detailed steps of the Isolation Forest for outlier detection in economic data are presented in Algorithm 1 above. This approach efficiently detects anomalies in high-dimensional datasets, making it suitable for APS data analysis.</p>

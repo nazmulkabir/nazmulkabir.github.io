@@ -11,6 +11,9 @@ github: https://github.com/nazmulkabir/deeph2o
 paper: /assets/pdf/deeph2o_paper.pdf
 related_publications: true
 giscus_comments: true
+pretty_table: true
+toc:
+  sidebar: left
 ---
 
 <div class="project-header">
@@ -78,20 +81,27 @@ giscus_comments: true
           <h4>AutoEncoder Architecture</h4>
           <p>AutoEncoders serve as the foundation for <strong>dimensionality reduction</strong> and <strong>feature learning</strong> in anomaly detection. The architecture consists of complementary <strong>encoder</strong> and <strong>decoder</strong> networks that learn compressed representations of normal system behavior.</p>
           
-          <div class="mathematical-framework">
+          <div class="mathematical-framework" markdown="1">
             <h5><i class="fas fa-calculator"></i> Mathematical Foundation</h5>
             <p>The encoder-decoder system is mathematically defined as:</p>
             
-            <div class="equation-block">
-              $$\phi: \mathcal{X} \rightarrow \mathcal{F}$$
-              $$\psi: \mathcal{F} \rightarrow \mathcal{X}$$
-              $$\phi, \psi=\underset{\phi, \psi}{\arg \min }\|\mathcal{X}-(\psi \circ \phi) \mathcal{X}\|^{2}$$
-            </div>
+$$
+\phi: \mathcal{X} \rightarrow \mathcal{F}
+$$
+
+$$
+\psi: \mathcal{F} \rightarrow \mathcal{X}
+$$
+
+$$
+\phi, \psi = \underset{\phi, \psi}{\arg \min} \|\mathcal{X} - (\psi \circ \phi) \mathcal{X}\|^{2}
+$$
             
             <p>The reconstruction loss function:</p>
-            <div class="equation-block">
-              $$\mathcal{L}\left(\mathbf{x}, \mathbf{x}^{\prime}\right)=\left\|\mathbf{x}-\mathbf{x}^{\prime}\right\|^{2}$$
-            </div>
+
+$$
+\mathcal{L}(\mathbf{x}, \mathbf{x}') = \|\mathbf{x} - \mathbf{x}'\|^{2}
+$$
           </div>
           
           <div class="algorithm-box">
@@ -135,25 +145,27 @@ giscus_comments: true
       <div class="col-lg-8">
         <div class="technical-details">
           <h4>HCAE Innovation</h4>
-          <p>In water distribution systems, false positives from anomaly detection can result in costly and unnecessary maintenance operations. <strong>HCAE</strong> addresses this critical challenge by incorporating <strong>deterministic learning constraints</strong> that ensure consistent feature learning across multiple training sessions.</p>
+          <p>In water distribution systems, false positives from anomaly detection can result in costly and unnecessary maintenance operations. <strong>HCAE</strong> addresses this critical challenge by incorporating <strong>consistent learning constraints</strong> that ensure reliable feature learning across multiple training sessions.</p>
           
           <div class="hcae-features">
             <h5><i class="fas fa-star"></i> Key Improvements</h5>
             <ul class="feature-list">
-              <li><strong>Deterministic Training:</strong> Eliminates randomness in weight initialization and training</li>
-              <li><strong>Confidence Scoring:</strong> Provides uncertainty estimates for each detection</li>
-              <li><strong>Robust Feature Learning:</strong> Consistent performance across different training runs</li>
+              <li><strong>Consistent Training:</strong> Stable learning across training sessions</li>
+              <li><strong>Confidence Scoring:</strong> Provides reliability estimates for each detection</li>
+              <li><strong>Robust Feature Learning:</strong> Reliable performance across different training runs</li>
               <li><strong>Cost-Aware Design:</strong> Minimizes expensive false alarm maintenance calls</li>
             </ul>
           </div>
           
-          <div class="confidence-mechanism">
+          <div class="confidence-mechanism" markdown="1">
             <h5><i class="fas fa-chart-line"></i> Confidence Calculation</h5>
             <p>HCAE introduces a confidence score based on reconstruction error distribution:</p>
-            <div class="equation-block">
-              $$C(x) = 1 - \frac{|\mathcal{L}(x, x') - \mu_{\text{normal}}|}{\sigma_{\text{normal}} + \epsilon}$$
-            </div>
-            <p>Where μ<sub>normal</sub> and σ<sub>normal</sub> represent the mean and standard deviation of reconstruction errors for normal data.</p>
+
+$$
+C(x) = 1 - \frac{|\mathcal{L}(x, x') - \mu_{\text{normal}}|}{\sigma_{\text{normal}} + \epsilon}
+$$
+
+            <p>Where $\mu_{\text{normal}}$ and $\sigma_{\text{normal}}$ represent the mean and standard deviation of reconstruction errors for normal data.</p>
           </div>
         </div>
       </div>
@@ -204,13 +216,15 @@ giscus_comments: true
             </ul>
           </div>
           
-          <div class="mathematical-framework">
+          <div class="mathematical-framework" markdown="1">
             <h5><i class="fas fa-calculator"></i> TGCN Formulation</h5>
             <p>The TGCN update rule combines spatial and temporal convolutions:</p>
-            <div class="equation-block">
-              $$H^{(t+1)} = \sigma\left(\tilde{A} H^{(t)} W^{(t)} + b^{(t)}\right)$$
-            </div>
-            <p>Where Ã represents the normalized adjacency matrix encoding sensor network topology.</p>
+
+$$
+H^{(t+1)} = \sigma\left(\tilde{A} H^{(t)} W^{(t)} + b^{(t)}\right)
+$$
+
+            <p>Where $\tilde{A}$ represents the normalized adjacency matrix encoding sensor network topology.</p>
           </div>
         </div>
       </div>
@@ -297,7 +311,7 @@ giscus_comments: true
   </div>
 </div>
 
-<p>HCAE addresses the <strong>non-determinism</strong> found in standard AEs, where the reconstruction error can vary due to randomness in the training process. By reducing this variability, HCAE enhances attack detection performance, reducing both false positives and false negatives.</p>
+<p>HCAE addresses the <strong>variability</strong> found in standard AutoEncoders, where the reconstruction error can vary due to randomness in the training process. By improving this consistency, HCAE enhances attack detection performance, reducing both false positives and false negatives.</p>
 
 <h4>AI Assurance Constraints in HCAE</h4>
 
@@ -348,13 +362,9 @@ giscus_comments: true
 
 <p>GAN training follows a minimax optimization process, where a generator tries to fool a discriminator into classifying synthetic data as real. The objective function for GANs is given as:</p>
 
-<pre>
-<code>
-\[
-\min _{G} \max _{D} V(D, G)= \mathbb{E}_{\boldsymbol{x} \sim p_{\mathrm{data}}(\boldsymbol{x})}[\log D(\boldsymbol{x})]  + \mathbb{E}_{\boldsymbol{z} \sim p_{\boldsymbol{z}}(\boldsymbol{z})}[\log (1-D(G(\boldsymbol{z})))]
-\]
-</code>
-</pre>
+$$
+\min_{G} \max_{D} V(D, G) = \mathbb{E}_{\boldsymbol{x} \sim p_{\mathrm{data}}(\boldsymbol{x})}[\log D(\boldsymbol{x})] + \mathbb{E}_{\boldsymbol{z} \sim p_{\boldsymbol{z}}(\boldsymbol{z})}[\log (1-D(G(\boldsymbol{z})))]
+$$
 
 <p>Through this process, the model is tested on both real and adversarially generated attack data, further improving robustness.</p>
 
@@ -626,5 +636,75 @@ giscus_comments: true
   .module-section {
     padding: 2rem 1rem;
   }
+}
+
+/* MathJax Equation Styling */
+.MJX-TEX {
+  font-size: 110% !important;
+}
+
+mjx-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 1rem 0;
+}
+
+mjx-container[display="true"] {
+  display: block !important;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.mathematical-framework mjx-container,
+.algorithm-box mjx-container {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid #007bff;
+}
+
+/* Ensure LaTeX delimiters are hidden during rendering */
+.MathJax_Preview {
+  color: transparent !important;
+}
+
+/* Algorithm pseudocode styling */
+.algorithm-pseudocode {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  border: 1px solid #dee2e6;
+  margin: 1.5rem 0;
+}
+
+.algorithm-pseudocode ol {
+  counter-reset: item;
+  list-style-type: none;
+  padding-left: 1.5rem;
+}
+
+.algorithm-pseudocode ol > li {
+  counter-increment: item;
+  margin-bottom: 0.8rem;
+}
+
+.algorithm-pseudocode ol > li::before {
+  content: counter(item) ". ";
+  font-weight: bold;
+  color: #495057;
+  margin-right: 0.5rem;
+}
+
+.algorithm-pseudocode ul {
+  list-style-type: none;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.algorithm-pseudocode ul > li::before {
+  content: "• ";
+  color: #6c757d;
+  font-weight: bold;
+  margin-right: 0.5rem;
 }
 </style>

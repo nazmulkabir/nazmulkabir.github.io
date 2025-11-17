@@ -26,7 +26,7 @@ related_publications: true
       <div class="col-lg-8">
         <div class="overview-content">
           <h2><i class="fas fa-tachometer-alt text-primary"></i> P<sub>2</sub>O: Prediction Dashboard</h2>
-          <p class="lead">P<sub>2</sub>O (Prediction to Optimization) is an intelligent AI-driven dashboard solution for water utilities, featuring advanced <strong>Multivariate Multi-step LSTM (MM-LSTM)</strong> models for accurate tunnel water level prediction and real-time system optimization.</p>
+          <p class="lead">P<sub>2</sub>O (Prediction to Optimization) is an intelligent AI-driven dashboard solution for water utilities, featuring advanced <strong>Multivariate Multi-step LSTM</strong> models for accurate tunnel water level prediction and real-time system optimization.</p>
           
           <div class="highlight-box">
             <h4><i class="fas fa-bullseye text-success"></i> Core Capabilities</h4>
@@ -91,7 +91,7 @@ related_publications: true
             <i class="fas fa-brain"></i>
           </div>
           <h4>Model Development</h4>
-          <p>MM-LSTM architecture with Huber loss optimization for handling extreme weather events and outliers.</p>
+          <p>LSTM architecture with Huber loss optimization for handling extreme weather events and anomalies.</p>
         </div>
       </div>
     </div>
@@ -175,7 +175,7 @@ related_publications: true
     <div class="row">
       <div class="col-lg-8">
         <div class="technical-details">
-          <h4>MM-LSTM Architecture</h4>
+          <h4>LSTM Architecture</h4>
           <p>The <strong>Multivariate Multi-step LSTM</strong> model represents a sophisticated approach to time-series forecasting, designed to handle the complex temporal dependencies in water level data while prioritizing critical overflow incidents.</p>
           
           <div class="lstm-features">
@@ -188,15 +188,18 @@ related_publications: true
             </ul>
           </div>
           
-          <div class="mathematical-framework">
+          <div class="mathematical-framework" markdown="1">
             <h5><i class="fas fa-calculator"></i> Huber Loss Function</h5>
-            <p>The model uses Huber loss to handle outliers from extreme weather and overflow events:</p>
-            <div class="equation-block">
-              $$L(y, f(x)) = \begin{cases}
-                \frac{1}{2}(y - f(x))^2 & \text{if } |y - f(x)| \leq \delta \\
-                \delta(|y - f(x)| - \frac{1}{2}\delta) & \text{if } |y - f(x)| > \delta
-              \end{cases}$$
-            </div>
+            <p>The model uses Huber loss to handle anomalies from extreme weather and overflow events:</p>
+
+$$
+L(y, f(x)) = 
+\begin{cases}
+  \frac{1}{2}(y - f(x))^2 & \text{if } |y - f(x)| \leq \delta \\
+  \delta \left(|y - f(x)| - \frac{1}{2}\delta\right) & \text{if } |y - f(x)| > \delta
+\end{cases}
+$$
+
             <p>This robust loss function ensures reliable predictions during both normal operations and extreme weather conditions.</p>
           </div>
         </div>
@@ -286,36 +289,28 @@ related_publications: true
 
 <h3>Model Optimization and Explainability</h3>
 
-<p>The MM-LSTM model is optimized using the Huber loss function, which is a robust alternative to Mean Squared Error (MSE) and less sensitive to outliers. The Huber loss function adjusts dynamically between MSE and Mean Absolute Error (MAE), providing a balance between outlier resistance and smooth optimization.</p>
+<p>The LSTM model is optimized using the Huber loss function, which is a robust alternative to Mean Squared Error (MSE) and less sensitive to anomalies. The Huber loss function adjusts dynamically between MSE and Mean Absolute Error (MAE), providing a balance between robustness and smooth optimization.</p>
 
-<pre>
-<code>
-\[
-L(y, f(x)) = \begin{cases}
+$$
+L(y, f(x)) = 
+\begin{cases}
     \frac{1}{2}(y - f(x))^2 & \text{if } |y - f(x)| \leq \delta \\
-    \delta(|y - f(x)| - \frac{1}{2}\delta) & \text{if } |y - f(x)| > \delta
+    \delta \left(|y - f(x)| - \frac{1}{2}\delta\right) & \text{if } |y - f(x)| > \delta
 \end{cases}
-\]
-\]
-</code>
+$$
+
 </pre>
 
 <p>To improve the interpretability of the deep learning model, SHAP (Shapley Additive Explanations) values are used to estimate feature importance. SHAP provides insights into the contribution of each feature to the model's output by applying a game-theory-based approach to calculate contribution scores for each prediction. By analyzing SHAP values, operators can gain a better understanding of critical features influencing tunnel water levels, optimizing the operational decision-making process.</p>
 
 <h4>Algorithm: Multivariate Multistep LSTM with Huber Loss for Tunnel Water Level Forecasting and Anomaly Detection</h4>
 
-<pre>
-<code>
-\begin{algorithm}[ht]
-\resizebox{\linewidth}{!}{
-\begin{minipage}{\linewidth}
-\caption{Multivariate Multistep LSTM with Huber Loss for Tunnel Water Level Forecasting with Anomaly Detection}
-\label{algo:LSTM-huber-anomaly-detection}
-\begin{algorithmic}[1]
-\STATE \textbf{Input:} Multivariate time series data $X$, LSTM model parameters, prediction horizon $H$, anomaly threshold $T$
-\STATE \textbf{Output:} Forecasted water levels and anomaly labels
-
-\STATE Split $X$ into training ($X_{\text{train}}$) and testing ($X_{\text{test}}$) datasets
+<div class="algorithm-pseudocode">
+  <p><strong>Algorithm:</strong> Multivariate Multistep LSTM with Huber Loss for Tunnel Water Level Forecasting with Anomaly Detection</p>
+  <p><strong>Input:</strong> Multivariate time series data $X$, LSTM model parameters, prediction horizon $H$, anomaly threshold $T$</p>
+  <p><strong>Output:</strong> Forecasted water levels and anomaly labels</p>
+  <ol>
+    <li>Split $X$ into training ($X_{\text{train}}$) and testing ($X_{\text{test}}$) datasets</li>
 
 \STATE Train the LSTM model on the training dataset using Huber loss
 \STATE Initialize model parameters and hyperparameters: $\Theta = \{\theta_1, \theta_2, \ldots, \theta_n\}$
