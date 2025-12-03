@@ -9,8 +9,9 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
+    <p><i class="fas fa-envelope"></i> msikder@odu.edu</p>
     <p><i class="fas fa-envelope"></i> nazmulkabir@vt.edu</p>
-    <p><i class="fas fa-map-marker-alt"></i> Arlington, VA</p>
+    <p><i class="fas fa-map-marker-alt"></i> Norfolk, VA</p>
     <p><i class="fas fa-calendar-alt"></i> <a href="https://calendly.com/nazmulkabir-vt/30min">Schedule Meeting</a></p>
 
 news: true # includes a list of news items
@@ -21,7 +22,7 @@ social: true # includes social icons at the bottom of the page
 <div class="about-intro">
   <div class="intro-content">
     <h2>AI Research Scientist & Cybersecurity Expert</h2>
-    <p class="intro-text">I am an incoming <strong>Research Assistant Professor</strong> at Old Dominion University's <a href="https://www.odu.edu/cyber" target="_blank">School of Cybersecurity</a>, where I will be exploring emerging research directions in cybersecurity. My expertise spans AI assurance, machine learning for cyberattack detection, and securing cyber-physical systems, with proven real-world applications in critical infrastructure including water distribution and agricultural networks.</p>
+    <p class="intro-text">I am a <strong>Research Assistant Professor</strong> at Old Dominion University's <a href="https://covacci.org/" target="_blank">Commonwealth Cyber Initiative Coastal Virginia</a>, where I am exploring emerging research directions in cybersecurity. Previously, I was a <a href="https://www.research.vt.edu/about/postdoctoral-associates/virginia-tech-presidential-postdoctoral-fellowships/current-fellows/sikder-nazmul.html" target="_blank">Presidential Postdoctoral Fellow</a> at Virginia Tech. My expertise spans AI assurance, machine learning for cyberattack detection, and securing cyber-physical systems, with proven real-world applications in critical infrastructure including water distribution and agricultural networks.</p>
     
     <div class="intro-highlights">
       <div class="highlight-item">
