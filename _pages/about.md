@@ -12,7 +12,7 @@ profile:
     <p><i class="fas fa-envelope"></i> msikder@odu.edu</p>
     <p><i class="fas fa-envelope"></i> nazmulkabir@vt.edu</p>
     <p><i class="fas fa-map-marker-alt"></i> Norfolk, VA</p>
-    <p><i class="fas fa-calendar-alt"></i> <a href="https://calendly.com/nazmulkabir-vt/30min">Schedule Meeting</a></p>
+    <p><i class="fas fa-calendar-alt"></i> <a href="https://calendly.com/nazmulkabir-vt/30min">Schedule a meeting with me</a></p>
 
 news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -43,181 +43,609 @@ social: true # includes social icons at the bottom of the page
 
 <div class="research-focus">
   <h3>Research Focus Areas</h3>
-  <div class="focus-areas">
-    <div class="focus-area">
-      <div class="focus-icon">
-        <i class="fas fa-shield-alt"></i>
-      </div>
-      <div class="focus-content">
-        <h4>AI-Driven Cybersecurity</h4>
-        <p>Advanced ML techniques for real-time threat detection in critical infrastructure</p>
-        <div class="focus-papers">
-          <h6>Key Publications:</h6>
-          <ul class="paper-list">
-            <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S2214714423000855" target="_blank">Deep H2O: Cyber attacks detection in water distribution systems using deep learning</a> <span class="journal">Journal of Water Process Engineering (2023)</span></li>
-            <li><a href="https://ascelibrary.org/doi/abs/10.1061/JOEEDU.EEENG-7266" target="_blank">P2O: AI-Driven Framework for Managing and Securing Wastewater Treatment Plants</a> <span class="journal">Journal of Environmental Engineering (2023)</span></li>
-            <li><a href="https://ieeexplore.ieee.org/abstract/document/9951019" target="_blank">Model-agnostic scoring methods for artificial intelligence assurance</a> <span class="journal">IEEE STC (2022)</span></li>
-          </ul>
+  
+  <div class="research-container">
+    <!-- Research Area Cards on Left -->
+    <div class="research-areas-list">
+      <article class="research-card" data-area="cybersecurity" onclick="showResearchDetails('cybersecurity')">
+        <div class="card-content">
+          <div class="card-header">
+            <div class="card-icon">🛡️</div>
+            <div class="card-meta">
+              <span class="card-category cybersecurity">Cybersecurity</span>
+              <span class="research-badge"><i class="fas fa-award"></i> 6 Publications</span>
+            </div>
+          </div>
+          <h4>AI-Driven Cybersecurity</h4>
+          <p>Developing advanced ML models for real-time threat detection in critical infrastructure</p>
         </div>
-      </div>
-    </div>
-    
-    <div class="focus-area">
-      <div class="focus-icon">
-        <i class="fas fa-water"></i>
-      </div>
-      <div class="focus-content">
-        <h4>Smart Water Systems</h4>
-        <p>AI solutions for water distribution optimization and anomaly detection</p>
-        <div class="focus-papers">
-          <h6>Key Publications:</h6>
-          <ul class="paper-list">
-            <li><a href="https://dl.acm.org/doi/10.1145/3744350" target="_blank">Context-driven Deep Learning Forecasting for Wastewater Treatment Plants</a> <span class="journal">ACM TCPS (2025)</span></li>
-            <li><a href="https://ieeexplore.ieee.org/abstract/document/11028129" target="_blank">Assessing the Impact of Cyber Attacks on Water Distribution Systems</a> <span class="journal">IEEE Access (2023)</span></li>
-            <li><a href="https://www.waterrf.org/sites/default/files/file/2022-11/2022_IWS-Challenge-Solution_Virginia-Tech.pdf" target="_blank">Realtime management of wastewater treatment plants using AI</a> <span class="journal">International Water Symposium (2022)</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    
-    <div class="focus-area">
-      <div class="focus-icon">
-        <i class="fas fa-seedling"></i>
-      </div>
-      <div class="focus-content">
-        <h4>Precision Agriculture</h4>
-        <p>Machine learning applications for sustainable farming and crop monitoring</p>
-        <div class="focus-papers">
-          <h6>Key Publications:</h6>
-          <ul class="paper-list">
-            <li><a href="https://ieeexplore.ieee.org/abstract/document/9659921" target="_blank">DeepAg: Deep learning approach for measuring the effects of outlier events</a> <span class="journal">IEEE SSCI (2021)</span></li>
-            <li><a href="https://www.sciencedirect.com/science/article/abs/pii/B9780323919197000299" target="_blank">The application of artificial intelligence assurance in precision farming</a> <span class="journal">AI Assurance Book Chapter (2022)</span></li>
-            <li><a href="https://scholar.archive.org/work/x4nad4ffdrgprittlkqyu7paki/access/wayback/https://journals.flvc.org/FLAIRS/article/download/128497/130068" target="_blank">Applications of machine learning for precision agriculture and smart farming</a> <span class="journal">FLAIRS (2021)</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    
-    <div class="focus-area">
-      <div class="focus-icon">
-        <i class="fas fa-check-circle"></i>
-      </div>
-      <div class="focus-content">
-        <h4>AI Assurance & Reliability</h4>
-        <p>Ensuring trustworthy and explainable AI systems in critical applications</p>
-        <div class="focus-papers">
-          <h6>Key Publications:</h6>
-          <ul class="paper-list">
-            <li><a href="https://vtechworks.lib.vt.edu/server/api/core/bitstreams/ddafd734-9641-4011-9bba-f5d4f8756bbe/content" target="_blank">AI Methods for Anomaly Detection in Cyber-Physical Systems</a> <span class="journal">PhD Dissertation, Virginia Tech (2025)</span></li>
-            <li><a href="https://www.sciencedirect.com/science/article/abs/pii/B9780323919197000202" target="_blank">Outlier detection using AI: a survey</a> <span class="journal">AI Assurance Book Chapter (2023)</span></li>
-            <li><a href="https://www.sciencedirect.com/book/9780323919197/ai-assurance" target="_blank">AI Assurance: Towards Trustworthy, Explainable, Safe, and Ethical AI</a> <span class="journal">Academic Press (2022)</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="background-section">
-  <div class="row">
-    <div class="col-lg-8">
-      <h3>Academic & Professional Journey</h3>
+      </article>
       
-      <div class="journey-timeline">
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <i class="fas fa-university"></i>
-          </div>
-          <div class="timeline-content">
-            <h4>Ph.D. in Computer Engineering</h4>
-            <p class="institution">Virginia Tech (2024)</p>
-            <p>Dissertation: "AI Methods for Anomaly Detection in Cyber-Physical Systems: With Application to Water and Agriculture"</p>
-            <div class="achievement-badges">
-              <span class="badge">Summa Cum Laude</span>
-              <span class="badge">Research Excellence Award</span>
+      <article class="research-card" data-area="water" onclick="showResearchDetails('water')">
+        <div class="card-content">
+          <div class="card-header">
+            <div class="card-icon">💧</div>
+            <div class="card-meta">
+              <span class="card-category water">Water Systems</span>
+              <span class="research-badge"><i class="fas fa-award"></i> 3 Publications</span>
             </div>
           </div>
+          <h4>Smart Water Systems</h4>
+          <p>AI-powered solutions for monitoring and protecting water distribution networks</p>
         </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <i class="fas fa-briefcase"></i>
-          </div>
-          <div class="timeline-content">
-            <h4>Telecommunications Engineer</h4>
-            <p class="institution">Grameenphone Ltd., Bangladesh (4 years)</p>
-            <p>Led digital transformation initiatives serving <strong>170+ million users</strong>. Specialized in network optimization, data analytics, and infrastructure management.</p>
-            <div class="achievement-badges">
-              <span class="badge">Team Leadership</span>
-              <span class="badge">Network Optimization</span>
+      </article>
+      
+      <article class="research-card" data-area="agriculture" onclick="showResearchDetails('agriculture')">
+        <div class="card-content">
+          <div class="card-header">
+            <div class="card-icon">🌾</div>
+            <div class="card-meta">
+              <span class="card-category agriculture">AgriTech</span>
+              <span class="research-badge"><i class="fas fa-award"></i> 3 Publications</span>
             </div>
           </div>
+          <h4>Precision Agriculture</h4>
+          <p>Machine learning for crop health monitoring and sustainable farming practices</p>
         </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <i class="fas fa-rocket"></i>
-          </div>
-          <div class="timeline-content">
-            <h4>Research Assistant Professor</h4>
-            <p class="institution">Old Dominion University - Cybersecurity (2025 - Present)</p>
-            <p>Leading advanced research in AI-driven cybersecurity, developing ML solutions currently <strong>deployed in major U.S. facilities</strong>, bridging the gap between theoretical AI research and real-world applications.</p>
-            <div class="achievement-badges">
-              <span class="badge">Real-world Deployment</span>
-              <span class="badge">Industry Partnership</span>
+      </article>
+      
+      <article class="research-card" data-area="assurance" onclick="showResearchDetails('assurance')">
+        <div class="card-content">
+          <div class="card-header">
+            <div class="card-icon">✓</div>
+            <div class="card-meta">
+              <span class="card-category research">AI Assurance</span>
+              <span class="research-badge"><i class="fas fa-award"></i> 3 Publications</span>
             </div>
           </div>
+          <h4>AI Assurance & Reliability</h4>
+          <p>Ensuring trustworthy, explainable, and safe AI systems in critical applications</p>
         </div>
-      </div>
+      </article>
     </div>
     
-    <div class="col-lg-4">
-      <div class="research-highlights">
-        <h4>Research Highlights</h4>
-        <div class="highlight-stats">
-          <div class="stat-item">
-            <div class="stat-number">15+</div>
-            <div class="stat-label">Publications</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">3</div>
-            <div class="stat-label">Awards</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">5</div>
-            <div class="stat-label">Years Experience</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">170M+</div>
-            <div class="stat-label">Users Impacted</div>
-          </div>
-        </div>
-        
-        <div class="current-focus-box">
-          <h5>Current Focus</h5>
-          <p>Developing <strong>trustworthy AI systems</strong> that operate reliably in high-stakes environments. My research bridges AI theory and practice, focusing on scalable ML models for real-time threat detection.</p>
-        </div>
+    <!-- Details Panel on Right (Sticky) -->
+    <div class="research-details-panel">
+    
+    <!-- Cybersecurity Details -->
+    <div class="research-detail-content" id="detail-cybersecurity" style="display: none;">
+      <div class="detail-header">
+        <div class="detail-icon">🛡️</div>
+        <h4>AI-Driven Cybersecurity</h4>
       </div>
+      <p class="detail-description">Developing advanced machine learning models for real-time threat detection and response in critical infrastructure. My work focuses on creating scalable, deployable solutions that bridge the gap between academic research and industrial applications.</p>
+      <h5>Key Publications</h5>
+      <ul class="publication-detail-list">
+              <li>
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/S2214714423000855" target="_blank">
+                  <strong>Deep H2O: Cyber attacks detection in water distribution systems using deep learning</strong>
+                  <span class="pub-venue">Journal of Water Process Engineering (2023)</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://ascelibrary.org/doi/abs/10.1061/JOEEDU.EEENG-7266" target="_blank">
+                  <strong>P2O: AI-Driven Framework for Managing and Securing Wastewater Treatment Plants</strong>
+                  <span class="pub-venue">Journal of Environmental Engineering (2023)</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://ieeexplore.ieee.org/abstract/document/9951019" target="_blank">
+                  <strong>Model-agnostic scoring methods for artificial intelligence assurance</strong>
+                  <span class="pub-venue">IEEE STC (2022)</span>
+                </a>
+              </li>
+      </ul>
     </div>
+    
+    <!-- Water Systems Details -->
+    <div class="research-detail-content" id="detail-water" style="display: none;">
+      <div class="detail-header">
+        <div class="detail-icon">💧</div>
+        <h4>Smart Water Systems</h4>
+      </div>
+      <p class="detail-description">Pioneering AI-powered solutions for monitoring and protecting water distribution networks. My research has been deployed in operational water systems, demonstrating practical impact in safeguarding critical water infrastructure.</p>
+      <h5>Key Publications</h5>
+      <ul class="publication-detail-list">
+              <li>
+                <a href="https://dl.acm.org/doi/10.1145/3744350" target="_blank">
+                  <strong>Context-driven Deep Learning Forecasting for Wastewater Treatment Plants</strong>
+                  <span class="pub-venue">ACM TCPS (2025)</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://ieeexplore.ieee.org/abstract/document/11028129" target="_blank">
+                  <strong>Assessing the Impact of Cyber Attacks on Water Distribution Systems</strong>
+                  <span class="pub-venue">IEEE Access (2023)</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.waterrf.org/sites/default/files/file/2022-11/2022_IWS-Challenge-Solution_Virginia-Tech.pdf" target="_blank">
+                  <strong>Realtime management of wastewater treatment plants using AI</strong>
+                  <span class="pub-venue">International Water Symposium (2022)</span>
+                </a>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Agriculture Details -->
+    <div class="research-detail-content" id="detail-agriculture" style="display: none;">
+      <div class="detail-header">
+        <div class="detail-icon">🌾</div>
+        <h4>Precision Agriculture</h4>
+      </div>
+      <p class="detail-description">Applying machine learning to optimize agricultural practices, from crop health monitoring to irrigation management. My work combines computer vision and IoT technologies to enhance food security and resource efficiency.</p>
+      <h5>Key Publications</h5>
+      <ul class="publication-detail-list">
+              <li>
+                <a href="https://ieeexplore.ieee.org/abstract/document/9659921" target="_blank">
+                  <strong>DeepAg: Deep learning approach for measuring the effects of outlier events</strong>
+                  <span class="pub-venue">IEEE SSCI (2021)</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/B9780323919197000299" target="_blank">
+                  <strong>The application of artificial intelligence assurance in precision farming</strong>
+                  <span class="pub-venue">AI Assurance Book Chapter (2022)</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://scholar.archive.org/work/x4nad4ffdrgprittlkqyu7paki/access/wayback/https://journals.flvc.org/FLAIRS/article/download/128497/130068" target="_blank">
+                  <strong>Applications of machine learning for precision agriculture and smart farming</strong>
+                  <span class="pub-venue">FLAIRS (2021)</span>
+                </a>
+              </li>
+      </ul>
+    </div>
+    
+    <!-- AI Assurance Details -->
+    <div class="research-detail-content" id="detail-assurance" style="display: none;">
+      <div class="detail-header">
+        <div class="detail-icon">✓</div>
+        <h4>AI Assurance & Reliability</h4>
+      </div>
+      <p class="detail-description">Advancing the field of trustworthy AI through research on explainability, safety, and ethical considerations. My book on AI Assurance serves as a comprehensive resource for developing reliable AI systems.</p>
+      <h5>Key Publications</h5>
+      <ul class="publication-detail-list">
+              <li>
+                <a href="https://vtechworks.lib.vt.edu/server/api/core/bitstreams/ddafd734-9641-4011-9bba-f5d4f8756bbe/content" target="_blank">
+                  <strong>AI Methods for Anomaly Detection in Cyber-Physical Systems</strong>
+                  <span class="pub-venue">PhD Dissertation, Virginia Tech (2025)</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/B9780323919197000202" target="_blank">
+                  <strong>Outlier detection using AI: a survey</strong>
+                  <span class="pub-venue">AI Assurance Book Chapter (2023)</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.sciencedirect.com/book/9780323919197/ai-assurance" target="_blank">
+                  <strong>AI Assurance: Towards Trustworthy, Explainable, Safe, and Ethical AI</strong>
+                  <span class="pub-venue">Academic Press (2022)</span>
+                </a>
+        </li>
+      </ul>
+    </div>
+    
   </div>
 </div>
-
-<div class="collaboration-section">
-  <div class="cta-content">
-    <h3>Let's Collaborate</h3>
-    <p>Interested in discussing research collaborations, speaking opportunities, or consulting on AI/cybersecurity projects?</p>
-    <div class="cta-buttons">
-      <a href="mailto:nazmulkabir@vt.edu" class="btn btn-primary">
-        <i class="fas fa-envelope"></i> Email Me
-      </a>
-      <a href="https://calendly.com/nazmulkabir-vt/30min" class="btn btn-outline" target="_blank">
-        <i class="fas fa-calendar-alt"></i> Schedule Meeting
-      </a>
-    </div>
-  </div>
 </div>
 
 <style>
+/* Research Focus Section */
+.research-focus {
+  margin-bottom: 4rem;
+}
+
+.research-focus h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--global-text-color);
+  margin-bottom: 2rem;
+}
+
+/* Two Column Layout */
+.research-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Research Cards List (Horizontal) */
+.research-areas-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+/* Research Card */
+.research-card {
+  background: var(--global-bg-color);
+  border-radius: 1rem;
+  border: 2px solid var(--global-divider-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.research-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--global-theme-color), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.research-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-color: var(--global-theme-color);
+}
+
+.research-card:hover::before {
+  opacity: 1;
+}
+
+.research-card.active {
+  border-color: var(--global-theme-color);
+  border-width: 2px;
+  box-shadow: 0 4px 16px rgba(52, 152, 219, 0.2);
+  transform: translateX(8px);
+}
+
+.research-card.active::before {
+  opacity: 1;
+  height: 6px;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  gap: 1rem;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.research-card:hover .card-icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.research-card.active .card-icon {
+  transform: scale(1.15);
+}
+
+.card-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+}
+
+.card-category {
+  padding: 0.35rem 0.85rem;
+  border-radius: 1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+}
+
+.card-category.cybersecurity {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.card-category.water {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}
+
+.card-category.agriculture {
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+}
+
+.card-category.research {
+  background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+}
+
+.research-badge {
+  font-size: 0.7rem;
+  color: var(--global-text-color-light);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.card-content h4 {
+  font-size: 1.25em;
+  font-weight: 600;
+  color: var(--global-text-color);
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+
+.card-content p {
+  color: var(--global-text-color-light);
+  line-height: 1.6;
+  font-size: 17px;
+  margin: 0;
+}
+
+/* Research Details Panel */
+.research-details-panel {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.details-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--global-text-color-light);
+  background: var(--global-code-bg-color);
+  border-radius: 1rem;
+  border: 2px dashed var(--global-divider-color);
+  min-height: 300px;
+}
+
+.details-placeholder i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.details-placeholder p {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.research-detail-content {
+  display: none;
+  padding: 2rem;
+  background: var(--global-bg-color);
+  border: 2px solid var(--global-theme-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeSlideIn 0.4s ease;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--global-divider-color);
+}
+
+.detail-icon {
+  font-size: 2.25rem;
+}
+
+.research-detail-content h4 {
+  color: var(--global-theme-color);
+  margin: 0;
+  font-size: 1.75em;
+  font-weight: 600;
+}
+
+.research-detail-content h5 {
+  color: var(--global-text-color);
+  margin: 1.25rem 0 0.9rem 0;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.detail-description {
+  color: var(--global-text-color);
+  line-height: 1.65;
+  font-size: 18px;
+  margin-bottom: 1.25rem;
+}
+
+/* Publication List */
+.publication-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.publication-detail-list li {
+  padding: 1rem;
+  background: var(--global-code-bg-color);
+  border-radius: 0.65rem;
+  border-left: 4px solid var(--global-theme-color);
+  transition: all 0.3s ease;
+}
+
+.publication-detail-list li:hover {
+  transform: translateX(6px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  background: var(--global-bg-color);
+}
+
+.publication-detail-list a {
+  color: var(--global-text-color);
+  text-decoration: none;
+  display: block;
+}
+
+.publication-detail-list a:hover {
+  color: var(--global-theme-color);
+}
+
+.publication-detail-list strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 17px;
+  line-height: 1.4;
+  color: var(--global-text-color);
+  font-weight: 600;
+}
+
+.publication-detail-list .pub-venue {
+  display: block;
+  font-size: 16px;
+  color: var(--global-text-color-light);
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .research-areas-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .research-details-panel {
+    position: relative;
+    top: 0;
+    max-height: none;
+    overflow-y: visible;
+  }
+  
+  .research-card:hover,
+  .research-card.active {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .research-areas-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-content {
+    padding: 1.25rem;
+  }
+  
+  .card-icon {
+    font-size: 2rem;
+  }
+  
+  .research-detail-content {
+    padding: 1.5rem;
+  }
+  
+  .detail-icon {
+    font-size: 1.85rem;
+  }
+  
+  .research-detail-content h4 {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .card-meta {
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 0.6rem;
+  }
+}
+</style>
+
+<script>
+function showResearchDetails(area) {
+  const allDetails = document.querySelectorAll('.research-detail-content');
+  const allCards = document.querySelectorAll('.research-card');
+  const placeholder = document.querySelector('.details-placeholder');
+  const selectedCard = document.querySelector('.research-card[data-area="' + area + '"]');
+  const selectedDetail = document.getElementById('detail-' + area);
+  
+  // Check if clicking the same card (toggle off)
+  if (selectedCard.classList.contains('active')) {
+    selectedCard.classList.remove('active');
+    selectedDetail.style.display = 'none';
+    if (placeholder) {
+      placeholder.style.display = 'flex';
+    }
+    return;
+  }
+  
+  // Remove active from all cards
+  allCards.forEach(card => card.classList.remove('active'));
+  
+  // Hide all details
+  allDetails.forEach(detail => {
+    detail.style.display = 'none';
+  });
+  
+  // Hide placeholder if it exists
+  if (placeholder) {
+    placeholder.style.display = 'none';
+  }
+  
+  // Show selected detail with animation
+  if (selectedDetail) {
+    selectedDetail.style.display = 'block';
+  }
+  
+  // Add active class to clicked card
+  if (selectedCard) {
+    selectedCard.classList.add('active');
+  }
+}
+</script>
+
+<style>
+/* Typography - Academic Pages Style */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Scale down profile image */
+.profile img {
+  max-width: 70%;
+  height: auto;
+}
+
 /* Professional About Page Styling */
 .about-intro {
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
@@ -226,6 +654,7 @@ social: true # includes social icons at the bottom of the page
   margin-bottom: 2.5rem;
   border: 1px solid #e9ecef;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  grid-column: 1 / -1;
 }
 
 html[data-theme='dark'] .about-intro {
@@ -234,9 +663,15 @@ html[data-theme='dark'] .about-intro {
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
+/* Research Focus and other sections span full width */
+.research-focus,
+.background-section {
+  grid-column: 1 / -1;
+}
+
 .intro-content h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 2em;
+  font-weight: 600;
   color: #2c3e50;
   margin-bottom: 1rem;
   text-align: center;
@@ -247,8 +682,8 @@ html[data-theme='dark'] .intro-content h2 {
 }
 
 .intro-text {
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 18px;
+  line-height: 1.65;
   color: #495057;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -276,14 +711,14 @@ html[data-theme='dark'] .intro-text {
 
 .highlight-number {
   display: block;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 2em;
+  font-weight: 600;
   color: #3498db;
   margin-bottom: 0.25rem;
 }
 
 .highlight-label {
-  font-size: 0.85rem;
+  font-size: 1em;
   color: #6c757d;
   font-weight: 500;
 }
@@ -294,7 +729,7 @@ html[data-theme='dark'] .intro-text {
 }
 
 .research-focus h3 {
-  font-size: 1.4rem;
+  font-size: 1.75em;
   font-weight: 600;
   color: #2c3e50;
   margin-bottom: 1.5rem;

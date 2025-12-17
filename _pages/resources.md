@@ -1244,4 +1244,462 @@ nav_order: 7
     max-width: 300px;
   }
 }
+</style>    
+    this.updateCarouselPosition();
+    
+    setTimeout(() => {
+      this.isAnimating = false;
+    }, 600);
+  }
+  
+  goToSlide(index) {
+    if (this.isAnimating || index === this.currentIndex) return;
+    
+    this.isAnimating = true;
+    this.currentIndex = index;
+    this.updateCarouselPosition();
+    
+    setTimeout(() => {
+      this.isAnimating = false;
+    }, 600);
+  }
+  
+  startAutoPlay() {
+    this.stopAutoPlay();
+    this.autoPlayInterval = setInterval(() => {
+      this.moveCarousel(1);
+    }, 5000); // Change slide every 5 seconds
+  }
+  
+  stopAutoPlay() {
+    if (this.autoPlayInterval) {
+      clearInterval(this.autoPlayInterval);
+      this.autoPlayInterval = null;
+    }
+  }
+  
+  addTouchSupport() {
+    let startX = 0;
+    let startY = 0;
+    let isDragging = false;
+    
+    this.carousel.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      isDragging = false;
+      this.stopAutoPlay();
+    });
+    
+    this.carousel.addEventListener('touchmove', (e) => {
+      if (!startX) return;
+      
+      const currentX = e.touches[0].clientX;
+      const currentY = e.touches[0].clientY;
+      const diffX = startX - currentX;
+      const diffY = startY - currentY;
+      
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 10) {
+        isDragging = true;
+        e.preventDefault();
+      }
+    });
+    
+    this.carousel.addEventListener('touchend', (e) => {
+      if (!startX || !isDragging) return;
+      
+      const endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+      
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+          this.moveCarousel(1); // Swipe left - move right
+        } else {
+          this.moveCarousel(-1); // Swipe right - move left
+        }
+      }
+      
+      startX = 0;
+      isDragging = false;
+      this.startAutoPlay();
+    });
+  }
+}
+
+// Global functions for button controls
+function moveCarousel(direction) {
+  if (window.newsCarousel) {
+    window.newsCarousel.moveCarousel(direction);
+  }
+}
+
+function goToSlide(index) {
+  if (window.newsCarousel) {
+    window.newsCarousel.goToSlide(index);
+  }
+}
+
+// Initialize carousel when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Wait a bit for all elements to be rendered
+  setTimeout(() => {
+    window.newsCarousel = new NewsCarousel();
+  }, 100);
+});
+
+// Reinitialize on page changes (for SPA behavior)
+if (typeof window !== 'undefined') {
+  window.addEventListener('load', function() {
+    if (!window.newsCarousel) {
+      setTimeout(() => {
+        window.newsCarousel = new NewsCarousel();
+      }, 200);
+    }
+  });
+}
+</script>
+>>>>>>> c76794f61283297db94743ff5c9c1ce07faee8f3
+ align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  text-decoration: none;
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #667eea;
+  border-color: #667eea;
+}
+
+.btn-outline:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resources-hero {
+    padding: 2rem 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .resources-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .resource-card {
+    padding: 1.5rem;
+  }
+  
+  .category-header h2 {
+    font-size: 2rem;
+  }
+  
+  .contribution-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+</style>a800 100%); }
+.tag.scalable { background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); }
+.tag.editor { background: linear-gradient(135deg, #6610f2 0%, #520dc2 100%); }
+.tag.tracking { background: linear-gradient(135deg, #28a745 0%, #20c997 100%); }
+
+/* Resource Links */
+.resource-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--global-card-bg-color);
+  color: var(--global-theme-color);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.btn-link:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Contribution Section */
+.contribution-section {
+  background: var(--global-card-bg-color);
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin-top: 4rem;
+  border: 1px solid var(--global-divider-color);
+}
+
+.contribution-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.contribution-content p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.contribution-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  text-decoration: none;
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #667eea;
+  border-color: #667eea;
+}
+
+.btn-outline:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resources-hero {
+    padding: 2rem 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .resources-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .resource-card {
+    padding: 1.5rem;
+  }
+  
+  .category-header h2 {
+    font-size: 2rem;
+  }
+  
+  .contribution-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+</style>
+>>>>>>> 9d10a637 (Update profile for ODU Research Assistant Professor position and improve dark mode visibility)
+.clientY;
+      const diffX = startX - currentX;
+      const diffY = startY - currentY;
+      
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 10) {
+        isDragging = true;
+        e.preventDefault();
+      }
+    });
+    
+    this.carousel.addEventListener('touchend', (e) => {
+      if (!startX || !isDragging) return;
+      
+      const endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+      
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+          this.moveCarousel(1); // Swipe left - move right
+        } else {
+          this.moveCarousel(-1); // Swipe right - move left
+        }
+      }
+      
+      startX = 0;
+      isDragging = false;
+      this.startAutoPlay();
+    });
+  }
+}
+
+// Global functions for button controls
+function moveCarousel(direction) {
+  if (window.newsCarousel) {
+    window.newsCarousel.moveCarousel(direction);
+  }
+}
+
+function goToSlide(index) {
+  if (window.newsCarousel) {
+    window.newsCarousel.goToSlide(index);
+  }
+}
+
+// Initialize carousel when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Wait a bit for all elements to be rendered
+  setTimeout(() => {
+    window.newsCarousel = new NewsCarousel();
+  }, 100);
+});
+
+// Reinitialize on page changes (for SPA behavior)
+if (typeof window !== 'undefined') {
+  window.addEventListener('load', function() {
+    if (!window.newsCarousel) {
+      setTimeout(() => {
+        window.newsCarousel = new NewsCarousel();
+      }, 200);
+    }
+  });
+}
+</script> align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  text-decoration: none;
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #667eea;
+  border-color: #667eea;
+}
+
+.btn-outline:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resources-hero {
+    padding: 2rem 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .resources-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .resource-card {
+    padding: 1.5rem;
+  }
+  
+  .category-header h2 {
+    font-size: 2rem;
+  }
+  
+  .contribution-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
 </style>

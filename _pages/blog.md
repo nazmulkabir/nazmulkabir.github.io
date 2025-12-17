@@ -2,99 +2,15 @@
 layout: page
 permalink: /blog/
 title: blog
-description: Insights, discoveries, and reflections on AI research, cybersecurity, and the future of technology
+description:
 nav: true
 nav_order: 2
 ---
 
-<div class="blog-hero">
-  <div class="hero-background">
-    <div class="hero-pattern"></div>
-  </div>
-  <div class="hero-content">
-    <h1><i class="fas fa-pen-fancy"></i> Research Blog</h1>
-    <p class="hero-subtitle">Exploring the intersection of artificial intelligence, cybersecurity, and real-world applications</p>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-number">25+</div>
-        <div class="stat-label">Articles</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">12K+</div>
-        <div class="stat-label">Readers</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">8</div>
-        <div class="stat-label">Topics</div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="blog-container">
   
-  <!-- Featured Article -->
-  <div class="featured-section">
-    <div class="section-header">
-      <h2><i class="fas fa-star"></i> Featured Article</h2>
-      <p>Deep dive into cutting-edge research and insights</p>
-    </div>
-    
-    <article class="featured-article">
-      <div class="article-image">
-        <img src="{{ '/assets/img/blog/featured-ai-security.jpg' | relative_url }}" 
-             alt="AI Security Research" 
-             onerror="this.src='https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'">
-        <div class="article-badge">Featured</div>
-      </div>
-      <div class="article-content">
-        <div class="article-meta">
-          <span class="article-category ai-ml">AI & Machine Learning</span>
-          <span class="article-date">October 10, 2025</span>
-          <span class="article-reading-time"><i class="fas fa-clock"></i> 12 min read</span>
-        </div>
-        <h1>The Future of Explainable AI in Cybersecurity: Beyond Black Box Models</h1>
-        <p class="article-excerpt">
-          As artificial intelligence becomes increasingly critical in cybersecurity applications, the need for transparent, 
-          explainable AI systems has never been more urgent. In this comprehensive exploration, we examine how explainable 
-          AI (XAI) is revolutionizing threat detection, incident response, and security decision-making processes.
-        </p>
-        <div class="article-highlights">
-          <h4><i class="fas fa-lightbulb"></i> Key Insights:</h4>
-          <ul>
-            <li>Why black-box AI models pose risks in critical security decisions</li>
-            <li>Novel approaches to interpretable machine learning for threat detection</li>
-            <li>Real-world case studies from water infrastructure protection</li>
-            <li>Future directions in trustworthy AI for cybersecurity</li>
-          </ul>
-        </div>
-        <div class="article-actions">
-          <a href="#" class="btn-read-more">
-            <i class="fas fa-book-open"></i> Read Full Article
-          </a>
-          <div class="article-engagement">
-            <span class="engagement-item">
-              <i class="fas fa-heart"></i> 156 Likes
-            </span>
-            <span class="engagement-item">
-              <i class="fas fa-comment"></i> 23 Comments
-            </span>
-            <span class="engagement-item">
-              <i class="fas fa-share"></i> 45 Shares
-            </span>
-          </div>
-        </div>
-      </div>
-    </article>
-  </div>
-
   <!-- Recent Articles -->
   <div class="articles-section">
-    <div class="section-header">
-      <h2><i class="fas fa-newspaper"></i> Recent Articles</h2>
-      <p>Latest thoughts and research insights</p>
-    </div>
-    
     <div class="articles-grid">
       
       <!-- Article 1 -->
@@ -330,39 +246,14 @@ nav_order: 2
     </div>
   </div>
 
-  <!-- Newsletter Signup -->
-  <div class="newsletter-section">
-    <div class="newsletter-content">
-      <div class="newsletter-icon">
-        <i class="fas fa-envelope"></i>
-      </div>
-      <div class="newsletter-text">
-        <h2>Stay Updated</h2>
-        <p>Get the latest research insights and articles delivered to your inbox. No spam, just valuable content.</p>
-      </div>
-      <div class="newsletter-form">
-        <form class="signup-form">
-          <div class="form-group">
-            <input type="email" placeholder="Enter your email address" class="email-input" required>
-            <button type="submit" class="signup-btn">
-              <i class="fas fa-paper-plane"></i>
-              Subscribe
-            </button>
-          </div>
-          <p class="form-note">Join 1,200+ researchers and professionals</p>
-        </form>
-      </div>
-    </div>
-  </div>
-
 </div>
 
 <style>
 /* Blog Page Styling */
 .blog-hero {
   position: relative;
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
-  color: white;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%);
+  color: #1a1a1a;
   padding: 4rem 2rem;
   margin-bottom: 4rem;
   overflow: hidden;
