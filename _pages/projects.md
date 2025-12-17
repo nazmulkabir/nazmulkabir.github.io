@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Research projects in AI assurance, cybersecurity, and machine learning for critical infrastructure protection
+description:
 nav: true
 nav_order: 4
 display_categories: [work, fun]
@@ -12,190 +12,111 @@ horizontal: false
 <!-- pages/projects.md -->
 <div class="projects">
 
-<!-- Hero Section -->
-<div class="projects-hero-section mb-5">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="hero-content text-center">
-        <h1 class="hero-title">
-          <i class="fas fa-project-diagram text-primary"></i>
-          Research Projects
-        </h1>
-        <p class="hero-subtitle">
-          Innovative AI solutions for critical infrastructure protection, cybersecurity, and intelligent systems
-        </p>
-        <div class="hero-stats mt-4">
-          <div class="row justify-content-center">
-            <div class="col-md-3 col-6">
-              <div class="stat-card clickable" data-target="projects-section">
-                <h3 class="stat-number">{{ site.projects | size }}</h3>
-                <p class="stat-label">Active Projects</p>
-                <i class="fas fa-arrow-down stat-arrow"></i>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="stat-card clickable" data-target="research-focus">
-                <h3 class="stat-number">4</h3>
-                <p class="stat-label">Research Areas</p>
-                <i class="fas fa-arrow-down stat-arrow"></i>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="stat-card">
-                <h3 class="stat-number">3</h3>
-                <p class="stat-label">Years Experience</p>
-              </div>
-            </div>
-            <div class="col-md-3 col-6">
-              <div class="stat-card clickable" data-target="/publications/">
-                <h3 class="stat-number">10+</h3>
-                <p class="stat-label">Publications</p>
-                <i class="fas fa-external-link-alt stat-arrow"></i>
-              </div>
-            </div>
-          </div>
+<div class="row">
+  <div class="col-lg-3 col-md-6 mb-4">
+    <div class="focus-card h-100">
+      <div class="focus-icon">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h4>Cybersecurity & AI Assurance</h4>
+      <p>AI-driven security solutions for critical infrastructure and cyber-physical systems</p>
+      <div class="focus-projects mb-3">
+        <h6 class="text-muted mb-2">Featured Projects:</h6>
+        <div class="project-links">
+          <a href="{{ site.baseurl }}/projects/2_project/" class="project-link">
+            <i class="fas fa-water"></i> DeepH2O
+          </a>
+          <a href="{{ site.baseurl }}/projects/4_project/" class="project-link">
+            <i class="fas fa-shield-alt"></i> MAA Framework
+          </a>
         </div>
+      </div>
+      <div class="focus-technologies">
+        <span class="tech-tag">Deep Learning</span>
+        <span class="tech-tag">Anomaly Detection</span>
+        <span class="tech-tag">HCAE</span>
+        <span class="tech-tag">TGCN</span>
       </div>
     </div>
   </div>
-</div>
-
-<!-- GitHub Highlights (compact) -->
-<div class="github-compact-section mb-5">
-  <h2 class="section-title text-center mb-2">
-    <i class="fab fa-github text-dark"></i> GitHub highlights
-  </h2>
-  <p class="text-center text-muted small mb-4">A few open-source repos I maintain or contribute to</p>
-
-  <div class="github-compact-grid">
-    {% assign repos = site.data.repositories.github_repos | slice: 0, 4 %}
-    {% for repo in repos %}
-      {% include repository/repo.liquid repository=repo %}
-    {% endfor %}
+  <div class="col-lg-3 col-md-6 mb-4">
+    <div class="focus-card h-100">
+      <div class="focus-icon">
+        <i class="fas fa-water"></i>
+      </div>
+      <h4>Water Systems Intelligence</h4>
+      <p>Smart water distribution and wastewater treatment optimization using AI</p>
+      <div class="focus-projects mb-3">
+        <h6 class="text-muted mb-2">Featured Projects:</h6>
+        <div class="project-links">
+          <a href="{{ site.baseurl }}/projects/1_project/" class="project-link">
+            <i class="fas fa-chart-line"></i> DC Water
+          </a>
+          <a href="{{ site.baseurl }}/projects/3_project/" class="project-link">
+            <i class="fas fa-tachometer-alt"></i> P2O Dashboard
+          </a>
+          <a href="{{ site.baseurl }}/projects/6_project/" class="project-link">
+            <i class="fas fa-brain"></i> cP2O Context-Aware
+          </a>
+          <a href="{{ site.baseurl }}/projects/7_project/" class="project-link">
+            <i class="fas fa-trophy"></i> IWS Challenge
+          </a>
+        </div>
+      </div>
+      <div class="focus-technologies">
+        <span class="tech-tag">LSTM</span>
+        <span class="tech-tag">Forecasting</span>
+        <span class="tech-tag">Time Series</span>
+      </div>
+    </div>
   </div>
-
-  <div class="text-center mt-3">
-    <a class="btn btn-sm btn-outline-primary" href="https://github.com/{{ site.data.repositories.github_users[0] }}" target="_blank" rel="noopener">
-      <i class="fab fa-github"></i> View GitHub profile
-    </a>
+  <div class="col-lg-3 col-md-6 mb-4">
+    <div class="focus-card h-100">
+      <div class="focus-icon">
+        <i class="fas fa-seedling"></i>
+      </div>
+      <h4>Precision Agriculture</h4>
+      <p>AI-driven precision farming and agricultural production optimization</p>
+      <div class="focus-projects mb-3">
+        <h6 class="text-muted mb-2">Featured Projects:</h6>
+        <div class="project-links">
+          <a href="{{ site.baseurl }}/projects/5_project/" class="project-link">
+            <i class="fas fa-leaf"></i> DeepAg System
+          </a>
+        </div>
+      </div>
+      <div class="focus-technologies">
+        <span class="tech-tag">Computer Vision</span>
+        <span class="tech-tag">IoT Sensors</span>
+        <span class="tech-tag">Outlier Detection</span>
+      </div>
+    </div>
   </div>
-</div>
-
-<!-- Research Focus Areas -->
-<div id="research-focus" class="research-focus-section mb-5">
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="section-title text-center mb-4">
-        <i class="fas fa-bullseye text-primary"></i> Research Focus Areas
-      </h2>
-      <div class="row">
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="focus-card h-100">
-            <div class="focus-icon">
-              <i class="fas fa-shield-alt"></i>
-            </div>
-            <h4>Cybersecurity & AI Assurance</h4>
-            <p>AI-driven security solutions for critical infrastructure and cyber-physical systems</p>
-            <div class="focus-projects mb-3">
-              <h6 class="text-muted mb-2">Featured Projects:</h6>
-              <div class="project-links">
-                <a href="{{ site.baseurl }}/projects/2_project/" class="project-link">
-                  <i class="fas fa-water"></i> DeepH2O
-                </a>
-                <a href="{{ site.baseurl }}/projects/4_project/" class="project-link">
-                  <i class="fas fa-shield-alt"></i> MAA Framework
-                </a>
-              </div>
-            </div>
-            <div class="focus-technologies">
-              <span class="tech-tag">Deep Learning</span>
-              <span class="tech-tag">Anomaly Detection</span>
-              <span class="tech-tag">HCAE</span>
-              <span class="tech-tag">TGCN</span>
-            </div>
-          </div>
+  <div class="col-lg-3 col-md-6 mb-4">
+    <div class="focus-card h-100">
+      <div class="focus-icon">
+        <i class="fas fa-exclamation-triangle"></i>
+      </div>
+      <h4>Anomaly Detection & Assurance</h4>
+      <p>Advanced outlier detection methods for ensuring AI system reliability and trustworthiness</p>
+      <div class="focus-projects mb-3">
+        <h6 class="text-muted mb-2">Cross-Domain Applications:</h6>
+        <div class="project-links">
+          <a href="{{ site.baseurl }}/projects/4_project/" class="project-link">
+            <i class="fas fa-check-circle"></i> Model Agnostic Methods
+          </a>
+          <a href="{{ site.baseurl }}/projects/2_project/" class="project-link">
+            <i class="fas fa-water"></i> Water System Detection
+          </a>
+          <a href="{{ site.baseurl }}/projects/5_project/" class="project-link">
+            <i class="fas fa-seedling"></i> Agricultural Outliers
+          </a>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="focus-card h-100">
-            <div class="focus-icon">
-              <i class="fas fa-water"></i>
-            </div>
-            <h4>Water Systems Intelligence</h4>
-            <p>Smart water distribution and wastewater treatment optimization using AI</p>
-            <div class="focus-projects mb-3">
-              <h6 class="text-muted mb-2">Featured Projects:</h6>
-              <div class="project-links">
-                <a href="{{ site.baseurl }}/projects/1_project/" class="project-link">
-                  <i class="fas fa-chart-line"></i> DC Water
-                </a>
-                <a href="{{ site.baseurl }}/projects/3_project/" class="project-link">
-                  <i class="fas fa-tachometer-alt"></i> P2O Dashboard
-                </a>
-                <a href="{{ site.baseurl }}/projects/6_project/" class="project-link">
-                  <i class="fas fa-brain"></i> cP2O Context-Aware
-                </a>
-                <a href="{{ site.baseurl }}/projects/7_project/" class="project-link">
-                  <i class="fas fa-trophy"></i> IWS Challenge
-                </a>
-              </div>
-            </div>
-            <div class="focus-technologies">
-              <span class="tech-tag">LSTM</span>
-              <span class="tech-tag">Forecasting</span>
-              <span class="tech-tag">Time Series</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="focus-card h-100">
-            <div class="focus-icon">
-              <i class="fas fa-seedling"></i>
-            </div>
-            <h4>Precision Agriculture</h4>
-            <p>AI-driven precision farming and agricultural production optimization</p>
-            <div class="focus-projects mb-3">
-              <h6 class="text-muted mb-2">Featured Projects:</h6>
-              <div class="project-links">
-                <a href="{{ site.baseurl }}/projects/5_project/" class="project-link">
-                  <i class="fas fa-leaf"></i> DeepAg System
-                </a>
-              </div>
-            </div>
-            <div class="focus-technologies">
-              <span class="tech-tag">Computer Vision</span>
-              <span class="tech-tag">IoT Sensors</span>
-              <span class="tech-tag">Outlier Detection</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="focus-card h-100">
-            <div class="focus-icon">
-              <i class="fas fa-exclamation-triangle"></i>
-            </div>
-            <h4>Anomaly Detection & Assurance</h4>
-            <p>Advanced outlier detection methods for ensuring AI system reliability and trustworthiness</p>
-            <div class="focus-projects mb-3">
-              <h6 class="text-muted mb-2">Cross-Domain Applications:</h6>
-              <div class="project-links">
-                <a href="{{ site.baseurl }}/projects/4_project/" class="project-link">
-                  <i class="fas fa-check-circle"></i> Model Agnostic Methods
-                </a>
-                <a href="{{ site.baseurl }}/projects/2_project/" class="project-link">
-                  <i class="fas fa-water"></i> Water System Detection
-                </a>
-                <a href="{{ site.baseurl }}/projects/5_project/" class="project-link">
-                  <i class="fas fa-seedling"></i> Agricultural Outliers
-                </a>
-              </div>
-            </div>
-            <div class="focus-technologies">
-              <span class="tech-tag">Machine Learning</span>
-              <span class="tech-tag">Pattern Recognition</span>
-              <span class="tech-tag">AI Assurance</span>
-            </div>
-          </div>
-        </div>
+      </div>
+      <div class="focus-technologies">
+        <span class="tech-tag">Machine Learning</span>
+        <span class="tech-tag">Pattern Recognition</span>
+        <span class="tech-tag">AI Assurance</span>
       </div>
     </div>
   </div>

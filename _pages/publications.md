@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: Research publications in AI assurance, cybersecurity, and machine learning for critical infrastructure
+description:
 nav: true
 nav_order: 3
 ---
@@ -10,147 +10,10 @@ nav_order: 3
 <!-- _pages/publications.md -->
 <div class="publications">
 
-<!-- Publication Statistics Section -->
-<div class="publication-stats-section mb-4">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="stats-compact">
-        <h2 class="section-title text-center mb-3">
-          <i class="fas fa-file-alt text-primary"></i> Research Publications
-        </h2>
-        <div class="stats-grid">
-          <div class="stat-card">
-            <span class="stat-number">{% bibliography_count -f {{site.scholar.bibliography}} %}</span>
-            <span class="stat-label">Total Publications</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">{% bibliography_count -f {{site.scholar.bibliography}} -q @article %}</span>
-            <span class="stat-label">Journal Articles</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">{% bibliography_count -f {{site.scholar.bibliography}} -q @inproceedings %}</span>
-            <span class="stat-label">Conference Papers</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">5+</span>
-            <span class="stat-label">Years Research</span>
-          </div>
-        </div>
-        <div class="publication-highlights">
-          <h6 class="mb-2">Featured Venues:</h6>
-          <div class="venue-tags">
-            <span class="venue-tag">ACM TCPS</span>
-            <span class="venue-tag">IEEE Access</span>
-            <span class="venue-tag">Journal of Water Process Engineering</span>
-            <span class="venue-tag">IEEE STC</span>
-            <span class="venue-tag">FLAIRS</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Research Areas Section -->
-<div class="research-areas-section mb-5">
-  <div class="row">
-    <div class="col-md-12">
-      <h3 class="section-title text-center mb-4">
-        <i class="fas fa-brain text-primary"></i> Research Areas
-      </h3>
-      <div class="row">
-        <div class="col-md-3 mb-3">
-          <div class="card h-100 border-0 shadow-sm research-area-card">
-            <div class="card-body text-center">
-              <i class="fas fa-shield-alt text-primary mb-3" style="font-size: 2.5rem;"></i>
-              <h5 class="card-title">Cybersecurity</h5>
-              <p class="card-text text-muted">AI-driven security for critical infrastructure and cyber-physical systems</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 mb-3">
-          <div class="card h-100 border-0 shadow-sm research-area-card">
-            <div class="card-body text-center">
-              <i class="fas fa-water text-info mb-3" style="font-size: 2.5rem;"></i>
-              <h5 class="card-title">Water Systems</h5>
-              <p class="card-text text-muted">Smart water distribution and wastewater treatment optimization</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 mb-3">
-          <div class="card h-100 border-0 shadow-sm research-area-card">
-            <div class="card-body text-center">
-              <i class="fas fa-seedling text-success mb-3" style="font-size: 2.5rem;"></i>
-              <h5 class="card-title">Agriculture</h5>
-              <p class="card-text text-muted">AI assurance in precision farming and agricultural production</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 mb-3">
-          <div class="card h-100 border-0 shadow-sm research-area-card">
-            <div class="card-body text-center">
-              <i class="fas fa-exclamation-triangle text-warning mb-3" style="font-size: 2.5rem;"></i>
-              <h5 class="card-title">Anomaly Detection</h5>
-              <p class="card-text text-muted">Outlier detection and AI assurance methodologies</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Google Scholar Profile Section -->
-<div class="scholar-profile-section mb-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card border-0 shadow-sm">
-        <div class="card-body text-center">
-          <h4 class="card-title mb-3">
-            <i class="ai ai-google-scholar text-primary"></i> Google Scholar Profile
-          </h4>
-          <p class="card-text mb-3">For the most up-to-date citation metrics and additional publications, visit my Google Scholar profile.</p>
-          <a href="https://scholar.google.com/citations?user={{site.scholar_userid}}" 
-             class="btn btn-primary btn-lg" 
-             target="_blank" 
-             rel="noopener noreferrer">
-            <i class="ai ai-google-scholar"></i> View Google Scholar
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Publications Section -->
 <div class="publications-list-section">
   <div class="row">
     <div class="col-md-12">
-      <h3 class="section-title text-center mb-4">
-        <i class="fas fa-file-alt text-primary"></i> Publications by Year
-      </h3>
-      
-      <!-- Search and Filter Options -->
-      <div class="publication-controls mb-4">
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <div class="input-group">
-              <span class="input-group-text"><i class="fas fa-search"></i></span>
-              <input type="text" id="publication-search" class="form-control" placeholder="Search publications...">
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <select class="form-select" id="publication-filter">
-              <option value="">All Publication Types</option>
-              <option value="phdthesis">PhD Thesis</option>
-              <option value="article">Journal Articles</option>
-              <option value="inproceedings">Conference Papers</option>
-              <option value="book">Books</option>
-              <option value="inbook">Book Chapters</option>
-            </select>
-          </div>
-        </div>
-      </div>
 
       <!-- Publications List -->
       <div id="publications-container">

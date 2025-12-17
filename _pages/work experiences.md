@@ -2,35 +2,10 @@
 layout: page
 permalink: /work/
 title: experience
-description: Professional journey in academia and industry, bridging AI research with real-world applications
+description:
 nav: true
 nav_order: 6
 ---
-
-<div class="experience-hero">
-  <div class="hero-content">
-    <h1><i class="fas fa-briefcase text-primary"></i> Professional Experience</h1>
-    <p class="hero-subtitle">A comprehensive journey spanning academia and industry, with expertise in AI research, cybersecurity, and large-scale infrastructure management.</p>
-    <div class="experience-stats">
-      <div class="stat-card">
-        <h3>7+</h3>
-        <p>Years Experience</p>
-      </div>
-      <div class="stat-card">
-        <h3>170M+</h3>
-        <p>Users Impacted</p>
-      </div>
-      <div class="stat-card">
-        <h3>15+</h3>
-        <p>Publications</p>
-      </div>
-      <div class="stat-card">
-        <h3>5</h3>
-        <p>Awards</p>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="experience-timeline">
   
