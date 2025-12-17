@@ -3,7 +3,7 @@ layout: cv
 permalink: /cv/
 title: resume
 nav: true
-nav_order: 2
+nav_order: 3
 cv_pdf: Nazmul_CV__CS_positions_ML_AI_DL_.pdf
 description: Professional curriculum vitae showcasing expertise in AI, cybersecurity, and research leadership
 toc:
