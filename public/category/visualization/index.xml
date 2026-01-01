@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>visualization | Md Nazmul Kabir Sikder</title><link>https://nazmulkabir.com/category/visualization/</link><atom:link href="https://nazmulkabir.com/category/visualization/index.xml" rel="self" type="application/rss+xml"/><description>visualization</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 19 Jul 2021 00:00:00 +0000</lastBuildDate><image><url>https://nazmulkabir.com/media/icon_hu82c6599c132dd59e4c5438f5b06fe553_25162_512x512_fill_lanczos_center_3.png</url><title>visualization</title><link>https://nazmulkabir.com/category/visualization/</link></image><item><title>Visualizing data with raincloud plots</title><link>https://nazmulkabir.com/post/visualizing-data-with-raincloud-plots/</link><pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/post/visualizing-data-with-raincloud-plots/</guid><description>&lt;details class="toc-inpage d-print-none " open>
+&lt;summary class="font-weight-bold">Table of Contents&lt;/summary>
+&lt;nav id="TableOfContents">
+&lt;ul>
+&lt;li>&lt;a href="#motivation">Motivation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#step-1-install-raincloudplots">Step 1: Install {raincloudplots}&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#step-2-simulate-some-data">Step 2: Simulate some data&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#step-3-initialize-the-data-format">Step 3: Initialize the data-format&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#step-4-make-it-rain-">Step 4: Make it rain! 🌧&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#acknowledgements">Acknowledgements&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/nav>
+&lt;/details>
+&lt;h2 id="motivation">Motivation&lt;/h2>
+&lt;p>I love effective data visualization that combines the distribution of the data, individual data points, and summary statistics. I recently discovered a new tool for doing just this, with the R package &lt;a href="https://github.com/RainCloudPlots/RainCloudPlots" target="_blank" rel="noopener">{raincloudplots}&lt;/a>. The &amp;lsquo;rain&amp;rsquo; stands for the raw data, and the &amp;lsquo;cloud&amp;rsquo; stands for the data distribution. In this post, I showcase my first raincloud plot, and how to recreate it.&lt;/p>
+&lt;h2 id="step-1-install-raincloudplots">Step 1: Install {raincloudplots}&lt;/h2>
+&lt;p>First, we&amp;rsquo;ll install the raincloudplots package from GitHub and load it.&lt;/p>
+&lt;pre>&lt;code class="language-r">if (!require(remotes)) {
+install.packages(&amp;quot;remotes&amp;quot;)
+}
+remotes::install_github('jorvlan/raincloudplots')
+library(raincloudplots)
+&lt;/code>&lt;/pre>
+&lt;h2 id="step-2-simulate-some-data">Step 2: Simulate some data&lt;/h2>
+&lt;p>In one of my research projects, I&amp;rsquo;m planning to explore whether crowdsourced data analysis, also known as &lt;strong>multi-analyst&lt;/strong> studies &amp;mdash; giving the same dataset to different teams of scientists, who independently analyze it to answer the same research question &amp;mdash; can increase the sway and credibility of scientific research. That is, are the results of multi-analyst (vs. single-analyst) studies more likely to sway someone&amp;rsquo;s prior beliefs?&lt;/p>
+&lt;details class="spoiler " id="spoiler-1">
+&lt;summary>Give me some more background information on the data and research setting&lt;/summary>
+&lt;p>&lt;p>Before reading the results of a scientific study, study participants will report their prior beliefs in a specific phenomenon on a scale of 0% (very unlikely) to 100% (very likely).&lt;/p>
+&lt;pre>&lt;code class="language-mermaid">graph LR
+A[Report &amp;lt;br&amp;gt; prior beliefs]
+A ==&amp;gt;B[Read &amp;lt;br&amp;gt; single-analyst results]
+A ==&amp;gt;C[Read consistent &amp;lt;br&amp;gt; multi-analyst results]
+A ==&amp;gt;D[Read inconsistent &amp;lt;br&amp;gt; multi-analyst results]
+E[Report &amp;lt;br&amp;gt; final beliefs]
+B ==&amp;gt; E
+C ==&amp;gt; E
+D ==&amp;gt; E
+style A fill:#f6d4d1,stroke:#333,stroke-width:4px
+style B fill:#f6d4d1,stroke:#333,stroke-width:4px
+style C fill:#f6d4d1,stroke:#333,stroke-width:4px
+style D fill:#f6d4d1,stroke:#333,stroke-width:4px
+style E fill:#f6d4d1,stroke:#333,stroke-width:4px
+&lt;/code>&lt;/pre>
+&lt;p>Afterwards, study participants will be randomly allocated to one of three groups: one group will read the results of a conventional, single-analyst study; one group will read the results of a multi-analyst study with consistent results; one group will read the results of a multi-analyst study with inconsistent result.&lt;/p>
+&lt;p>After reading the study results, the study participants will again report their belief in the phenomenon on a scale of 0% (very unlikely) to 100% (very likely).&lt;/p>
+&lt;/p>
+&lt;/details>
+&lt;p>Below, I simulate some data that are in line with the hypotheses we&amp;rsquo;re planning to preregister: we expect that, compared to single-analyst studies, multi-analyst studies with inconsistent, highly variable results will negatively affect prior beliefs (i.e., research consumers will be less likely to believe in the reported phenomenon), while multi-analyst studies with consistent, positive results will positively affect prior beliefs.&lt;/p>
+&lt;details class="spoiler " id="spoiler-2">
+&lt;summary>Give me some more information about the simulation&lt;/summary>
+&lt;p>&lt;p>For the &lt;strong>prior beliefs&lt;/strong> of all three participant groups, we&amp;rsquo;ll make 500 random draws from a normal distribution with &lt;code>𝜇 = 65&lt;/code> and &lt;code>𝜎 = 5&lt;/code>.&lt;/p>
+&lt;p>For the &lt;strong>final beliefs&lt;/strong> of participants reading a &lt;em>single-analyst&lt;/em> study, we&amp;rsquo;ll draw from a normal distribution with &lt;code>𝜇 = 72&lt;/code> and &lt;code>𝜎 = 6&lt;/code>. For the final beliefs of participants reading a &lt;em>multi-analyst study with consistent results&lt;/em>, we&amp;rsquo;ll draw from a normal distribution with &lt;code>𝜇 = 75&lt;/code> and &lt;code>𝜎 = 7&lt;/code>.&lt;/p>
+&lt;p>For the remaining group (the &lt;em>inconsistent multi-analyst&lt;/em> condition), we&amp;rsquo;ll draw from a normal distribution with &lt;code>𝜇 = 55&lt;/code> and &lt;code>𝜎 = 9&lt;/code>. This reflects our hypothesis that beliefs in a phenomenon will decrease after observing a multi-analyst study with highly variable results.&lt;/p>
+&lt;/p>
+&lt;/details>
+&lt;pre>&lt;code class="language-r">set.seed(3)
+prior &amp;lt;- replicate(n = 3, rnorm(n = 500, mean = 65, sd = 5))
+final_single &amp;lt;- rnorm(n = 500, mean = 72, sd = 6)
+final_multi_consistent &amp;lt;- rnorm(n = 500, mean = 75, sd = 7)
+final_multi_inconsistent &amp;lt;- rnorm(n = 500, mean = 55, sd = 9)
+&lt;/code>&lt;/pre>
+&lt;h2 id="step-3-initialize-the-data-format">Step 3: Initialize the data-format&lt;/h2>
+&lt;p>For this step, you&amp;rsquo;ll need to choose between several possible designs that you can find &lt;a href="https://github.com/jorvlan/raincloudplots" target="_blank" rel="noopener">here&lt;/a>: e.g., a 1-by-1, 2-by-2, or 2-by-3 (repeated measures) raincloud. In my case, I have 3 different groups (the &lt;em>single-analyst&lt;/em> condition, the &lt;em>consistent multi-analyst&lt;/em> condition, and the &lt;em>inconsistent multi-analyst&lt;/em> condition) with 2 measures each (&lt;em>prior beliefs&lt;/em> and &lt;em>final beliefs&lt;/em>), so I&amp;rsquo;m creating a 2 x 3 raincloud.&lt;/p>
+&lt;p>The {raincloudplot} function to set up the desired data format for a 2 x 3 raincloud is called &lt;code>data_2x2()&lt;/code>. (Confusing, I know). For other options and how to initialize them, check out &lt;a href="https://github.com/jorvlan/raincloudplots" target="_blank" rel="noopener">this page&lt;/a>.&lt;/p>
+&lt;pre>&lt;code class="language-r">df_2x3 &amp;lt;- data_2x2(
+array_1 = prior[,1],
+array_2 = final_single,
+array_3 = prior[,2],
+array_4 = final_multi_consistent,
+array_5 = prior[,3],
+array_6 = final_multi_inconsistent,
+labels = (c('Prior Beliefs','Final Beliefs')),
+jit_distance = .09,
+jit_seed = 321)
+&lt;/code>&lt;/pre>
+&lt;h2 id="step-4-make-it-rain-">Step 4: Make it rain! 🌧&lt;/h2>
+&lt;p>Finally, we&amp;rsquo;ll use the &lt;code>raincloud_2x3_repmes()&lt;/code> function to create our 2x3 raincloud.&lt;/p>
+&lt;pre>&lt;code class="language-r">colors &amp;lt;- rep(c(&amp;quot;dodgerblue&amp;quot;, &amp;quot;darkorange&amp;quot;), 3) #choose colors
+raincloud_2x3_repmes(
+data = df_2x3,
+colors = colors,
+fills = colors,
+size = 1,
+alpha = .6,
+ort = &amp;quot;h&amp;quot;) + #set to v for vertical plot
+scale_x_continuous(
+breaks = c(1,2,3),
+limits = c(0.8, 4.3),
+labels = rep(&amp;quot;&amp;quot;, 3)) +
+ylab(&amp;quot;Rated Beliefs&amp;quot;) +
+annotate(geom = &amp;quot;text&amp;quot;,
+label = &amp;quot;Single-Analyst&amp;quot;,
+x = 1.5, y = 42) +
+annotate(geom = &amp;quot;text&amp;quot;,
+label = &amp;quot;Multi-Analyst: Consistent&amp;quot;,
+x = 2.5, y = 38) +
+annotate(geom = &amp;quot;text&amp;quot;,
+label = &amp;quot;Multi-Analyst: Inconsistent&amp;quot;,
+x = 3.9, y = 38) +
+annotate(geom = &amp;quot;text&amp;quot;,
+label = &amp;quot;Prior Beliefs&amp;quot;,
+x = 4.2, y = 55, size = 5,
+color = &amp;quot;dodgerblue&amp;quot;) +
+annotate(geom = &amp;quot;text&amp;quot;,
+label = &amp;quot;vs.&amp;quot;,
+x = 4.2, y = 66, size = 5) +
+annotate(geom = &amp;quot;text&amp;quot;,
+label = &amp;quot;Final Beliefs&amp;quot;,
+x = 4.2, y = 77, size = 5,
+color = &amp;quot;darkorange&amp;quot;) +
+theme_classic() +
+theme(axis.ticks.y = element_blank(),
+axis.text = element_text(size = 9),
+axis.title.y = element_blank())
+&lt;/code>&lt;/pre>
+&lt;img src="https://nazmulkabir.com/post/visualizing-data-with-raincloud-plots/index_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+&lt;p>And we&amp;rsquo;re done! For more options and information, feel free to check out &lt;a href="https://doi.org/10.12688/wellcomeopenres.15191.2" target="_blank" rel="noopener">the paper cited below&lt;/a>. A huge thank you to the {raincloudplots} package developers.❤︎&lt;/p>
+&lt;h2 id="acknowledgements">Acknowledgements&lt;/h2>
+&lt;p>Allen M, Poggiali D, Whitaker K et al. Raincloud plots: a multi-platform tool for robust data visualization [version 2; peer review: 2 approved]. Wellcome Open Res 2021, 4:63. DOI: &lt;a href="https://doi.org/10.12688/wellcomeopenres.15191.2" target="_blank" rel="noopener">10.12688/wellcomeopenres.15191.2&lt;/a>&lt;/p></description></item></channel></rss>

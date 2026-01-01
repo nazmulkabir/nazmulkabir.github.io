@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tidyverse | Md Nazmul Kabir Sikder</title><link>https://nazmulkabir.com/category/tidyverse/</link><atom:link href="https://nazmulkabir.com/category/tidyverse/index.xml" rel="self" type="application/rss+xml"/><description>tidyverse</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 12 May 2021 00:00:00 +0000</lastBuildDate><image><url>https://nazmulkabir.com/media/icon_hu82c6599c132dd59e4c5438f5b06fe553_25162_512x512_fill_lanczos_center_3.png</url><title>tidyverse</title><link>https://nazmulkabir.com/category/tidyverse/</link></image><item><title>Building your website using R {blogdown}</title><link>https://nazmulkabir.com/post/building-your-website-using-r-blogdown/</link><pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/post/building-your-website-using-r-blogdown/</guid><description>&lt;details class="toc-inpage d-print-none " open>
+&lt;summary class="font-weight-bold">Table of Contents&lt;/summary>
+&lt;nav id="TableOfContents">
+&lt;ul>
+&lt;li>&lt;a href="#prerequisites">Prerequisites&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#resources-for-getting-started-with-github-hahahugoshortcode30s6hbhb">Resources for getting started with GitHub
+&lt;i class="fab fa-github pr-1 fa-fw">&lt;/i>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#step-1-create-github-repository">Step 1: Create GitHub repository&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#step-2-create-project-with-version-control-in-rstudio">Step 2: Create project with Version Control in RStudio&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#step-3-create-website-with-blogdown">Step 3: Create website with {blogdown}&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#step-4-push--to-github">Step 4: Push ⬆︎ to GitHub&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#step-5-deploy-site-with-netlify">Step 5: Deploy site with Netlify&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#step-6-customize-your-site-with-wowchemy-">Step 6: Customize your site with Wowchemy 🎨&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#personal-information">Personal information&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#widgets">Widgets&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#menu">Menu&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#theme">Theme&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#website-icon">Website icon&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#step-7-write-your-first-post-">Step 7: Write your first post ✍&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#were-done-">We&amp;rsquo;re done! 💪&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#acknowledgements">Acknowledgements&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/nav>
+&lt;/details>
+&lt;p>I finally decided to bite the bullet and create my own website using
+&lt;i class="fab fa-r-project pr-1 fa-fw">&lt;/i> &lt;code>{blogdown}&lt;/code>. If you&amp;rsquo;re like me, you&amp;rsquo;ve already seen many inspiring examples of websites created with blogdown (for example, the webpages of &lt;a href="https://juliasilge.com/about/" target="_blank" rel="noopener">Julia Silge&lt;/a>, &lt;a href="https://silvia.rbind.io" target="_blank" rel="noopener">Silvia Canelón&lt;/a>, and &lt;a href="https://mauriciocely.github.io" target="_blank" rel="noopener">Iván Mauricio Cely Toro&lt;/a>), but the process of creating it sounds slightly overwhelming. 😰&lt;/p>
+&lt;p>If so, this post is for you: I&amp;rsquo;ll walk you through my step-by-step process of building a site using &lt;a href="https://github.com/rstudio/blogdown" target="_blank" rel="noopener">blogdown&lt;/a> and the &lt;a href="https://wowchemy.com" target="_blank" rel="noopener">Wowchemy&lt;/a> theme for &lt;a href="https://gohugo.io" target="_blank" rel="noopener">Hugo&lt;/a> and deploying it with &lt;a href="https://www.netlify.com" target="_blank" rel="noopener">Netlify&lt;/a>. I largely followed the process documented &lt;a href="https://alison.rbind.io/post/new-year-new-blogdown/" target="_blank" rel="noopener">here&lt;/a> by Alison Hill. The good news: we&amp;rsquo;ll mostly build and customize the website from the comfort of RStudio. 🥳&lt;/p>
+&lt;p>My goal is to write a concise step-by-step guide without having you worry too much about what&amp;rsquo;s happening behind the scenes. For a much more comprehensive guide, please check out &lt;a href="https://alison.rbind.io/post/new-year-new-blogdown/" target="_blank" rel="noopener">Alison&amp;rsquo;s blog&lt;/a>.&lt;/p>
+&lt;h2 id="prerequisites">Prerequisites&lt;/h2>
+&lt;p>
+&lt;i class="fas fa-download pr-1 fa-fw">&lt;/i> Install a recent version of &lt;a href="https://cran.r-project.org" target="_blank" rel="noopener">R&lt;/a> and &lt;a href="https://www.rstudio.com/products/rstudio/download/" target="_blank" rel="noopener">RStudio&lt;/a>&lt;br>
+&lt;i class="fab fa-github pr-1 fa-fw">&lt;/i> &lt;a href="https://github.com/join" target="_blank" rel="noopener">Create&lt;/a> a GitHub account&lt;br>
+&lt;i class="fab fa-r-project pr-1 fa-fw">&lt;/i> &lt;a href="https://happygitwithr.com/connect-intro.html" target="_blank" rel="noopener">Connect&lt;/a> RStudio to GitHub (preferably with &lt;a href="https://happygitwithr.com/credential-caching.html#credential-caching" target="_blank" rel="noopener">HTTPS&lt;/a>)&lt;br>
+&lt;i class="fas fa-user-plus pr-1 fa-fw">&lt;/i> &lt;a href="https://www.netlify.com" target="_blank" rel="noopener">Sign up&lt;/a> with Netlify using your GitHub account&lt;/p>
+&lt;h3 id="resources-for-getting-started-with-github-hahahugoshortcode30s6hbhb">Resources for getting started with GitHub
+&lt;i class="fab fa-github pr-1 fa-fw">&lt;/i>&lt;/h3>
+&lt;p>⚒︎ &lt;a href="https://happygitwithr.com/github-acct.html" target="_blank" rel="noopener">Happy Git and GitHub for the useR&lt;/a>&lt;br>
+⚒︎ &lt;a href="https://the-turing-way.netlify.app/collaboration/github-novice.html#" target="_blank" rel="noopener">The Turing Way Guide for Collaboration&lt;/a>&lt;br>
+⚒︎ &lt;a href="https://www.startyourlab.com/docs/github-accounts/" target="_blank" rel="noopener">Start Your Lab guide&lt;/a> &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+&lt;h2 id="step-1-create-github-repository">Step 1: Create GitHub repository&lt;/h2>
+&lt;ul class="cta-group">
+&lt;li>
+&lt;a href="https://github.com/new" target="_blank" rel="noopener" class="btn btn-primary px-3 py-3">Click to create a new repository&lt;/a>
+&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-note">
+&lt;div>
+Use the following settings:&lt;br>
+✓ Keep the repository &lt;code>Public&lt;/code>&lt;br>
+✓ Add a &lt;code>README&lt;/code> file&lt;br>
+✓ Do not add &lt;code>.gitignore&lt;/code>
+&lt;/div>
+&lt;/div>
+&lt;details class="spoiler " id="spoiler-10">
+&lt;summary>Click to view screenshots for Step 1&lt;/summary>
+&lt;p>&lt;img src="new-repository.png" alt="">&lt;/p>
+&lt;/details>
+&lt;h2 id="step-2-create-project-with-version-control-in-rstudio">Step 2: Create project with Version Control in RStudio&lt;/h2>
+&lt;p>☞︎ Go to &lt;code>https://github.com/your-username/your-repository&lt;/code>&lt;br>
+☞︎ Click on the green &lt;code>Code&lt;/code> button&lt;br>
+☞ Copy the &lt;code>HTTPS&lt;/code> link to your clipboard&lt;br>
+☞ Go to &lt;code>RStudio &amp;gt; File &amp;gt; New Project &amp;gt; Version Control &amp;gt; Git&lt;/code>&lt;br>
+☞︎︎ Copy paste the &lt;code>HTTPS&lt;/code> link under &lt;code>Repository URL&lt;/code>&lt;br>
+☞ Click &lt;code>Create Poject&lt;/code>&lt;/p>
+&lt;details class="spoiler " id="spoiler-11">
+&lt;summary>Click to view screenshots for Step 2&lt;/summary>
+&lt;p>&lt;img src="https.png" alt="">
+&lt;img src="new-project.png" alt="">
+&lt;img src="version-control.png" alt="">
+&lt;img src="git.png" alt="">&lt;/p>
+&lt;/details>
+&lt;h2 id="step-3-create-website-with-blogdown">Step 3: Create website with {blogdown}&lt;/h2>
+&lt;pre>&lt;code class="language-r">install.packages(&amp;quot;blogdown&amp;quot;) # install the blogdown package
+library(blogdown) # load blogdown
+new_site(theme = &amp;quot;wowchemy/starter-academic&amp;quot;) # create your website!
+&lt;/code>&lt;/pre>
+&lt;p>You will now be asked if you want to serve and preview the site locally (before publishing). Type &lt;code>y&lt;/code> in your Console.
+&lt;img src="y.jpg" alt="">&lt;/p>
+&lt;p>A preview will show up in your Viewer Pane. Click on the
+&lt;i class="fas fa-external-link-alt pr-1 fa-fw">&lt;/i> &amp;ldquo;Show in new window&amp;rdquo; icon next to the 🧹 to preview your site in a browser window.&lt;/p>
+&lt;details class="spoiler " id="spoiler-13">
+&lt;summary>Click to view screenshots for Step 3&lt;/summary>
+&lt;p>&lt;img src="new-site.png" alt="">
+&lt;img src="viewer-in-new-window.png" alt="">&lt;/p>
+&lt;/details>
+&lt;h2 id="step-4-push--to-github">Step 4: Push ⬆︎ to GitHub&lt;/h2>
+&lt;p>In the console, run the following line of code to create a &lt;code>.gitignore&lt;/code> file:&lt;/p>
+&lt;pre>&lt;code class="language-r">file.edit(&amp;quot;gitignore&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;p>Add the following lines to the &lt;code>.gitignore&lt;/code> file:&lt;/p>
+&lt;pre>&lt;code class="language-r">.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+Thumbs.db
+&lt;/code>&lt;/pre>
+&lt;p>Before we make our first commit, we use blogdown to check all our files:&lt;/p>
+&lt;pre>&lt;code class="language-r">blogdown::check_site()
+&lt;/code>&lt;/pre>
+&lt;p>This will give you a number of &lt;code>[TODO]&lt;/code> items, like adding &lt;code>public&lt;/code> and &lt;code>resources&lt;/code> to the &lt;code>.gitignore&lt;/code> file, which you can do safely. Don&amp;rsquo;t worry about content flagged as &lt;code>draft&lt;/code> or files with a future publish date. If you have a &lt;code>[TODO]&lt;/code> item related to your &lt;code>.Rprofile&lt;/code>, run &lt;code>blogdown::config_Rprofile()&lt;/code>.&lt;/p>
+&lt;p>After running these checks, you&amp;rsquo;re ready to commit to GitHub! 🎉&lt;/p>
+&lt;details class="spoiler " id="spoiler-14">
+&lt;summary>Show me how to commit to GitHub&lt;/summary>
+&lt;p>&lt;div class="alert alert-note">
+&lt;div>
+☞ Go to the &lt;code>Environment&lt;/code> Pane&lt;br>
+☞ Click on &lt;code>Commit&lt;/code> under &lt;code>Git&lt;/code>&lt;br>
+☞ Check ☑︎ files to &lt;code>Stage&lt;/code> them&lt;br>
+☞ Write a commit message&lt;br>
+☞ &lt;code>Commit&lt;/code> and then &lt;code>Push&lt;/code> ⬆︎
+&lt;/div>
+&lt;/div>
+&lt;/p>
+&lt;/details>
+&lt;h2 id="step-5-deploy-site-with-netlify">Step 5: Deploy site with Netlify&lt;/h2>
+&lt;ul class="cta-group">
+&lt;li>
+&lt;a href="https://github.com/login?client_id=0eef2fa971fd9f7d46a2&amp;amp;return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3D0eef2fa971fd9f7d46a2%26redirect_uri%3Dhttps%253A%252F%252Fapi.netlify.com%252Fauth%252Fdone%26scope%3Duser%253Aemail%26state%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwaWQiOiI1NmMzZjE1MDcxZTIwYTE4ZGIwMDAwMGYiLCJleHAiOjE2MjA4ODA5OTYsImxvZ2luIjp0cnVlfQ.5GilGKggLeOdejJI5_1VXSWmofo5n30SKHSX77VWncQ" target="_blank" rel="noopener" class="btn btn-primary px-3 py-3">Log in to Netlify with GitHub&lt;/a>
+&lt;/li>
+&lt;/ul>
+&lt;p>After logging in to Netlify through GitHub, you can deploy&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> your website and change the url to your preferred site name, as follows:&lt;/p>
+&lt;p>☞ Select &lt;code>New site from Git &amp;gt; Continuous Deployment: GitHub&lt;/code>&lt;br>
+☞ Select your website repository&lt;br>
+☞ &lt;code>Deploy Site&lt;/code>&lt;br>
+☞ &lt;code>Settings &amp;gt; Site information &amp;gt; Change site name&lt;/code>&lt;/p>
+&lt;p>Back in RStudio, change the baseurl to your new link in your configuration file:&lt;/p>
+&lt;pre>&lt;code class="language-r">install.packages(&amp;quot;rstudioapi&amp;quot;)
+library(rstudioapi) # to easily navigate to files
+rstudioapi::navigateToFile(&amp;quot;config.yaml&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;p>In &lt;code>config.yaml&lt;/code>, set the following:&lt;/p>
+&lt;pre>&lt;code class="language-yaml">baseurl: 'http://your-site-name.netlify.app' # use the link you just created
+&lt;/code>&lt;/pre>
+&lt;p>Before committing, let&amp;rsquo;s again run&lt;/p>
+&lt;pre>&lt;code class="language-r">blogdown::check_site() # checks to resolve critical [TODOs] before commit
+&lt;/code>&lt;/pre>
+&lt;p>Among other things, you need to make sure that the version of Hugo that you are using locally with {blogdown} matches the version used by Netlify (which is specified in &lt;code>netlify.toml&lt;/code>). You will likely need to change your &lt;code>netlify.toml&lt;/code> file. Remember that you can easily navigate to this file using&lt;/p>
+&lt;pre>&lt;code class="language-r">rstudioapi::navigateToFile(&amp;quot;netlify.toml&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;h2 id="step-6-customize-your-site-with-wowchemy-">Step 6: Customize your site with Wowchemy 🎨&lt;/h2>
+&lt;center>
+&lt;p>It&amp;rsquo;s time to customize! ❤︎&lt;/p>
+&lt;/center>
+&lt;p>&lt;img src="excited.jpg" alt="">&lt;/p>
+&lt;h3 id="personal-information">Personal information&lt;/h3>
+&lt;p>First, we&amp;rsquo;ll edit the &lt;code>About&lt;/code> information (called a widget) on your homepage.&lt;/p>
+&lt;pre>&lt;code class="language-r">rstudioapi::navigateToFile(&amp;quot;content/authors/admin/_index.md&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;p>☞ Fill in the &lt;code>_index.md&lt;/code> with your personal information (find mine &lt;a href="https://raw.githubusercontent.com/shilaan/personal-website/main/content/authors/admin/_index.md" target="_blank" rel="noopener">here&lt;/a>)&lt;br>
+☞ Personalize with desired &lt;a href="https://wowchemy.com/docs/getting-started/page-builder/#icons" target="_blank" rel="noopener">icons&lt;/a>
+&lt;i class="ai ai-sci-hub pr-1 fa-fw">&lt;/i>&lt;br>
+☞ Add your picture called &lt;code>avatar.jpg&lt;/code> to the &lt;code>content/authors/admin/&lt;/code> folder&lt;/p>
+&lt;p>To change (or remove) the title of your &lt;code>About&lt;/code> widget,&lt;/p>
+&lt;pre>&lt;code class="language-r">rstudioapi::navigateToFile(&amp;quot;content/home/about.md&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;p>set &lt;code>title: My new title&lt;/code>&lt;/p>
+&lt;details class="spoiler " id="spoiler-17">
+&lt;summary>Show me what a personalized page looks like&lt;/summary>
+&lt;p>The &lt;code>about&lt;/code> page:
+&lt;img src="about.png" alt="">
+The shortened &lt;code>bio&lt;/code> (appears under your blogposts):
+&lt;img src="bio.png" alt="">&lt;/p>
+&lt;/details>
+&lt;h3 id="widgets">Widgets&lt;/h3>
+&lt;p>To get rid of and rename the other widgets on your homepage,&lt;br>
+☞ Go to the &lt;code>Files&lt;/code> tab on your &lt;code>Viewer&lt;/code> pane&lt;br>
+☞ Open the &lt;code>.md&lt;/code> of a widget you wish to deactivate, e.g. &lt;code>hero.md&lt;/code> &lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> &lt;br>
+☞ Write &lt;code>active:false&lt;/code>&lt;br>
+☞ Change titles to your liking with &lt;code>title: My new title&lt;/code>&lt;br>
+☞ Repeat for all other widges you wish to deactivate or personalize&lt;/p>
+&lt;p>I wanted to start with a pretty minimal webpage, so I deactivated all widgets except for &lt;code>about.md&lt;/code> and &lt;code>posts.md&lt;/code>.&lt;/p>
+&lt;details class="spoiler " id="spoiler-18">
+&lt;summary>Click to view a screenshot for this step&lt;/summary>
+&lt;p>&lt;img src="widgets.png" alt="">&lt;/p>
+&lt;/details>
+&lt;h3 id="menu">Menu&lt;/h3>
+&lt;p>Now that you&amp;rsquo;ve deactivated some widgets, you&amp;rsquo;ll no longer want to link to them in your main menu (the navigation bar at the top).&lt;/p>
+&lt;p>Customize your main menu in &lt;code>config/_default/menus.yaml&lt;/code>&lt;/p>
+&lt;pre>&lt;code class="language-r">rstudioapi::navigateToFile(&amp;quot;config/_default/menus.yaml&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;p>☞ &lt;code>name: My new name&lt;/code> to change the name of your menu items&lt;br>
+☞ Remove the links to widgets that you deactivated (&lt;a href="https://raw.githubusercontent.com/shilaan/personal-website/main/config/_default/menus.yaml" target="_blank" rel="noopener">here&amp;rsquo;s my &lt;code>menus.yaml&lt;/code>&lt;/a>)&lt;/p>
+&lt;h3 id="theme">Theme&lt;/h3>
+&lt;p>&lt;img src="themes.png" alt="">&lt;/p>
+&lt;p>☞ Pick a built-in Wowchemy color theme&lt;br>
+☞ &lt;code>rstudioapi::navigateToFile(&amp;quot;config/_default/params.yaml&amp;quot;)&lt;/code>&lt;br>
+☞ Set &lt;code>theme: rose&lt;/code> (or whichever your chosen theme is; no capitalization)&lt;/p>
+&lt;p>I initially chose the &lt;code>Rose&lt;/code> theme, but decided I wanted to further customize the color theme using the steps outlined &lt;a href="https://wowchemy.com/docs/getting-started/customization/#community-themes" target="_blank" rel="noopener">here&lt;/a>:&lt;/p>
+&lt;p>☑︎ I located the &lt;code>rose.toml&lt;/code> file&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>&lt;br>
+☑︎ I created a new &lt;code>data/themes/&lt;/code> folder at the root of my site&lt;br>
+☑︎ I copied the &lt;code>rose.toml&lt;/code> file into &lt;code>data/themes/shilaan_theme.toml&lt;/code>&lt;br>
+☑︎ I adjusted the colors as desired using &lt;a href="https://htmlcolorcodes.com" target="_blank" rel="noopener">HTML color codes&lt;/a>&lt;br>
+☑︎ I set &lt;code>theme: shilaan_theme&lt;/code> in &lt;code>config/_default/params.yaml&lt;/code>&lt;/p>
+&lt;p>You can also &lt;a href="https://wowchemy.com/docs/getting-started/customization/#custom-font" target="_blank" rel="noopener">customize the font set&lt;/a>.&lt;/p>
+&lt;details class="spoiler " id="spoiler-19">
+&lt;summary>Show example GitHub files for creating my own theme&lt;/summary>
+&lt;p>&lt;p>&lt;i class="fab fa-github pr-1 fa-fw">&lt;/i> &lt;a href="https://github.com/shilaan/personal-website/blob/main/data/themes/shilaan_theme.toml" target="_blank" rel="noopener">data/themes/shilaan_theme.toml&lt;/a>&lt;/p>
+&lt;p>&lt;i class="fab fa-github pr-1 fa-fw">&lt;/i> &lt;a href="https://github.com/shilaan/personal-website/blob/main/config/_default/params.yaml" target="_blank" rel="noopener">config/_default/params.yaml&lt;/a>&lt;/p>
+&lt;/p>
+&lt;/details>
+&lt;h3 id="website-icon">Website icon&lt;/h3>
+&lt;p>By default, your website will be published with the Wowchemy icon in the web browser tab. For example:
+&lt;img src="example-default-icon.png" alt="">&lt;/p>
+&lt;p>To get &lt;a href="https://wowchemy.com/docs/getting-started/customization/#website-icon" target="_blank" rel="noopener">your own Website icon&lt;/a>, save a square 512x512 pixel image named &lt;code>icon.png&lt;/code> in your root &lt;code>assets/media/&lt;/code> folder. My webpage should now show up in your Browser like this: &lt;img src="example-adjusted-icon.png" alt="">&lt;/p>
+&lt;details class="spoiler " id="spoiler-20">
+&lt;summary>I followed the steps but my Website icon hasn&amp;rsquo;t changed&lt;/summary>
+&lt;p>I ran into this issue. Simply clear your website from your browser history. 🧼 I didn&amp;rsquo;t realize the problem was caused by my cache until finding &lt;a href="https://github.com/wowchemy/wowchemy-hugo-modules/issues/1391#issuecomment-807274736" target="_blank" rel="noopener">this issue&lt;/a>.&lt;/p>
+&lt;/details>
+&lt;h2 id="step-7-write-your-first-post-">Step 7: Write your first post ✍&lt;/h2>
+&lt;p>To remove the example posts currently populating your website (e.g., &lt;em>Welcome to Wowchemy, the website builder for Hugo&lt;/em>), navigate to &lt;code>content/post&lt;/code> and remove the folders associated with them (in this case, the &lt;code>getting-started&lt;/code> folder).&lt;/p>
+&lt;p>If you find these posts helpful, you can always take another look at them on the &lt;a href="https://academic-demo.netlify.app" target="_blank" rel="noopener">Demo site&lt;/a> and find their underlying files at &lt;code>themes/starter-academic/exampleSite/content/post&lt;/code>.&lt;/p>
+&lt;p>If you really want to keep these files on hand, you can save them as a draft so that they don&amp;rsquo;t publish on your site anymore. You will still see them in your preview when you serve your site locally. For example:&lt;/p>
+&lt;pre>&lt;code class="language-r">rstudioapi::navigateToFile(&amp;quot;content/post/getting-started/index.md&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;p>Now, set &lt;code>draft:true&lt;/code> in the front matter. From now on, whenever you run &lt;code>blogdown::check_site()&lt;/code>, you will be reminded that you have these files marked as drafts.&lt;/p>
+&lt;p>We&amp;rsquo;re ready to write!&lt;/p>
+&lt;p>&lt;img src="ready.jpg" alt="">&lt;/p>
+&lt;p>In your console, type&lt;/p>
+&lt;pre>&lt;code class="language-r">blogdown::new_post(
+title = &amp;quot;My first post&amp;quot;,
+ext = '.Rmarkdown',
+subdir = &amp;quot;post&amp;quot;
+)
+&lt;/code>&lt;/pre>
+&lt;p>In your &lt;code>Files&lt;/code> pane, you will now have a folder (under &lt;code>content/post&lt;/code>) with today&amp;rsquo;s date and the title of your post. The crucial file is &lt;code>index.Rmarkdown&lt;/code>: this is where you will write your post.&lt;/p>
+&lt;p>Go ahead and open &lt;code>index.Rmarkdown&lt;/code>. When you knit this&lt;sup id="fnref:5">&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref">5&lt;/a>&lt;/sup>, your website will preview in the Viewer pane. Remember that you can click on the
+&lt;i class="fas fa-external-link-alt pr-1 fa-fw">&lt;/i> &amp;ldquo;Show in new window&amp;rdquo; icon next to the 🧹 to preview your site in a browser window.&lt;/p>
+&lt;div class="alert alert-warning">
+&lt;div>
+Make sure you edit the &lt;code>index.Rmarkdown&lt;/code> file, not the &lt;code>index.markdown&lt;/code> file. The markdown file is automatically created and updated when you knit your Rmarkdown.
+&lt;/div>
+&lt;/div>
+&lt;p>Go ahead and add an R code chunk:&lt;/p>
+&lt;pre>&lt;code>```{r echo=FALSE}
+library(ggplot2)
+x = seq(-1, 1, .01)
+y = sin(x^3)/(1 + x^6)
+ggplot(aes(x = x, y = y)) +
+geom_line() +
+geom_ribbon(
+aes(ymin = 0, ymax = y),
+fill = &amp;quot;pink&amp;quot;,
+alpha = 0.5
+) +
+theme_void()
+```
+&lt;/code>&lt;/pre>
+&lt;p>Knit your Rmarkdown. Check out what it looks like, write your own content, and push⬆︎ to GitHub when you&amp;rsquo;re ready. Don&amp;rsquo;t forget about the option to run &lt;code>blogdown::check_site()&lt;/code>.&lt;/p>
+&lt;details class="spoiler " id="spoiler-23">
+&lt;summary>Show me screenshots of this step&lt;/summary>
+&lt;p>&lt;img src="index.png" alt="">
+&lt;img src="files.png" alt="">
+&lt;img src="first-post.png" alt="">&lt;/p>
+&lt;/details>
+&lt;h2 id="were-done-">We&amp;rsquo;re done! 💪&lt;/h2>
+&lt;p>&lt;img src="minions.png" alt="">&lt;/p>
+&lt;center>
+&lt;p>I hope this was helpful! Feel free to &lt;a href="https://twitter.com/shilaan01/status/1393071955964665857?s=20" target="_blank" rel="noopener">leave a comment
+&lt;i class="fab fa-twitter pr-1 fa-fw">&lt;/i>&lt;/a>&lt;/p>
+&lt;/center>
+&lt;h3 id="acknowledgements">Acknowledgements&lt;/h3>
+&lt;p>My workflow, and a large part of the content of this post, is based on &lt;a href="https://alison.rbind.io/post/new-year-new-blogdown/" target="_blank" rel="noopener">Alison Hill&amp;rsquo;s materials&lt;/a>. In addition, I would not have made this website if it wasn&amp;rsquo;t for Daniël Lakens friendly nudging me (about 5 months ago&amp;hellip; it took me a while to accept my fate). Thank you, Alison and Daniël! 🙏&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>Thank you to &lt;a href="https://www.aridyckovsky.com" target="_blank" rel="noopener">Ari Dyckovsky&lt;/a> for &lt;a href="https://twitter.com/adyckovsky/status/1393346563481735168?s=20" target="_blank" rel="noopener">suggesting this addition
+&lt;i class="fab fa-twitter pr-1 fa-fw">&lt;/i>&lt;/a> to the post&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>Continuous deployment ensures that your website is rebuilt every time you push⬆︎ to GitHub.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>The &lt;code>hero&lt;/code> widget is the top blue pane that introduces &lt;em>Hugo Academic Starter&lt;/em>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>Themes are in &lt;code>themes/github/com/wowchemy/wowchemy-hugo-modules/wowchemy/data&lt;/code>. In this folder, go to &lt;code>/fonts&lt;/code> for font sets and to &lt;code>themes&lt;/code> for color themes.&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:5">
+&lt;p>Use either the Knit button, &lt;code>command + shift + k&lt;/code> on Mac, or &lt;code>control + shift + k&lt;/code> on Windows/Linux.&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item></channel></rss>
