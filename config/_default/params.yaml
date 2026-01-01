@@ -6,7 +6,7 @@
 # Appearance
 
 theme: shilaan_theme
-day_night: false
+day_night: true
 font: 'shilaan_font'
 font_size: L
 
@@ -15,32 +15,32 @@ font_size: L
 site_type: Person
 local_business_type: ''
 org_name: ''
-description: 'Shilaan Alzahawi personal website'
-twitter: 'https://twitter.com/shilaan01'
+description: 'Nazmul Kabir Sikder personal website'
+twitter: ''
 
 # Contact (edit or remove options as required)
 
-email: shilaan@stanford.edu
+email: msikder@odu.edu
 address:
-  city: Palo Alto
-  region: CA
-  postcode: '94304'
+  city: Norfolk
+  region: VA
+  postcode: '23529'
   country: United States
   country_code: US
 contact_links:
   - icon: twitter
     icon_pack: fab
     name: Find me on Twitter
-    link: 'https://twitter.com/shilaan01'
+    link: ''
 
 # Site header
 
 main_menu:
   enable: true
-  align: l
-  show_logo: true
+  align: r
+  show_logo: false
   show_language: false
-  show_day_night: false
+  show_day_night: true
   show_search: true
   highlight_active_link: true
 

@@ -33,19 +33,10 @@ social:
   link: https://github.com/nazmulkabir
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/md-nazmul-kabir-sikder-831596a6
+  link: https://www.linkedin.com/in/nazmul-kabir-sikder-ph-d-831596a6
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=1meq3gcAAAAJ
-- icon: orcid
-  icon_pack: ai
-  link: https://orcid.org/0000-0002-7608-2925
-- icon: researchgate
-  icon_pack: ai
-  link: https://www.researchgate.net/profile/Md-Nazmul-Kabir-Sikder
-- icon: kaggle
-  icon_pack: fab
-  link: https://www.kaggle.com/nazmul7086
 - icon: building
   icon_pack: fas
   link: https://ai.bse.vt.edu/
