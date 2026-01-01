@@ -1,1 +1,128 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Publications | Md Nazmul Kabir Sikder</title><link>https://nazmulkabir.com/publication/</link><atom:link href="https://nazmulkabir.com/publication/index.xml" rel="self" type="application/rss+xml"/><description>Publications</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jun 2025 00:00:00 +0000</lastBuildDate><image><url>https://nazmulkabir.com/media/icon_hu82c6599c132dd59e4c5438f5b06fe553_25162_512x512_fill_lanczos_center_3.png</url><title>Publications</title><link>https://nazmulkabir.com/publication/</link></image><item><title>Context-driven Deep Learning Forecasting for Wastewater Treatment Plants</title><link>https://nazmulkabir.com/publication/context-driven-forecasting-wastewater/</link><pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/context-driven-forecasting-wastewater/</guid><description/></item><item><title>AI Methods for Anomaly Detection in Cyber-Physical Systems: With Application to Water and Agriculture</title><link>https://nazmulkabir.com/publication/ai-methods-anomaly-cps/</link><pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/ai-methods-anomaly-cps/</guid><description/></item><item><title>P2O: AI-Driven Framework for Managing and Securing Wastewater Treatment Plants</title><link>https://nazmulkabir.com/publication/p2o-secure-wastewater/</link><pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/p2o-secure-wastewater/</guid><description/></item><item><title>Assessing the Impact of Cyber Attacks on Water Distribution Systems: A Deep Learning Approach</title><link>https://nazmulkabir.com/publication/assessing-cyber-attacks-water-distribution/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/assessing-cyber-attacks-water-distribution/</guid><description/></item><item><title>Deep H2O: Cyber attacks detection in water distribution systems using deep learning</title><link>https://nazmulkabir.com/publication/deep-h2o-cyber-attacks-water/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/deep-h2o-cyber-attacks-water/</guid><description/></item><item><title>Outlier detection using AI: a survey</title><link>https://nazmulkabir.com/publication/outlier-detection-ai-survey/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/outlier-detection-ai-survey/</guid><description/></item><item><title>Model-Agnostic Scoring Methods for Artificial Intelligence Assurance</title><link>https://nazmulkabir.com/publication/model-agnostic-aia-scoring/</link><pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/model-agnostic-aia-scoring/</guid><description/></item><item><title>AI Assurance: Towards Trustworthy, Explainable, Safe, and Ethical AI</title><link>https://nazmulkabir.com/publication/ai-assurance-book/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/ai-assurance-book/</guid><description/></item><item><title>Realtime management of wastewater treatment plants using AI</title><link>https://nazmulkabir.com/publication/realtime-management-wastewater-ai/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/realtime-management-wastewater-ai/</guid><description/></item><item><title>The application of artificial intelligence assurance in precision farming and agricultural economics</title><link>https://nazmulkabir.com/publication/ai-assurance-precision-farming/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/ai-assurance-precision-farming/</guid><description/></item><item><title>DeepAg: Deep Learning Approach for Measuring the Effects of Outlier Events on Agricultural Production and Policy</title><link>https://nazmulkabir.com/publication/deepag-outlier-events-agriculture/</link><pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/deepag-outlier-events-agriculture/</guid><description/></item><item><title>Quantification of Peak Demand Reduction Potential in Commercial Buildings due to HVAC Set Point and Brightness Adjustment</title><link>https://nazmulkabir.com/publication/peak-demand-reduction-hvac-lighting/</link><pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/peak-demand-reduction-hvac-lighting/</guid><description/></item><item><title>Applications of machine learning for precision agriculture and smart farming</title><link>https://nazmulkabir.com/publication/ml-precision-agriculture-flairs/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/ml-precision-agriculture-flairs/</guid><description/></item><item><title>Implementation of microcontroller based Maximum Power Point Tracker (MPPT) using SEPIC converter</title><link>https://nazmulkabir.com/publication/mppt-sepic-microcontroller/</link><pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/mppt-sepic-microcontroller/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications | Md Nazmul Kabir Sikder</title>
+    <link>http://localhost:1313/publication/</link>
+      <atom:link href="http://localhost:1313/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_d0971a6e9e77ec8b.png</url>
+      <title>Publications</title>
+      <link>http://localhost:1313/publication/</link>
+    </image>
+    
+    <item>
+      <title>Context-driven Deep Learning Forecasting for Wastewater Treatment Plants</title>
+      <link>http://localhost:1313/publication/context-driven-forecasting-wastewater/</link>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/context-driven-forecasting-wastewater/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AI Methods for Anomaly Detection in Cyber-Physical Systems: With Application to Water and Agriculture</title>
+      <link>http://localhost:1313/publication/ai-methods-anomaly-cps/</link>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/ai-methods-anomaly-cps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>P2O: AI-Driven Framework for Managing and Securing Wastewater Treatment Plants</title>
+      <link>http://localhost:1313/publication/p2o-secure-wastewater/</link>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/p2o-secure-wastewater/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Assessing the Impact of Cyber Attacks on Water Distribution Systems: A Deep Learning Approach</title>
+      <link>http://localhost:1313/publication/assessing-cyber-attacks-water-distribution/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/assessing-cyber-attacks-water-distribution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep H2O: Cyber attacks detection in water distribution systems using deep learning</title>
+      <link>http://localhost:1313/publication/deep-h2o-cyber-attacks-water/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/deep-h2o-cyber-attacks-water/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Outlier detection using AI: a survey</title>
+      <link>http://localhost:1313/publication/outlier-detection-ai-survey/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/outlier-detection-ai-survey/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Model-Agnostic Scoring Methods for Artificial Intelligence Assurance</title>
+      <link>http://localhost:1313/publication/model-agnostic-aia-scoring/</link>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/model-agnostic-aia-scoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AI Assurance: Towards Trustworthy, Explainable, Safe, and Ethical AI</title>
+      <link>http://localhost:1313/publication/ai-assurance-book/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/ai-assurance-book/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Realtime management of wastewater treatment plants using AI</title>
+      <link>http://localhost:1313/publication/realtime-management-wastewater-ai/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/realtime-management-wastewater-ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The application of artificial intelligence assurance in precision farming and agricultural economics</title>
+      <link>http://localhost:1313/publication/ai-assurance-precision-farming/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/ai-assurance-precision-farming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DeepAg: Deep Learning Approach for Measuring the Effects of Outlier Events on Agricultural Production and Policy</title>
+      <link>http://localhost:1313/publication/deepag-outlier-events-agriculture/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/deepag-outlier-events-agriculture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quantification of Peak Demand Reduction Potential in Commercial Buildings due to HVAC Set Point and Brightness Adjustment</title>
+      <link>http://localhost:1313/publication/peak-demand-reduction-hvac-lighting/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/peak-demand-reduction-hvac-lighting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Applications of machine learning for precision agriculture and smart farming</title>
+      <link>http://localhost:1313/publication/ml-precision-agriculture-flairs/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/ml-precision-agriculture-flairs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Implementation of microcontroller based Maximum Power Point Tracker (MPPT) using SEPIC converter</title>
+      <link>http://localhost:1313/publication/mppt-sepic-microcontroller/</link>
+      <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/mppt-sepic-microcontroller/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
