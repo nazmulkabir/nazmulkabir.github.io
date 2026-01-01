@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Research | Md Nazmul Kabir Sikder</title><link>https://nazmulkabir.com/category/research/</link><atom:link href="https://nazmulkabir.com/category/research/index.xml" rel="self" type="application/rss+xml"/><description>Research</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate><image><url>https://nazmulkabir.com/media/icon_hu_d0971a6e9e77ec8b.png</url><title>Research</title><link>https://nazmulkabir.com/category/research/</link></image><item><title>Adversarial Image Detection in Agriculture</title><link>https://nazmulkabir.com/project/agri-adversarial/</link><pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/project/agri-adversarial/</guid><description>&lt;ul&gt;
+&lt;li&gt;Classifies high-fidelity adversarial plant images; attributes source models (StyleGAN2/3, DS8, BLIP, Pix2Pix) alongside health status.&lt;/li&gt;
+&lt;li&gt;Trains EfficientNet-B0 / ResNet-50 / CLIP-ViT on binary health, source (Real/GAN/Diffusion), and detailed 10-way crop–health–generator tasks.&lt;/li&gt;
+&lt;li&gt;Designed to scale as new generators emerge; targets cyber-biosecurity for Agriculture 4.0 systems.&lt;/li&gt;
+&lt;li&gt;Authors: Md Nazmul Kabir Sikder, Mehmet Oguz Yardimci, Trey Ward, Shubham Laxmikant Deshmukh, Feras A. Batarseh (Preprint, 2025).&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>cP2O: Context-Aware Water Level Forecasting</title><link>https://nazmulkabir.com/project/cp2o/</link><pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/project/cp2o/</guid><description>&lt;ul&gt;
+&lt;li&gt;Two-stage pipeline: temporal context extraction plus multi-horizon forecasting.&lt;/li&gt;
+&lt;li&gt;Achieves &amp;gt;95% accuracy with real-time updates for overflow prevention.&lt;/li&gt;
+&lt;li&gt;Designed for smart water/WWTP operations.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Model-Agnostic Assurance (ALSP)</title><link>https://nazmulkabir.com/project/maa/</link><pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/project/maa/</guid><description>&lt;ul&gt;
+&lt;li&gt;Shapley-value weight assessment, reverse learning, and secret inversion to quantify XAI/FAI/SAI.&lt;/li&gt;
+&lt;li&gt;Generates per-sample assurance scores and adversarial logging for production monitoring.&lt;/li&gt;
+&lt;li&gt;Published with ALSP framework and validation on real-world models.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>DeepAg: Precision Farming Anomaly Detection</title><link>https://nazmulkabir.com/project/deepag/</link><pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/project/deepag/</guid><description>&lt;ul&gt;
+&lt;li&gt;Unsupervised outlier detection tailored to crop production signals.&lt;/li&gt;
+&lt;li&gt;Integrates financial indices (oil, gold, DJIA, S&amp;amp;P500, VIX) for risk-aware decisions.&lt;/li&gt;
+&lt;li&gt;Targets real-time alerts to reduce losses and optimize farm operations.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>IWS Challenge 2022: Integrated AI for Water Systems</title><link>https://nazmulkabir.com/project/iws-challenge/</link><pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/project/iws-challenge/</guid><description>&lt;ul&gt;
+&lt;li&gt;Prediction: LSTM-based tunnel water level forecasting with robust preprocessing.&lt;/li&gt;
+&lt;li&gt;Protection: Cyber-physical attack detection and classification on SMOD-style datasets.&lt;/li&gt;
+&lt;li&gt;Optimization: Genetic algorithm pump scheduling to cut energy use and prevent overflows.&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
