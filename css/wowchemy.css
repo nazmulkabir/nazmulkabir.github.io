@@ -9,6 +9,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:wght@600;700&display=swap");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -9534,3 +9535,42 @@ ul.emoji-list > li:before {
 ul.emoji-list > li:hover:before {
   content: "😍";
   /* change the emoji on hover! */ }
+
+:root {
+  font-size: 18px; }
+
+body {
+  font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.55; }
+
+h1 {
+  font-size: 1.9rem;
+  font-family: "Source Serif 4", "Source Sans 3", Georgia, serif; }
+
+h2 {
+  font-size: 1.6rem;
+  font-family: "Source Serif 4", "Source Sans 3", Georgia, serif; }
+
+h3 {
+  font-size: 1.35rem;
+  font-family: "Source Serif 4", "Source Sans 3", Georgia, serif; }
+
+h4 {
+  font-size: 1.2rem;
+  font-family: "Source Serif 4", "Source Sans 3", Georgia, serif; }
+
+h5 {
+  font-size: 1.05rem;
+  font-family: "Source Serif 4", "Source Sans 3", Georgia, serif; }
+
+h6 {
+  font-size: 0.95rem;
+  font-family: "Source Serif 4", "Source Sans 3", Georgia, serif; }
+
+.network-icon .big-icon {
+  color: #6f7782;
+  transition: color 0.2s ease; }
+
+.network-icon .big-icon:hover {
+  color: #4a4f58; }
