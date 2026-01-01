@@ -11,10 +11,10 @@
 
 <section id="profile-page" class="pt-5">
   <div class="container">
-    {{/* Show the About widget if an account exists for this user. */}}
-    {{ if .File }}
+    {{/* Show the About widget if an account exists for this user (skip the section root). */}}
+    {{ $username := (path.Base (path.Split .Path).Dir) }}{{/* Alternatively, use `index .Params.authors 0` */}}
+    {{ if and .File (ne $username "authors") }}
       {{ $widget := "widgets/about.html" }}
-      {{ $username := (path.Base (path.Split .Path).Dir) }}{{/* Alternatively, use `index .Params.authors 0` */}}
       {{ $params := dict "root" $ "page" . "author" $username }}
       {{ partial $widget $params }}
     {{end}}

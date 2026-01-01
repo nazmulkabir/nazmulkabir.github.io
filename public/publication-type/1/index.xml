@@ -1,1 +1,64 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>1 | Md Nazmul Kabir Sikder</title><link>https://nazmulkabir.com/publication-type/1/</link><atom:link href="https://nazmulkabir.com/publication-type/1/index.xml" rel="self" type="application/rss+xml"/><description>1</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate><image><url>https://nazmulkabir.com/media/icon_hu82c6599c132dd59e4c5438f5b06fe553_25162_512x512_fill_lanczos_center_3.png</url><title>1</title><link>https://nazmulkabir.com/publication-type/1/</link></image><item><title>Model-Agnostic Scoring Methods for Artificial Intelligence Assurance</title><link>https://nazmulkabir.com/publication/model-agnostic-aia-scoring/</link><pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/model-agnostic-aia-scoring/</guid><description/></item><item><title>Realtime management of wastewater treatment plants using AI</title><link>https://nazmulkabir.com/publication/realtime-management-wastewater-ai/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/realtime-management-wastewater-ai/</guid><description/></item><item><title>DeepAg: Deep Learning Approach for Measuring the Effects of Outlier Events on Agricultural Production and Policy</title><link>https://nazmulkabir.com/publication/deepag-outlier-events-agriculture/</link><pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/deepag-outlier-events-agriculture/</guid><description/></item><item><title>Quantification of Peak Demand Reduction Potential in Commercial Buildings due to HVAC Set Point and Brightness Adjustment</title><link>https://nazmulkabir.com/publication/peak-demand-reduction-hvac-lighting/</link><pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/peak-demand-reduction-hvac-lighting/</guid><description/></item><item><title>Applications of machine learning for precision agriculture and smart farming</title><link>https://nazmulkabir.com/publication/ml-precision-agriculture-flairs/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/ml-precision-agriculture-flairs/</guid><description/></item><item><title>Implementation of microcontroller based Maximum Power Point Tracker (MPPT) using SEPIC converter</title><link>https://nazmulkabir.com/publication/mppt-sepic-microcontroller/</link><pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/publication/mppt-sepic-microcontroller/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1 | Md Nazmul Kabir Sikder</title>
+    <link>http://localhost:1313/publication-type/1/</link>
+      <atom:link href="http://localhost:1313/publication-type/1/index.xml" rel="self" type="application/rss+xml" />
+    <description>1</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_d0971a6e9e77ec8b.png</url>
+      <title>1</title>
+      <link>http://localhost:1313/publication-type/1/</link>
+    </image>
+    
+    <item>
+      <title>Model-Agnostic Scoring Methods for Artificial Intelligence Assurance</title>
+      <link>http://localhost:1313/publication/model-agnostic-aia-scoring/</link>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/model-agnostic-aia-scoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Realtime management of wastewater treatment plants using AI</title>
+      <link>http://localhost:1313/publication/realtime-management-wastewater-ai/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/realtime-management-wastewater-ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DeepAg: Deep Learning Approach for Measuring the Effects of Outlier Events on Agricultural Production and Policy</title>
+      <link>http://localhost:1313/publication/deepag-outlier-events-agriculture/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/deepag-outlier-events-agriculture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quantification of Peak Demand Reduction Potential in Commercial Buildings due to HVAC Set Point and Brightness Adjustment</title>
+      <link>http://localhost:1313/publication/peak-demand-reduction-hvac-lighting/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/peak-demand-reduction-hvac-lighting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Applications of machine learning for precision agriculture and smart farming</title>
+      <link>http://localhost:1313/publication/ml-precision-agriculture-flairs/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/ml-precision-agriculture-flairs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Implementation of microcontroller based Maximum Power Point Tracker (MPPT) using SEPIC converter</title>
+      <link>http://localhost:1313/publication/mppt-sepic-microcontroller/</link>
+      <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/mppt-sepic-microcontroller/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

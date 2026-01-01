@@ -12,6 +12,8 @@ weight: 60
 title: Publications
 subtitle:
 
+active: false
+
 content:
   # Page type to display. E.g. post, talk, publication...
   page_type: publication

@@ -11,7 +11,13 @@
   {{ range $idx, $key := sort $page.Params.experience ".date_start" "desc" }}
   <div class="row experience">
     <!-- Timeline -->
-    <div class="col-auto text-center flex-column d-none d-sm-flex">
+    <div class="col-auto text-center flex-column d-none d-sm-flex position-relative">
+      {{ $start_year := (time .date_start).Format "2006" }}
+
+      <div class="text-muted small position-absolute" style="left:-48px; top:50%; transform:translateY(-50%); white-space:nowrap;">
+        {{ $start_year }}
+      </div>
+
       <div class="row h-50">
         <div class="col {{if gt $idx 0}}border-right{{end}}">&nbsp;</div>
         <div class="col">&nbsp;</div>
