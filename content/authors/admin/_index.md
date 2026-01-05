@@ -23,7 +23,7 @@ organizations:
   url: https://www.odu.edu
 - name: Commonwealth Cyber Initiative Coastal Virginia
   url: https://covacci.org/
-role: Research Associate Professor
+role: Research Assistant Professor
 social:
 - icon: envelope
   icon_pack: fas
@@ -44,7 +44,7 @@ social:
   icon_pack: fab
   link: https://discordapp.com/users/nazmul1230
 superuser: yes
-bio: Research Associate Professor focused on trustworthy AI, security for cyber-physical systems, and applied ML for critical infrastructure.
+bio: Research Assistant Professor focused on trustworthy AI, security for cyber-physical systems, and applied ML for critical infrastructure.
 greeting: sikder::nazmul()
 ---
 
