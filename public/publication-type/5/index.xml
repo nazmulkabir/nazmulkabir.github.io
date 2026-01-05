@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>5 | Md Nazmul Kabir Sikder</title>
-    <link>http://localhost:1313/publication-type/5/</link>
-      <atom:link href="http://localhost:1313/publication-type/5/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://nazmulkabir.com/publication-type/5/</link>
+      <atom:link href="https://nazmulkabir.com/publication-type/5/index.xml" rel="self" type="application/rss+xml" />
     <description>5</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jan 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/media/icon_hu_d0971a6e9e77ec8b.png</url>
+      <url>https://nazmulkabir.com/media/icon_hu_d0971a6e9e77ec8b.png</url>
       <title>5</title>
-      <link>http://localhost:1313/publication-type/5/</link>
+      <link>https://nazmulkabir.com/publication-type/5/</link>
     </image>
     
     <item>
       <title>AI Assurance: Towards Trustworthy, Explainable, Safe, and Ethical AI</title>
-      <link>http://localhost:1313/publication/ai-assurance-book/</link>
+      <link>https://nazmulkabir.com/publication/ai-assurance-book/</link>
       <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/publication/ai-assurance-book/</guid>
+      <guid>https://nazmulkabir.com/publication/ai-assurance-book/</guid>
       <description></description>
     </item>
     
