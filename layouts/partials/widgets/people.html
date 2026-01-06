@@ -35,11 +35,8 @@
 
   {{ range $query }}
   {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
-  {{/* Get link to user's profile page. */}}
-  {{ $link := "" }}
-  {{ with site.GetPage (printf "/authors/%s" (path.Base (path.Split .Path).Dir)) }}
-    {{ $link = .RelPermalink }}
-  {{ end }}
+  {{/* Use the page's own permalink for profile links (supports singular /author/ paths). */}}
+  {{ $link := .RelPermalink }}
   <div class="col-12 col-md-6 people-person">
     {{ $src := "" }}
     {{ if site.Params.avatar.gravatar }}
@@ -57,7 +54,7 @@
 
     <div class="portrait-title">
       <h2>{{with $link}}<a href="{{.}}">{{end}}{{ .Title }}{{if $link}}</a>{{end}}</h2>
-      {{ if and $show_organizations .Params.organizations }}{{ range .Params.organizations }}<h3>{{ .name }}</h3>{{ end }}{{ end }}
+      {{ if and $show_organizations .Params.organizations }}{{ range .Params.organizations }}<h3>{{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}</h3>{{ end }}{{ end }}
       {{ if and $show_role .Params.role }}<h3>{{ .Params.role | markdownify | emojify }}</h3>{{ end }}
       {{ if $show_social }}{{ partial "social_links" . }}{{ end }}
       {{ if and $show_bio .Params.bio }}<p class="people-bio">{{ .Params.bio | markdownify | emojify }}</p>{{ end }}

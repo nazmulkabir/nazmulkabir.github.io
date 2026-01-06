@@ -1,1 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories | Md Nazmul Kabir Sikder</title><link>https://nazmulkabir.com/categories/</link><atom:link href="https://nazmulkabir.com/categories/index.xml" rel="self" type="application/rss+xml"/><description>Categories</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate><image><url>https://nazmulkabir.com/media/icon_hu_d0971a6e9e77ec8b.png</url><title>Categories</title><link>https://nazmulkabir.com/categories/</link></image></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories | Md Nazmul Kabir Sikder</title>
+    <link>http://localhost:63993/categories/</link>
+      <atom:link href="http://localhost:63993/categories/index.xml" rel="self" type="application/rss+xml" />
+    <description>Categories</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:63993/media/icon_hu_d0971a6e9e77ec8b.png</url>
+      <title>Categories</title>
+      <link>http://localhost:63993/categories/</link>
+    </image>
+    
+  </channel>
+</rss>

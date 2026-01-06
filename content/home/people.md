@@ -12,7 +12,7 @@ content:
   # Show these user groups (set in each author's front matter)
   user_groups:
     - Core Collaborators
-    #- Research Partners
+    - Research Partners
 
 design:
   columns: 2

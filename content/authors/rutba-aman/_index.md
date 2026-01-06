@@ -20,7 +20,7 @@ bio: Academic and researcher in CSE focusing on privacy-aware intelligent system
 highlight_name: false
 superuser: false
 user_groups:
-  - Core Collaborators
+  - Research Partners
 ---
 
 Rutba Aman is a lecturer in the Department of Computer Science and Engineering at Primeasia University in Dhaka, Bangladesh. She teaches undergraduate courses and conducts research spanning social network privacy and de-anonymization, machine learning, natural language processing, data mining, and health informatics.
