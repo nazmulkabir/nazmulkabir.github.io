@@ -37,7 +37,7 @@
   {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
   {{/* Use the page's own permalink for profile links (supports singular /author/ paths). */}}
   {{ $link := .RelPermalink }}
-  <div class="col-12 col-md-6 people-person">
+  <div class="col-12 col-md-6 col-lg-4 people-person">
     {{ $src := "" }}
     {{ if site.Params.avatar.gravatar }}
       {{ $src = printf "https://s.gravatar.com/avatar/%s?s=150" (md5 .Params.email) }}

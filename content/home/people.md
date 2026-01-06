@@ -15,7 +15,7 @@ content:
     - Research Partners
 
 design:
-  columns: 2
+  columns: "3"
   show_bio: true
   show_interests: true
   show_role: true

@@ -20,7 +20,7 @@ bio: MS student and research assistant building ML-driven frameworks for softwar
 highlight_name: false
 superuser: false
 user_groups:
-  - Core Collaborators
+  - Research Partners
 ---
 
 Akanksha Tyagi is a Master’s student in Computer Science at the University of Arkansas and a Research Assistant under Dr. Qinghua Li. Her work centers on ML for cybersecurity, including software vulnerability testing and infrastructure security. Previously, at IIIT Hyderabad, she focused on reinforcement learning for intelligent transportation systems. She also brings experience as a software engineer and web developer, and holds a Bachelor’s degree from the College of Engineering Roorkee.
