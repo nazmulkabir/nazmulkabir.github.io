@@ -1,6 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Computer Vision | Md Nazmul Kabir Sikder</title><link>https://nazmulkabir.com/tag/computer-vision/</link><atom:link href="https://nazmulkabir.com/tag/computer-vision/index.xml" rel="self" type="application/rss+xml"/><description>Computer Vision</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate><image><url>https://nazmulkabir.com/media/icon_hu_d0971a6e9e77ec8b.png</url><title>Computer Vision</title><link>https://nazmulkabir.com/tag/computer-vision/</link></image><item><title>Adversarial Image Detection in Agriculture</title><link>https://nazmulkabir.com/project/agri-adversarial/</link><pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/project/agri-adversarial/</guid><description>&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computer Vision | Md Nazmul Kabir Sikder</title>
+    <link>http://localhost:63993/tag/computer-vision/</link>
+      <atom:link href="http://localhost:63993/tag/computer-vision/index.xml" rel="self" type="application/rss+xml" />
+    <description>Computer Vision</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:63993/media/icon_hu_d0971a6e9e77ec8b.png</url>
+      <title>Computer Vision</title>
+      <link>http://localhost:63993/tag/computer-vision/</link>
+    </image>
+    
+    <item>
+      <title>Adversarial Image Detection in Agriculture</title>
+      <link>http://localhost:63993/project/agri-adversarial/</link>
+      <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:63993/project/agri-adversarial/</guid>
+      <description>&lt;ul&gt;
 &lt;li&gt;Classifies high-fidelity adversarial plant images; attributes source models (StyleGAN2/3, DS8, BLIP, Pix2Pix) alongside health status.&lt;/li&gt;
 &lt;li&gt;Trains EfficientNet-B0 / ResNet-50 / CLIP-ViT on binary health, source (Real/GAN/Diffusion), and detailed 10-way crop–health–generator tasks.&lt;/li&gt;
 &lt;li&gt;Designed to scale as new generators emerge; targets cyber-biosecurity for Agriculture 4.0 systems.&lt;/li&gt;
 &lt;li&gt;Authors: Md Nazmul Kabir Sikder, Mehmet Oguz Yardimci, Trey Ward, Shubham Laxmikant Deshmukh, Feras A. Batarseh (Preprint, 2025).&lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

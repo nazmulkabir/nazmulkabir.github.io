@@ -1,9 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Water Systems | Md Nazmul Kabir Sikder</title><link>https://nazmulkabir.com/tag/water-systems/</link><atom:link href="https://nazmulkabir.com/tag/water-systems/index.xml" rel="self" type="application/rss+xml"/><description>Water Systems</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2024 00:00:00 +0000</lastBuildDate><image><url>https://nazmulkabir.com/media/icon_hu_d0971a6e9e77ec8b.png</url><title>Water Systems</title><link>https://nazmulkabir.com/tag/water-systems/</link></image><item><title>cP2O: Context-Aware Water Level Forecasting</title><link>https://nazmulkabir.com/project/cp2o/</link><pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/project/cp2o/</guid><description>&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Water Systems | Md Nazmul Kabir Sikder</title>
+    <link>http://localhost:63993/tag/water-systems/</link>
+      <atom:link href="http://localhost:63993/tag/water-systems/index.xml" rel="self" type="application/rss+xml" />
+    <description>Water Systems</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:63993/media/icon_hu_d0971a6e9e77ec8b.png</url>
+      <title>Water Systems</title>
+      <link>http://localhost:63993/tag/water-systems/</link>
+    </image>
+    
+    <item>
+      <title>cP2O: Context-Aware Water Level Forecasting</title>
+      <link>http://localhost:63993/project/cp2o/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:63993/project/cp2o/</guid>
+      <description>&lt;ul&gt;
 &lt;li&gt;Two-stage pipeline: temporal context extraction plus multi-horizon forecasting.&lt;/li&gt;
 &lt;li&gt;Achieves &amp;gt;95% accuracy with real-time updates for overflow prevention.&lt;/li&gt;
 &lt;li&gt;Designed for smart water/WWTP operations.&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>IWS Challenge 2022: Integrated AI for Water Systems</title><link>https://nazmulkabir.com/project/iws-challenge/</link><pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate><guid>https://nazmulkabir.com/project/iws-challenge/</guid><description>&lt;ul&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IWS Challenge 2022: Integrated AI for Water Systems</title>
+      <link>http://localhost:63993/project/iws-challenge/</link>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:63993/project/iws-challenge/</guid>
+      <description>&lt;ul&gt;
 &lt;li&gt;Prediction: LSTM-based tunnel water level forecasting with robust preprocessing.&lt;/li&gt;
 &lt;li&gt;Protection: Cyber-physical attack detection and classification on SMOD-style datasets.&lt;/li&gt;
 &lt;li&gt;Optimization: Genetic algorithm pump scheduling to cut energy use and prevent overflows.&lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
