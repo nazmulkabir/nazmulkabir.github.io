@@ -2,182 +2,182 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:63993/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-12-16T10:00:00-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/news/</loc>
+    <loc>http://localhost:1313/news/</loc>
     <lastmod>2025-12-16T10:00:00-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/news/2025-12-16-odu-nsa-validation/</loc>
+    <loc>http://localhost:1313/news/2025-12-16-odu-nsa-validation/</loc>
     <lastmod>2025-12-16T10:00:00-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication-type/2/</loc>
+    <loc>http://localhost:1313/publication-type/2/</loc>
     <lastmod>2025-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication/context-driven-forecasting-wastewater/</loc>
+    <loc>http://localhost:1313/publication/context-driven-forecasting-wastewater/</loc>
     <lastmod>2025-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication_types/</loc>
+    <loc>http://localhost:1313/publication_types/</loc>
     <lastmod>2025-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication/</loc>
+    <loc>http://localhost:1313/publication/</loc>
     <lastmod>2025-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/news/2025-02-10-presidential-postdoc/</loc>
+    <loc>http://localhost:1313/news/2025-02-10-presidential-postdoc/</loc>
     <lastmod>2025-02-10T18:00:00-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/tag/adversarial-detection/</loc>
+    <loc>http://localhost:1313/tag/adversarial-detection/</loc>
     <lastmod>2025-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/project/agri-adversarial/</loc>
+    <loc>http://localhost:1313/project/agri-adversarial/</loc>
     <lastmod>2025-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/tag/agriculture/</loc>
+    <loc>http://localhost:1313/tag/agriculture/</loc>
     <lastmod>2025-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/tag/computer-vision/</loc>
+    <loc>http://localhost:1313/tag/computer-vision/</loc>
     <lastmod>2025-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/project/</loc>
+    <loc>http://localhost:1313/project/</loc>
     <lastmod>2025-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/category/research/</loc>
+    <loc>http://localhost:1313/category/research/</loc>
     <lastmod>2025-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication-type/7/</loc>
+    <loc>http://localhost:1313/publication-type/7/</loc>
     <lastmod>2025-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication/ai-methods-anomaly-cps/</loc>
+    <loc>http://localhost:1313/publication/ai-methods-anomaly-cps/</loc>
     <lastmod>2025-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/news/2024-11-25-phd-defense/</loc>
+    <loc>http://localhost:1313/news/2024-11-25-phd-defense/</loc>
     <lastmod>2024-11-25T05:00:00-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/news/2024-11-09-aaai-fall-symposium/</loc>
+    <loc>http://localhost:1313/news/2024-11-09-aaai-fall-symposium/</loc>
     <lastmod>2024-11-09T13:00:00-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/news/2024-10-13-cyber-attacks-water-sector/</loc>
+    <loc>http://localhost:1313/news/2024-10-13-cyber-attacks-water-sector/</loc>
     <lastmod>2024-10-13T12:00:00-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/project/cp2o/</loc>
+    <loc>http://localhost:1313/project/cp2o/</loc>
     <lastmod>2024-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/tag/lstm/</loc>
+    <loc>http://localhost:1313/tag/lstm/</loc>
     <lastmod>2024-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/tag/time-series/</loc>
+    <loc>http://localhost:1313/tag/time-series/</loc>
     <lastmod>2024-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/tag/water-systems/</loc>
+    <loc>http://localhost:1313/tag/water-systems/</loc>
     <lastmod>2024-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/news/2024-05-24-ai-cybersecurity-water-treatment/</loc>
+    <loc>http://localhost:1313/news/2024-05-24-ai-cybersecurity-water-treatment/</loc>
     <lastmod>2024-05-24T12:00:00-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication/p2o-secure-wastewater/</loc>
+    <loc>http://localhost:1313/publication/p2o-secure-wastewater/</loc>
     <lastmod>2023-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/tag/ai-assurance/</loc>
+    <loc>http://localhost:1313/tag/ai-assurance/</loc>
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/project/maa/</loc>
+    <loc>http://localhost:1313/project/maa/</loc>
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/tag/security/</loc>
+    <loc>http://localhost:1313/tag/security/</loc>
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/tag/xai/</loc>
+    <loc>http://localhost:1313/tag/xai/</loc>
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/tag/anomaly-detection/</loc>
+    <loc>http://localhost:1313/tag/anomaly-detection/</loc>
     <lastmod>2023-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/tag/deep-learning/</loc>
+    <loc>http://localhost:1313/tag/deep-learning/</loc>
     <lastmod>2023-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/project/deepag/</loc>
+    <loc>http://localhost:1313/project/deepag/</loc>
     <lastmod>2023-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication-type/6/</loc>
+    <loc>http://localhost:1313/publication-type/6/</loc>
     <lastmod>2023-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication/assessing-cyber-attacks-water-distribution/</loc>
+    <loc>http://localhost:1313/publication/assessing-cyber-attacks-water-distribution/</loc>
     <lastmod>2023-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication/deep-h2o-cyber-attacks-water/</loc>
+    <loc>http://localhost:1313/publication/deep-h2o-cyber-attacks-water/</loc>
     <lastmod>2023-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication/outlier-detection-ai-survey/</loc>
+    <loc>http://localhost:1313/publication/outlier-detection-ai-survey/</loc>
     <lastmod>2023-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/news/2022-10-14-intelligent-water-systems-challenge/</loc>
+    <loc>http://localhost:1313/news/2022-10-14-intelligent-water-systems-challenge/</loc>
     <lastmod>2022-10-14T15:59:00-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication-type/1/</loc>
+    <loc>http://localhost:1313/publication-type/1/</loc>
     <lastmod>2022-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication/model-agnostic-aia-scoring/</loc>
+    <loc>http://localhost:1313/publication/model-agnostic-aia-scoring/</loc>
     <lastmod>2022-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/news/2022-09-20-tunnel-water-level-forecasting/</loc>
+    <loc>http://localhost:1313/news/2022-09-20-tunnel-water-level-forecasting/</loc>
     <lastmod>2022-09-20T13:00:00-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/tag/competition/</loc>
+    <loc>http://localhost:1313/tag/competition/</loc>
     <lastmod>2022-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/tag/cybersecurity/</loc>
+    <loc>http://localhost:1313/tag/cybersecurity/</loc>
     <lastmod>2022-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/project/iws-challenge/</loc>
+    <loc>http://localhost:1313/project/iws-challenge/</loc>
     <lastmod>2022-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/news/2022-06-10-maa-paper-sdss/</loc>
+    <loc>http://localhost:1313/news/2022-06-10-maa-paper-sdss/</loc>
     <lastmod>2022-06-10T12:00:00-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication-type/5/</loc>
+    <loc>http://localhost:1313/publication-type/5/</loc>
     <lastmod>2022-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication/ai-assurance-book/</loc>
+    <loc>http://localhost:1313/publication/ai-assurance-book/</loc>
     <lastmod>2022-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication/realtime-management-wastewater-ai/</loc>
+    <loc>http://localhost:1313/publication/realtime-management-wastewater-ai/</loc>
     <lastmod>2022-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication/ai-assurance-precision-farming/</loc>
+    <loc>http://localhost:1313/publication/ai-assurance-precision-farming/</loc>
     <lastmod>2022-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication/deepag-outlier-events-agriculture/</loc>
+    <loc>http://localhost:1313/publication/deepag-outlier-events-agriculture/</loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication/peak-demand-reduction-hvac-lighting/</loc>
+    <loc>http://localhost:1313/publication/peak-demand-reduction-hvac-lighting/</loc>
     <lastmod>2021-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication/ml-precision-agriculture-flairs/</loc>
+    <loc>http://localhost:1313/publication/ml-precision-agriculture-flairs/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/publication/mppt-sepic-microcontroller/</loc>
+    <loc>http://localhost:1313/publication/mppt-sepic-microcontroller/</loc>
     <lastmod>2015-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63993/admin/</loc>
+    <loc>http://localhost:1313/admin/</loc>
   </url><url>
-    <loc>http://localhost:63993/author/akanksha-tyagi/</loc>
+    <loc>http://localhost:1313/author/akanksha-tyagi/</loc>
   </url><url>
-    <loc>http://localhost:63993/authors/</loc>
+    <loc>http://localhost:1313/authors/</loc>
   </url><url>
-    <loc>http://localhost:63993/author/feras-a.-batarseh/</loc>
+    <loc>http://localhost:1313/author/feras-a.-batarseh/</loc>
   </url><url>
-    <loc>http://localhost:63993/author/nazmul-kabir-sikder/</loc>
+    <loc>http://localhost:1313/author/nazmul-kabir-sikder/</loc>
   </url><url>
-    <loc>http://localhost:63993/author/rutba-aman/</loc>
+    <loc>http://localhost:1313/author/rutba-aman/</loc>
   </url><url>
-    <loc>http://localhost:63993/author/umme-rumman/</loc>
+    <loc>http://localhost:1313/author/umme-rumman/</loc>
   </url><url>
-    <loc>http://localhost:63993/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
+    <loc>http://localhost:1313/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
   </url>
 </urlset>
