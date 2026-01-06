@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nazmul Kabir Sikder | Md Nazmul Kabir Sikder</title>
-    <link>http://localhost:63993/author/nazmul-kabir-sikder/</link>
-      <atom:link href="http://localhost:63993/author/nazmul-kabir-sikder/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/author/nazmul-kabir-sikder/</link>
+      <atom:link href="http://localhost:1313/author/nazmul-kabir-sikder/index.xml" rel="self" type="application/rss+xml" />
     <description>Nazmul Kabir Sikder</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
     <image>
-      <url>http://localhost:63993/author/nazmul-kabir-sikder/avatar_hu_be3c8bcbcc5fc128.jpg</url>
+      <url>http://localhost:1313/author/nazmul-kabir-sikder/avatar_hu_be3c8bcbcc5fc128.jpg</url>
       <title>Nazmul Kabir Sikder</title>
-      <link>http://localhost:63993/author/nazmul-kabir-sikder/</link>
+      <link>http://localhost:1313/author/nazmul-kabir-sikder/</link>
     </image>
     
   </channel>

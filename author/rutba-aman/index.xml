@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rutba Aman | Md Nazmul Kabir Sikder</title>
-    <link>http://localhost:63993/author/rutba-aman/</link>
-      <atom:link href="http://localhost:63993/author/rutba-aman/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/author/rutba-aman/</link>
+      <atom:link href="http://localhost:1313/author/rutba-aman/index.xml" rel="self" type="application/rss+xml" />
     <description>Rutba Aman</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
     <image>
-      <url>http://localhost:63993/media/icon_hu_d0971a6e9e77ec8b.png</url>
+      <url>http://localhost:1313/media/icon_hu_d0971a6e9e77ec8b.png</url>
       <title>Rutba Aman</title>
-      <link>http://localhost:63993/author/rutba-aman/</link>
+      <link>http://localhost:1313/author/rutba-aman/</link>
     </image>
     
   </channel>

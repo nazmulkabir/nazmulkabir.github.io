@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI Assurance | Md Nazmul Kabir Sikder</title>
-    <link>http://localhost:63993/tag/ai-assurance/</link>
-      <atom:link href="http://localhost:63993/tag/ai-assurance/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tag/ai-assurance/</link>
+      <atom:link href="http://localhost:1313/tag/ai-assurance/index.xml" rel="self" type="application/rss+xml" />
     <description>AI Assurance</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 May 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:63993/media/icon_hu_d0971a6e9e77ec8b.png</url>
+      <url>http://localhost:1313/media/icon_hu_d0971a6e9e77ec8b.png</url>
       <title>AI Assurance</title>
-      <link>http://localhost:63993/tag/ai-assurance/</link>
+      <link>http://localhost:1313/tag/ai-assurance/</link>
     </image>
     
     <item>
       <title>Model-Agnostic Assurance (ALSP)</title>
-      <link>http://localhost:63993/project/maa/</link>
+      <link>http://localhost:1313/project/maa/</link>
       <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63993/project/maa/</guid>
+      <guid>http://localhost:1313/project/maa/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Shapley-value weight assessment, reverse learning, and secret inversion to quantify XAI/FAI/SAI.&lt;/li&gt;
 &lt;li&gt;Generates per-sample assurance scores and adversarial logging for production monitoring.&lt;/li&gt;

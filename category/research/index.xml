@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Research | Md Nazmul Kabir Sikder</title>
-    <link>http://localhost:63993/category/research/</link>
-      <atom:link href="http://localhost:63993/category/research/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/category/research/</link>
+      <atom:link href="http://localhost:1313/category/research/index.xml" rel="self" type="application/rss+xml" />
     <description>Research</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:63993/media/icon_hu_d0971a6e9e77ec8b.png</url>
+      <url>http://localhost:1313/media/icon_hu_d0971a6e9e77ec8b.png</url>
       <title>Research</title>
-      <link>http://localhost:63993/category/research/</link>
+      <link>http://localhost:1313/category/research/</link>
     </image>
     
     <item>
       <title>Adversarial Image Detection in Agriculture</title>
-      <link>http://localhost:63993/project/agri-adversarial/</link>
+      <link>http://localhost:1313/project/agri-adversarial/</link>
       <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63993/project/agri-adversarial/</guid>
+      <guid>http://localhost:1313/project/agri-adversarial/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Classifies high-fidelity adversarial plant images; attributes source models (StyleGAN2/3, DS8, BLIP, Pix2Pix) alongside health status.&lt;/li&gt;
 &lt;li&gt;Trains EfficientNet-B0 / ResNet-50 / CLIP-ViT on binary health, source (Real/GAN/Diffusion), and detailed 10-way crop–health–generator tasks.&lt;/li&gt;
@@ -28,9 +28,9 @@
     
     <item>
       <title>cP2O: Context-Aware Water Level Forecasting</title>
-      <link>http://localhost:63993/project/cp2o/</link>
+      <link>http://localhost:1313/project/cp2o/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63993/project/cp2o/</guid>
+      <guid>http://localhost:1313/project/cp2o/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Two-stage pipeline: temporal context extraction plus multi-horizon forecasting.&lt;/li&gt;
 &lt;li&gt;Achieves &amp;gt;95% accuracy with real-time updates for overflow prevention.&lt;/li&gt;
@@ -41,9 +41,9 @@
     
     <item>
       <title>Model-Agnostic Assurance (ALSP)</title>
-      <link>http://localhost:63993/project/maa/</link>
+      <link>http://localhost:1313/project/maa/</link>
       <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63993/project/maa/</guid>
+      <guid>http://localhost:1313/project/maa/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Shapley-value weight assessment, reverse learning, and secret inversion to quantify XAI/FAI/SAI.&lt;/li&gt;
 &lt;li&gt;Generates per-sample assurance scores and adversarial logging for production monitoring.&lt;/li&gt;
@@ -54,9 +54,9 @@
     
     <item>
       <title>DeepAg: Precision Farming Anomaly Detection</title>
-      <link>http://localhost:63993/project/deepag/</link>
+      <link>http://localhost:1313/project/deepag/</link>
       <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63993/project/deepag/</guid>
+      <guid>http://localhost:1313/project/deepag/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Unsupervised outlier detection tailored to crop production signals.&lt;/li&gt;
 &lt;li&gt;Integrates financial indices (oil, gold, DJIA, S&amp;amp;P500, VIX) for risk-aware decisions.&lt;/li&gt;
@@ -67,9 +67,9 @@
     
     <item>
       <title>IWS Challenge 2022: Integrated AI for Water Systems</title>
-      <link>http://localhost:63993/project/iws-challenge/</link>
+      <link>http://localhost:1313/project/iws-challenge/</link>
       <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63993/project/iws-challenge/</guid>
+      <guid>http://localhost:1313/project/iws-challenge/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Prediction: LSTM-based tunnel water level forecasting with robust preprocessing.&lt;/li&gt;
 &lt;li&gt;Protection: Cyber-physical attack detection and classification on SMOD-style datasets.&lt;/li&gt;

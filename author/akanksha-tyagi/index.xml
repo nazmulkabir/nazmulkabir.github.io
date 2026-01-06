@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Akanksha Tyagi | Md Nazmul Kabir Sikder</title>
-    <link>http://localhost:63993/author/akanksha-tyagi/</link>
-      <atom:link href="http://localhost:63993/author/akanksha-tyagi/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/author/akanksha-tyagi/</link>
+      <atom:link href="http://localhost:1313/author/akanksha-tyagi/index.xml" rel="self" type="application/rss+xml" />
     <description>Akanksha Tyagi</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
     <image>
-      <url>http://localhost:63993/media/icon_hu_d0971a6e9e77ec8b.png</url>
+      <url>http://localhost:1313/media/icon_hu_d0971a6e9e77ec8b.png</url>
       <title>Akanksha Tyagi</title>
-      <link>http://localhost:63993/author/akanksha-tyagi/</link>
+      <link>http://localhost:1313/author/akanksha-tyagi/</link>
     </image>
     
   </channel>

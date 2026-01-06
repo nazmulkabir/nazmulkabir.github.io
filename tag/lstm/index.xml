@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>LSTM | Md Nazmul Kabir Sikder</title>
-    <link>http://localhost:63993/tag/lstm/</link>
-      <atom:link href="http://localhost:63993/tag/lstm/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tag/lstm/</link>
+      <atom:link href="http://localhost:1313/tag/lstm/index.xml" rel="self" type="application/rss+xml" />
     <description>LSTM</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:63993/media/icon_hu_d0971a6e9e77ec8b.png</url>
+      <url>http://localhost:1313/media/icon_hu_d0971a6e9e77ec8b.png</url>
       <title>LSTM</title>
-      <link>http://localhost:63993/tag/lstm/</link>
+      <link>http://localhost:1313/tag/lstm/</link>
     </image>
     
     <item>
       <title>cP2O: Context-Aware Water Level Forecasting</title>
-      <link>http://localhost:63993/project/cp2o/</link>
+      <link>http://localhost:1313/project/cp2o/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63993/project/cp2o/</guid>
+      <guid>http://localhost:1313/project/cp2o/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Two-stage pipeline: temporal context extraction plus multi-horizon forecasting.&lt;/li&gt;
 &lt;li&gt;Achieves &amp;gt;95% accuracy with real-time updates for overflow prevention.&lt;/li&gt;

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Agriculture | Md Nazmul Kabir Sikder</title>
-    <link>http://localhost:63993/tag/agriculture/</link>
-      <atom:link href="http://localhost:63993/tag/agriculture/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tag/agriculture/</link>
+      <atom:link href="http://localhost:1313/tag/agriculture/index.xml" rel="self" type="application/rss+xml" />
     <description>Agriculture</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:63993/media/icon_hu_d0971a6e9e77ec8b.png</url>
+      <url>http://localhost:1313/media/icon_hu_d0971a6e9e77ec8b.png</url>
       <title>Agriculture</title>
-      <link>http://localhost:63993/tag/agriculture/</link>
+      <link>http://localhost:1313/tag/agriculture/</link>
     </image>
     
     <item>
       <title>Adversarial Image Detection in Agriculture</title>
-      <link>http://localhost:63993/project/agri-adversarial/</link>
+      <link>http://localhost:1313/project/agri-adversarial/</link>
       <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63993/project/agri-adversarial/</guid>
+      <guid>http://localhost:1313/project/agri-adversarial/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Classifies high-fidelity adversarial plant images; attributes source models (StyleGAN2/3, DS8, BLIP, Pix2Pix) alongside health status.&lt;/li&gt;
 &lt;li&gt;Trains EfficientNet-B0 / ResNet-50 / CLIP-ViT on binary health, source (Real/GAN/Diffusion), and detailed 10-way crop–health–generator tasks.&lt;/li&gt;
@@ -28,9 +28,9 @@
     
     <item>
       <title>DeepAg: Precision Farming Anomaly Detection</title>
-      <link>http://localhost:63993/project/deepag/</link>
+      <link>http://localhost:1313/project/deepag/</link>
       <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63993/project/deepag/</guid>
+      <guid>http://localhost:1313/project/deepag/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Unsupervised outlier detection tailored to crop production signals.&lt;/li&gt;
 &lt;li&gt;Integrates financial indices (oil, gold, DJIA, S&amp;amp;P500, VIX) for risk-aware decisions.&lt;/li&gt;
