@@ -66,5 +66,5 @@ experience:
       Built intelligent building management and IoT solutions for energy efficiency and automation, including smart building controls, energy optimization, sensor integration, and real-time monitoring dashboards.
 
 design:
-  columns: '2'
+  columns: "1"
 ---

@@ -40,6 +40,40 @@ ul.emoji-list > li:hover:before {
     content: "😍";    /* change the emoji on hover! */
 }
 
+// Center interests bullets under people cards
+.people-interests-line {
+  text-align: center;
+  margin: 0.35rem 0 0.5rem 0;
+}
+
+// Center section headers globally (People now centers too)
+.section-heading {
+  text-align: center !important;
+}
+
+// Responsive grids for Research and News cards (exclude headings)
+#research .col-12:not(.section-heading),
+#news .col-12:not(.section-heading) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem 1.25rem;
+}
+
+#research .card-simple,
+#news .card-simple {
+  height: 100%;
+}
+
+/* Ensure all research cards align in the grid */
+#research .card-simple:first-of-type {
+  margin-top: 20px;
+}
+
+/* Ensure all news cards align in the grid */
+#news .card-simple:first-of-type {
+  margin-top: 20px;
+}
+
 :root {
   font-size: 18px; // lower than default (~16px)
 }
