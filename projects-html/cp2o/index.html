@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>cP2O: Context-Aware Water Level Forecasting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Context-aware deep learning for short-term wastewater tunnel and chemical level forecasting." />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;600;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff; --text:#1f2937; --muted:#6b7280; --soft:#f8fafc; --line:#e5e7eb; --card:#ffffff;
+      --btn:#0f172a; --btnText:#ffffff; --link:#2563eb; --wrap:1100px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b0e12; --text:#e5e7eb; --muted:#9aa4b2; --soft:#0f1319; --line:#1f2733; --card:#0d1117;
+        --btn:#1f2937; --btnText:#e5e7eb; --link:#8ab4ff;
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+    header.hero{padding:56px 0 22px}
+    h1{font-family:"Google Sans",sans-serif;font-weight:700;line-height:1.12;letter-spacing:.2px;font-size:clamp(28px,5vw,52px);text-align:center;margin:0 0 12px}
+    .subtitle{text-align:center;color:var(--muted);font-size:20px;margin:4px 0 16px}
+    .authors,.affils{font-size:16px;text-align:center;line-height:1.6}
+    .authors a{color:#2a6bf4}
+    .authors sup{font-size:12px;vertical-align:top}
+    .buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:20px 0 6px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;border:1px solid var(--line);background:var(--btn);color:var(--btnText);font-weight:700}
+    .btn.light{background:transparent;color:var(--text)}
+    .btn:hover{opacity:.95;text-decoration:none}
+    section{padding:40px 0;border-top:1px solid var(--line)}
+    h2{font-family:"Google Sans",sans-serif;font-size:30px;margin:0 0 14px;text-align:center}
+    h3{font-family:"Google Sans",sans-serif;font-size:22px;margin:14px 0 8px}
+    .content{max-width:900px;margin:0 auto;font-size:17px;line-height:1.7}
+    .grid-2{display:grid;grid-template-columns:1fr;gap:16px}
+    @media (min-width:920px){.grid-2{grid-template-columns:1fr 1fr}}
+    .figure{max-width:980px;margin:18px auto 10px}
+    .figure img{width:100%;height:auto;border-radius:12px;background:var(--soft);display:block}
+    .caption{color:var(--muted);font-size:14px;text-align:center;margin-top:6px}
+    .cards{display:grid;grid-template-columns:1fr;gap:14px;margin-top:12px}
+    @media (min-width:960px){.cards{grid-template-columns:1fr 1fr}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:0 6px 18px rgba(0,0,0,.04)}
+    table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+    th,td{border:1px solid var(--line);padding:8px;text-align:left}
+    th{background:var(--soft);color:var(--text);font-weight:700}
+    caption{caption-side:top;text-align:left;font-weight:700;margin-bottom:6px;color:var(--text)}
+    .chip{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--soft);color:var(--muted);font-size:13px;margin-right:8px;margin-bottom:6px}
+    .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:10px}
+    .metric{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--card);text-align:center}
+    .metric strong{display:block;font-size:20px;font-family:"Google Sans",sans-serif}
+    .scroller{display:grid;grid-auto-flow:column;grid-auto-columns:320px;gap:14px;overflow-x:auto;padding:12px 0;margin-top:12px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line)}
+    .scroller::-webkit-scrollbar{height:8px}
+    .scroller::-webkit-scrollbar-thumb{background:#c6c6c6;border-radius:6px}
+    .scroller::-webkit-scrollbar-track{background:transparent}
+    .slide{scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.04);padding:10px}
+    .slide img{width:100%;height:220px;object-fit:contain;border-radius:10px;background:var(--soft);display:block}
+    .slide .caption{margin:8px 0 0;text-align:center;font-size:14px;color:var(--muted)}
+    .lightbox-overlay{position:fixed;inset:0;background:rgba(0,0,0,.68);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .18s ease;z-index:2000;padding:18px}
+    .lightbox-overlay.active{opacity:1;pointer-events:auto}
+    .lightbox-content{position:relative;max-width:1200px;width:90%;max-height:90vh;display:flex;justify-content:center;align-items:center;animation:scaleIn .2s ease}
+    .lightbox-img{max-width:100%;max-height:90vh;border-radius:12px;box-shadow:0 14px 34px rgba(0,0,0,.35);background:#0b0e12}
+    .lightbox-close{position:absolute;top:-10px;right:-10px;width:34px;height:34px;border:none;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1}
+    .lightbox-close:hover{background:rgba(0,0,0,.85)}
+    @keyframes scaleIn{from{transform:scale(.96);opacity:.85}to{transform:scale(1);opacity:1}}
+    footer{padding:34px 0;text-align:center;color:var(--muted);font-size:14px}
+  </style>
+</head>
+<body>
+<header class="hero container">
+  <h1>cP2O: Context-Aware Water Level Forecasting</h1>
+  <div class="subtitle">Hybrid context + dilated LSTM with attention for 4–6 hour WWTP forecasts</div>
+  <div class="authors">
+    <a href="https://scholar.google.com/citations?user=1meq3gcAAAAJ&hl=en" target="_blank" rel="noopener">Md Nazmul Kabir Sikder</a><sup>1</sup>,
+    <a href="https://scholar.google.co.uk/citations?user=oQiAulIAAAAJ&hl=en" target="_blank" rel="noopener">Feras A. Batarseh</a><sup>2</sup>
+  </div>
+  <div class="affils">
+    <sup>1</sup>Virginia Tech, Bradley Department of ECE (CCI) &nbsp;&nbsp;|&nbsp;&nbsp;
+    <sup>2</sup>Virginia Tech, Biological Systems Engineering
+  </div>
+  <div class="buttons">
+    <a class="btn" href="/media/publications/context-driven-forecasting-wastewater.pdf" target="_blank" rel="noopener">📄 Paper (PDF)</a>
+    <a class="btn light" href="https://github.com/nazmulkabir/Contextual-AI-WDS" target="_blank" rel="noopener">💻 Code (GitHub)</a>
+  </div>
+</header>
+
+<section id="abstract">
+  <div class="container">
+    <h2>Abstract</h2>
+    <div class="content">
+      <p>Wastewater utilities need accurate 4–6 hour forecasts to operate pumps, chemicals, and energy during extreme weather. We propose <strong>cP<sub>2</sub>O</strong>, a context-driven forecasting architecture that fuses exogenous signals (weather, river flow, demographics, economic activity) with internal plant data. A two-stage pipeline performs dynamic context extraction plus hierarchical dilated LSTM forecasting with attention and quantile loss, producing point forecasts and calibrated prediction intervals. On two full-scale utilities (DC Water tunnel levels, AlexRenew nitrate) cP<sub>2</sub>O cuts MAPE by 22% and 19% vs strong baselines, with 90% bands covering 90.5% ± 3.2% of observations (5.9% below, 3.6% above).</p>
+    </div>
+  </div>
+</section>
+
+<section id="research-questions">
+  <div class="container">
+    <h2>Research Questions</h2>
+    <div class="content">
+      <ul>
+        <li>Does adding external context improve 4–6h WWTP forecasts vs. internal-only models?</li>
+        <li>Can one architecture adapt to multiple utilities (tunnel levels, nitrate) with high accuracy?</li>
+        <li>Does attention help dynamically weight inputs for better forecasts?</li>
+        <li>Does quantile loss reduce peak-event bias and yield reliable prediction intervals?</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contributions">
+  <div class="container">
+    <h2>Contributions</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Hybrid architecture</h3>
+        <p>Dynamic context extractor + dilated LSTMs with attention to capture short/long temporal structure without heavy preprocessing.</p>
+      </div>
+      <div class="card">
+        <h3>Context integration</h3>
+        <p>Weather, river, demographic, and economic signals shape forecasts; quantile loss reduces bias during peaks.</p>
+      </div>
+      <div class="card">
+        <h3>Uncertainty-aware</h3>
+        <p>Predicts point values and prediction intervals for operational risk decisions in SCADA workflows.</p>
+      </div>
+      <div class="card">
+        <h3>Real deployments</h3>
+        <p>Validated on DC Water tunnel levels and AlexRenew nitrate forecasting with consistent accuracy gains.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="overview">
+  <div class="container">
+    <h2>Method Overview</h2>
+    <div class="content">
+      <p>The pipeline aligns context and utility data, applies dynamic smoothing, and feeds concatenated features to a 3-layer dilated LSTM (dilations 1/2/4) with an internal attention gate. Quantile pinball loss produces median forecasts and 90% intervals while mitigating peak bias. An ensemble variant (cP2Oe) averages members for robustness.</p>
+    </div>
+    <div class="figure">
+      <img src="/media/projects/cp2o/context_pipeline.png" alt="Two-stage context extraction and forecasting pipeline for cP2O." />
+      <p class="caption">Stage 1 extracts context vectors; Stage 2 performs multi-horizon forecasting with attention and dilated LSTMs.</p>
+    </div>
+    <div class="figure">
+      <img src="/media/projects/cp2o/cell_architecture.png" alt="Dilated LSTM cell with recent and delayed states plus attention modulation." />
+      <p class="caption">Dilated LSTM cell mixes recent and delayed states; attention modulates inputs for feature saliency.</p>
+    </div>
+  </div>
+</section>
+
+<section id="datasets-context">
+  <div class="container">
+    <h2>Datasets & Context</h2>
+    <div class="content">
+      <p><strong>DC Water (Blue Plains):</strong> tunnel level forecasting under flash-flood and coastal surge events; rain gauges, pumps, flow sensors, NOAA storm context, river levels.</p>
+      <p><strong>AlexRenew:</strong> nutrient forecasting (pH, ammonia, nitrate) with weather, influent flow, and operational context.</p>
+      <table>
+        <caption>Context signals used in cP<sub>2</sub>O</caption>
+        <thead><tr><th>Group</th><th>Examples</th><th>Role</th></tr></thead>
+        <tbody>
+          <tr><td>Weather</td><td>Rainfall, temp, humidity, wind</td><td>Drives inflow surges and dilution</td></tr>
+          <tr><td>River/Ocean</td><td>Flow, stage/tide</td><td>Backflow risk and boundary conditions</td></tr>
+          <tr><td>Demographic/Economic</td><td>Usage intensity proxies</td><td>Baseline demand patterns</td></tr>
+          <tr><td>WWTP sensors</td><td>Levels, pumps, flows, chemistry</td><td>Core autoregressive signal</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="experiments">
+  <div class="container">
+    <h2>Experiments</h2>
+    <div class="content">
+      <p><strong>Setup.</strong> 80/20 train/val; 48-step input, 4–6h horizon; quantile pinball loss (0.05/0.5/0.95); Adam with decaying LR; batch 16→64; ensembles up to 20 members.</p>
+      <p><strong>Architectural levers.</strong> Dynamic smoothing + context extractor → concatenated with plant data → 3-layer dilated LSTM (d=1/2/4) with internal attention → point + interval forecasts; quantile loss reduces peak bias.</p>
+      <p><strong>Ablations.</strong> Removing context, attention, or dilation raises MAPE/RMSE and drops peak detection; context and attention are the largest gains, dilation helps on fast spikes.</p>
+    </div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="container">
+    <h2>Results</h2>
+    <div class="metrics">
+      <div class="metric"><strong>MAPE 2.10%</strong><span>DC Water (tunnel)</span></div>
+      <div class="metric"><strong>MAPE 1.90%</strong><span>AlexRenew (NO<sub>3</sub>)</span></div>
+      <div class="metric"><strong>PDR 93.5%</strong><span>Peak detection (DC)</span></div>
+      <div class="metric"><strong>−22% / −19%</strong><span>MAPE vs strong baselines</span></div>
+    </div>
+    <div class="content">
+      <table>
+        <caption>Headline performance</caption>
+        <thead><tr><th>Task</th><th>Horizon</th><th>Gain vs baselines</th><th>90% PI coverage</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>DC Water tunnel levels</td><td>4–6 h</td><td>−22% MAPE</td><td>90.5% ± 3.2% (5.9% below / 3.6% above)</td><td>PDR 93.5%, fast-spike tracking</td></tr>
+          <tr><td>AlexRenew nitrate</td><td>4–6 h</td><td>−19% MAPE</td><td>≈90% interval coverage</td><td>Improved bias under peaks</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="figure">
+      <img src="/media/projects/cp2o/enhanced_dynamic_pi_plot.png" alt="Forecast vs actual with prediction intervals during peak events." />
+      <p class="caption">cP2Oe tracks extreme peaks with calibrated intervals; context is critical for flood surges.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <h2>Gallery</h2>
+    <div class="content">
+      <p>Key diagrams and evaluation plots from the cP2O paper, covering the two-stage pipeline, dilated cells, dataset peaks, forecast intervals, and comparative baselines.</p>
+    </div>
+    <div class="scroller">
+      <div class="slide">
+        <img src="/media/projects/cp2o/Flow_diagram.png" alt="Context and forecasting flow diagram." data-full="/media/projects/cp2o/Flow_diagram.png" />
+        <p class="caption">Context + forecasting flow: two-stage pipeline wiring</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/cp2o/Flow_diagram_V1.png" alt="Alternate flow diagram." data-full="/media/projects/cp2o/Flow_diagram_V1.png" />
+        <p class="caption">Alternate flow view highlighting data paths</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/cp2o/Model_Architecture.jpg" alt="Model architecture schematic." data-full="/media/projects/cp2o/Model_Architecture.jpg" />
+        <p class="caption">Full model stack with dilations and attention</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/cp2o/cp2o_cell.png" alt="cP2O cell diagram." data-full="/media/projects/cp2o/cp2o_cell.png" />
+        <p class="caption">Dilated cell details: recent + delayed states</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/cp2o/cell_2.png" alt="LSTM cell variant." data-full="/media/projects/cp2o/cell_2.png" />
+        <p class="caption">Cell variant with gate layout</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/cp2o/dRNN.png" alt="dRNN illustration." data-full="/media/projects/cp2o/dRNN.png" />
+        <p class="caption">dRNN illustration for stacked dilations</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/cp2o/Cell_architecture.jpg" alt="Cell architecture alt rendering." data-full="/media/projects/cp2o/Cell_architecture.jpg" />
+        <p class="caption">Cell architecture (alt rendering)</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/cp2o/Peaks_Plot.png" alt="Peak events plot." data-full="/media/projects/cp2o/Peaks_Plot.png" />
+        <p class="caption">Peak event diagnostics across storm windows</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/cp2o/all_results.png" alt="All results comparison." data-full="/media/projects/cp2o/all_results.png" />
+        <p class="caption">Extreme event comparisons vs baseline P2O</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/cp2o/enhanced_dynamic_forecast_plot.png" alt="Dynamic forecast plot." data-full="/media/projects/cp2o/enhanced_dynamic_forecast_plot.png" />
+        <p class="caption">Dynamic forecasts with intervals over time</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/cp2o/output_context_wocontext.png" alt="Context vs no-context outputs." data-full="/media/projects/cp2o/output_context_wocontext.png" />
+        <p class="caption">Context vs no-context impact on predictions</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/cp2o/Schematic-diagram-of-standard-wastewater-treatment-processes-and-particle-behaviour.png" alt="Standard WWTP schematic." data-full="/media/projects/cp2o/Schematic-diagram-of-standard-wastewater-treatment-processes-and-particle-behaviour.png" />
+        <p class="caption">WWTP process schematic for context variables</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/cp2o/Cell_architecture.png" alt="Cell architecture PNG." data-full="/media/projects/cp2o/Cell_architecture.png" />
+        <p class="caption">Cell architecture (PNG, clean lines)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox-overlay" id="lightbox" aria-modal="true" role="dialog">
+  <div class="lightbox-content">
+    <button class="lightbox-close" type="button" aria-label="Close">×</button>
+    <img class="lightbox-img" id="lightbox-img" alt="Expanded diagram" />
+  </div>
+</div>
+
+<section id="takeaways">
+  <div class="container">
+    <h2>Takeaways</h2>
+    <div class="content">
+      <ul>
+        <li>Context-aware forecasting cuts MAPE by ~20% and improves peak detection vs. non-context baselines.</li>
+        <li>Quantile loss + ensembles provide actionable prediction intervals for SCADA alarms.</li>
+        <li>Designed for deployment: hourly rolling forecasts, 4–6 hour horizons, compatible with existing tunnel/plant ops.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+  </div>
+</footer>
+<script>
+  (function(){
+    const overlay=document.getElementById('lightbox');
+    const imgEl=document.getElementById('lightbox-img');
+    const closeBtn=overlay.querySelector('.lightbox-close');
+    const slides=document.querySelectorAll('.slide img');
+    const open=(src,alt)=>{imgEl.src=src;imgEl.alt=alt||'Expanded diagram';overlay.classList.add('active');document.body.style.overflow='hidden';};
+    const close=()=>{overlay.classList.remove('active');imgEl.src='';document.body.style.overflow='';};
+    slides.forEach(img=>{img.style.cursor='zoom-in';img.addEventListener('click',()=>open(img.dataset.full||img.src,img.alt));});
+    closeBtn.addEventListener('click',close);
+    overlay.addEventListener('click',e=>{if(e.target===overlay) close();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape') close();});
+  })();
+</script>
+</body>
+</html>
