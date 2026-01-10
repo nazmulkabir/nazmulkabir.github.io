@@ -5,7 +5,7 @@ summary: "Game-theoretic, model-agnostic assurance pipeline combining explainabi
 tags: [AI Assurance, XAI, Security]
 categories: [research]
 projects: []
-external_link: https://github.com/nazmulkabir/maa-framework
+external_link: /project/maa/
 type: project
 ---
 

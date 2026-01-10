@@ -21,7 +21,7 @@ interests:
 organizations:
 - name: Old Dominion University
   url: https://www.odu.edu
-- name: Commonwealth Cyber Initiative Coastal Virginia
+- name: Commonwealth Cyber Initiative Coastal Virginia (COVA)
   url: https://covacci.org/
 role: Research Assistant Professor
 social:

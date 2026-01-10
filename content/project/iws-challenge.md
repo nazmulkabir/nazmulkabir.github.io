@@ -5,7 +5,7 @@ summary: "Competition-winning AI stack combining prediction, protection, and opt
 tags: [Competition, Water Systems, Cybersecurity]
 categories: [research]
 projects: []
-external_link: https://github.com/nazmulkabir/iws-challenge-2022
+external_link: /project/iws-challenge/
 type: project
 ---
 

@@ -5,7 +5,7 @@ summary: "Context-aware dilated LSTM with attention for 4–6 hour wastewater tu
 tags: [Water Systems, Time Series, LSTM]
 categories: [research]
 projects: []
-external_link: https://github.com/nazmulkabir/cp2o
+external_link: /project/cp2o/
 type: project
 ---
 

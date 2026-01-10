@@ -5,7 +5,7 @@ summary: "Deep learning and Isolation Forest pipeline to flag economic and opera
 tags: [Agriculture, Anomaly Detection, Deep Learning]
 categories: [research]
 projects: []
-external_link: https://github.com/nazmulkabir/deepag
+external_link: /project/deepag/
 type: project
 ---
 

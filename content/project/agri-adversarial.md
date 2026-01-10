@@ -6,7 +6,7 @@ summary: "Detect and attribute GAN/diffusion-generated plant images for Agricult
 tags: [Adversarial Detection, Agriculture, Computer Vision]
 categories: [research]
 projects: []
-external_link: ""
+external_link: /project/agrivision/
 paper: ""
 ---
 
