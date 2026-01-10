@@ -9540,6 +9540,47 @@ ul.emoji-list > li:hover:before {
   text-align: center;
   margin: 0.35rem 0 0.5rem 0; }
 
+.people-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.9rem;
+  margin: 0.35rem auto 0;
+  border-radius: 999px;
+  border: 1px solid #d6d9df;
+  background: #f8f9fb;
+  color: #1f2430;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.25s ease, transform 0.18s ease, box-shadow 0.18s ease; }
+
+.people-toggle:hover {
+  background: #eef1f7;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(17, 24, 39, 0.08); }
+
+.people-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(3, 90, 166, 0.18); }
+
+.people-toggle__icon {
+  font-size: 0.95rem;
+  transition: transform 0.3s ease; }
+
+.people-collapsible {
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.28s ease; }
+
+.people-collapsible.is-open {
+  opacity: 1;
+  margin-top: 0.4rem; }
+
+.people-collapsible p {
+  margin-bottom: 0.4rem; }
+
 .section-heading {
   text-align: center !important; }
 
