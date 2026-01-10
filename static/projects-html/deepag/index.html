@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeepAg | Outlier-Aware Agricultural Forecasting</title>
+  <style>
+    :root {
+      --bg:#ffffff;
+      --panel:#ffffff;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --soft:#f8fafc;
+      --accent:#2563eb;
+      --accent-2:#0e9f6e;
+      --line:#e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    .container { width: min(1080px, 92vw); margin: 0 auto; padding: 28px 0 64px; }
+    header { padding: 32px 0 12px; }
+    h1 { margin: 0 0 12px; font-size: 34px; letter-spacing: -0.02em; }
+    h2 { margin: 8px 0 14px; font-size: 22px; letter-spacing: -0.01em; }
+    p { color: var(--muted); }
+    .lede { font-size: 17px; max-width: 820px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 10px; }
+    .chip { background: var(--soft); color: var(--muted); padding: 6px 12px; border-radius: 999px; font-size: 13px; border: 1px solid var(--line); }
+    .cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .btn { padding: 11px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--accent); color: #ffffff; font-weight: 700; }
+    .btn.secondary { background: transparent; color: var(--text); }
+    section { margin-top: 28px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 10px; box-shadow: 0 10px 24px rgba(0,0,0,0.06); }
+    .content { color: var(--muted); }
+    ul { padding-left: 18px; color: var(--muted); }
+    .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+    .metric-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-top: 12px; }
+    .metric { padding: 12px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); }
+    .metric strong { display: block; font-size: 20px; color: var(--text); }
+    table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+    th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; color: var(--muted); }
+    th { background: var(--soft); color: var(--text); font-weight: 700; }
+    caption { caption-side: top; text-align: left; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .figure { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px; margin: 12px 0; }
+    .figure img { width: 100%; border-radius: 8px; display: block; }
+    .caption { font-size: 13px; color: var(--muted); margin: 6px 4px 2px; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+    .gallery img { width: 100%; border-radius: 10px; border: 1px solid var(--line); }
+    @media (max-width: 640px) {
+      h1 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="chips">
+        <span class="chip">Deep Learning</span>
+        <span class="chip">Isolation Forest</span>
+        <span class="chip">Agriculture</span>
+        <span class="chip">Outlier Events</span>
+      </div>
+      <h1>DeepAg: Outlier-Aware Agricultural Forecasting</h1>
+      <p class="lede">DeepAg fuses isolation-forest outlier detection with LSTM forecasting to quantify how financial shocks, weather, and political events reshape agricultural production. The framework couples causation/correlation screening with multi-step multivariate forecasts, delivering scenario-aware production guidance.</p>
+      <div class="cta">
+        <a class="btn" href="/media/publications/deepag-outlier-events-agriculture.pdf" target="_blank" rel="noopener">Download paper (PDF)</a>
+        <a class="btn secondary" href="https://github.com/AI-VTRC/AI-for-Ag-Production-DeepAg" target="_blank" rel="noopener">Source & code</a>
+      </div>
+    </header>
+
+    <section id="abstract">
+      <h2>Abstract</h2>
+      <div class="content">
+        <p>Commodity production is tightly coupled with macro shocks—trade wars, pandemics, market crashes, and extreme weather. DeepAg builds an outlier-aware pipeline: (1) detect rare events in financial indices using Isolation Forests after double-rolling normalization, (2) learn causal/correlated pairings between indices and commodities, and (3) forecast production with an LSTM that explicitly includes outlier flags. Across 15 commodities, outlier-aware DeepAg improves RMSE over baselines and the same LSTM without outlier inputs; isolation-aware models capture shock-driven surges that classical regression misses.</p>
+      </div>
+    </section>
+
+    <section id="questions">
+      <h2>Research Questions</h2>
+      <div class="content">
+        <ul>
+          <li>Do macro outlier events (economic, financial, weather, political) materially change agricultural production forecasts?</li>
+          <li>Can an LSTM conditioned on detected outliers outperform regression and tree baselines on multi-step commodity production?</li>
+          <li>Which financial indices causally drive each commodity, and how does causation differ from correlation?</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="data">
+      <h2>Data & Context</h2>
+      <div class="content">
+        <p><strong>Financial indices (Yahoo Finance, 2000–2019):</strong> Gold, Crude Oil, DOW, S&amp;P 500, VIX (daily close).<br>
+           <strong>Commodities (USDA NASS QuickStats, monthly):</strong> Beef, Butter, Cheese, Chickens, Ducks, Eggs, Ice Cream, Lamb/Mutton, Milk, Other Poultry, Pork, Sherbet, Turkeys, Veal, Water Ices.<br>
+           <strong>Outlier events:</strong> detected over indices; mapped to economic, financial, weather, or political shocks.</p>
+        <table>
+          <caption>Daily contamination rates (IQR → Isolation Forest)</caption>
+          <thead><tr><th>Index</th><th>Contamination (%)</th></tr></thead>
+          <tbody>
+            <tr><td>VIX</td><td>6.56</td></tr>
+            <tr><td>S&amp;P 500</td><td>6.01</td></tr>
+            <tr><td>DOW</td><td>6.13</td></tr>
+            <tr><td>Gold</td><td>5.38</td></tr>
+            <tr><td>Crude Oil</td><td>3.95</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="method">
+      <h2>Method</h2>
+      <div class="grid">
+        <div class="card">
+          <h3 style="margin-top:4px;">Pipeline</h3>
+          <ul>
+            <li>Normalize indices with DoubleRollingAggregate; flag anomalies via Isolation Forest.</li>
+            <li>Compute causation (DoWhy) and correlation to select driver indices per commodity.</li>
+            <li>Train multivariate LSTM (lookback 60, forecast ≈30 monthly steps ≈5 years) with and without outlier flags.</li>
+            <li>Compare against regression, trees, and boosting baselines.</li>
+          </ul>
+          <p class="caption">Hyperparameters: MinMax scaling; contamination from IQR; multi-step horizon; RMS-based evaluation.</p>
+        </div>
+        <div class="card">
+          <div class="figure">
+            <img src="/media/projects/deepag/methods.png" alt="DeepAg methodology diagram" />
+          </div>
+          <p class="caption">Two-stage flow: anomaly detection on indices → causal screening → LSTM forecasting with outlier inputs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="outliers">
+      <h2>Outlier Detection</h2>
+      <div class="content">
+        <p>Isolation Forest isolates rare partitions quickly; contamination is set from interquartile spread. Outlier flags are fed to the LSTM as an input feature so the forecaster can reshape trajectories during shocks.</p>
+        <div class="grid">
+          <div class="figure">
+            <img src="/media/projects/deepag/outliersScaled.png" alt="Normalized S&P 500 series with rolling aggregation" />
+            <p class="caption">DoubleRollingAggregate scales S&amp;P 500; anomalies become separable.</p>
+          </div>
+          <div class="figure">
+            <img src="/media/projects/deepag/vixDow.png" alt="Outlier markers on VIX and DOW series" />
+            <p class="caption">Red markers: detected outliers aligned with trade wars, recessions, and major shocks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="causation">
+      <h2>Causation vs Correlation</h2>
+      <div class="content">
+        <p>DoWhy causation scores often diverge from raw correlations. Meat and dairy show strong causation from DOW/S&amp;P; VIX exhibits weaker influence. DeepAg pairs each commodity with its top causal and correlated index before forecasting.</p>
+        <div class="grid">
+          <div class="figure">
+            <img src="/media/projects/deepag/causation.png" alt="Causation heatmap across commodities and indices" />
+            <p class="caption">Causation matrix: DOW and S&amp;P are dominant drivers for many commodities.</p>
+          </div>
+          <div class="figure">
+            <img src="/media/projects/deepag/corrCaus.png" alt="Chicken production correlation and causation with DOW" />
+            <p class="caption">Correlation vs causation for chicken production and DOW.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="results">
+      <h2>Results</h2>
+      <div class="metric-row">
+        <div class="metric"><strong>15/15</strong>Commodities evaluated</div>
+        <div class="metric"><strong>Lower RMSE</strong>Outlier-aware vs baselines on 12/15</div>
+        <div class="metric"><strong>5 yrs</strong>Multi-step horizon</div>
+      </div>
+      <div class="content">
+        <table>
+          <caption>Sample RMSE (lower is better)</caption>
+          <thead><tr><th>Commodity</th><th>Best baseline</th><th>DeepAg (with outliers)</th><th>DeepAg (no outliers)</th></tr></thead>
+          <tbody>
+            <tr><td>Butter</td><td>0.138 (Poly Reg)</td><td><strong>0.001</strong></td><td>0.009</td></tr>
+            <tr><td>Cheese</td><td>0.139 (Poly Reg)</td><td><strong>0.004</strong></td><td>0.058</td></tr>
+            <tr><td>Beef</td><td>0.201 (Poly Reg)</td><td>0.164</td><td><strong>0.120</strong></td></tr>
+            <tr><td>Chickens</td><td><strong>0.131 (Poly Reg)</strong></td><td>0.258</td><td>0.197</td></tr>
+            <tr><td>Turkeys</td><td>0.177 (Poly Reg)</td><td><strong>0.024</strong></td><td>0.028</td></tr>
+          </tbody>
+        </table>
+        <p>Outlier-aware LSTM improves most commodities; a few steadily trending series (e.g., chickens) remain competitive for linear regressions.</p>
+        <div class="grid">
+          <div class="figure">
+            <img src="/media/projects/deepag/BaselinesGraph.png" alt="Baseline model errors" />
+            <p class="caption">Baseline RMSE across models.</p>
+          </div>
+          <div class="figure">
+            <img src="/media/projects/deepag/DeepAgResults.png" alt="DeepAg model results table" />
+            <p class="caption">DeepAg forecasts with/without outliers across 15 commodities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="forecasts">
+      <h2>Forecast Examples</h2>
+      <div class="grid">
+        <div class="figure">
+          <img src="/media/projects/deepag/ChickensGraph.png" alt="Chicken production forecast" />
+          <p class="caption">Chicken production 2020–2025 with and without outlier inputs.</p>
+        </div>
+        <div class="figure">
+          <img src="/media/projects/deepag/BeefGraph.png" alt="Beef production forecast" />
+          <p class="caption">Beef production forecast; outlier-aware model captures shock-induced swings.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="policy">
+      <h2>Policy & Operational Insights</h2>
+      <div class="content">
+        <ul>
+          <li>Outlier flags help quantify production shifts during trade wars, recessions, and natural disasters—useful for USDA/FAO policy scenarios.</li>
+          <li>Producers can plan labor, inventory, and pricing around interval forecasts that condition on shocks.</li>
+          <li>Better shock modeling mitigates food waste by smoothing release of supply during demand spikes.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="/media/projects/deepag/iqr.png" alt="IQR contamination visualization" />
+        <img src="/media/projects/deepag/BaselinesR2.png" alt="Baseline R2 scores" />
+        <img src="/media/projects/deepag/CorrelationTable.png" alt="Correlation table between indices and commodities" />
+        <img src="/media/projects/deepag/ComparisonResults.png" alt="RMSE comparison" />
+      </div>
+    </section>
+  </div>
+</body>
+</html>

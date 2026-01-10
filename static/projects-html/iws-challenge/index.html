@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>IWS Challenge 2022: Integrated AI for Water Systems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Competition-winning P2O stack: prediction, protection, and optimization for wastewater systems." />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;600;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff; --text:#1f2937; --muted:#6b7280; --soft:#f8fafc; --line:#e5e7eb; --card:#ffffff;
+      --btn:#0f172a; --btnText:#ffffff; --link:#2563eb; --wrap:1100px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b0e12; --text:#e5e7eb; --muted:#9aa4b2; --soft:#0f1319; --line:#1f2733; --card:#0d1117;
+        --btn:#1f2937; --btnText:#e5e7eb; --link:#8ab4ff;
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+    header.hero{padding:56px 0 22px}
+    h1{font-family:"Google Sans",sans-serif;font-weight:700;line-height:1.12;letter-spacing:.2px;font-size:clamp(28px,5vw,52px);text-align:center;margin:0 0 12px}
+    .subtitle{text-align:center;color:var(--muted);font-size:20px;margin:4px 0 16px}
+    .authors,.affils{font-size:16px;text-align:center;line-height:1.6}
+    .authors a{color:#2a6bf4}
+    .authors sup{font-size:12px;vertical-align:top}
+    .buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:20px 0 6px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;border:1px solid var(--line);background:var(--btn);color:var(--btnText);font-weight:700}
+    .btn.light{background:transparent;color:var(--text)}
+    .btn:hover{opacity:.95;text-decoration:none}
+    section{padding:40px 0;border-top:1px solid var(--line)}
+    h2{font-family:"Google Sans",sans-serif;font-size:30px;margin:0 0 14px;text-align:center}
+    h3{font-family:"Google Sans",sans-serif;font-size:22px;margin:14px 0 8px}
+    .content{max-width:900px;margin:0 auto;font-size:17px;line-height:1.7}
+    .grid-2{display:grid;grid-template-columns:1fr;gap:16px}
+    @media (min-width:920px){.grid-2{grid-template-columns:1fr 1fr}}
+    .figure{max-width:980px;margin:18px auto 10px}
+    .figure img{width:100%;height:auto;border-radius:12px;background:var(--soft);display:block}
+    .caption{color:var(--muted);font-size:14px;text-align:center;margin-top:6px}
+    .cards{display:grid;grid-template-columns:1fr;gap:14px;margin-top:12px}
+    @media (min-width:960px){.cards{grid-template-columns:1fr 1fr}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:0 6px 18px rgba(0,0,0,.04)}
+    ul{padding-left:18px;margin:0 0 10px}
+    table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+    th,td{border:1px solid var(--line);padding:8px;text-align:left}
+    th{background:var(--soft);color:var(--text);font-weight:700}
+    caption{caption-side:top;text-align:left;font-weight:700;margin-bottom:6px;color:var(--text)}
+    .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:10px}
+    .metric{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--card);text-align:center}
+    .metric strong{display:block;font-size:20px;font-family:"Google Sans",sans-serif}
+    .scroller{display:grid;grid-auto-flow:column;grid-auto-columns:320px;gap:14px;overflow-x:auto;padding:12px 0;margin-top:12px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line)}
+    .scroller::-webkit-scrollbar{height:8px}
+    .scroller::-webkit-scrollbar-thumb{background:#c6c6c6;border-radius:6px}
+    .scroller::-webkit-scrollbar-track{background:transparent}
+    .slide{scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.04);padding:10px}
+    .slide img{width:100%;height:220px;object-fit:contain;border-radius:10px;background:var(--soft);display:block}
+    .slide .caption{margin:8px 0 0;text-align:center;font-size:14px;color:var(--muted)}
+    .lightbox-overlay{position:fixed;inset:0;background:rgba(0,0,0,.68);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .18s ease;z-index:2000;padding:18px}
+    .lightbox-overlay.active{opacity:1;pointer-events:auto}
+    .lightbox-content{position:relative;max-width:1200px;width:90%;max-height:90vh;display:flex;justify-content:center;align-items:center;animation:scaleIn .2s ease}
+    .lightbox-img{max-width:100%;max-height:90vh;border-radius:12px;box-shadow:0 14px 34px rgba(0,0,0,.35);background:#0b0e12}
+    .lightbox-close{position:absolute;top:-10px;right:-10px;width:34px;height:34px;border:none;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1}
+    .lightbox-close:hover{background:rgba(0,0,0,.85)}
+    @keyframes scaleIn{from{transform:scale(.96);opacity:.85}to{transform:scale(1);opacity:1}}
+    footer{padding:34px 0;text-align:center;color:var(--muted);font-size:14px}
+  </style>
+</head>
+<body>
+<header class="hero container">
+  <h1>IWS Challenge 2022: Integrated AI for Water Systems</h1>
+  <div class="subtitle">Competition-winning P2O stack for prediction, protection, and optimization of wastewater networks</div>
+  <div class="authors">
+    <a href="https://scholar.google.com/citations?user=1meq3gcAAAAJ&hl=en" target="_blank" rel="noopener">Md Nazmul Kabir Sikder</a><sup>1</sup>,
+    <a href="https://scholar.google.co.uk/citations?user=oQiAulIAAAAJ&hl=en" target="_blank" rel="noopener">Feras A. Batarseh</a><sup>2</sup>,
+    <a href="https://ece.vt.edu/people/faculty/al-qadi" target="_blank" rel="noopener">Imad L. Al-Qadi</a><sup>1</sup>
+  </div>
+  <div class="affils">
+    <sup>1</sup>Virginia Tech, Bradley Department of ECE (CCI) &nbsp;&nbsp;|&nbsp;&nbsp;
+    <sup>2</sup>Virginia Tech, Biological Systems Engineering
+  </div>
+  <div class="buttons">
+    <a class="btn" href="https://github.com/AI-VTRC/P2O" target="_blank" rel="noopener">💻 Code & Assets</a>
+    <a class="btn light" href="#gallery">🖼 Gallery</a>
+  </div>
+</header>
+
+<section id="abstract">
+  <div class="container">
+    <h2>Abstract</h2>
+    <div class="content">
+      <p>P<sub>2</sub>O (Prediction, Protection, Optimization) tackles overflow risk and cyber-physical threats in wastewater treatment plants. The stack forecasts tunnel water levels, flags malicious sensor manipulation, and prescribes pump schedules that minimize chemical use and avert spills. The system scored top marks in the IWS Challenge 2022 by pairing deep learning forecasters with threat classifiers and a genetic algorithm recommender.</p>
+    </div>
+  </div>
+</section>
+
+<section id="tracks">
+  <div class="container">
+    <h2>Challenge Tracks</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Prediction</h3>
+        <p>LSTM-based multivariate forecasting on four years of tunnel data (367k rows) using downsampling, PCA variants, and time-series cross-validation.</p>
+      </div>
+      <div class="card">
+        <h3>Protection</h3>
+        <p>RNN models (LSTM/GRU) trained on SMOD cyber-physical scenarios to classify intentional vs. unintentional anomalies and attack situations.</p>
+      </div>
+      <div class="card">
+        <h3>Optimization</h3>
+        <p>Genetic algorithm that chooses pump start time, runtime, and capacity to prevent overflow while cutting wet-weather chemical treatment.</p>
+      </div>
+      <div class="card">
+        <h3>Decision Support</h3>
+        <p>Operators receive risk-aware forecasts, top contributing sensors, and actionable pump schedules for extreme-weather operations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="overview">
+  <div class="container">
+    <h2>System Overview</h2>
+    <div class="content">
+      <p>Two datasets drive P<sub>2</sub>O: a full-scale WWTP tunnel archive (flow, rain, pumps, level) and the SMOD Modbus intrusion suite. The pipeline cleans and aligns signals, fits forecasting and detection models with time-aware validation, and feeds predictions into a GA that recommends pump actions under safety thresholds.</p>
+    </div>
+    <div class="figure">
+      <img src="/media/projects/p2o/framework.png" alt="Prediction, protection, and optimization workflow." />
+      <p class="caption">P<sub>2</sub>O unifies forecasting, threat detection, and pump scheduling.</p>
+    </div>
+  </div>
+</section>
+
+<section id="modules">
+  <div class="container">
+    <h2>Modules</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Water-Level Forecasting</h3>
+        <p>Grid-searched RF/GBM baselines vs. tuned LSTM forecasters. Best model: 24h input, 2h horizon LSTM with cubic loss, RMSE 0.036 and NSE 0.739; 85% soft-warning peak recall at −50 m.</p>
+      </div>
+      <div class="card">
+        <h3>Threat Detection</h3>
+        <p>Oversampled SMOD scenarios; LSTM and GRU classifiers. LSTM yields higher macro accuracy, GRU minimizes intentional attack misses; protection detects 94–97% intentional attacks.</p>
+      </div>
+      <div class="card">
+        <h3>Optimization</h3>
+        <p>Tournament + half-uniform crossover GA over pump start/run/capacity chromosomes. Achieves 23% reduction in chemical treatment volume and zero simulated overflow across five years of storms.</p>
+      </div>
+      <div class="card">
+        <h3>Explainability</h3>
+        <p>SHAP highlights top drivers: tunnel level, flow sensors, pump 5 state, and treatment flow, guiding sensor trust and operator focus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="container">
+    <h2>Key Outcomes</h2>
+    <div class="metrics">
+      <div class="metric"><strong>RMSE 0.036</strong><span>LSTM 24h→2h horizon</span></div>
+      <div class="metric"><strong>85%</strong><span>Peak soft-warning recall</span></div>
+      <div class="metric"><strong>94–97%</strong><span>Intentional attack detection</span></div>
+      <div class="metric"><strong>−23%</strong><span>Chemical treatment volume</span></div>
+      <div class="metric"><strong>0</strong><span>Simulated overflows (5y)</span></div>
+    </div>
+    <div class="figure">
+      <img src="/media/projects/p2o/opt.png" alt="Optimization schematic for pump scheduling." />
+      <p class="caption">GA-based pump scheduling reduces wet-weather chemical load while meeting safety thresholds.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <h2>Gallery</h2>
+    <div class="content">
+      <p>Artifacts used in the IWS Challenge submission. Images are stored under <code>static/media/projects/p2o/</code>.</p>
+    </div>
+    <div class="scroller">
+      <div class="slide">
+        <img src="/media/projects/p2o/method.png" alt="Water-level prediction pipeline." data-full="/media/projects/p2o/method.png" />
+        <p class="caption">Prediction pipeline and data prep</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/p2o/TS_plot.png" alt="Tunnel level time series." data-full="/media/projects/p2o/TS_plot.png" />
+        <p class="caption">Four-year tunnel level history</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/p2o/Three_var.png" alt="Key sensor time series." data-full="/media/projects/p2o/Three_var.png" />
+        <p class="caption">Level, rain, and outflow sensors</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/p2o/class.png" alt="Threat detection workflow." data-full="/media/projects/p2o/class.png" />
+        <p class="caption">Protection module workflow</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/p2o/intention_plot.png" alt="Intention classification bars." data-full="/media/projects/p2o/intention_plot.png" />
+        <p class="caption">Intentional vs. unintentional accuracy</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/p2o/situation_plot.png" alt="Attack situation bars." data-full="/media/projects/p2o/situation_plot.png" />
+        <p class="caption">Situation-wise detection performance</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/p2o/LSTM/LSTM_Result.png" alt="LSTM forecast plot." data-full="/media/projects/p2o/LSTM/LSTM_Result.png" />
+        <p class="caption">LSTM 24h→2h results</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/p2o/LSTM/LSTM Test.png" alt="LSTM test peaks." data-full="/media/projects/p2o/LSTM/LSTM Test.png" />
+        <p class="caption">Peak detection on test set</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/p2o/RADO.png" alt="P2O dashboard mock." data-full="/media/projects/p2o/RADO.png" />
+        <p class="caption">Operator-facing dashboard concept</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="takeaways">
+  <div class="container">
+    <h2>Takeaways</h2>
+    <div class="content">
+      <ul>
+        <li>Time-aware validation and downsampling were critical to stable tunnel forecasts; LSTM outperformed boosted trees on peaks.</li>
+        <li>Separate threat detectors for intentional vs. unintentional events reduce false negatives on high-severity attacks.</li>
+        <li>GA-driven pump scheduling cuts chemical usage without sacrificing safety under extreme rain events.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container"></div>
+</footer>
+<script>
+  (function(){
+    const overlay=document.getElementById('lightbox');
+    const imgEl=document.getElementById('lightbox-img');
+    const closeBtn=overlay?overlay.querySelector('.lightbox-close'):null;
+    const slides=document.querySelectorAll('.slide img');
+    const open=(src,alt)=>{if(!overlay)return;imgEl.src=src;imgEl.alt=alt||'Expanded diagram';overlay.classList.add('active');document.body.style.overflow='hidden';};
+    const close=()=>{if(!overlay)return;overlay.classList.remove('active');imgEl.src='';document.body.style.overflow='';};
+    slides.forEach(img=>{img.style.cursor='zoom-in';img.addEventListener('click',()=>open(img.dataset.full||img.src,img.alt));});
+    if(closeBtn){closeBtn.addEventListener('click',close);overlay.addEventListener('click',e=>{if(e.target===overlay) close();});}
+    document.addEventListener('keydown',e=>{if(e.key==='Escape') close();});
+  })();
+</script>
+<div class="lightbox-overlay" id="lightbox" aria-modal="true" role="dialog">
+  <div class="lightbox-content">
+    <button class="lightbox-close" type="button" aria-label="Close">×</button>
+    <img class="lightbox-img" id="lightbox-img" alt="Expanded diagram" />
+  </div>
+</div>
+</body>
+</html>

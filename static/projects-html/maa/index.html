@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Model-Agnostic Assurance (ALSP)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Game-theoretic, model-agnostic assurance scoring across explainability, fairness, and security." />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;600;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#ffffff;--text:#1f2937;--muted:#6b7280;--soft:#f8fafc;--line:#e5e7eb;--card:#ffffff;--btn:#0f172a;--btnText:#ffffff;--link:#2563eb;--wrap:1100px;}
+    @media (prefers-color-scheme: dark){:root{--bg:#0b0e12;--text:#e5e7eb;--muted:#9aa4b2;--soft:#0f1319;--line:#1f2733;--card:#0d1117;--btn:#1f2937;--btnText:#e5e7eb;--link:#8ab4ff;}}
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+    header.hero{padding:56px 0 22px}
+    h1{font-family:"Google Sans",sans-serif;font-weight:700;line-height:1.12;letter-spacing:.2px;font-size:clamp(28px,5vw,52px);text-align:center;margin:0 0 12px}
+    .subtitle{text-align:center;color:var(--muted);font-size:20px;margin:4px 0 16px}
+    .buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:20px 0 6px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;border:1px solid var(--line);background:var(--btn);color:var(--btnText);font-weight:700}
+    .btn.light{background:transparent;color:var(--text)}
+    .btn:hover{opacity:.95;text-decoration:none}
+    section{padding:40px 0;border-top:1px solid var(--line)}
+    h2{font-family:"Google Sans",sans-serif;font-size:30px;margin:0 0 14px;text-align:center}
+    h3{font-family:"Google Sans",sans-serif;font-size:22px;margin:14px 0 8px}
+    .content{max-width:900px;margin:0 auto;font-size:17px;line-height:1.7}
+    .cards{display:grid;grid-template-columns:1fr;gap:14px;margin-top:12px}
+    @media (min-width:960px){.cards{grid-template-columns:1fr 1fr}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:0 6px 18px rgba(0,0,0,.04)}
+    table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+    th,td{border:1px solid var(--line);padding:8px;text-align:left}
+    th{background:var(--soft);color:var(--text);font-weight:700}
+    caption{caption-side:top;text-align:left;font-weight:700;margin-bottom:6px;color:var(--text)}
+    .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:14px}
+    .metric{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--card);text-align:center}
+    .metric strong{display:block;font-size:20px;font-family:"Google Sans",sans-serif}
+    .scroller{display:grid;grid-auto-flow:column;grid-auto-columns:320px;gap:14px;overflow-x:auto;padding:12px 0;margin-top:12px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line)}
+    .scroller::-webkit-scrollbar{height:8px}
+    .scroller::-webkit-scrollbar-thumb{background:#c6c6c6;border-radius:6px}
+    .scroller::-webkit-scrollbar-track{background:transparent}
+    .slide{scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.04);padding:10px}
+    .slide img{width:100%;height:220px;object-fit:contain;border-radius:10px;background:var(--soft);display:block}
+    .slide .caption{margin:8px 0 0;text-align:center;font-size:14px;color:var(--muted)}
+    .lightbox-overlay{position:fixed;inset:0;background:rgba(0,0,0,.68);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .18s ease;z-index:2000;padding:18px}
+    .lightbox-overlay.active{opacity:1;pointer-events:auto}
+    .lightbox-content{position:relative;max-width:1200px;width:90%;max-height:90vh;display:flex;justify-content:center;align-items:center;animation:scaleIn .2s ease}
+    .lightbox-img{max-width:100%;max-height:90vh;border-radius:12px;box-shadow:0 14px 34px rgba(0,0,0,.35);background:#0b0e12}
+    .lightbox-close{position:absolute;top:-10px;right:-10px;width:34px;height:34px;border:none;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1}
+    .lightbox-close:hover{background:rgba(0,0,0,.85)}
+    @keyframes scaleIn{from{transform:scale(.96);opacity:.85}to{transform:scale(1);opacity:1}}
+    footer{padding:34px 0;text-align:center;color:var(--muted);font-size:14px}
+  </style>
+</head>
+<body>
+<header class="hero container">
+  <h1>Model-Agnostic Assurance (ALSP)</h1>
+  <div class="subtitle">Assurance scores across explainability, fairness, and security for deployed ML</div>
+  <div class="buttons">
+    <a class="btn" href="/media/publications/model-agnostic-aia-scoring.pdf" target="_blank" rel="noopener">📄 Paper (PDF)</a>
+    <a class="btn light" href="https://github.com/AI-VTRC/MAA" target="_blank" rel="noopener">💻 Code (GitHub)</a>
+  </div>
+</header>
+
+<section id="abstract">
+  <div class="container">
+    <h2>Abstract</h2>
+    <div class="content">
+      <p>State-of-the-art AI assurance is often model- and domain-specific. We present two model-agnostic pipelines—Adversarial Logging Scoring Pipeline (ALSP) and Requirements Feedback Scoring Pipeline (RFSP)—that score explainability, safety, security, fairness, trustworthiness, and ethics. ALSP uses game-theoretic weighting, adversarial logging, and secret inversion to detect malicious inputs and quantify assurance. RFSP is user-driven: it gathers assurance weight preferences, segments data, and optimizes hyper-parameters (grid and Bayesian) to reflect desired goals. Both pipelines are validated on SCADA, telco, water, and telecom datasets, producing quantifiable assurance scores and surfacing trade-offs among AI goals.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contributions">
+  <div class="container">
+    <h2>Highlights</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Unified assurance</h3>
+        <p>Combines XAI, fairness, and security signals into a single actionable index for each prediction.</p>
+      </div>
+      <div class="card">
+        <h3>Game-theoretic weights</h3>
+        <p>Shapley-based weighting of indices prioritizes features and outcomes that most impact assurance.</p>
+      </div>
+      <div class="card">
+        <h3>Adversarial logging</h3>
+        <p>Tracks adversarial examples and secret inversion attempts to flag drift and malicious behavior.</p>
+      </div>
+      <div class="card">
+        <h3>Production-friendly</h3>
+        <p>Model-agnostic hooks for tabular and vision models with per-sample reporting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="container">
+    <h2>Approach</h2>
+    <div class="content">
+      <p><strong>ALSP (model-driven).</strong> Three algorithms: (1) Weight Assessment multiplies Shapley values with domain-provided assurance labels to yield per-sample scores; (2) Reverse Learning logs every boosting epoch to surface loss minima and drift; (3) Secret Inversion trains an autoencoder to detect adversarial data via reconstruction errors (SAI/CAI).</p>
+      <p><strong>RFSP (user-driven).</strong> Three algorithms: (1) Economic Equilibrium collects user-weighted goals (must sum to 100); (2) Extreme Data Segmentation builds a dedicated AIA set and maps statistical measures to assurance goals; (3) Model Optimization tunes hyper-parameters via grid search and Bayesian optimization, reporting trust scores from F1 deltas.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experiments">
+  <div class="container">
+    <h2>Experiments & Results</h2>
+    <div class="content">
+      <p><strong>Datasets.</strong> SCADA (critical water network, intrusion detection), Telco (churn/plan selection, bias tests), Pima diabetes (8 features, 768 samples), Bank loans (GBDT logging), and synthetic water/telco benchmarks for assurance stress tests.</p>
+      <p><strong>Weight Assessment.</strong> Shapley-weighted AI assurance columns (AIAC) produce per-sample scores; injected Gaussian bias visibly shifts score distributions (Fig. Distributions & Histogram of indices).</p>
+      <p><strong>Reverse Learning.</strong> Custom GBDT logging finds loss minima at epoch 13; epochs beyond that degrade accuracy and are pruned.</p>
+      <p><strong>Secret Inversion.</strong> Autoencoder detects adversarial SCADA inputs; thresholding top 1% reconstruction error separates attack traffic with >91% accuracy.</p>
+      <p><strong>RFSP.</strong> User-weighted goals (16.6 each) combined with statistical measures (ANOVA, Kendall, MI, Chi2, KS, outliers, bias/variance) to yield weighted AIA scores. Bayesian hyper-parameter search improves trust (TAI) over defaults and grid search.</p>
+    </div>
+    <div class="content">
+      <table>
+        <caption>Statistical measures mapped to assurance goals</caption>
+        <thead><tr><th>Measure</th><th>Implication</th><th>Limitation</th><th>Related goals</th></tr></thead>
+        <tbody>
+          <tr><td>ANOVA-F</td><td>Linear dependence</td><td>Numeric→categorical</td><td>XAI, TAI</td></tr>
+          <tr><td>Kendall</td><td>Nonlinear dependence</td><td>Numeric→categorical</td><td>XAI, TAI</td></tr>
+          <tr><td>Mutual Information</td><td>General dependence</td><td>Data-agnostic</td><td>XAI, TAI</td></tr>
+          <tr><td>Chi-squared</td><td>Category dependence</td><td>Cat→cat</td><td>XAI, TAI</td></tr>
+          <tr><td>KS test</td><td>Distribution distance</td><td>Numeric</td><td>SAI, CAI</td></tr>
+          <tr><td>Outlier rate</td><td>Points outside 3σ</td><td>Numeric</td><td>SAI, CAI</td></tr>
+          <tr><td>Bias</td><td>Prediction accuracy</td><td>All cols</td><td>FAI, EAI</td></tr>
+          <tr><td>Variance</td><td>Prediction stability</td><td>All cols</td><td>FAI, EAI</td></tr>
+        </tbody>
+      </table>
+
+      <table>
+        <caption>Intrusion detection via Secret Inversion (AE)</caption>
+        <thead><tr><th>Test set</th><th>Accuracy</th><th>F1</th><th>Precision</th><th>Recall</th></tr></thead>
+        <tbody>
+          <tr><td>SCADA-1</td><td>0.9466</td><td>0.7194</td><td>0.9438</td><td>0.5813</td></tr>
+          <tr><td>SCADA-2</td><td>0.9128</td><td>0.7182</td><td>0.9707</td><td>0.5700</td></tr>
+        </tbody>
+      </table>
+
+      <table>
+        <caption>CAI score vs injected bias (SCADA)</caption>
+        <thead><tr><th>Bias injected</th><th>CAI score</th></tr></thead>
+        <tbody>
+          <tr><td>3.33%</td><td>54.4</td></tr>
+          <tr><td>2.67%</td><td>52.7</td></tr>
+          <tr><td>2.00%</td><td>53.4</td></tr>
+          <tr><td>1.34%</td><td>57.3</td></tr>
+          <tr><td>0.67%</td><td>63.6</td></tr>
+          <tr><td>0%</td><td>71.5</td></tr>
+        </tbody>
+      </table>
+
+      <table>
+        <caption>LightGBM hyper-parameters (Telco)</caption>
+        <thead><tr><th>Hyper-parameter</th><th>Default</th><th>Bayesian</th><th>Grid</th></tr></thead>
+        <tbody>
+          <tr><td>Learning rate</td><td>0.10</td><td>0.05</td><td>0.07</td></tr>
+          <tr><td>Max depth</td><td>-1 (unlimited)</td><td>14</td><td>9</td></tr>
+          <tr><td>Bagging fraction</td><td>1.0</td><td>0.8</td><td>1.0</td></tr>
+          <tr><td>Number of trees</td><td>100</td><td>396</td><td>100</td></tr>
+          <tr><td>Number of leaves</td><td>31</td><td>25</td><td>12</td></tr>
+        </tbody>
+      </table>
+
+      <table>
+        <caption>TAI (F1) improvements</caption>
+        <thead><tr><th>Model setup</th><th>Telco F1</th><th>SCADA F1</th></tr></thead>
+        <tbody>
+          <tr><td>Default</td><td>0.767</td><td>0.802</td></tr>
+          <tr><td>Grid search</td><td>0.746</td><td>0.794</td></tr>
+          <tr><td>Bayesian opt.</td><td>0.772</td><td>0.842</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <h2>Gallery</h2>
+    <div class="content">
+      <p>Key artifacts from ALSP: assurance pipeline diagram, adversarial probes, fairness diagnostics, and assurance index distributions.</p>
+    </div>
+    <div class="scroller">
+      <div class="slide">
+        <img src="/media/projects/maa/ALSP.png" alt="ALSP pipeline diagram." data-full="/media/projects/maa/ALSP.png" />
+        <p class="caption">ALSP pipeline: XAI + fairness + security into ALS</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/maa/fig1.png" alt="Assurance framework overview." data-full="/media/projects/maa/fig1.png" />
+        <p class="caption">Framework overview and component flow</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/maa/AE.png" alt="Adversarial examples." data-full="/media/projects/maa/AE.png" />
+        <p class="caption">Adversarial examples and perturbations</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/maa/LOSS.png" alt="Training loss curves." data-full="/media/projects/maa/LOSS.png" />
+        <p class="caption">Loss trends during assurance training</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/maa/Distributions.png" alt="Assurance index distributions." data-full="/media/projects/maa/Distributions.png" />
+        <p class="caption">Assurance index distributions across samples</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/maa/Histogram%20of%20indices.png" alt="Histogram of assurance indices." data-full="/media/projects/maa/Histogram%20of%20indices.png" />
+        <p class="caption">Histogram of ALS scores</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/maa/slider.png" alt="Slider visualization of indices." data-full="/media/projects/maa/slider.png" />
+        <p class="caption">Interactive slider for assurance thresholds</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/maa/gender_bias.png" alt="Gender bias fairness plot." data-full="/media/projects/maa/gender_bias.png" />
+        <p class="caption">Fairness analysis: gender bias diagnostics</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/maa/AIA.png" alt="Assurance index architecture." data-full="/media/projects/maa/AIA.png" />
+        <p class="caption">Assurance index architecture</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/maa/ALoc.png" alt="Localization of assurance signals." data-full="/media/projects/maa/ALoc.png" />
+        <p class="caption">Localization of assurance signals</p>
+      </div>
+      <div class="slide">
+        <img src="/media/projects/maa/DT.png" alt="Decision tree or drift diagram." data-full="/media/projects/maa/DT.png" />
+        <p class="caption">Decision path / drift illustration</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox-overlay" id="lightbox" aria-modal="true" role="dialog">
+  <div class="lightbox-content">
+    <button class="lightbox-close" type="button" aria-label="Close">×</button>
+    <img class="lightbox-img" id="lightbox-img" alt="Expanded diagram" />
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    Built from the MAA/ALSP assurance framework.
+  </div>
+</footer>
+<script>
+  (function(){
+    const overlay=document.getElementById('lightbox');
+    const imgEl=document.getElementById('lightbox-img');
+    const closeBtn=overlay.querySelector('.lightbox-close');
+    const slides=document.querySelectorAll('.slide img');
+    const open=(src,alt)=>{imgEl.src=src;imgEl.alt=alt||'Expanded diagram';overlay.classList.add('active');document.body.style.overflow='hidden';};
+    const close=()=>{overlay.classList.remove('active');imgEl.src='';document.body.style.overflow='';};
+    slides.forEach(img=>{img.style.cursor='zoom-in';img.addEventListener('click',()=>open(img.dataset.full||img.src,img.alt));});
+    closeBtn.addEventListener('click',close);
+    overlay.addEventListener('click',e=>{if(e.target===overlay) close();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape') close();});
+  })();
+</script>
+</body>
+</html>
