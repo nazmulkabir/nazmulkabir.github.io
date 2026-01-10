@@ -5,8 +5,12 @@ summary: "Competition-winning AI stack combining prediction, protection, and opt
 tags: [Competition, Water Systems, Cybersecurity]
 categories: [research]
 projects: []
-external_link: /project/iws-challenge/
+external_link: "/projects-html/iws-challenge/"
 type: project
+
+image:
+  focal_point: Center
+  preview_only: false
 ---
 
 - Prediction: LSTM-based tunnel water level forecasting with robust preprocessing.

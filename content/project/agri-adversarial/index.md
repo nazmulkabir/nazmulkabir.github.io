@@ -6,8 +6,12 @@ summary: "Detect and attribute GAN/diffusion-generated plant images for Agricult
 tags: [Adversarial Detection, Agriculture, Computer Vision]
 categories: [research]
 projects: []
-external_link: /project/agrivision/
+external_link: "/projects-html/agrivision/"
 paper: ""
+
+image:
+  focal_point: Center
+  preview_only: false
 ---
 
 - Classifies high-fidelity adversarial plant images; attributes source models (StyleGAN2/3, DS8, BLIP, Pix2Pix) alongside health status.

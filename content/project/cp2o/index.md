@@ -5,8 +5,12 @@ summary: "Context-aware dilated LSTM with attention for 4–6 hour wastewater tu
 tags: [Water Systems, Time Series, LSTM]
 categories: [research]
 projects: []
-external_link: /project/cp2o/
+external_link: "/projects-html/cp2o/"
 type: project
+
+image:
+  focal_point: Center
+  preview_only: false
 ---
 
 - Two-stage pipeline: temporal context extraction plus multi-horizon forecasting.

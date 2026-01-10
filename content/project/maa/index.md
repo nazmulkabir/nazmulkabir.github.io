@@ -5,8 +5,12 @@ summary: "Game-theoretic, model-agnostic assurance pipeline combining explainabi
 tags: [AI Assurance, XAI, Security]
 categories: [research]
 projects: []
-external_link: /project/maa/
+external_link: "/projects-html/maa/"
 type: project
+
+image:
+  focal_point: Center
+  preview_only: false
 ---
 
 - Shapley-value weight assessment, reverse learning, and secret inversion to quantify XAI/FAI/SAI.

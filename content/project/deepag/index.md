@@ -5,8 +5,12 @@ summary: "Deep learning and Isolation Forest pipeline to flag economic and opera
 tags: [Agriculture, Anomaly Detection, Deep Learning]
 categories: [research]
 projects: []
-external_link: /project/deepag/
+external_link: "/projects-html/deepag/"
 type: project
+
+image:
+  focal_point: Center
+  preview_only: false
 ---
 
 - Unsupervised outlier detection tailored to crop production signals.
