@@ -6,11 +6,10 @@ on:
       - main
   workflow_dispatch:
 
-actions:
-  # Prevent overlapping deploys
-  concurrency:
-    group: pages
-    cancel-in-progress: true
+# Prevent overlapping deploys
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
   build:
