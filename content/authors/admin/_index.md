@@ -47,5 +47,6 @@ superuser: yes
 bio: Research Assistant Professor focused on trustworthy AI, security for cyber-physical systems, and applied ML for critical infrastructure.
 greeting: sikder::nazmul()
 ---
-
 I am a **Research Assistant Professor** at Old Dominion University's [Commonwealth Cyber Initiative Coastal Virginia](https://covacci.org/), where I explore emerging directions in cybersecurity. Previously, I was a [Presidential Postdoctoral Fellow](https://www.research.vt.edu/about/postdoctoral-associates/virginia-tech-presidential-postdoctoral-fellowships/current-fellows/sikder-nazmul.html) at Virginia Tech. My work spans AI assurance, machine learning for cyberattack detection, and securing cyber-physical systems, with deployments in critical infrastructure including water distribution and agricultural networks.
+
+[Book a 30-minute meeting](https://calendly.com/nazmul-odu/30min) to chat.
