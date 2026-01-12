@@ -12,9 +12,15 @@ interests:
   - Data mining
   - Health informatics
 social:
+  - icon: envelope
+    icon_pack: fas
+    link: rutba.aman@gmail.com
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/rutba-aman-5ab341a3/
+  - icon: github
+    icon_pack: fab
+    link:
 email: ""
 bio: Academic and researcher in CSE focusing on privacy-aware intelligent systems, blending ML, NLP, and data mining for social networks and health informatics.
 highlight_name: false

@@ -13,6 +13,9 @@ interests:
   - Context and Causality
   - AI for Agricultural Policy
 social:
+  - icon: globe
+    icon_pack: fas
+    link: https://ai.bse.vt.edu/
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/ferasbatarseh

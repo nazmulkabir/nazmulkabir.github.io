@@ -11,10 +11,17 @@ interests:
   - CPS security
   - Intelligent transportation systems
   - Generative modeling and optimization
+
 social:
+  - icon: envelope
+    icon_pack: fas
+    link: atyagi@uark.edu
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/tyagiakanksha/
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/TyagiAkanksha
 email: ""
 bio: MS student and research assistant building ML-driven frameworks for software vulnerability testing and infrastructure security, blending CPS security with transportation-focused reinforcement learning.
 highlight_name: false
