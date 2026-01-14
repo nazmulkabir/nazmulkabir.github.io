@@ -22,7 +22,10 @@ social:
   - icon: github
     icon_pack: fab
     link: https://github.com/TyagiAkanksha
-email: ""
+  - icon: globe
+    icon_pack: fas
+    link: https://tyagiakanksha.github.io/
+email: "atyagi@uark.edu"
 bio: MS student and research assistant building ML-driven frameworks for software vulnerability testing and infrastructure security, blending CPS security with transportation-focused reinforcement learning.
 highlight_name: false
 superuser: false

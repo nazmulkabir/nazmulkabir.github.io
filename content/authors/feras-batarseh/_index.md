@@ -19,7 +19,7 @@ social:
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/ferasbatarseh
-email: ""
+email: "batarseh@vt.edu"
 bio: Feras A. Batarseh is an Associate Professor with the Department of Biological Systems Engineering at Virginia Tech (VT) and the Director of the A3 (AI Assurance and Applications) Lab. His research spans AI Assurance, Cyberbiosecurity, AI for Agriculture and Water, and Data-Driven Public Policy.
 highlight_name: false
 superuser: false
