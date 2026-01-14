@@ -1,8 +1,8 @@
 ---
 title: "Akanksha Tyagi"
 role: MS Research Assistant — ML x Cybersecurity
-#avatar: /media/people/akanksha-tyagi.jpg
-avatar: static/media/people/new_images/akanksha-tyagi.jpg
+avatar: /media/people/akanksha-tyagi.jpg
+#avatar: static/media/people/new_images/akanksha-tyagi.jpg
 organizations:
   - name: University of Arkansas
     url: https://www.uark.edu/

@@ -1,8 +1,8 @@
 ---
 title: "Rutba Aman"
 role: Lecturer — Computer Science and Engineering
-#avatar: /media/people/rutba-aman.jpg
-avatar: static/media/people/new_images/rutba-aman.jpg
+avatar: /media/people/rutba-aman.jpg
+# avatar: static/media/people/new_images/rutba-aman.jpg
 organizations:
   - name: Primeasia University, Dhaka
     url: https://primeasia.edu.bd/

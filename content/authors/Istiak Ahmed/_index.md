@@ -1,8 +1,8 @@
 ---
 title: "Istiak Ahmed"
 role: Business Analyst
-# avatar: /media/people/istiak.jpg
-avatar: static/media/people/new_images/istiak.jpg
+avatar: /media/people/istiak.jpg
+# avatar: static/media/people/new_images/istiak.jpg
 organizations:
   - name: Servopro IT
     url: https://www.servoproit.com/

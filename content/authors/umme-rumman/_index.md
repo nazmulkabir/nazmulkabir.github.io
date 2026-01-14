@@ -2,8 +2,8 @@
 # Temporarily disable Umme Rumman profile to hide from People widget.
 title: "Umme Rumman"
 role: Information Service Assistant; Digital Marketing Executive (SEO)
-# avatar: /media/people/umme-rumman.jpg
-avatar: static/media/people/new_-_images/umme-rumman.jpg
+avatar: /media/people/umme-rumman.jpg
+# avatar: static/media/people/new_-_images/umme-rumman.jpg
 organizations:
   - name: Tottho Apa (Government Project)
     url: https://totthoapa.gov.bd/
