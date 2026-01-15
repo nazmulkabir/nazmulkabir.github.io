@@ -9,7 +9,7 @@ subtitle:
 
 content:
   page_type: project
-  count: 5
+  count: 10
   filters:
     author: ""
     category: ""
