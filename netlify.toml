@@ -1,46 +1,21 @@
 [build]
-  command = "hugo --gc --minify -b $URL"
+  command = "hugo --gc --minify"
   publish = "public"
-  ignoreErrors = ["error-remote-getjson"]
 
 [build.environment]
-  HUGO_VERSION = "0.122.0"
+  HUGO_VERSION = "0.143.0"
   HUGO_ENABLEGITINFO = "true"
 
-[context.production.environment]
-  HUGO_ENV = "production"
-
-[context.deploy-preview]
-  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
-
-[context.branch-deploy]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
-
-[[plugins]]
-  package = "netlify-plugin-hugo-cache-resources"
-  [plugins.inputs]
-    debug = true
-
+# Hugo's built-in redirect and header support
 [[redirects]]
-  from = "https://shilaan.netlify.app/*"
-  to = "https://shilaan.com/:splat"
-  status = 301
-  force = true
-  
-[[redirects]]
-  from = "http://shilaan.netlify.app/*"
-  to = "https://shilaan.com/:splat"
-  status = 301
-  force = true
-  
-[[redirects]]
-  from = "http://shilaan.rbind.io/*"
-  to = "https://shilaan.com/:splat"
-  status = 301
-  force = true
-  
-[[redirects]]
-  from = "https://shilaan.rbind.io/*"
-  to = "https://shilaan.com/:splat"
-  status = 301
-  force = true
+  from = "/admin/*"
+  to = "/"
+  status = 404
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

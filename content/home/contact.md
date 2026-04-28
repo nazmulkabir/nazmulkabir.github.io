@@ -1,13 +1,13 @@
 ---
 # An instance of the Contact widget.
-# Documentation: https://sourcethemes.com/academic/docs/page-builder/
+# Documentation: https://wowchemy.com/docs/page-builder/
 widget: contact
-active: false
+active: true
 # This file represents a page section.
 headless: true
 
 # Order that this section appears on the page.
-weight: 130
+weight: 90
 
 title: Contact
 subtitle:
@@ -18,13 +18,12 @@ content:
   
   # Email form provider
   form:
-    provider: formspree
-    formspree:
-      id: test
+    provider: netlify
     netlify:
-      # Enable CAPTCHA challenge to reduce spam?
       captcha: false
   
 design:
   columns: '2'
 ---
+
+Send me an email directly or use the contact form below. I'm always happy to connect about research collaborations, speaking engagements, or academic discussions.

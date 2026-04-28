@@ -31,8 +31,6 @@ experience:
     date_end: '2025-12-09'
     description: |2-
       Advanced research in AI assurance and cybersecurity for critical infrastructure; robust and explainable ML for cyber-physical systems.
-
-
   - title: Graduate Research Assistant (Ph.D.)
     company: Virginia Tech - Commonwealth Cyber Initiative
     company_url: https://www.vt.edu
@@ -42,8 +40,6 @@ experience:
     date_end: '2024-12-31'
     description: |2-
       Doctoral research on AI assurance methods for cyber-physical systems under Dr. Feras A. Batarseh, emphasizing robust and explainable cyberattack detection.
-
-
   - title: Telecommunications Engineer
     company: Grameenphone Ltd.
     company_url: https://www.grameenphone.com
@@ -53,8 +49,6 @@ experience:
     date_end: '2019-07-01'
     description: |2-
       Led digital transformation and network optimization for Bangladesh's largest telecom operator (170M+ subscribers, 15K+ base stations, 99.9% uptime).
-
-
   - title: Software Development Consultant (Part-time)
     company: BEMControls LLC
     company_url: https://www.bemcontrols.com

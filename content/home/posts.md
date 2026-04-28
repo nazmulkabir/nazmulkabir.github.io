@@ -7,37 +7,31 @@ widget: pages
 headless: true
 
 # Order that this section appears on the page.
-weight: 60
+weight: 65
 
 title: Publications
-subtitle:
+subtitle: 'Selected publications. Full list available on <a href="https://scholar.google.com" target="_blank">Google Scholar</a>'
 
-active: false
+active: true
 
 content:
   # Page type to display. E.g. post, talk, publication...
   page_type: publication
-  # Choose how many pages you would like to display (0 = all pages)
+  # Display all publications (0)
   count: 0
   # Filter on criteria
   filters:
-    author: ""
+    author: "nazmul-kabir-sikder"
     category: ""
     tag: ""
     exclude_featured: false
     exclude_future: false
     exclude_past: false
     publication_type: ""
-  # Choose how many pages you would like to offset by
-  offset: 0
-  # Page order: descending (desc) or ascending (asc) date.
+  # Page order
   order: desc
 
 design:
-  # Choose a view for the listings:
-  #   1 = List
-  #   2 = Compact
-  #   3 = Card
-  #   4 = Citation (publication only)
-  view: 4
+  # 3 = Card view
+  view: 3
 ---

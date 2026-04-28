@@ -2,45 +2,55 @@
 # An instance of the Featurette widget.
 # Documentation: https://wowchemy.com/docs/page-builder/
 widget: featurette
-active: false
+active: true
 
 # This file represents a page section.
 headless: true
 
 # Order that this section appears on the page.
-weight: 30
+weight: 25
 
-title: Skills
-subtitle:
+title: Expertise
+
+subtitle: >
+  My research spans AI, cybersecurity, and cyber-physical systems.
 
 # Showcase personal skills or business features.
-# - Add/remove as many `feature` blocks below as you like.
-# - For available icons, see: https://wowchemy.com/docs/page-builder/#icons
 feature:
-- description: 90%
-  icon: r-project
-  icon_pack: fab
-  name: R
-- description: 100%
-  icon: chart-line
+- description: >
+    Development of AI systems that can be trusted, verified, and explained.
+    Focus on robustness against attacks, adversarial examples, and model uncertainty.
+  icon: shield-alt
   icon_pack: fas
-  name: Statistics
-- description: 10%
-  icon: camera-retro
+  name: AI Assurance & Trustworthy AI
+- description: >
+    Researching secure and robust AI/ML methods for critical infrastructure,
+    including wastewater treatment, manufacturing, and energy systems.
+  icon: network-wired
   icon_pack: fas
-  name: Photography
-
-# Uncomment to use emoji icons.
-#- icon = ":smile:"
-#  icon_pack = "emoji"
-#  name = "Emojiness"
-#  description = "100%"  
-
-# Uncomment to use custom SVG icons.
-# Place custom SVG icon in `assets/images/icon-pack/`, creating folders if necessary.
-# Reference the SVG icon name (without `.svg` extension) in the `icon` field.
-#- icon = "your-custom-icon-name"
-#  icon_pack = "custom"
-#  name = "Surfing"
-#  description = "90%"
+  name: Cybersecurity for Cyber-Physical Systems
+- description: >
+    Designing and evaluating large language models (LLMs) for cybersecurity applications,
+    including threat detection, red-teaming, and security analysis.
+  icon: brain
+  icon_pack: fas
+  name: AI & LLMs for Cybersecurity
+- description: >
+    Building autonomous AI agents capable of complex multi-step reasoning,
+    task planning, and interaction with external environments for security research.
+  icon: robot
+  icon_pack: fas
+  name: Agentic AI
+- description: >
+    Deep learning architectures for time-series forecasting, anomaly detection,
+    and pattern recognition in sensor and monitoring data.
+  icon: chart-area
+  icon_pack: fas
+  name: Deep Learning for CPS
+- description: >
+    Extensive experience with machine learning, statistical modeling, NLP,
+    and optimization across academia and industry.
+  icon: code
+  icon_pack: fas
+  name: Machine Learning & Data Science
 ---
