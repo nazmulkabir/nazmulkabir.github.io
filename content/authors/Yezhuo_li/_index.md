@@ -23,5 +23,5 @@ bio: Research Assistant Professor at Old Dominion University developing reliable
 highlight_name: false
 superuser: false
 user_groups:
-  - Research Partners
+  - Core Collaborators
 ---
