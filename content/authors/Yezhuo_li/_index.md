@@ -1,7 +1,7 @@
 ---
 title: "Yezhuo Li"
 role: Research Assistant Professor — Decision Science x Trustworthy AI
-avatar: /media/people/yezhou-li.jpg
+avatar: /media/people/yezhuo-li.jpg
 organizations:
   - name: Old Dominion University
     url: https://www.odu.edu/
