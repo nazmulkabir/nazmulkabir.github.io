@@ -16,7 +16,7 @@ interests:
 social:
   - icon: envelope
     icon_pack: fas
-    link: y12li@odu.edu
+    link: mailto:y12li@odu.edu
 
 email: "y12li@odu.edu"
 bio: Research Assistant Professor at Old Dominion University developing reliable and robust decision frameworks for complex data-driven and AI-enabled systems under uncertainty, partial observability, and trust constraints.

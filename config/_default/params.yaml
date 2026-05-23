@@ -14,8 +14,8 @@ font_size: L
 
 site_type: Person
 local_business_type: ''
-org_name: ''
-description: 'Nazmul Kabir Sikder personal website'
+org_name: 'Old Dominion University'
+description: 'Md Nazmul Kabir Sikder — Research Assistant Professor at Old Dominion University (Commonwealth Cyber Initiative). Research on trustworthy AI, AI assurance, agentic AI security, and machine learning for cyber-physical systems and critical infrastructure.'
 twitter: ''
 
 # Contact (edit or remove options as required)
@@ -27,11 +27,7 @@ address:
   postcode: '23529'
   country: United States
   country_code: US
-contact_links:
-  - icon: twitter
-    icon_pack: fab
-    name: Find me on Twitter
-    link: ''
+contact_links: []
 
 # Site header
 
@@ -131,7 +127,7 @@ marketing:
   baidu_site_verification: ''
   baidu_tongji: ''
 cms:
-  branch: master
+  branch: main
   local_backend: false
 icon:
   pack:

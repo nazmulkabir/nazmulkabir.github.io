@@ -3,9 +3,9 @@ Personal website of [Md Nazmul Kabir Sikder](https://nazmulkabir.com)
 
 Build with minification:
 hugo --minify
-Commit and push main:
-git add -A
-git commit -m "Your message here"
+git status
+git add .
+git commit -m "update collaborator"
 git push origin main
 Refresh gh-pages worktree and push:
 cd /private/tmp/gh-pages

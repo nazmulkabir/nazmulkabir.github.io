@@ -15,13 +15,10 @@ interests:
 social:
   - icon: envelope
     icon_pack: fas
-    link: rutba.aman@gmail.com
+    link: mailto:rutba.aman@gmail.com
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/rutba-aman-5ab341a3/
-  - icon: github
-    icon_pack: fab
-    link:
   - icon: globe
     icon_pack: fas
     link: https://rutba.github.io/
