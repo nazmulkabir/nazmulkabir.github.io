@@ -10,7 +10,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 20
 
-title: Publications
+title: All Publications
 subtitle: ''
 
 content:
@@ -40,5 +40,5 @@ design:
 ---
 
 {{% callout note %}}
-Quickly discover relevant content by [filtering publications](./publication/).
+Filter and search the full publication list on the [publications page](./publication/).
 {{% /callout %}}

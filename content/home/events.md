@@ -2,15 +2,16 @@
 # An instance of the Pages widget.
 # Documentation: https://wowchemy.com/docs/page-builder/
 widget: pages
+# Set active: true after adding at least one entry under content/event/
 active: false
 # This file represents a page section.
 headless: true
 
 # Order that this section appears on the page.
-weight: 70
+weight: 35
 
-title: 'Recent & Upcoming Talks'
-subtitle:
+title: 'Recent &amp; Upcoming Talks'
+subtitle: ''
 
 content:
   # Page type to display. E.g. post, event, publication...

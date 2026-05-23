@@ -121,9 +121,12 @@ map:
   api_key: ''
   zoom: 15
 marketing:
-  google_analytics: 'UA-196914537-1'
+  # GA4 Measurement ID (G-XXXXXXXX). UA-196914537-1 was Universal Analytics
+  # which Google sunset in July 2024 and now collects no data.
+  google_analytics: ''
   google_tag_manager: ''
-  google_site_verification: 'UA-196914537-1'
+  # Google Search Console verification meta tag content.
+  google_site_verification: ''
   baidu_site_verification: ''
   baidu_tongji: ''
 cms:

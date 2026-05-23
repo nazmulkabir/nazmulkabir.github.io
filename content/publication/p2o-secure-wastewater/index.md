@@ -8,5 +8,5 @@ publication: "Journal of Environmental Engineering"
 abstract: "AI framework for prediction, protection, and optimization of wastewater treatment plant operations."
 url_pdf: /media/publications/p2o-secure-wastewater.pdf
 url_source: https://ascelibrary.org/doi/abs/10.1061/JOEEDU.EEENG-7266
-featured: false
+featured: true
 ---

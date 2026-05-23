@@ -2,17 +2,16 @@
 # An instance of the Accomplishments widget.
 # Documentation: https://wowchemy.com/docs/page-builder/
 widget: accomplishments
-active: false
+active: true
 
 # This file represents a page section.
 headless: true
 
 # Order that this section appears on the page.
-weight: 50
+weight: 45
 
-# Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
-title: 'Accomplish&shy;ments'
-subtitle:
+title: 'Awards &amp; Honors'
+subtitle: ''
 
 # Date format
 #   Refer to https://wowchemy.com/docs/customization/#date-format
@@ -22,33 +21,32 @@ date_format: Jan 2006
 #   Add/remove as many `item` blocks below as you like.
 #   `title`, `organization`, and `date_start` are the required parameters.
 #   Leave other parameters empty if not required.
-#   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 item:
-- certificate_url: https://www.coursera.org
-  date_end: ""
-  date_start: "2021-01-25"
-  description: ""
-  organization: Coursera
-  organization_url: https://www.coursera.org
-  title: Neural Networks and Deep Learning
-  url: ""
-- certificate_url: https://www.edx.org
-  date_end: ""
-  date_start: "2021-01-01"
-  description: Formulated informed blockchain models, hypotheses, and use cases.
-  organization: edX
-  organization_url: https://www.edx.org
-  title: Blockchain Fundamentals
-  url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-- certificate_url: https://www.datacamp.com
-  date_end: "2020-12-21"
-  date_start: "2020-07-01"
-  description: ""
-  organization: DataCamp
-  organization_url: https://www.datacamp.com
-  title: 'Object-Oriented Programming in R'
-  url: ""
+  - title: Presidential Postdoctoral Fellowship
+    organization: Virginia Tech
+    organization_url: https://www.research.vt.edu/about/postdoctoral-associates/virginia-tech-presidential-postdoctoral-fellowships/current-fellows/sikder-nazmul.html
+    date_start: '2025-02-10'
+    date_end: '2025-12-09'
+    description: 'Competitive fellowship awarded to top emerging scholars across Virginia Tech.'
+    url: 'https://www.research.vt.edu/about/postdoctoral-associates/virginia-tech-presidential-postdoctoral-fellowships/current-fellows/sikder-nazmul.html'
+    certificate_url: ''
+  - title: Ph.D. in Computer Engineering — Dissertation Defended
+    organization: Virginia Tech
+    organization_url: https://www.vt.edu
+    date_start: '2024-11-25'
+    date_end: ''
+    description: 'Dissertation: AI Methods for Anomaly Detection in Cyber-Physical Systems — Application to Water and Agriculture.'
+    url: 'https://vtechworks.lib.vt.edu/server/api/core/bitstreams/ddafd734-9641-4011-9bba-f5d4f8756bbe/content'
+    certificate_url: ''
+  - title: 'Intelligent Water Systems (IWS) Challenge — Top Finalist'
+    organization: 'Water Research Foundation'
+    organization_url: 'https://www.waterrf.org/'
+    date_start: '2022-10-14'
+    date_end: ''
+    description: 'Recognized team submission combining prediction, protection, and optimization for wastewater systems.'
+    url: ''
+    certificate_url: ''
 
 design:
-  columns: '2' 
+  columns: '2'
 ---

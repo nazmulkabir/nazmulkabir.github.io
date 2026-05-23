@@ -28,15 +28,31 @@ social:
 - icon: envelope
   icon_pack: fas
   link: mailto:msikder@odu.edu
-- icon: github
-  icon_pack: fab
-  link: https://github.com/nazmulkabir
-- icon: linkedin
-  icon_pack: fab
-  link: https://www.linkedin.com/in/nazmul-kabir-sikder-ph-d-831596a6
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=1meq3gcAAAAJ
+# Fill in your ORCID iD (https://orcid.org/your-id) and uncomment to display.
+# - icon: orcid
+#   icon_pack: ai
+#   link: https://orcid.org/0000-0000-0000-0000
+# Fill in your dblp profile URL and uncomment to display.
+# - icon: dblp
+#   icon_pack: ai
+#   link: https://dblp.org/pid/xxx/yyy.html
+# Fill in your Semantic Scholar URL and uncomment to display.
+# - icon: semantic-scholar
+#   icon_pack: ai
+#   link: https://www.semanticscholar.org/author/your-id
+# Fill in your ResearchGate URL and uncomment to display.
+# - icon: researchgate
+#   icon_pack: ai
+#   link: https://www.researchgate.net/profile/your-profile
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/nazmul-kabir-sikder-ph-d-831596a6
+- icon: github
+  icon_pack: fab
+  link: https://github.com/nazmulkabir
 - icon: building
   icon_pack: fas
   link: https://ai.bse.vt.edu/

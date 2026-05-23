@@ -8,5 +8,5 @@ publication: "Academic Press"
 abstract: "Co-authored book on AI assurance frameworks covering trustworthiness, explainability, safety, and ethical considerations."
 url_pdf: /media/publications/ai-assurance-book.pdf
 url_source: https://www.sciencedirect.com/book/9780323919197/ai-assurance
-featured: false
+featured: true
 ---

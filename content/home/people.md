@@ -3,7 +3,7 @@
 widget: people
 active: true
 headless: true
-weight: 18
+weight: 38
 
 title: People
 subtitle: ''

@@ -10,27 +10,33 @@ main:
   - name: Research
     url: '#research'
     weight: 15
-  - name: People
-    url: '#people'
-    weight: 17
   - name: Publications
-    url: '#publications'
+    url: '#featured'
     weight: 20
-  - name: Experiences
+  - name: Experience
     url: '#experience'
     weight: 30
+  # Uncomment after activating content/home/events.md
+  # - name: Talks
+  #   url: '#events'
+  #   weight: 35
+  - name: People
+    url: '#people'
+    weight: 38
+  # Uncomment after activating content/home/teaching.md
+  # - name: Teaching
+  #   url: '#teaching'
+  #   weight: 40
+  - name: Awards
+    url: '#accomplishments'
+    weight: 45
   - name: News
     url: '#news'
-    weight: 40
-#  - name: Talks
-#    url: '#talks'
-#    weight: 30
+    weight: 48
+  # Uncomment after activating content/home/service.md
+  # - name: Service
+  #   url: '#service'
+  #   weight: 50
   - name: CV
-    url: "cv/Resume_Sikder.pdf"
-    weight: 50
-#  - name: File Drawer
-#    url: filedrawer/
-#    weight: 30 # keep as draft before committing
-#  - name: Contact
-#    url: '#contact'
-#    weight: 70
+    url: 'cv/Resume_Sikder.pdf'
+    weight: 55
