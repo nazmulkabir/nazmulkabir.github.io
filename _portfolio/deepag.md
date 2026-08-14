@@ -3,6 +3,7 @@ title: "DeepAg: Precision Farming Anomaly Detection"
 excerpt: "Deep learning and Isolation Forest pipeline to flag economic and operational anomalies in agriculture."
 collection: portfolio
 permalink: /portfolio/deepag/
+link: /projects-html/deepag/
 date: 2023-02-01
 order: 6
 tags:

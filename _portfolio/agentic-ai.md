@@ -3,6 +3,7 @@ title: "Agentic AI Security"
 excerpt: "Trustworthy AI for cybersecurity, focusing on networked and communications-enabled systems, agentic AI, and generative models.<br/><img src='/media/projects/agentic-ai-security/agentic-ai-wf.jpg' width='400'>"
 collection: portfolio
 permalink: /portfolio/agentic-ai/
+link: /projects-html/agentic-ai-security/
 date: 2026-01-15
 order: 1
 tags:

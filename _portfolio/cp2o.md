@@ -3,6 +3,7 @@ title: "cP2O: Context-Aware Water Level Forecasting"
 excerpt: "Context-aware dilated LSTM with attention for 4–6 hour wastewater tunnel level forecasts."
 collection: portfolio
 permalink: /portfolio/cp2o/
+link: /projects-html/cp2o/
 date: 2024-06-01
 order: 3
 tags:

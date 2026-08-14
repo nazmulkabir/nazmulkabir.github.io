@@ -3,6 +3,7 @@ title: "IWS Challenge 2022: Integrated AI for Water Systems"
 excerpt: "Competition-winning AI stack combining prediction, protection, and optimization for wastewater systems."
 collection: portfolio
 permalink: /portfolio/iws-challenge/
+link: /projects-html/iws-challenge/
 date: 2022-08-01
 order: 4
 tags:

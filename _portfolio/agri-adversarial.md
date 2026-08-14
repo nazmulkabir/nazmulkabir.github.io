@@ -3,6 +3,7 @@ title: "Adversarial Image Detection in Agriculture"
 excerpt: "Detect and attribute GAN/diffusion-generated plant images for Agriculture 4.0 cyber-biosecurity."
 collection: portfolio
 permalink: /portfolio/agri-adversarial/
+link: /projects-html/agrivision/
 date: 2025-02-10
 order: 2
 tags:
