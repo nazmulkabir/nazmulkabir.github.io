@@ -3,13 +3,14 @@ title: "DeepAg: Deep Learning Approach for Measuring the Effects of Outlier Even
 collection: publications
 category: conferences
 permalink: /publication/2021-12-01-deepag-outlier-events-agriculture
-excerpt: 'Deep learning framework using LSTM networks to predict commodity production considering outlier events'' impact on the global economy.'
 date: 2021-12-01
-venue: '2021 IEEE Symposium Series on Computational Intelligence'
+venue: 'IEEE Symposium Series on Computational Intelligence (SSCI), 1–8, Orlando, FL'
 paperurl: '/media/publications/deepag-outlier-events-agriculture.pdf'
-citation: '&quot;DeepAg: Deep Learning Approach for Measuring the Effects of Outlier Events on Agricultural Production and Policy.&quot; (2021). <i>2021 IEEE Symposium Series on Computational Intelligence</i>.'
+citation: 'Gurrapu, S., Batarseh, F. A., Wang, P., Sikder, M. N. K., Gorentala, N., &amp; Gopinath, M. (2021). &quot;DeepAg: Deep Learning Approach for Measuring the Effects of Outlier Events on Agricultural Production and Policy.&quot; <i>IEEE Symposium Series on Computational Intelligence (SSCI), 1–8, Orlando, FL</i>.'
 ---
 
-Deep learning framework using LSTM networks to predict commodity production considering outlier events' impact on the global economy.
+**Authors:** Gurrapu, S., Batarseh, F. A., Wang, P., Sikder, M. N. K., Gorentala, N., & Gopinath, M.
 
-[Publisher page](https://ieeexplore.ieee.org/abstract/document/9659921)
+**Venue:** IEEE Symposium Series on Computational Intelligence (SSCI), 1–8, Orlando, FL
+
+[Publisher page / DOI](https://doi.org/10.1109/SSCI50451.2021.9659921)

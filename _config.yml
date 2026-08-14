@@ -26,7 +26,7 @@ author:
   avatar           : "nazmul-kabir.jpg"
   name             : "Md Nazmul Kabir Sikder"
   pronouns         : # example: "she/her"  
-  bio              : "Research Assistant Professor focused on trustworthy AI, security for cyber-physical systems, and applied ML for critical infrastructure."
+  bio              : "Research Assistant Professor working on Generative AI security, cybersecurity, critical infrastructure protection, and trustworthy embedded AI."
   location         : "Norfolk, VA"
   employer         : "Old Dominion University"
   uri              : "https://nazmulkabir.com"
@@ -84,16 +84,20 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
   manuscripts:
-    title: 'Journal Articles'
+    title: 'Refereed Journal Articles'
   conferences:
-    title: 'Conference Papers'
+    title: 'Refereed Conference Proceedings'
   chapters:
     title: 'Book Chapters'
+  preprints:
+    title: 'Preprints and Technical Reports'
+  posters:
+    title: 'Posters and Presentations'
   theses:
-    title: 'Theses and Dissertations'
+    title: 'Doctoral Dissertation'
+  books:
+    title: 'Books'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews

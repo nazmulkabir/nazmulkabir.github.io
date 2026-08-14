@@ -3,13 +3,14 @@ title: "Outlier detection using AI: a survey"
 collection: publications
 category: chapters
 permalink: /publication/2023-01-01-outlier-detection-ai-survey
-excerpt: 'Comprehensive survey of AI techniques for outlier detection across multiple domains and applications.'
 date: 2023-01-01
-venue: 'AI Assurance Book Chapter'
+venue: 'In AI Assurance: Towards Valid, Explainable, Fair, and Ethical AI, 231–291. Academic Press'
 paperurl: '/media/publications/outlier-detection-ai-survey.pdf'
-citation: '&quot;Outlier detection using AI: a survey.&quot; (2023). <i>AI Assurance Book Chapter</i>.'
+citation: 'Sikder, M. N. K., &amp; Batarseh, F. A. (2023). &quot;Outlier detection using AI: a survey.&quot; <i>In AI Assurance: Towards Valid, Explainable, Fair, and Ethical AI, 231–291. Academic Press</i>.'
 ---
 
-Comprehensive survey of AI techniques for outlier detection across multiple domains and applications.
+**Authors:** Sikder, M. N. K., & Batarseh, F. A.
 
-[Publisher page](https://www.sciencedirect.com/science/article/abs/pii/B9780323919197000202)
+**Venue:** In AI Assurance: Towards Valid, Explainable, Fair, and Ethical AI, 231–291. Academic Press
+
+[Publisher page / DOI](https://doi.org/10.1016/B978-0-32-391919-7.00020-2)

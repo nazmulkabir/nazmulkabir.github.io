@@ -3,13 +3,16 @@ title: "Implementation of microcontroller based Maximum Power Point Tracker (MPP
 collection: publications
 category: conferences
 permalink: /publication/2015-12-01-mppt-sepic-microcontroller
-excerpt: 'Design and implementation of an economical and compact MPPT system using SEPIC converter with Incremental Conductance method.'
 date: 2015-12-01
-venue: '2015 IEEE International WIE Conference on Electrical and Computer Engineering'
+venue: '2015 IEEE International WIE Conference on Electrical and Computer Engineering (WIECON-ECE), 374–377'
 paperurl: '/media/publications/mppt-sepic-microcontroller.pdf'
-citation: '&quot;Implementation of microcontroller based Maximum Power Point Tracker (MPPT) using SEPIC converter.&quot; (2015). <i>2015 IEEE International WIE Conference on Electrical and Computer Engineering</i>.'
+citation: 'Chakma, S., Sikder, N. K., Khan, S. I., &amp; Akhter, S. (2015). &quot;Implementation of microcontroller based Maximum Power Point Tracker (MPPT) using SEPIC converter.&quot; <i>2015 IEEE International WIE Conference on Electrical and Computer Engineering (WIECON-ECE), 374–377</i>.'
 ---
 
-Design and implementation of an economical and compact MPPT system using SEPIC converter with Incremental Conductance method.
+**Authors:** Chakma, S., Sikder, N. K., Khan, S. I., & Akhter, S.
 
-[Publisher page](https://ieeexplore.ieee.org/abstract/document/7443942)
+**Venue:** 2015 IEEE International WIE Conference on Electrical and Computer Engineering (WIECON-ECE), 374–377
+
+[Publisher page / DOI](https://doi.org/10.1109/WIECON-ECE.2015.7443942)
+
+*Published under the name N. K. Sikder.*

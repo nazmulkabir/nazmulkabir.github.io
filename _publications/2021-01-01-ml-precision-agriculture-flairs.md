@@ -1,15 +1,16 @@
 ---
-title: "Applications of machine learning for precision agriculture and smart farming"
+title: "Applications of Machine Learning for Precision Agriculture and Smart Farming"
 collection: publications
-category: conferences
+category: posters
 permalink: /publication/2021-01-01-ml-precision-agriculture-flairs
-excerpt: 'Comprehensive applications of machine learning techniques in precision agriculture and smart farming systems.'
 date: 2021-01-01
-venue: 'The International FLAIRS Conference Proceedings'
+venue: 'The International FLAIRS Conference Proceedings, 34'
 paperurl: '/media/publications/ml-precision-agriculture-flairs.pdf'
-citation: '&quot;Applications of machine learning for precision agriculture and smart farming.&quot; (2021). <i>The International FLAIRS Conference Proceedings</i>.'
+citation: 'Gurrapu, S., Sikder, N., Wang, P., Gorentala, N., Williams, M., &amp; Batarseh, F. A. (2021). &quot;Applications of Machine Learning for Precision Agriculture and Smart Farming.&quot; <i>The International FLAIRS Conference Proceedings, 34</i>.'
 ---
 
-Comprehensive applications of machine learning techniques in precision agriculture and smart farming systems.
+**Authors:** Gurrapu, S., Sikder, N., Wang, P., Gorentala, N., Williams, M., & Batarseh, F. A.
 
-[Publisher page](https://scholar.archive.org/work/x4nad4ffdrgprittlkqyu7paki/access/wayback/https://journals.flvc.org/FLAIRS/article/download/128497/130068)
+**Venue:** The International FLAIRS Conference Proceedings, 34
+
+[Publisher page / DOI](https://doi.org/10.32473/flairs.v34i1.128497)

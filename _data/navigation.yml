@@ -3,11 +3,6 @@
 # Changing the order here will adjust the order and you can also add additional
 # links. Removing a link prevents it from showing in the header, but does not
 # prevent it from being included in the site.
-#
-# NOTE: Talks (/talks/) and Teaching (/teaching/) pages still exist but are
-#       currently unlinked because there is no content in _talks/ or _teaching/.
-#       Add files to those collections and uncomment the entries below to
-#       re-enable them.
 
 main:
   - title: "Publications"
@@ -15,6 +10,12 @@ main:
 
   - title: "Projects"
     url: /portfolio/
+
+  - title: "Talks"
+    url: /talks/
+
+  - title: "Teaching"
+    url: /teaching/
 
   - title: "People"
     url: /people/
@@ -24,9 +25,3 @@ main:
 
   - title: "CV"
     url: /cv/
-
-  # - title: "Talks"
-  #   url: /talks/
-
-  # - title: "Teaching"
-  #   url: /teaching/

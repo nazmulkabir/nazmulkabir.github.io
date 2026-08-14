@@ -3,13 +3,14 @@ title: "Deep H2O: Cyber attacks detection in water distribution systems using de
 collection: publications
 category: manuscripts
 permalink: /publication/2023-01-01-deep-h2o-cyber-attacks-water
-excerpt: 'Deep learning models for detecting concealed cyber attacks in water distribution systems using TGCN and HCAE approaches.'
 date: 2023-01-01
-venue: 'Journal of Water Process Engineering'
+venue: 'Journal of Water Process Engineering, 52, 103568'
 paperurl: '/media/publications/deep-h2o-cyber-attacks-water.pdf'
-citation: '&quot;Deep H2O: Cyber attacks detection in water distribution systems using deep learning.&quot; (2023). <i>Journal of Water Process Engineering</i>.'
+citation: 'Sikder, M. N. K., Nguyen, M. B., Elliott, E. D., &amp; Batarseh, F. A. (2023). &quot;Deep H2O: Cyber attacks detection in water distribution systems using deep learning.&quot; <i>Journal of Water Process Engineering, 52, 103568</i>.'
 ---
 
-Deep learning models for detecting concealed cyber attacks in water distribution systems using TGCN and HCAE approaches.
+**Authors:** Sikder, M. N. K., Nguyen, M. B., Elliott, E. D., & Batarseh, F. A.
 
-[Publisher page](https://www.sciencedirect.com/science/article/abs/pii/S2214714423000855)
+**Venue:** Journal of Water Process Engineering, 52, 103568
+
+[Publisher page / DOI](https://doi.org/10.1016/j.jwpe.2023.103568)

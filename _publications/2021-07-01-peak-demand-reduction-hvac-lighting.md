@@ -3,13 +3,14 @@ title: "Quantification of Peak Demand Reduction Potential in Commercial Building
 collection: publications
 category: conferences
 permalink: /publication/2021-07-01-peak-demand-reduction-hvac-lighting
-excerpt: 'Investigation of peak demand reduction potential in commercial buildings through HVAC and lighting adjustments in microgrid environments.'
 date: 2021-07-01
-venue: '2021 IEEE Power & Energy Society General Meeting'
+venue: '2021 IEEE Power &amp; Energy Society General Meeting (PESGM), 1–6'
 paperurl: '/media/publications/peak-demand-reduction-hvac-lighting.pdf'
-citation: '&quot;Quantification of Peak Demand Reduction Potential in Commercial Buildings due to HVAC Set Point and Brightness Adjustment.&quot; (2021). <i>2021 IEEE Power & Energy Society General Meeting</i>.'
+citation: 'Usman, M. U., Haque, A., Sikder, M. N. K., Cai, M., Bradley, S. R., Pandey, S., Kliros, C., &amp; Zhang, L. (2021). &quot;Quantification of Peak Demand Reduction Potential in Commercial Buildings due to HVAC Set Point and Brightness Adjustment.&quot; <i>2021 IEEE Power &amp; Energy Society General Meeting (PESGM), 1–6</i>.'
 ---
 
-Investigation of peak demand reduction potential in commercial buildings through HVAC and lighting adjustments in microgrid environments.
+**Authors:** Usman, M. U., Haque, A., Sikder, M. N. K., Cai, M., Bradley, S. R., Pandey, S., Kliros, C., & Zhang, L.
 
-[Publisher page](https://ieeexplore.ieee.org/document/9638053)
+**Venue:** 2021 IEEE Power & Energy Society General Meeting (PESGM), 1–6
+
+[Publisher page / DOI](https://doi.org/10.1109/PESGM46819.2021.9638053)

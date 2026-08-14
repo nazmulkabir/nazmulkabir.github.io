@@ -1,15 +1,16 @@
 ---
-title: "Realtime management of wastewater treatment plants using AI"
+title: "Realtime Management of Wastewater Treatment Plants Using AI"
 collection: publications
-category: conferences
+category: posters
 permalink: /publication/2022-01-01-realtime-management-wastewater-ai
-excerpt: 'Real-time AI-driven decision support system (RADS) for cybersecurity, prediction, and optimization in wastewater treatment.'
 date: 2022-01-01
-venue: '2022 International Water Symposium'
+venue: 'Virginia Tech &amp; DC Water'
 paperurl: '/media/publications/realtime-management-wastewater-ai.pdf'
-citation: '&quot;Realtime management of wastewater treatment plants using AI.&quot; (2022). <i>2022 International Water Symposium</i>.'
+citation: 'Batarseh, F. A., Yardimci, M. O., Suzuki, R., Sikder, M. N. K., Wang, Z., &amp; Mao, W. (2022). &quot;Realtime Management of Wastewater Treatment Plants Using AI.&quot; <i>Virginia Tech &amp; DC Water</i>.'
 ---
 
-Real-time AI-driven decision support system (RADS) for cybersecurity, prediction, and optimization in wastewater treatment.
+**Authors:** Batarseh, F. A., Yardimci, M. O., Suzuki, R., Sikder, M. N. K., Wang, Z., & Mao, W.
 
-[Publisher page](https://www.waterrf.org/sites/default/files/file/2022-11/2022_IWS-Challenge-Solution_Virginia-Tech.pdf)
+**Venue:** Virginia Tech & DC Water
+
+[Publisher page / DOI](https://www.waterrf.org/sites/default/files/file/2022-11/2022_IWS-Challenge-Solution_Virginia-Tech.pdf)

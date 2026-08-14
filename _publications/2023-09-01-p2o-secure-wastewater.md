@@ -3,13 +3,14 @@ title: "P2O: AI-Driven Framework for Managing and Securing Wastewater Treatment 
 collection: publications
 category: manuscripts
 permalink: /publication/2023-09-01-p2o-secure-wastewater
-excerpt: 'AI framework for prediction, protection, and optimization of wastewater treatment plant operations.'
 date: 2023-09-01
-venue: 'Journal of Environmental Engineering'
+venue: 'Journal of Environmental Engineering, 149(9), 04023045'
 paperurl: '/media/publications/p2o-secure-wastewater.pdf'
-citation: '&quot;P2O: AI-Driven Framework for Managing and Securing Wastewater Treatment Plants.&quot; (2023). <i>Journal of Environmental Engineering</i>.'
+citation: 'Kulkarni, A., Yardimci, M., Kabir Sikder, M. N., &amp; Batarseh, F. A. (2023). &quot;P2O: AI-Driven Framework for Managing and Securing Wastewater Treatment Plants.&quot; <i>Journal of Environmental Engineering, 149(9), 04023045</i>.'
 ---
 
-AI framework for prediction, protection, and optimization of wastewater treatment plant operations.
+**Authors:** Kulkarni, A., Yardimci, M., Kabir Sikder, M. N., & Batarseh, F. A.
 
-[Publisher page](https://ascelibrary.org/doi/abs/10.1061/JOEEDU.EEENG-7266)
+**Venue:** Journal of Environmental Engineering, 149(9), 04023045
+
+[Publisher page / DOI](https://doi.org/10.1061/JOEEDU.EEENG-7266)
