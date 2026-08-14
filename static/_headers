@@ -1,3 +1,0 @@
-# Netlify password protection for /cv/
-/cv/*
-  Basic-Auth: "cvuser:yourpasscodehere"
