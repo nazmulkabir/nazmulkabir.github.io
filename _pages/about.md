@@ -62,7 +62,7 @@ CVE/NVD, plus a constrained-MDP response agent — evaluated on ToN_IoT, SWaT, a
 
 **November 2024** — [Successfully defended Ph.D. dissertation from Virginia Tech](https://www.linkedin.com/posts/md-nazmul-kabir-sikder-ph-d-831596a6_phddefense-gratitude-milestone-activity-7267022202741342209-nlKS?utm_source=share&utm_medium=member_desktop) :mortar_board: :tada: :trophy:
 
-![Successfully defended Ph.D. dissertation at Virginia Tech](/media/news/phd-defense.jpg)
+<!-- ![Successfully defended Ph.D. dissertation at Virginia Tech](/media/news/phd-defense.jpg) -->
 
 **November 2024** — [Attended AAAI Fall-24 Symposium](https://www.linkedin.com/posts/aiassurance_aaai-deeplearning-computervision-activity-7260790585307852800-TTRJ?utm_source=share&utm_medium=member_desktop) :sparkles:
 
