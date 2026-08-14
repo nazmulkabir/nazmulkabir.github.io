@@ -189,9 +189,7 @@ Leadership and Outreach
 Talks and Presentations
 ======
 
-  <ul>{% for post in site.talks %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+* **SDSS 2022** — *Model-Agnostic Scoring Methods for Artificial Intelligence Assurance*, Symposium on Data Science and Statistics, June 2022. [Abstract](https://ww2.amstat.org/meetings/sdss/2022/onlineprogram/AbstractDetails.cfm?AbstractID=310048)
 
 Open-Source Software and Datasets
 ======

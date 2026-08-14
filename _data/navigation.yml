@@ -3,25 +3,22 @@
 # Changing the order here will adjust the order and you can also add additional
 # links. Removing a link prevents it from showing in the header, but does not
 # prevent it from being included in the site.
+#
+# News and talks now live as sections on the about page (/), not as
+# separate collections.
 
 main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Projects"
-    url: /portfolio/
-
-  - title: "Talks"
-    url: /talks/
+  - title: "People"
+    url: /people/
 
   - title: "Teaching"
     url: /teaching/
 
-  - title: "People"
-    url: /people/
-
-  - title: "News"
-    url: /year-archive/
+  - title: "Projects"
+    url: /portfolio/
 
   - title: "CV"
     url: /cv/

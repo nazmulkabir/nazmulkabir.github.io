@@ -54,6 +54,32 @@ CVE/NVD, plus a constrained-MDP response agent — evaluated on ToN_IoT, SWaT, a
 - **M.S., Computer Engineering**, Virginia Tech, 2022
 - **B.S., Electrical and Electronic Engineering**, BUET, Dhaka, 2015
 
+## News
+
+**December 2025** — [Old Dominion University becomes first university to earn NSA Cybersecurity Validation](https://www.odu.edu/article/old-dominion-university-becomes-first-university-to-earn-nsa-cybersecurity-validation-for) :trophy:
+
+**February 2025** — Joining as a Presidential Postdoctoral Fellow at Virginia Tech, affiliated with CCI and BSE/ECE. :sparkles:
+
+**November 2024** — [Successfully defended Ph.D. dissertation from Virginia Tech](https://www.linkedin.com/posts/md-nazmul-kabir-sikder-ph-d-831596a6_phddefense-gratitude-milestone-activity-7267022202741342209-nlKS?utm_source=share&utm_medium=member_desktop) :mortar_board: :tada: :trophy:
+
+![Successfully defended Ph.D. dissertation at Virginia Tech](/media/news/phd-defense.jpg)
+
+**November 2024** — [Attended AAAI Fall-24 Symposium](https://www.linkedin.com/posts/aiassurance_aaai-deeplearning-computervision-activity-7260790585307852800-TTRJ?utm_source=share&utm_medium=member_desktop) :sparkles:
+
+**October 2024** — [11 recent cyber attacks on the water and wastewater sector](https://wisdiam.com/publications/recent-cyber-attacks-water-wastewater/) :lock: :shield:
+
+**May 2024** — [New partnership uses AI to bolster efficiency, cybersecurity for water treatment](https://news.vt.edu/articles/2024/05/water-treatment-acwa-lab-cci-alexrenew.html?utm_source=cmpgn_news&utm_medium=email&utm_campaign=vtUnirelNewsDailyCMP_fs-052824) :droplet:
+
+**October 2022** — [2022 Intelligent Water Systems Challenge — Winning Solution by Virginia Tech and DC Water: Realtime Management of Wastewater Treatment Plants Using AI](https://www.waterrf.org/news/2022-intelligent-water-systems-challenge) :trophy:
+
+**September 2022** — [A3 Lab and Commonwealth Cyber Initiative (CCI) partner with DC Water for Tunnel Water Level Forecasting](https://news.vt.edu/videos/k/2022/09/1_029flkz1.html) :sparkles:
+
+**June 2022** — [Presented MAA paper in 2022 SDSS Conference](https://ww2.amstat.org/meetings/sdss/2022/onlineprogram/AbstractDetails.cfm?AbstractID=310048) :man_teacher:
+
+## Talks and presentations
+
+**SDSS 2022** — *Model-Agnostic Scoring Methods for Artificial Intelligence Assurance*, Symposium on Data Science and Statistics, June 2022. Model-agnostic pipelines for scoring explainability, safety, and security of AI systems. [Abstract](https://ww2.amstat.org/meetings/sdss/2022/onlineprogram/AbstractDetails.cfm?AbstractID=310048)
+
 ## Open-source
 
 - [Context-Driven Forecasting](https://github.com/nazmulkabir/Context_water) — dataset and reproducible code for the context-driven forecasting study
