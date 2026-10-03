@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>H-CLAIR: Physical Safety Under a Compromised Automation Plane</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Project page for: H-CLAIR. Actuation-time reference monitor that keeps industrial plants safe when the detector, controller, and fallback are compromised." />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;600;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff; --text:#1f2937; --muted:#6b7280; --soft:#f8fafc; --line:#e5e7eb; --card:#ffffff;
+      --btn:#111827; --btnText:#ffffff; --link:#2563eb;
+      --wrap:1100px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b0e12; --text:#e5e7eb; --muted:#9aa4b2; --soft:#0f1319; --line:#1f2733; --card:#0d1117;
+        --btn:#1f2937; --btnText:#e5e7eb; --link:#8ab4ff;
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+    header.hero{padding:56px 0 22px}
+    h1{font-family:"Google Sans",sans-serif;font-weight:700;line-height:1.12;letter-spacing:.2px;
+       font-size:clamp(28px,5.2vw,56px);text-align:center;margin:0 0 12px}
+    .venue{font-family:"Google Sans",sans-serif;text-align:center;color:var(--muted);font-size:20px;margin:4px 0 10px}
+    .authors,.affils{font-size:16px;text-align:center}
+    .authors a{color:#2a6bf4}
+    .authors sup{font-size:12px;vertical-align:top}
+    .affils{color:var(--muted);line-height:1.6;margin-top:6px}
+    .buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:20px 0 6px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;border:1px solid var(--line);
+         background:var(--btn);color:var(--btnText);font-weight:700}
+    .btn.light{background:transparent;color:var(--text)}
+    .btn:hover{opacity:.95;text-decoration:none}
+    section{padding:40px 0;border-top:1px solid var(--line)}
+    h2{font-family:"Google Sans",sans-serif;font-size:30px;margin:0 0 14px;text-align:center}
+    .content{max-width:900px;margin:0 auto;font-size:17px;line-height:1.7}
+    .figure{max-width:980px;margin:16px auto 6px}
+    .figure img{width:100%;height:auto;border-radius:12px;background:var(--soft);display:block}
+    .caption{color:var(--muted);font-size:14px;text-align:center;margin-top:6px}
+    .grid-2{display:grid;grid-template-columns:1fr;gap:16px}
+    @media (min-width:920px){ .grid-2{grid-template-columns:1fr 1fr} }
+    pre{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:14px;overflow:auto}
+    footer{padding:34px 0;text-align:center;color:var(--muted);font-size:14px}
+  </style>
+</head>
+<body>
+<header class="hero container">
+  <h1>H-CLAIR: Physical Safety Under a Fully Compromised Automation Plane</h1>
+  <div class="venue">Research Project 2026</div>
+  <div class="authors">
+    <a href="https://scholar.google.com/citations?user=1meq3gcAAAAJ&hl=en" target="_blank" rel="noopener">Md Nazmul Kabir Sikder</a>
+  </div>
+</header>
+<section id="overview">
+  <div class="container">
+    <h2>Overview</h2>
+    <div class="content">
+      <p>Industrial control systems increasingly use learned anomaly detectors to gate automated controllers: normal-looking telemetry goes to the primary controller, and an alarm hands control to a fallback. This project asks whether that design actually keeps the plant safe. In a closed-loop water-distribution network, the detector catches every ordinary fault, never fires on a clean day, and defers on almost every attacked sample, yet most attacked runs still drive tanks outside their safe operating range.</p>
+      <p>The gap is structural rather than a matter of detector calibration. Anomaly detection asks whether telemetry looks abnormal; physical safety depends on whether the command about to reach a pump is safe for the current plant state. A correct deferral to "close the pumps" can prevent overflow but cause underflow when the network is already draining, and a compromised controller can skip the detector entirely and issue a harmful command directly.</p>
+    </div>
+  </div>
+</section>
+<section id="approach">
+  <div class="container">
+    <h2>Approach</h2>
+    <div class="content">
+      <p>H-CLAIR moves the safety decision to actuation time. It treats the whole automation plane, including telemetry processing, the detector, the learned controller, orchestration logic, and the fallback, as fully compromised, and keeps a small, separate physical-safety trusted computing base:</p>
+      <ul>
+        <li><strong>Authenticated state.</strong> Plant state comes from a separate, minimal sensor path. Each record carries an endpoint identity, sequence number, timestamp, and HMAC tag, and only records that verify and are fresh may update the shield's state.</li>
+        <li><strong>Set-valued tracking.</strong> The shield maintains the set of plant states consistent with authenticated readings and the commands that actually reached the actuator, never the commands that compromised software requested.</li>
+        <li><strong>Complete mediation.</strong> Every request, from the primary branch or the fallback, is checked against the set of commands whose successors stay inside a certified safe region for every possible state and disturbance. Safe requests pass unchanged; unsafe ones are replaced with a certified restoring action.</li>
+        <li><strong>Explicit assurance loss.</strong> When trusted observations are delayed or dropped, the state set widens. If no command remains safe for every consistent state, H-CLAIR reports loss of assurance and fails closed instead of silently reusing stale state.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="guarantees">
+  <div class="container">
+    <h2>Guarantees</h2>
+    <div class="content">
+      <ul>
+        <li><strong>Request-channel noninterference.</strong> Changing telemetry, the detector decision, the agent, or the fallback cannot enlarge the set of commands the shield will admit.</li>
+        <li><strong>Invariant preservation.</strong> Under a truthful authenticated endpoint, a sound reachability model, a declared disturbance envelope, and complete mediation, the plant stays inside its safe region for every adaptive sequence of requests.</li>
+        <li><strong>Assurance horizon.</strong> A state- and model-dependent bound on how long the plant can run without fresh trusted state before no command is safe for every consistent state, replacing a fixed freshness timeout.</li>
+      </ul>
+      <p>Detector replacement does not require recertifying the safety logic; changes to the reachability model, trusted endpoint, timing envelope, or actuator proxy do.</p>
+    </div>
+  </div>
+</section>
+<section id="evaluation">
+  <div class="container">
+    <h2>Evaluation</h2>
+    <div class="content">
+      <ul>
+        <li><strong>Detection does not enforce safety:</strong> adaptive white-box evasion on SWaT, and closed-loop consequence studies on the BATADAL C-Town water-distribution network.</li>
+        <li><strong>Containment under complete request compromise:</strong> an end-to-end Modbus/TCP tank loop where the unguarded controller leaves the safe band on up to half of its cycles while the shield records no excursions, plus a held-out nonlinear plant whose dynamics the shield never sees.</li>
+        <li><strong>Authenticated channel:</strong> forged, modified, and replayed frames are all rejected, and the assurance horizon is validated under delay, burst loss, and total denial of trusted observations.</li>
+        <li><strong>Cost:</strong> the verifier, set propagation, and guard run in microseconds; the price of stale state appears as a higher intervention rate rather than as safety violations.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    Inspired by modern CVPR-style project pages. © 2026 Md Nazmul Kabir Sikder.
+  </div>
+</footer>
+</body>
+</html>

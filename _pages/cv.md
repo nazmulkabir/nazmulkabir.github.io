@@ -142,7 +142,7 @@ Industry and Professional Experience
 Teaching
 ======
 
-  <ul>{% for post in site.teaching %}
+  <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
@@ -200,7 +200,7 @@ Open-Source Software and Datasets
 Projects
 ======
 
-  <ul>{% for post in site.portfolio %}
+  <ul>{% assign projects = site.portfolio | sort: "date" | reverse %}{% for post in projects %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 

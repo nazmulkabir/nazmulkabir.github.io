@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>CoFi-E: Repairing Blind Spots in Conformal Detectors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Project page for: CoFi-E. Collision-guided score refinement for anytime-valid conformal detection." />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;600;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff; --text:#1f2937; --muted:#6b7280; --soft:#f8fafc; --line:#e5e7eb; --card:#ffffff;
+      --btn:#111827; --btnText:#ffffff; --link:#2563eb;
+      --wrap:1100px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b0e12; --text:#e5e7eb; --muted:#9aa4b2; --soft:#0f1319; --line:#1f2733; --card:#0d1117;
+        --btn:#1f2937; --btnText:#e5e7eb; --link:#8ab4ff;
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+    header.hero{padding:56px 0 22px}
+    h1{font-family:"Google Sans",sans-serif;font-weight:700;line-height:1.12;letter-spacing:.2px;
+       font-size:clamp(28px,5.2vw,56px);text-align:center;margin:0 0 12px}
+    .venue{font-family:"Google Sans",sans-serif;text-align:center;color:var(--muted);font-size:20px;margin:4px 0 10px}
+    .authors,.affils{font-size:16px;text-align:center}
+    .authors a{color:#2a6bf4}
+    .authors sup{font-size:12px;vertical-align:top}
+    .affils{color:var(--muted);line-height:1.6;margin-top:6px}
+    .buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:20px 0 6px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;border:1px solid var(--line);
+         background:var(--btn);color:var(--btnText);font-weight:700}
+    .btn.light{background:transparent;color:var(--text)}
+    .btn:hover{opacity:.95;text-decoration:none}
+    section{padding:40px 0;border-top:1px solid var(--line)}
+    h2{font-family:"Google Sans",sans-serif;font-size:30px;margin:0 0 14px;text-align:center}
+    .content{max-width:900px;margin:0 auto;font-size:17px;line-height:1.7}
+    .figure{max-width:980px;margin:16px auto 6px}
+    .figure img{width:100%;height:auto;border-radius:12px;background:var(--soft);display:block}
+    .caption{color:var(--muted);font-size:14px;text-align:center;margin-top:6px}
+    .grid-2{display:grid;grid-template-columns:1fr;gap:16px}
+    @media (min-width:920px){ .grid-2{grid-template-columns:1fr 1fr} }
+    pre{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:14px;overflow:auto}
+    footer{padding:34px 0;text-align:center;color:var(--muted);font-size:14px}
+  </style>
+</head>
+<body>
+<header class="hero container">
+  <h1>CoFi-E: Collision-Guided Fiber Refinement for Anytime-Valid Conformal Detection</h1>
+  <div class="venue">Research Project 2026</div>
+  <div class="authors">
+    <a href="https://scholar.google.com/citations?user=1meq3gcAAAAJ&hl=en" target="_blank" rel="noopener">Md Nazmul Kabir Sikder</a>
+  </div>
+</header>
+<section id="overview">
+  <div class="container">
+    <h2>Overview</h2>
+    <div class="content">
+      <p>Sequential conformal detectors combine model-agnostic nonconformity scores with finite-sample, anytime false-alarm control. Their power, however, passes through a single scalar score. If a distribution change leaves the score's distribution unchanged, no betting strategy on the resulting conformal ranks can detect it: the detector is perfectly valid and completely blind at the same time.</p>
+      <p>We call this failure a <strong>rank-fiber collision</strong>. A score collapses the observation space into fibers (groups of observations with the same score), and any change inside a fiber is discarded. The same failure arises in security monitors when malicious behavior preserves a deployed risk-score distribution while changing the richer telemetry underneath. A stronger betting function cannot fix this; the representation itself has to change.</p>
+    </div>
+  </div>
+</section>
+<section id="approach">
+  <div class="container">
+    <h2>Approach</h2>
+    <div class="content">
+      <p>CoFi-E (Collision-guided Fiber-refining Conformal E-detection) starts from an existing deployed score, or learns from scratch, and repairs it against a declared portfolio of alternative distributions:</p>
+      <ul>
+        <li><strong>Find hidden differences.</strong> Within each current score fiber, search for a witness split that separates clean data from a training alternative. The exact information recovered by a split depends only on four probabilities, so it can be estimated by counting.</li>
+        <li><strong>Certify every split.</strong> Witness, selection, and audit data are disjoint. Independent audit data give an exact binomial lower bound on each proposed split's gain, and only a certified prefix of the refinement path is kept.</li>
+        <li><strong>Never forget.</strong> Splits are permanent and never merged, so refinement cannot lose rank information the detector already exposed for any alternative.</li>
+        <li><strong>Keep validity separate.</strong> The refined score and its bettor are frozen before fresh reference data are drawn, so learning changes power but never the conformal null law.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="theory">
+  <div class="container">
+    <h2>Theory</h2>
+    <div class="content">
+      <ul>
+        <li>The information in a tie-smoothed conformal rank equals the information in the score's induced partition, and a Pearson projection splits total information into a visible part and an unresolved within-fiber collision.</li>
+        <li>With a weak-witness condition on the split dictionary, greedy refinement shrinks the total portfolio collision at a geometric rate; for finite alphabets the number of refinements needed is tight.</li>
+        <li>Transfer bounds quantify how much evidence carries over to an unseen anomaly family as a function of its distance from the convex hull of the training alternatives.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="evaluation">
+  <div class="container">
+    <h2>Evaluation</h2>
+    <div class="content">
+      <ul>
+        <li><strong>Controlled recovery:</strong> refinement recovers information the original score misses while keeping the null e-values and false-alarm rate at their nominal levels.</li>
+        <li><strong>Collision attacks:</strong> implemented attacks preserve marginal, context-conditional, and joint score interfaces exactly, yet remain clearly detectable in the full observations.</li>
+        <li><strong>Image and time-series benchmarks:</strong> on MVTec AD, UCR, and UEA datasets with held-out anomaly families, the audit certificates stay informative, but accuracy on unseen families trails standard one-class detectors. Including a family in the training portfolio measurably improves detection, matching what the transfer bounds predict.</li>
+      </ul>
+      <p>The result is a certified way to repair detector blind spots, with family coverage setting the scope of its guarantees rather than a claim of universal anomaly-detection performance.</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    Inspired by modern CVPR-style project pages. © 2026 Md Nazmul Kabir Sikder.
+  </div>
+</footer>
+</body>
+</html>

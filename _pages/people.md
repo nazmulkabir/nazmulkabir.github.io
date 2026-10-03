@@ -69,6 +69,7 @@ Collaborators and research partners I work with across institutions.
   </div>
 </div>
 
+{% comment %} Hidden: Istiak Ahmed and Umme Rumman. Remove this comment block to show them again. {% endcomment %}{% comment %}
 <div style="display:flex;gap:1.5em;align-items:flex-start;margin-bottom:2em;flex-wrap:wrap;">
   <img src="/media/people/istiak.jpg" alt="Istiak Ahmed" style="width:160px;border-radius:8px;flex-shrink:0;">
   <div style="flex:1;min-width:260px;">
@@ -97,3 +98,4 @@ Collaborators and research partners I work with across institutions.
     </p>
   </div>
 </div>
+{% endcomment %}
